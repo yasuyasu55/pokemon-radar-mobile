@@ -1,0 +1,15 @@
+{
+  "sourceId": "otakarasouko-group",
+  "displayName": "お宝創庫グループ(お宝創庫・おじゃま館・メディオ!・プレイズ)",
+  "allowedHosts": ["www.otakarasouko.com"],
+  "robotsUrl": "https://www.otakarasouko.com/robots.txt",
+  "listUrl": "https://www.otakarasouko.com/new_information/",
+  "itemPathPattern": "^/information/\\d+/?$",
+  "rules": {
+    "lotteryWords": ["抽選"],
+    "gameWords": ["ポケモン", "ポケカ"],
+    "resultWords": ["当選者", "当選番号", "当選発表", "結果発表", "抽選結果"]
+  },
+  "limits": { "maxDetailPages": 5, "delayMs": 2000, "timeoutMs": 15000, "maxBytes": 2097152, "maxRedirects": 3 },
+  "userAgent": "PokemonRadarDryRun/0.1 (personal use; verification dry-run; no login, no automatic entry)"
+}
