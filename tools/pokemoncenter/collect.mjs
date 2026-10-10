@@ -88,7 +88,8 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
  const [action,target]=process.argv.slice(2);fs.mkdirSync(target,{recursive:true});
  if(action==='run'){
   const r=await collect(createHttpsFetcher({allowedHosts:['www.pokemoncenter-online.com'],maxBytes:8*1024*1024,userAgent:'PokemonRadar/0.1 (+public lottery information check)'}),runOcr);
-  fs.writeFileSync(path.join(target,'result.json'),JSON.stringify(r,null,2)+'\n');console.log(JSON.stringify({ok:r.ok,cases:r.cases?.length??null,stage:r.stage,error:r.error}));process.exitCode=r.ok?0:10;
+  fs.writeFileSync(path.join(target,'result.json'),JSON.stringify(r,null,2)+'\n');
+  console.log(JSON.stringify({ok:r.ok,pid:r.pid,cases:r.cases?.map(c=>({title:c.title,deadline:c.entryPeriod.end.iso,resultNotBefore:c.resultAnnouncement.start.iso,purchaseDeadline:c.purchasePeriod.end.iso,shippingStart:c.shippingPeriod.start.date,shippingEnd:c.shippingPeriod.end.date,yearBasis:c.entryPeriod.start.yearBasis}))??null,requests:r.ledger.map(x=>({url:x.requestedUrl,status:x.status,bytes:x.bytes,sha256:x.sha256})),stage:r.stage,error:r.error}));process.exitCode=r.ok?0:10;
  }else if(action==='all'){
   for(let i=1;i<=2;i++){const r=spawnSync(process.execPath,[fileURLToPath(import.meta.url),'run',path.join(target,'run-'+i)],{stdio:'inherit'});if(r.status!==0){process.exitCode=r.status??99;break;}if(i===1)await new Promise(r=>setTimeout(r,20000));}
   if(!process.exitCode){const read=i=>JSON.parse(fs.readFileSync(path.join(target,'run-'+i,'result.json'),'utf8'));try{const report=compare(read(1),read(2));fs.writeFileSync(path.join(target,'comparison.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));}catch(e){console.error(e.message);process.exitCode=20;}}
