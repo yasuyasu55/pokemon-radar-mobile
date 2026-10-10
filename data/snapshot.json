@@ -805,7 +805,7 @@
       "title": "【ポケモンカード】30thセレブレーション再販 抽選販売のご案内",
       "sourceName": "カードラボ アバンティ京都店",
       "sourceUrl": "https://www.c-labo.jp/shop/kyoto/blog/619602/",
-      "fetchedAt": "2026-10-10T22:00:55.089Z",
+      "fetchedAt": "2026-10-10T22:04:12.660Z",
       "publishedDate": "2026-10-10",
       "entryPeriod": {
         "found": true,
@@ -950,8 +950,7 @@
           "・店頭でのご購入が可能な方に限らせていただきます。"
         ]
       },
-      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み",
-      "retainedFromPrevious": true
+      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み"
     },
     {
       "id": "cardlabo:/shop/tsudanuma/blog/619599/",
@@ -959,7 +958,7 @@
       "title": "【ポケモンカードゲーム】「MEGA 拡張パック 30thCELEBRATION」抽選販売のお知らせ 再販 1010",
       "sourceName": "カードラボ 津田沼店",
       "sourceUrl": "https://www.c-labo.jp/shop/tsudanuma/blog/619599/",
-      "fetchedAt": "2026-10-10T22:00:58.569Z",
+      "fetchedAt": "2026-10-10T22:04:15.755Z",
       "publishedDate": "2026-10-10",
       "entryPeriod": {
         "found": true,
@@ -1103,8 +1102,7 @@
           "ご購入はカードラボ津田沼店の店頭でのみ承ります。 オンラインでの決済、郵送対応等は行っておりません。"
         ]
       },
-      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み",
-      "retainedFromPrevious": true
+      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み"
     },
     {
       "id": "cardlabo:/shop/toyohashi/blog/619594/",
@@ -1112,7 +1110,7 @@
       "title": "【ポケモンカードゲーム】再入荷商品の抽選販売について",
       "sourceName": "カードラボ 豊橋店",
       "sourceUrl": "https://www.c-labo.jp/shop/toyohashi/blog/619594/",
-      "fetchedAt": "2026-10-10T22:01:03.087Z",
+      "fetchedAt": "2026-10-10T22:04:18.776Z",
       "publishedDate": "2026-10-09",
       "entryPeriod": {
         "found": true,
@@ -1259,19 +1257,18 @@
           "ご購入はカードラボ豊橋店の店頭でのみ承ります。"
         ]
       },
-      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み",
-      "retainedFromPrevious": true
+      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み"
     }
   ],
   "sources": {
     "cardlabo": {
       "name": "カードラボ",
-      "fetchedAt": "2026-10-10T22:01:03.089Z",
+      "fetchedAt": "2026-10-10T22:04:18.779Z",
       "coverage": "公式ポケモン一覧に掲載された最新3抽選記事。全店舗・全記事の網羅ではありません",
       "verifiedCases": 3,
       "evidence": [
         {
-          "pid": 2244,
+          "pid": 2255,
           "requests": [
             {
               "url": "https://www.c-labo.jp/robots.txt",
@@ -1332,7 +1329,7 @@
           ]
         },
         {
-          "pid": 2259,
+          "pid": 2270,
           "requests": [
             {
               "url": "https://www.c-labo.jp/robots.txt",
