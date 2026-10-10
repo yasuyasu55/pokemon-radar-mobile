@@ -798,7 +798,599 @@
         ]
       },
       "verification": "独立2回の実取得・必須項目の抽出を照合済み"
+    },
+    {
+      "id": "cardlabo:/shop/kyoto/blog/619602/",
+      "sourceId": "cardlabo",
+      "title": "【ポケモンカード】30thセレブレーション再販 抽選販売のご案内",
+      "sourceName": "カードラボ アバンティ京都店",
+      "sourceUrl": "https://www.c-labo.jp/shop/kyoto/blog/619602/",
+      "fetchedAt": "2026-10-10T22:00:55.089Z",
+      "publishedDate": "2026-10-10",
+      "entryPeriod": {
+        "found": true,
+        "raw": "応募期間:2026年10月10日(金)~10月12日(月)",
+        "start": {
+          "raw": "2026年10月10日(金)",
+          "iso": null,
+          "date": "2026-10-10",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": false,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "10月12日(月)",
+          "iso": null,
+          "date": "2026-10-12",
+          "timeUnconfirmed": true,
+          "inferredYear": true,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [
+            "年は同じ文中の開始日から引き継いだ(本文に年の記載なし)"
+          ],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "INFERRED",
+        "notes": [
+          "年は同じ文中の開始日から引き継いだ(本文に年の記載なし)"
+        ]
+      },
+      "resultAnnouncement": {
+        "found": true,
+        "raw": "当選発表:2026年10月13日(火)~10月15日(木)",
+        "start": {
+          "raw": "2026年10月13日(火)",
+          "iso": null,
+          "date": "2026-10-13",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "火",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "10月15日(木)",
+          "iso": null,
+          "date": "2026-10-15",
+          "timeUnconfirmed": true,
+          "inferredYear": true,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [
+            "年は同じ文中の開始日から引き継いだ(本文に年の記載なし)"
+          ],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "INFERRED",
+        "notes": [
+          "年は同じ文中の開始日から引き継いだ(本文に年の記載なし)"
+        ]
+      },
+      "purchasePeriod": {
+        "found": true,
+        "raw": "当選者店頭購入期間:2026年10月16日(金)~2026年10月25日(日)",
+        "start": {
+          "raw": "2026年10月16日(金)",
+          "iso": null,
+          "date": "2026-10-16",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026年10月25日(日)",
+          "iso": null,
+          "date": "2026-10-25",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "applicationMethod": "Xのフォロー・対象ポストのリポスト",
+      "webApplicationUrl": null,
+      "webApplicationLabel": "対象ポストのURLは未確認。公式案内・店舗Xで確認",
+      "applicationNote": "応募は対象ポストで行います。この案内ページだけでは応募完了になりません。",
+      "receivingMethod": "STORE_ONLY",
+      "receivingLabel": "店頭受取・来店必須",
+      "storeSelectionNote": "この店舗で購入・受取が必要",
+      "resultNote": "当選者へのXのDM。本人のアカウントで確認",
+      "stores": [
+        {
+          "brand": "カードラボ",
+          "name": "アバンティ京都店",
+          "address": "〒601-8003 京都府京都市南区東九条西山王町31 京都アバンティ 6F",
+          "prefecture": "京都府",
+          "sourceUrl": "https://www.c-labo.jp/shop/kyoto/",
+          "officialAccount": "https://www.twitter.com/avanti_labo"
+        }
+      ],
+      "conditions": [
+        "原文の日付と曜日が不一致: 2026年10月10日(金)（数字を保持。公式案内を要確認）",
+        "カードラボ店舗のX(旧Twitter)アカウントで告知させていただきます。",
+        "アカウントをフォロー&対象ツイートのリポストでご応募いただけます。",
+        "・販売時に身分証明書のご提示をお願いする場合があります。",
+        "・期間内にご購入いただけない場合、当選は無効となります。当選が無効となった場合販売はできません。",
+        "・お一人複数アカウントで応募が発覚した場合、当選が無効となる場合がございます。",
+        "・購入時に当選DMでメッセージのやり取りで確認いたします、",
+        "・アカウント停止やログインができない場合、ご購入いただけません。",
+        "・Xアカウント未所持の場合、抽選にご応募することはできません。事前に準備をお願い致します。"
+      ],
+      "handoverRestrictions": [
+        "バラパックでお渡しとなります、外箱はお渡し出来ません。",
+        "・バラパックでのお渡しとなります、外箱はお渡し出来ません。"
+      ],
+      "prices": [],
+      "unknowns": [
+        "応募締切の時刻",
+        "対象の応募ポストURL",
+        "あなたの応募資格・当選状況"
+      ],
+      "evidence": {
+        "entry": "応募期間:2026年10月10日(金)~10月12日(月)",
+        "result": "当選発表:2026年10月13日(火)~10月15日(木)",
+        "purchase": "当選者店頭購入期間:2026年10月16日(金)~2026年10月25日(日)",
+        "receiving": [
+          "当選者店頭購入期間:2026年10月16日(金)~2026年10月25日(日)",
+          "・店頭でのご購入が可能な方に限らせていただきます。"
+        ]
+      },
+      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み"
+    },
+    {
+      "id": "cardlabo:/shop/tsudanuma/blog/619599/",
+      "sourceId": "cardlabo",
+      "title": "【ポケモンカードゲーム】「MEGA 拡張パック 30thCELEBRATION」抽選販売のお知らせ 再販 1010",
+      "sourceName": "カードラボ 津田沼店",
+      "sourceUrl": "https://www.c-labo.jp/shop/tsudanuma/blog/619599/",
+      "fetchedAt": "2026-10-10T22:00:58.569Z",
+      "publishedDate": "2026-10-10",
+      "entryPeriod": {
+        "found": true,
+        "raw": "応募期間:2026年10月10日(土)から2026年10月12日(月)まで",
+        "start": {
+          "raw": "2026年10月10日(土)",
+          "iso": null,
+          "date": "2026-10-10",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "土",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026年10月12日(月)",
+          "iso": null,
+          "date": "2026-10-12",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "found": true,
+        "raw": "当選発表:2026年10月13日(火)~10月16日(金)まで",
+        "start": {
+          "raw": "2026年10月13日(火)",
+          "iso": null,
+          "date": "2026-10-13",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "火",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "10月16日(金)",
+          "iso": null,
+          "date": "2026-10-16",
+          "timeUnconfirmed": true,
+          "inferredYear": true,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [
+            "年は同じ文中の開始日から引き継いだ(本文に年の記載なし)"
+          ],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "INFERRED",
+        "notes": [
+          "年は同じ文中の開始日から引き継いだ(本文に年の記載なし)"
+        ]
+      },
+      "purchasePeriod": {
+        "found": true,
+        "raw": "購入期間:2026年10月19日(月)~2026年10月25日(日)21:00まで",
+        "start": {
+          "raw": "2026年10月19日(月)",
+          "iso": null,
+          "date": "2026-10-19",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026年10月25日(日)21:00",
+          "iso": "2026-10-25T21:00:00+09:00",
+          "date": "2026-10-25",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "applicationMethod": "Xのフォロー・対象ポストのリポスト",
+      "webApplicationUrl": null,
+      "webApplicationLabel": "対象ポストのURLは未確認。公式案内・店舗Xで確認",
+      "applicationNote": "応募は対象ポストで行います。この案内ページだけでは応募完了になりません。",
+      "receivingMethod": "STORE_ONLY",
+      "receivingLabel": "店頭受取・来店必須",
+      "storeSelectionNote": "この店舗で購入・受取が必要",
+      "resultNote": "当選者へのXのDM。本人のアカウントで確認",
+      "stores": [
+        {
+          "brand": "カードラボ",
+          "name": "津田沼店",
+          "address": "〒275-0016 千葉県習志野市津田沼1-23-1 イオンモール津田沼North 2階",
+          "prefecture": "千葉県",
+          "sourceUrl": "https://www.c-labo.jp/shop/tsudanuma/",
+          "officialAccount": "https://www.twitter.com/tsuda_labo"
+        }
+      ],
+      "conditions": [
+        "ご購入時にご本人様確認証のご提示をお願いします。",
+        "代理でのご購入、お受取りはお断りしております。",
+        "期間内にご購入いただけない場合、キャンセルとなります。",
+        "店頭でのご購入時に当選DMを確認いたします。確認が取れない場合は、購入いただくことができません。",
+        "当選DMの提示は画像保存されたものや、印刷物、動画などでの提示は無効となります。",
+        "ご購入時に当選したXのアカウントIDの照合を行います。",
+        "ユーザーIDが合致しない場合は当選が無効となる可能性がございます。",
+        "お一人複数アカウントでの応募が発覚した場合、当選が無効となる場合がございます。",
+        "その他不正と思わしき状況が発覚した場合、当選の無効や今後のご応募をお断りする場合がございます。",
+        "X(旧Twitter)アカウント未所持の場合、抽選にご応募することはできません。",
+        "内容をお守りいただけない場合は当選の無効や今後のご応募をお断りする場合がございます。"
+      ],
+      "handoverRestrictions": [
+        "※お一人様 20パック(シュリンク無し・箱無し、パックでのお渡しとなります)",
+        "商品は、ビニール(シュリンク)と外箱を剥がしてパックのみのお渡しとなります。"
+      ],
+      "prices": [],
+      "unknowns": [
+        "応募締切の時刻",
+        "対象の応募ポストURL",
+        "あなたの応募資格・当選状況"
+      ],
+      "evidence": {
+        "entry": "応募期間:2026年10月10日(土)から2026年10月12日(月)まで",
+        "result": "当選発表:2026年10月13日(火)~10月16日(金)まで",
+        "purchase": "購入期間:2026年10月19日(月)~2026年10月25日(日)21:00まで",
+        "receiving": [
+          "カードラボ津田沼店店頭でのご購入が可能な方に限らせていただきます。",
+          "店頭でのご購入時に当選DMを確認いたします。確認が取れない場合は、購入いただくことができません。",
+          "ご購入はカードラボ津田沼店の店頭でのみ承ります。 オンラインでの決済、郵送対応等は行っておりません。"
+        ]
+      },
+      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み"
+    },
+    {
+      "id": "cardlabo:/shop/toyohashi/blog/619594/",
+      "sourceId": "cardlabo",
+      "title": "【ポケモンカードゲーム】再入荷商品の抽選販売について",
+      "sourceName": "カードラボ 豊橋店",
+      "sourceUrl": "https://www.c-labo.jp/shop/toyohashi/blog/619594/",
+      "fetchedAt": "2026-10-10T22:01:03.087Z",
+      "publishedDate": "2026-10-09",
+      "entryPeriod": {
+        "found": true,
+        "raw": "応募期間:2026年10月9日(金)~10月11日(日)",
+        "start": {
+          "raw": "2026年10月9日(金)",
+          "iso": null,
+          "date": "2026-10-09",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "10月11日(日)",
+          "iso": null,
+          "date": "2026-10-11",
+          "timeUnconfirmed": true,
+          "inferredYear": true,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [
+            "年は同じ文中の開始日から引き継いだ(本文に年の記載なし)"
+          ],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "INFERRED",
+        "notes": [
+          "年は同じ文中の開始日から引き継いだ(本文に年の記載なし)"
+        ]
+      },
+      "resultAnnouncement": {
+        "found": true,
+        "raw": "当選発表:2026年10月12日(月)",
+        "start": {
+          "raw": "2026年10月12日(月)",
+          "iso": null,
+          "date": "2026-10-12",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026年10月12日(月)",
+          "iso": null,
+          "date": "2026-10-12",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "purchasePeriod": {
+        "found": true,
+        "raw": "当選者の購入可能期間2026年10月13日(火)~2026年10月18日(日)",
+        "start": {
+          "raw": "2026年10月13日(火)",
+          "iso": null,
+          "date": "2026-10-13",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "火",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026年10月18日(日)",
+          "iso": null,
+          "date": "2026-10-18",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "applicationMethod": "Xのフォロー・対象ポストのリポスト",
+      "webApplicationUrl": null,
+      "webApplicationLabel": "対象ポストのURLは未確認。公式案内・店舗Xで確認",
+      "applicationNote": "応募は対象ポストで行います。この案内ページだけでは応募完了になりません。",
+      "receivingMethod": "STORE_ONLY",
+      "receivingLabel": "店頭受取・来店必須",
+      "storeSelectionNote": "この店舗で購入・受取が必要",
+      "resultNote": "当選者へのXのDM。本人のアカウントで確認",
+      "stores": [
+        {
+          "brand": "カードラボ",
+          "name": "豊橋店",
+          "address": "〒440-0881 愛知県豊橋市広小路1-18 ユメックスビル 3F",
+          "prefecture": "愛知県",
+          "sourceUrl": "https://www.c-labo.jp/shop/toyohashi/",
+          "officialAccount": "https://www.twitter.com/toyohashi_labo"
+        }
+      ],
+      "conditions": [
+        "カードラボ店舗のX(旧Twitter)アカウントで告知させていただきます。",
+        "アカウントをフォロー&対象ツイートのリポストでご応募いただけます。",
+        "代理での購入、お支払いはお断りしております。",
+        "当選者ご本人様のご購入、代金のお支払い、お受取りのみとさせていただきます。(代理✕)",
+        "期間内にご購入いただけない場合、キャンセルとなります。",
+        "店頭での予約受付時に当選DMを確認いたします。確認が取れない場合は、ご予約及び購入いただくことができません。",
+        "当選DMの提示は画像保存されたものや、印刷物、動画などでの提示は無効となります。",
+        "ご購入時に当選したXのアカウントIDの照合を行います。",
+        "ユーザーIDが合致しない場合は当選が無効となる可能性がございます。",
+        "お一人複数アカウントでの応募が発覚した場合、当選が無効となる場合がございます。",
+        "その他不正と思わしき状況が発覚した場合、当選の無効や今後のご応募をお断りする場合がございます。",
+        "X(旧Twitter)アカウント未所持の場合、抽選にご応募することはできません。",
+        "内容をお守りいただけない場合は当選の無効や今後のご応募をお断りする場合がございます。"
+      ],
+      "handoverRestrictions": [
+        "・シュリンクを外してパックのみのご提供となります"
+      ],
+      "prices": [],
+      "unknowns": [
+        "応募締切の時刻",
+        "対象の応募ポストURL",
+        "あなたの応募資格・当選状況"
+      ],
+      "evidence": {
+        "entry": "応募期間:2026年10月9日(金)~10月11日(日)",
+        "result": "当選発表:2026年10月12日(月)",
+        "purchase": "当選者の購入可能期間2026年10月13日(火)~2026年10月18日(日)",
+        "receiving": [
+          "カードラボ豊橋店店頭でのご購入可能な方に限らせていただきます。",
+          "店頭での予約受付時に当選DMを確認いたします。確認が取れない場合は、ご予約及び購入いただくことができません。",
+          "ご購入はカードラボ豊橋店の店頭でのみ承ります。"
+        ]
+      },
+      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み"
     }
   ],
-  "retainedCount": 0
+  "retainedCount": 0,
+  "sources": {
+    "cardlabo": {
+      "name": "カードラボ",
+      "fetchedAt": "2026-10-10T22:01:03.089Z",
+      "coverage": "公式ポケモン一覧に掲載された最新3抽選記事。全店舗・全記事の網羅ではありません",
+      "verifiedCases": 3,
+      "evidence": [
+        {
+          "pid": 2244,
+          "requests": [
+            {
+              "url": "https://www.c-labo.jp/robots.txt",
+              "status": 200,
+              "bytes": 87,
+              "sha256": "6ab7ec64442471a7f84cd383268d68c4e207f6438ad50ffeaccea2ab8bb2494a",
+              "contentType": "text/plain; charset=utf-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/tcg/pokemon/",
+              "status": 200,
+              "bytes": 59347,
+              "sha256": "4d41ab7ba3a4eaf79d3a3c1896f75b81f32f365a92fd05409b829170585219d6",
+              "contentType": "text/html; charset=UTF-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/shop/kyoto/blog/619602/",
+              "status": 200,
+              "bytes": 64818,
+              "sha256": "0316cdd903ba55966d4172ae6493e1b54facb0ec9a73afc65381fadb2a2f5368",
+              "contentType": "text/html; charset=UTF-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/shop/kyoto/",
+              "status": 200,
+              "bytes": 72679,
+              "sha256": "f2b7d0a046c6e69ae4ca065c9078b349fd7e035248cabf1a83ce34961441c5f9",
+              "contentType": "text/html; charset=UTF-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/shop/tsudanuma/blog/619599/",
+              "status": 200,
+              "bytes": 73396,
+              "sha256": "ad4bf94457bdd8a04d56dabf243e605d1ddb6fb35366d6989178b88e53f62305",
+              "contentType": "text/html; charset=UTF-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/shop/tsudanuma/",
+              "status": 200,
+              "bytes": 76075,
+              "sha256": "d8e0abaafa83e4fc6d3aa7c4a54c6a232b3af689939c733d773c8dee7b5ee1c9",
+              "contentType": "text/html; charset=UTF-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/shop/toyohashi/blog/619594/",
+              "status": 200,
+              "bytes": 70796,
+              "sha256": "185834a2f72130f83f4a1ecc0c5227377c5f529ed913a41a98866f4cdd3cd1cf",
+              "contentType": "text/html; charset=UTF-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/shop/toyohashi/",
+              "status": 200,
+              "bytes": 80120,
+              "sha256": "4e0af0920c2dd0be30f8387802213cd9cba6821ff72190142847e48cc6a5307c",
+              "contentType": "text/html; charset=UTF-8"
+            }
+          ]
+        },
+        {
+          "pid": 2259,
+          "requests": [
+            {
+              "url": "https://www.c-labo.jp/robots.txt",
+              "status": 200,
+              "bytes": 87,
+              "sha256": "6ab7ec64442471a7f84cd383268d68c4e207f6438ad50ffeaccea2ab8bb2494a",
+              "contentType": "text/plain; charset=utf-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/tcg/pokemon/",
+              "status": 200,
+              "bytes": 59347,
+              "sha256": "4d41ab7ba3a4eaf79d3a3c1896f75b81f32f365a92fd05409b829170585219d6",
+              "contentType": "text/html; charset=UTF-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/shop/kyoto/blog/619602/",
+              "status": 200,
+              "bytes": 64818,
+              "sha256": "0316cdd903ba55966d4172ae6493e1b54facb0ec9a73afc65381fadb2a2f5368",
+              "contentType": "text/html; charset=UTF-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/shop/kyoto/",
+              "status": 200,
+              "bytes": 72679,
+              "sha256": "f2b7d0a046c6e69ae4ca065c9078b349fd7e035248cabf1a83ce34961441c5f9",
+              "contentType": "text/html; charset=UTF-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/shop/tsudanuma/blog/619599/",
+              "status": 200,
+              "bytes": 73396,
+              "sha256": "ad4bf94457bdd8a04d56dabf243e605d1ddb6fb35366d6989178b88e53f62305",
+              "contentType": "text/html; charset=UTF-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/shop/tsudanuma/",
+              "status": 200,
+              "bytes": 76075,
+              "sha256": "d8e0abaafa83e4fc6d3aa7c4a54c6a232b3af689939c733d773c8dee7b5ee1c9",
+              "contentType": "text/html; charset=UTF-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/shop/toyohashi/blog/619594/",
+              "status": 200,
+              "bytes": 70796,
+              "sha256": "185834a2f72130f83f4a1ecc0c5227377c5f529ed913a41a98866f4cdd3cd1cf",
+              "contentType": "text/html; charset=UTF-8"
+            },
+            {
+              "url": "https://www.c-labo.jp/shop/toyohashi/",
+              "status": 200,
+              "bytes": 80120,
+              "sha256": "4e0af0920c2dd0be30f8387802213cd9cba6821ff72190142847e48cc6a5307c",
+              "contentType": "text/html; charset=UTF-8"
+            }
+          ]
+        }
+      ]
+    }
+  }
 }
