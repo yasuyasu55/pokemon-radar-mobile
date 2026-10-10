@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "appVersion": "0.1.12",
   "sourceId": "otakarasouko-group",
-  "evidenceRunId": "38089755550",
-  "fetchedAt": "2026-10-10T22:02:37.207Z",
+  "evidenceRunId": "38089973280",
+  "fetchedAt": "2026-10-10T22:05:40.478Z",
   "updateMode": "毎日7:17ごろ（日本時間）に自動更新・検証失敗時は前回データを保持",
   "liveRunsVerified": 2,
   "fetchEvidence": [
     {
-      "startedAt": "2026-10-10T22:01:57.100Z",
-      "finishedAt": "2026-10-10T22:02:07.140Z",
+      "startedAt": "2026-10-10T22:05:00.048Z",
+      "finishedAt": "2026-10-10T22:05:10.365Z",
       "requests": [
         {
           "stage": "robots",
@@ -50,8 +50,8 @@
       ]
     },
     {
-      "startedAt": "2026-10-10T22:02:27.239Z",
-      "finishedAt": "2026-10-10T22:02:37.207Z",
+      "startedAt": "2026-10-10T22:05:30.470Z",
+      "finishedAt": "2026-10-10T22:05:40.478Z",
       "requests": [
         {
           "stage": "robots",
@@ -98,7 +98,7 @@
       "title": "【再版/アプリ会員様限定】ポケモンカードゲーム 2種 抽選販売に関して",
       "sourceName": "お宝創庫グループ",
       "sourceUrl": "https://www.otakarasouko.com/information/103177275/",
-      "fetchedAt": "2026-10-10T22:02:33.091Z",
+      "fetchedAt": "2026-10-10T22:05:36.136Z",
       "publishedDate": "2026-10-08",
       "entryPeriod": {
         "start": {
@@ -453,7 +453,7 @@
       "title": "【アプリ会員様限定】ポケモンカードゲーム MEGA「30th CELEBRATION カードセット 9種セット」抽選販売に関して",
       "sourceName": "お宝創庫グループ",
       "sourceUrl": "https://www.otakarasouko.com/information/103171570/",
-      "fetchedAt": "2026-10-10T22:02:36.250Z",
+      "fetchedAt": "2026-10-10T22:05:39.324Z",
       "publishedDate": "2026-10-08",
       "entryPeriod": {
         "start": {
@@ -950,7 +950,8 @@
           "・店頭でのご購入が可能な方に限らせていただきます。"
         ]
       },
-      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み"
+      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み",
+      "retainedFromPrevious": true
     },
     {
       "id": "cardlabo:/shop/tsudanuma/blog/619599/",
@@ -1102,7 +1103,8 @@
           "ご購入はカードラボ津田沼店の店頭でのみ承ります。 オンラインでの決済、郵送対応等は行っておりません。"
         ]
       },
-      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み"
+      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み",
+      "retainedFromPrevious": true
     },
     {
       "id": "cardlabo:/shop/toyohashi/blog/619594/",
@@ -1257,7 +1259,8 @@
           "ご購入はカードラボ豊橋店の店頭でのみ承ります。"
         ]
       },
-      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み"
+      "verification": "公式記事・公式店舗を独立2回取得し、抽出値を照合済み",
+      "retainedFromPrevious": true
     }
   ],
   "sources": {
