@@ -1,0 +1,717 @@
+{
+  "schemaVersion": 1,
+  "appVersion": "0.1.0",
+  "sourceId": "otakarasouko-group",
+  "evidenceRunId": "38050107462",
+  "fetchedAt": "2026-10-10T11:56:07.319Z",
+  "updateMode": "手動検証結果の反映（定期更新なし）",
+  "liveRunsVerified": 2,
+  "cases": [
+    {
+      "id": "otakarasouko:103177275",
+      "title": "【再版/アプリ会員様限定】ポケモンカードゲーム 2種 抽選販売に関して",
+      "sourceName": "お宝創庫グループ",
+      "sourceUrl": "https://www.otakarasouko.com/information/103177275/",
+      "fetchedAt": "2026-10-10T11:56:03.806Z",
+      "publishedDate": "2026-10-08",
+      "entryPeriod": {
+        "start": {
+          "raw": "2026年10月08日(木) ひる12時",
+          "iso": "2026-10-08T12:00:00+09:00",
+          "date": "2026-10-08",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026年10月11日(日) 23時45分",
+          "iso": "2026-10-11T23:45:00+09:00",
+          "date": "2026-10-11",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "single": false,
+        "approximate": false
+      },
+      "resultAnnouncement": {
+        "start": {
+          "raw": "2026年10月14日(水)",
+          "iso": null,
+          "date": "2026-10-14",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "水",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": true
+      },
+      "purchasePeriod": {
+        "start": {
+          "raw": "2026年10月15日(木)",
+          "iso": null,
+          "date": "2026-10-15",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026年10月18日(日)",
+          "iso": null,
+          "date": "2026-10-18",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "single": false,
+        "approximate": false,
+        "timeQualifier": "受取店舗の営業時間内"
+      },
+      "applicationMethod": "公式アプリ",
+      "webApplicationUrl": null,
+      "webApplicationLabel": "なし(アプリ内応募)",
+      "receivingMethod": "STORE_ONLY",
+      "receivingLabel": "店頭受取のみ(郵送・配送なし)",
+      "stores": [
+        {
+          "brand": "お宝創庫",
+          "name": "東海富木島店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "共和店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "鳴海店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "豊田店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "中川店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "西尾店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "知立店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "名古屋みなと店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "中村店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "刈谷店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "安城店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "上新庄店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "長居店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "茨木店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "小路店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "蒲生店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "深草店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "三宮店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "西宮店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "正木店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "イオンモール東員店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "メディオ!",
+          "name": "西市店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "メディオ!",
+          "name": "倉敷沖新店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "メディオ!",
+          "name": "十日市店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "ららぽーと安城店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "大須店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "半田店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "日本橋オタロード店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "なんば店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "三宮店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "堀田店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "安城店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "大阪日本橋本店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "イオンタウン刈谷店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "イオンタウン四日市泊店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "名駅店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "西尾シャオ店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "京都駅前店",
+          "address": null,
+          "prefecture": null
+        }
+      ],
+      "storeSelectionNote": "2 抽選応募時に選択いただいた店舗へ、当選者購入期間内にご来店ください。",
+      "conditions": [
+        "ご本人確認を行う都合、情報に不備がございますと抽選から漏れてしまう場合がございます",
+        "「お名前」「住所」「電話番号」「生年月日」が正しく入力されていることをアプリのマイページからご確認ください",
+        "再版/アプリ会員様限定!!",
+        "■お宝創庫グループ アプリ会員様",
+        "2026/6/1 以前のアプリ会員様はパスワード再設定をお済ませください!",
+        "■2025年10月07日〜2026年10月07日の期間中、お宝創庫グループ店舗にて会員証をご提示のうえ「お買い物」または「買取」のご利用履歴があるお客様",
+        "1 当選されたアプリ会員証と、アプリに登録されている内容と同一の顔写真入りのご本人様確認書類(運転免許証・マイナンバーカードなど)をご用意ください。※有効期限内のものに限ります。"
+      ],
+      "handoverRestrictions": [
+        "・当選したご本人様のみが購入可能です。他の方への譲渡、代理購入は出来ません。",
+        "・アプリのインストールされた携帯端末を必ずご持参ください。スクリーンショット画像でのご提示はお受けできません。"
+      ],
+      "prices": [
+        {
+          "label": "1BOX(20パック入り) 販売価格7,200円(税込)",
+          "amountYen": 7200
+        },
+        {
+          "label": "1コ 販売価格6,200円(税込)",
+          "amountYen": 6200
+        }
+      ],
+      "unknowns": [
+        "店舗の所在地・営業時間",
+        "あなたの会員資格・利用履歴",
+        "応募時に選択した受取店舗",
+        "1人あたりの応募上限"
+      ],
+      "evidence": {
+        "entry": "【抽選受付期間】\n2026年10月08日(木) ひる12時 ~ 2026年10月11日(日) 23時45分",
+        "result": "【当選通知】\n当選された方には、2026年10月14日(水)頃に",
+        "purchase": "【当選者購入期間】\n2026年10月15日(木) ~ 2026年10月18日(日)\n受取店舗の営業時間内",
+        "receiving": [
+          "下記の抽選受付対象店舗でのみ、ご応募/受取(ご購入)が可能です。",
+          "・いかなる場合においても郵送対応等は受付致しかねます。指定店舗にて直接ご購入ください。"
+        ]
+      },
+      "verification": "確認済み（今回の2記事）"
+    },
+    {
+      "id": "otakarasouko:103171570",
+      "title": "【アプリ会員様限定】ポケモンカードゲーム MEGA「30th CELEBRATION カードセット 9種セット」抽選販売に関して",
+      "sourceName": "お宝創庫グループ",
+      "sourceUrl": "https://www.otakarasouko.com/information/103171570/",
+      "fetchedAt": "2026-10-10T11:56:06.639Z",
+      "publishedDate": "2026-10-08",
+      "entryPeriod": {
+        "start": {
+          "raw": "2026年10月08日(木) ひる12時",
+          "iso": "2026-10-08T12:00:00+09:00",
+          "date": "2026-10-08",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026年10月11日(日) 23時45分",
+          "iso": "2026-10-11T23:45:00+09:00",
+          "date": "2026-10-11",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "single": false,
+        "approximate": false
+      },
+      "resultAnnouncement": {
+        "start": {
+          "raw": "2026年10月14日(水)",
+          "iso": null,
+          "date": "2026-10-14",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "水",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": true
+      },
+      "purchasePeriod": {
+        "start": {
+          "raw": "2026年10月16日(金)",
+          "iso": null,
+          "date": "2026-10-16",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026年10月18日(日)",
+          "iso": null,
+          "date": "2026-10-18",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "single": false,
+        "approximate": false,
+        "timeQualifier": "受取店舗の営業時間内"
+      },
+      "applicationMethod": "公式アプリ",
+      "webApplicationUrl": null,
+      "webApplicationLabel": "なし(アプリ内応募)",
+      "receivingMethod": "STORE_ONLY",
+      "receivingLabel": "店頭受取のみ(郵送・配送なし)",
+      "stores": [
+        {
+          "brand": "お宝創庫",
+          "name": "東海富木島店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "共和店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "鳴海店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "豊田店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "中川店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "西尾店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "知立店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "名古屋みなと店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "中村店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "刈谷店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "安城店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "上新庄店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "長居店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "茨木店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "小路店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "蒲生店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "深草店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "三宮店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "西宮店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "正木店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "イオンモール東員店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "メディオ!",
+          "name": "西市店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "メディオ!",
+          "name": "倉敷沖新店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "メディオ!",
+          "name": "十日市店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "ららぽーと安城店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "大須店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "半田店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "日本橋オタロード店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "なんば店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "三宮店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "堀田店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "安城店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "大阪日本橋本店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "イオンタウン刈谷店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "イオンタウン四日市泊店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "名駅店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "西尾シャオ店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "京都駅前店",
+          "address": null,
+          "prefecture": null
+        }
+      ],
+      "storeSelectionNote": "2 抽選応募時に選択いただいた店舗へ、当選者購入期間内にご来店ください。",
+      "conditions": [
+        "ご本人確認を行う都合、情報に不備がございますと抽選から漏れてしまう場合がございます",
+        "「お名前」「住所」「電話番号」「生年月日」が正しく入力されていることをアプリのマイページからご確認ください",
+        "アプリ会員様限定!!",
+        "■お宝創庫グループ アプリ会員様",
+        "2026/6/1 以前のアプリ会員様はパスワード再設定をお済ませください!",
+        "■2025年10月07日〜2026年10月07日の期間中、お宝創庫グループ店舗にて会員証をご提示のうえ「お買い物」または「買取」のご利用履歴があるお客様",
+        "1 当選されたアプリ会員証と、アプリに登録されている内容と同一の顔写真入りのご本人様確認書類(運転免許証・マイナンバーカードなど)をご用意ください。※有効期限内のものに限ります。"
+      ],
+      "handoverRestrictions": [
+        "・当選したご本人様のみが購入可能です。他の方への譲渡、代理購入は出来ません。",
+        "・アプリのインストールされた携帯端末を必ずご持参ください。スクリーンショット画像でのご提示はお受けできません。"
+      ],
+      "prices": [
+        {
+          "label": "9種類合計_販売価格10,800円(税込)",
+          "amountYen": 10800
+        }
+      ],
+      "unknowns": [
+        "店舗の所在地・営業時間",
+        "あなたの会員資格・利用履歴",
+        "応募時に選択した受取店舗",
+        "1人あたりの応募上限"
+      ],
+      "evidence": {
+        "entry": "【抽選受付期間】\n2026年10月08日(木) ひる12時 ~ 2026年10月11日(日) 23時45分",
+        "result": "【当選通知】\n当選された方には、2026年10月14日(水)頃に",
+        "purchase": "【当選者購入期間】\n2026年10月16日(金) ~ 2026年10月18日(日)\n受取店舗の営業時間内",
+        "receiving": [
+          "下記の抽選受付対象店舗でのみ、ご応募/受取(ご購入)が可能です。",
+          "・いかなる場合においても郵送対応等は受付致しかねます。指定店舗にて直接ご購入ください。"
+        ]
+      },
+      "verification": "確認済み（今回の2記事）"
+    }
+  ]
+}
