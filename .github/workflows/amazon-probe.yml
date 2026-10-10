@@ -1,0 +1,38 @@
+name: Amazon limited acquisition probe
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/amazon-probe.yml'
+      - 'tools/amazon-dryrun/**'
+      - 'tests/amazon.test.mjs'
+permissions:
+  contents: read
+concurrency:
+  group: amazon-probe
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Existing and Amazon tests
+        run: node --test tests/*.test.mjs
+      - name: Independent acquisitions and comparison (no adoption)
+        run: node tools/amazon-dryrun/cli.mjs all evidence/amazon
+      - name: Save restricted evidence only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: amazon-acquisition-evidence
+          path: |
+            evidence/amazon/run-*/result.json
+            evidence/amazon/compare.json
+            evidence/amazon/SUMMARY.md
+          if-no-files-found: warn
+          retention-days: 7
