@@ -1,0 +1,33 @@
+name: Verify Pokemon Center delivery lotteries
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['tools/pokemoncenter/**', 'tests/pokemoncenter.test.mjs', '.github/workflows/pokemoncenter.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Japanese table OCR
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-jpn python3-pil
+      - run: node --test tests/*.test.mjs
+      - name: Independent live fetch and OCR twice
+        run: node tools/pokemoncenter/collect.mjs all "$RUNNER_TEMP/pokemoncenter"
+      - name: Save structured evidence only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pokemoncenter-dryrun-evidence
+          path: ${{ runner.temp }}/pokemoncenter/**/*.json
+          retention-days: 7
