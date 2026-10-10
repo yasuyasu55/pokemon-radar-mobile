@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "appVersion": "0.1.12",
   "sourceId": "otakarasouko-group",
-  "evidenceRunId": "38093780149",
-  "fetchedAt": "2026-10-10T23:05:52.070Z",
+  "evidenceRunId": "38096616712",
+  "fetchedAt": "2026-10-10T23:55:06.376Z",
   "updateMode": "毎日7:17ごろ（日本時間）に自動更新・検証失敗時は前回データを保持",
   "liveRunsVerified": 2,
   "fetchEvidence": [
     {
-      "startedAt": "2026-10-10T23:05:12.325Z",
-      "finishedAt": "2026-10-10T23:05:22.045Z",
+      "startedAt": "2026-10-10T23:54:28.632Z",
+      "finishedAt": "2026-10-10T23:54:37.598Z",
       "requests": [
         {
           "stage": "robots",
@@ -50,8 +50,8 @@
       ]
     },
     {
-      "startedAt": "2026-10-10T23:05:42.118Z",
-      "finishedAt": "2026-10-10T23:05:52.070Z",
+      "startedAt": "2026-10-10T23:54:57.694Z",
+      "finishedAt": "2026-10-10T23:55:06.376Z",
       "requests": [
         {
           "stage": "robots",
@@ -98,7 +98,7 @@
       "title": "【再版/アプリ会員様限定】ポケモンカードゲーム 2種 抽選販売に関して",
       "sourceName": "お宝創庫グループ",
       "sourceUrl": "https://www.otakarasouko.com/information/103177275/",
-      "fetchedAt": "2026-10-10T23:05:47.923Z",
+      "fetchedAt": "2026-10-10T23:55:02.860Z",
       "publishedDate": "2026-10-08",
       "entryPeriod": {
         "start": {
@@ -453,7 +453,7 @@
       "title": "【アプリ会員様限定】ポケモンカードゲーム MEGA「30th CELEBRATION カードセット 9種セット」抽選販売に関して",
       "sourceName": "お宝創庫グループ",
       "sourceUrl": "https://www.otakarasouko.com/information/103171570/",
-      "fetchedAt": "2026-10-10T23:05:51.017Z",
+      "fetchedAt": "2026-10-10T23:55:05.687Z",
       "publishedDate": "2026-10-08",
       "entryPeriod": {
         "start": {
@@ -1419,7 +1419,8 @@
         "あなたの本人認証・応募資格",
         "商品ごとの応募ページURL"
       ],
-      "fetchedAt": "2026-10-10T23:07:06.428Z"
+      "fetchedAt": "2026-10-10T23:07:06.428Z",
+      "retainedFromPrevious": true
     },
     {
       "title": "ポケモンカードゲーム MEGA 拡張パック「ストームエメラルダ」",
@@ -1578,7 +1579,8 @@
         "あなたの本人認証・応募資格",
         "商品ごとの応募ページURL"
       ],
-      "fetchedAt": "2026-10-10T23:07:06.428Z"
+      "fetchedAt": "2026-10-10T23:07:06.428Z",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18595282",
@@ -1724,7 +1726,8 @@
           "発送予定: 2026年11月上旬発送"
         ]
       },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18595457",
@@ -1870,7 +1873,8 @@
           "発送予定: 2026年11月上旬発送"
         ]
       },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     }
   ],
   "sources": {
@@ -2384,5 +2388,5 @@
       ]
     }
   },
-  "retainedCount": 3
+  "retainedCount": 7
 }
