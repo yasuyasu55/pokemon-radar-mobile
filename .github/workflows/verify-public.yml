@@ -1,0 +1,34 @@
+name: Verify public viewer
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-public.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check published files and snapshot
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          const base='https://yasuyasu55.github.io/pokemon-radar-mobile/';
+          for(const path of ['index.html','style.css','app.mjs','model.mjs','data/snapshot.json']){
+            const r=await fetch(base+path,{signal:AbortSignal.timeout(20000)});
+            assert.equal(r.status,200,path);
+            const body=Buffer.from(await r.arrayBuffer());
+            assert.ok(body.equals(fs.readFileSync(path)),path+' published content mismatch');
+            if(path.endsWith('.mjs'))assert.match(r.headers.get('content-type'),/javascript/,path+' MIME');
+            console.log(path+': HTTP 200, exact content match');
+          }
+          const data=JSON.parse(fs.readFileSync('data/snapshot.json'));
+          assert.equal(data.cases.length,2);
+          console.log('Verified public snapshot: 2 cases');
+          JS
