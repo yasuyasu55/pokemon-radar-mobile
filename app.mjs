@@ -15,6 +15,19 @@ function applyDetailVisibility(){
 applyDetailVisibility();
 $('settings').onclick=()=>{const open=$('settings-panel').hidden;$('settings-panel').hidden=!open;$('settings').setAttribute('aria-expanded',String(open));};
 $('hide-details').onchange=()=>{showEvidence=!$('hide-details').checked;try{localStorage.setItem('radar:hide-details',String(!showEvidence));}catch{}applyDetailVisibility();};
+const receivingControls=[...document.querySelectorAll('input[name="receiving"]')];
+const receivingLabels={delivery:'配送・郵送',store:'店頭受取',unknown:'未確認'};
+try{
+ const saved=JSON.parse(localStorage.getItem('radar:receiving-filter')||'[]');
+ if(Array.isArray(saved))receivingControls.forEach(n=>n.checked=saved.includes(n.value));
+}catch{}
+const selectedReceiving=()=>receivingControls.filter(n=>n.checked).map(n=>n.value);
+function receivingChanged(){
+ try{localStorage.setItem('radar:receiving-filter',JSON.stringify(selectedReceiving()));}catch{}
+ render();
+}
+receivingControls.forEach(n=>n.addEventListener('change',receivingChanged));
+$('clear-receiving').addEventListener('click',()=>{receivingControls.forEach(n=>n.checked=false);receivingChanged();});
 function card(c,now) {
   const state=entryState(c,now), labels={before:'応募開始前',open:'受付中',soon:'締切間近',closed:'応募締切済み',unknown:'応募期間未確認'};
   const remaining=c.entryPeriod?.end?.iso?Date.parse(c.entryPeriod.end.iso)-now:null;
@@ -27,15 +40,15 @@ function card(c,now) {
 }
 function render(){
   if(!snapshot)return;
-  const now=Date.now(), filters={phase:$('phase').value,receiving:$('receiving').value,store:$('store').value};
+  const now=Date.now(), filters={phase:$('phase').value,receiving:selectedReceiving(),store:$('store').value};
   $('open-count').textContent=snapshot.cases.filter(c=>['open','soon'].includes(entryState(c,now))).length;
   $('soon-count').textContent=snapshot.cases.filter(c=>entryState(c,now)==='soon').length;
   const visible=snapshot.cases.filter(c=>matches(c,filters,now));
   $('count').textContent=`${visible.length}件 / 全${snapshot.cases.length}件`;
-  $('filter-description').textContent=`表示条件：${$('phase').selectedOptions[0].text} ＞ ${$('receiving').selectedOptions[0].text}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}`;
+  $('filter-description').textContent=`表示条件：${$('phase').selectedOptions[0].text} ＞ ${filters.receiving.length?filters.receiving.map(x=>receivingLabels[x]).join('・'):'受取方法すべて'}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}`;
   $('cases').innerHTML=visible.length?visible.map(c=>card(c,now)).join(''):'<div class="empty"><strong>この条件に合う案件はありません</strong><p>今回確認したお宝創庫の2記事が対象です。他の店舗に抽選がないことを意味しません。</p></div>';
 }
-for(const id of ['phase','receiving','store'])$(id).addEventListener(id==='store'?'input':'change',render);
+for(const id of ['phase','store'])$(id).addEventListener(id==='store'?'input':'change',render);
 try {
   const r=await fetch('./data/snapshot.json',{cache:'no-store'});if(!r.ok)throw new Error('snapshot unavailable');
   snapshot=await r.json();if(snapshot.schemaVersion!==1||!Array.isArray(snapshot.cases))throw new Error('invalid snapshot');

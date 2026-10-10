@@ -11,9 +11,8 @@ export function matches(c, filters, now=Date.now()) {
   if(filters.phase==='open'&&!['open','soon'].includes(state))return false;
   if(filters.phase==='soon'&&state!=='soon')return false;
   if(filters.phase==='closed'&&state!=='closed')return false;
-  if(filters.receiving==='delivery'&&!['DELIVERY','BOTH'].includes(c.receivingMethod))return false;
-  if(filters.receiving==='store'&&!['STORE_ONLY','BOTH'].includes(c.receivingMethod))return false;
-  if(filters.receiving==='unknown'&&['STORE_ONLY','DELIVERY','BOTH'].includes(c.receivingMethod))return false;
+  const receiving=Array.isArray(filters.receiving)?filters.receiving:filters.receiving&&filters.receiving!=='all'?[filters.receiving]:[];
+  if(receiving.length&&!receiving.some(kind=>kind==='delivery'?['DELIVERY','BOTH'].includes(c.receivingMethod):kind==='store'?['STORE_ONLY','BOTH'].includes(c.receivingMethod):kind==='unknown'?!['STORE_ONLY','DELIVERY','BOTH'].includes(c.receivingMethod):false))return false;
   const q=(filters.store||'').trim().toLocaleLowerCase();
   return !q||c.stores.some(s=>(s.brand+' '+s.name).toLocaleLowerCase().includes(q));
 }
