@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "appVersion": "0.1.10",
+  "appVersion": "0.1.11",
   "sourceId": "otakarasouko-group",
-  "evidenceRunId": "38057265819",
-  "fetchedAt": "2026-10-10T13:51:05.614Z",
+  "evidenceRunId": "38057410614",
+  "fetchedAt": "2026-10-10T13:53:19.544Z",
   "updateMode": "毎日7:17ごろ（日本時間）に自動更新・検証失敗時は前回データを保持",
   "liveRunsVerified": 2,
   "fetchEvidence": [
     {
-      "startedAt": "2026-10-10T13:50:26.729Z",
-      "finishedAt": "2026-10-10T13:50:36.431Z",
+      "startedAt": "2026-10-10T13:52:41.683Z",
+      "finishedAt": "2026-10-10T13:52:50.606Z",
       "requests": [
         {
           "stage": "robots",
@@ -50,8 +50,8 @@
       ]
     },
     {
-      "startedAt": "2026-10-10T13:50:56.497Z",
-      "finishedAt": "2026-10-10T13:51:05.614Z",
+      "startedAt": "2026-10-10T13:53:10.675Z",
+      "finishedAt": "2026-10-10T13:53:19.544Z",
       "requests": [
         {
           "stage": "robots",
@@ -98,7 +98,7 @@
       "title": "【再版/アプリ会員様限定】ポケモンカードゲーム 2種 抽選販売に関して",
       "sourceName": "お宝創庫グループ",
       "sourceUrl": "https://www.otakarasouko.com/information/103177275/",
-      "fetchedAt": "2026-10-10T13:51:01.768Z",
+      "fetchedAt": "2026-10-10T13:53:16.014Z",
       "publishedDate": "2026-10-08",
       "entryPeriod": {
         "start": {
@@ -453,7 +453,7 @@
       "title": "【アプリ会員様限定】ポケモンカードゲーム MEGA「30th CELEBRATION カードセット 9種セット」抽選販売に関して",
       "sourceName": "お宝創庫グループ",
       "sourceUrl": "https://www.otakarasouko.com/information/103171570/",
-      "fetchedAt": "2026-10-10T13:51:04.785Z",
+      "fetchedAt": "2026-10-10T13:53:18.838Z",
       "publishedDate": "2026-10-08",
       "entryPeriod": {
         "start": {
