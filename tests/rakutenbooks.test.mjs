@@ -30,7 +30,7 @@ test('extracts exact lottery periods without guessing shipping dates',()=>{
  assert.equal(c.receivingMethod,'DELIVERY');
 });
 test('ordinary product and incomplete schedule are rejected',()=>{
- assert.throws(()=>extractCase(detail().replace('【抽選商品について】','通常販売'),'https://books.rakuten.co.jp/rb/18595282/','x'));
+ assert.throws(()=>extractCase(detail().replace('【抽選商品について】','通常販売').replace('抽選販売スケジュール','販売スケジュール'),'https://books.rakuten.co.jp/rb/18595282/','x'));
  assert.throws(()=>extractCase(detail().replace('2026/08/30(日) 23:59','締切未定'),'https://books.rakuten.co.jp/rb/18595282/','x'));
 });
 function runs(){
