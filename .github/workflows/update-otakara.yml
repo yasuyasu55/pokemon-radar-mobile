@@ -15,7 +15,7 @@ permissions:
   contents: read
 concurrency:
   group: otakara-publish
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   collect:
@@ -28,6 +28,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

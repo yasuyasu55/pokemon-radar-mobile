@@ -12,7 +12,7 @@ export function mergeSnapshot(previous, fresh) {
   }
   // 一覧から消えたことを終了・削除の根拠にしない。最後の確認値を保持する。
   const retained=previous.cases.filter(c=>!ids.has(c.id)).map(c=>({...c,retainedFromPrevious:true}));
-  return {...fresh,cases:[...fresh.cases,...retained],retainedCount:retained.length};
+  return {...fresh,sources:previous.sources??{},cases:[...fresh.cases,...retained],retainedCount:retained.length};
 }
 
 export function updateSnapshot(resultDir, target) {

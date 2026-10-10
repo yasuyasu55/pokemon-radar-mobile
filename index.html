@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="ja" data-text-size="large" data-hide-details="true"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173d36"><title>POKEMON RADAR — 抽選情報</title><link rel="manifest" href="manifest.webmanifest?v=3"><link rel="icon" type="image/png" href="icons/favicon-v3.png"><link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-v3.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="ポケモンRADAR"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="stylesheet" href="style.css?v=0113"></head>
 <body>
-<header><div class="brand"><img class="brand-icon" src="icons/icon-192-v3.png" width="44" height="44" alt=""><div><strong>POKEMON RADAR</strong><small>抽選情報 · モバイル閲覧版 0.1.14</small></div></div><button id="settings" aria-expanded="false" aria-controls="settings-panel">表示設定</button></header>
+<header><div class="brand"><img class="brand-icon" src="icons/icon-192-v3.png" width="44" height="44" alt=""><div><strong>POKEMON RADAR</strong><small>抽選情報 · モバイル閲覧版 0.1.15</small></div></div><button id="settings" aria-expanded="false" aria-controls="settings-panel">表示設定</button></header>
 <main>
 <section id="settings-panel" class="settings" hidden><h2>⚙ 表示設定</h2><div class="text-setting"><label for="text-size">文字の大きさ</label><select id="text-size"><option value="standard">標準</option><option value="large" selected>大きめ</option><option value="largest">さらに大きめ</option></select></div><p>文字サイズはこのブラウザに保存されます。</p><label class="hide-setting"><input id="hide-details" type="checkbox" checked>取得・分類の詳細を非表示</label><p>取得の根拠や補足説明を隠します。締切・応募条件・受取方法・重要な注意は表示されます。</p><details class="install-help"><summary>ホーム画面への追加方法</summary><button id="install-app" hidden>アプリをインストール</button><p id="install-message">iPhone：Safariの共有メニュー →「ホーム画面に追加」。Android：Chromeのメニュー →「ホーム画面に追加」または「アプリをインストール」。PC：Chrome・Edgeのアドレスバーのインストールボタン。</p></details></section>
 <section class="intro display-supplementary"><p class="eyebrow">LOTTERY WATCH</p><h1>応募する前に、<br>条件までひと目で。</h1><p>締切と受取方法を確認して、気になる抽選を探しましょう。</p></section>
 
-<section class="overview" aria-label="受付状況"><div><span>受付中</span><strong id="open-count">—</strong></div><div><span>24時間以内に締切</span><strong id="soon-count">—</strong></div><div><span>確認済み情報源</span><strong>1<small> / お宝創庫</small></strong></div></section>
+<section class="overview" aria-label="受付状況"><div><span>受付中</span><strong id="open-count">—</strong></div><div><span>24時間以内に締切</span><strong id="soon-count">—</strong></div><div><span>確認済み情報源</span><strong id="source-count">—</strong></div></section>
 <p id="data-notice" class="data-notice" role="status">検証済み情報を読み込んでいます…</p>
 <section id="amazon-import-panel" class="personal-panel" hidden><h2>PCで確認したAmazon案件</h2><p id="amazon-import-title"></p><p>商品欄の招待リクエストを確認した記録を、あなたのPC・スマホで共有します。応募は行いません。</p><button id="amazon-import-save" class="card-link" type="button">この確認結果を保存する</button><p id="amazon-import-status" role="status"></p></section>
 <p id="amazon-share-status" class="muted" role="status"></p>
@@ -14,4 +14,4 @@
 <div class="list-heading"><h2>抽選案件</h2><span id="count">—</span></div><p id="filter-description" class="muted"></p>
 <section id="cases" aria-label="抽選案件一覧"></section>
 <footer>公式情報を整理した閲覧版です。応募は販売元の公式アプリ等で行ってください。<br>応募済みは利用者が記録する機能です。ボタンを押しても応募手続きは行われません。</footer>
-</main><script type="module" src="app.mjs?v=0114"></script><script type="module" src="install.mjs?v=0113"></script></body></html>
+</main><script type="module" src="app.mjs?v=0115"></script><script type="module" src="install.mjs?v=0113"></script></body></html>
