@@ -15,3 +15,9 @@ button.addEventListener('click',async()=>{
 });
 window.addEventListener('appinstalled',()=>{installPrompt=null;button.hidden=true;message.textContent='追加しました。ホーム画面のアイコンから開けます。';});
 refresh();
+
+const sizeControl=document.getElementById("text-size");
+const allowedSizes=new Set(["standard","large","largest"]);
+function applyTextSize(value){const size=allowedSizes.has(value)?value:"large";document.documentElement.dataset.textSize=size;sizeControl.value=size;}
+try{applyTextSize(localStorage.getItem("radar:text-size"));}catch{applyTextSize("large");}
+sizeControl.addEventListener("change",()=>{applyTextSize(sizeControl.value);try{localStorage.setItem("radar:text-size",sizeControl.value);}catch{}});
