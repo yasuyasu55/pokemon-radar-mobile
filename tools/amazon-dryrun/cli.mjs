@@ -16,7 +16,7 @@ async function acquire(asin) {
   const startedAt=new Date().toISOString();
   try {
     for(let i=0;i<4;i++) {
-      const r=await fetch(url,{redirect:'manual',signal:AbortSignal.timeout(20000),headers:{Accept:'text/html'}});
+      const r=await fetch(url,{redirect:'manual',signal:AbortSignal.timeout(20000),headers:{Accept:'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8','Accept-Language':'ja-JP,ja;q=0.9,en-US;q=0.7,en;q=0.5','Cache-Control':'no-cache','Pragma':'no-cache','User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36'}});
       if([301,302,303,307,308].includes(r.status)) {
         const next=new URL(r.headers.get('location'),url);
         if(next.protocol!=='https:'||next.hostname!=='www.amazon.co.jp'||next.username||next.password)throw new Error('Redirect outside allowed host');
