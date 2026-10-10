@@ -1,6 +1,9 @@
 name: Update Otakara and publish
 on:
   workflow_dispatch:
+  schedule:
+    # 22:17 UTC = 翌日07:17 JST。GitHubの混雑で遅延する場合があります。
+    - cron: '17 22 * * *'
   push:
     branches: [main]
     paths:
@@ -35,7 +38,7 @@ jobs:
       - name: Record fetch outcome
         if: always()
         run: |
-          node tools/mobile/run-summary.mjs "$RUNNER_TEMP/otakara" >> "$GITHUB_STEP_SUMMARY"
+          node tools/mobile/run-summary.mjs "$RUNNER_TEMP/otakara" | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Validate and merge snapshot
         run: |
           RESULT_DIR=$(find "$RUNNER_TEMP/otakara" -mindepth 1 -maxdepth 1 -type d -name 'otakara-*' | head -n 1)

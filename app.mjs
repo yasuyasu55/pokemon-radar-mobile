@@ -1,4 +1,4 @@
-import {entryState,matches,safeUrl} from './model.mjs';
+import {entryState,matches,safeUrl} from './model.mjs?v=0110';
 const $=id=>document.getElementById(id);
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const date=d=>d?d.replace(/^(\d{4})-(\d{2})-(\d{2})$/,'$1/$2/$3'):'未確認';
@@ -49,12 +49,24 @@ function render(){
   $('cases').innerHTML=visible.length?visible.map(c=>card(c,now)).join(''):'<div class="empty"><strong>この条件に合う案件はありません</strong><p>取得・検証済みのお宝創庫の記事が対象です。他の店舗に抽選がないことを意味しません。</p></div>';
 }
 for(const id of ['phase','store'])$(id).addEventListener(id==='store'?'input':'change',render);
-try {
+let refreshing=false;
+async function refreshSnapshot(){
+ if(refreshing)return;refreshing=true;
+ try {
   const r=await fetch('./data/snapshot.json',{cache:'no-store'});if(!r.ok)throw new Error('snapshot unavailable');
-  snapshot=await r.json();if(snapshot.schemaVersion!==1||!Array.isArray(snapshot.cases))throw new Error('invalid snapshot');
+  const next=await r.json();if(next.schemaVersion!==1||!Array.isArray(next.cases))throw new Error('invalid snapshot');
+  const changed=JSON.stringify(next)!==JSON.stringify(snapshot);snapshot=next;
   $('data-notice').textContent=`最終取得：${new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(snapshot.fetchedAt))} JST · ${snapshot.updateMode}。受付状態は現在日時で表示します。最新情報は公式案内をご確認ください。`;
-  render();setInterval(render,60000);
-}catch{
-  $('data-notice').textContent='情報を読み込めませんでした。案件0件とは判定していません。時間をおいて再読み込みしてください。';
-  $('cases').innerHTML='<div class="empty"><strong>取得済み情報を表示できません</strong><p>通信またはデータ読み込みに失敗しました。</p></div>';
+  if(changed)render();
+ }catch{
+  if(snapshot){$('data-notice').textContent='最新データを読み込めなかったため、表示中の情報を保持しています。各案件の取得日時をご確認ください。';}
+  else{
+   $('data-notice').textContent='情報を読み込めませんでした。案件0件とは判定していません。時間をおいて再読み込みしてください。';
+   $('cases').innerHTML='<div class="empty"><strong>取得済み情報を表示できません</strong><p>通信またはデータ読み込みに失敗しました。</p></div>';
+  }
+ }finally{refreshing=false;}
 }
+await refreshSnapshot();
+setInterval(render,60000);
+setInterval(()=>{if(!document.hidden)refreshSnapshot();},300000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshSnapshot();});
