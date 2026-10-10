@@ -6,6 +6,10 @@ import {fileURLToPath} from 'node:url';
 import {extractAmazon, TARGETS, EXTRACTOR_VERSION} from './extract.mjs';
 const here=fileURLToPath(import.meta.url);
 const sha=b=>createHash('sha256').update(b).digest('hex');
+export function summarizeObservations(observations) {
+  const ok=observations.length===TARGETS.length&&TARGETS.every(asin=>observations.some(o=>o.asin===asin&&o.stage==='PRODUCT_PARSED'));
+  return {acquisitionVerdict:ok?'OK':'FAILED',candidateCount:ok?observations.filter(o=>o.extraction?.candidate).length:null};
+}
 
 async function acquire(asin) {
   let url=`https://www.amazon.co.jp/gp/product/${asin}`;
@@ -34,8 +38,7 @@ async function run(out) {
   const result={schemaVersion:1,mode:'LIVE',environment:process.env.GITHUB_ACTIONS?'GitHub Actions':'Development environment',extractorVersion:EXTRACTOR_VERSION,pid:process.pid,startedAt:new Date().toISOString(),observations:[]};
   for(const asin of TARGETS)result.observations.push(await acquire(asin));
   result.finishedAt=new Date().toISOString();
-  result.acquisitionVerdict=result.observations.every(o=>o.stage==='PRODUCT_PARSED')?'OK':'FAILED';
-  result.candidateCount=result.observations.filter(o=>o.extraction?.candidate).length;
+  Object.assign(result,summarizeObservations(result.observations));
   result.adoption='NOT_ENABLED';
   fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'result.json'),JSON.stringify(result,null,2)+'\n');
   console.log(JSON.stringify({acquisition:result.acquisitionVerdict,candidateCount:result.candidateCount,observations:result.observations.map(o=>({asin:o.asin,status:o.status,stage:o.stage,title:o.extraction?.title,kind:o.extraction?.kind,reason:o.extraction?.reason}))}));
@@ -60,7 +63,7 @@ async function all(out) {
   const read=n=>JSON.parse(fs.readFileSync(path.join(out,`run-${n}`,'result.json'),'utf8'));
   const a=read(1),b=read(2),comparison=compareRuns(a,b);
   fs.writeFileSync(path.join(out,'compare.json'),JSON.stringify(comparison,null,2)+'\n');
-  fs.writeFileSync(path.join(out,'SUMMARY.md'),`# Amazon実取得検証\n\n取得工程: ${a.acquisitionVerdict} / ${b.acquisitionVerdict}\n\n2回の抽出比較: ${comparison.overall}\n\n候補数: ${b.candidateCount}\n\n公開・本番採用・定期更新: 無効\n\n${b.observations.map(o=>`- ${o.asin}: HTTP ${o.status??'未取得'} / ${o.extraction?.kind??'取得失敗'} / ${o.extraction?.reason??o.error??o.stage}`).join('\n')}\n\n締切・当選日・受取条件・本人の応募済み状態は補完しません。構造上の操作の存在を確認するだけで、実ブラウザでの操作可否・ログイン後の表示は未確認です。応答はこの環境で受け取ったバイト列のハッシュです。キャッシュの有無や新しいソケット接続は証明しません。生HTML・Cookie・応答ヘッダーは保存しません。\n`);
+  fs.writeFileSync(path.join(out,'SUMMARY.md'),`# Amazon実取得検証\n\n取得工程: ${a.acquisitionVerdict} / ${b.acquisitionVerdict}\n\n2回の抽出比較: ${comparison.overall}\n\n候補数: ${b.candidateCount??'判定不能'}\n\n公開・本番採用・定期更新: 無効\n\n${b.observations.map(o=>`- ${o.asin}: HTTP ${o.status??'未取得'} / ${o.extraction?.kind??'取得失敗'} / ${o.extraction?.reason??o.error??o.stage}`).join('\n')}\n\n締切・当選日・受取条件・本人の応募済み状態は補完しません。構造上の操作の存在を確認するだけで、実ブラウザでの操作可否・ログイン後の表示は未確認です。応答はこの環境で受け取ったバイト列のハッシュです。キャッシュの有無や新しいソケット接続は証明しません。生HTML・Cookie・応答ヘッダーは保存しません。\n`);
   console.log(JSON.stringify(comparison));
   return codes.some(c=>c!==0)?10:comparison.overall==='CONSISTENT'?0:30;
 }

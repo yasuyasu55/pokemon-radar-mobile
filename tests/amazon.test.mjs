@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {extractAmazon} from '../tools/amazon-dryrun/extract.mjs';
-import {compareRuns} from '../tools/amazon-dryrun/cli.mjs';
+import {compareRuns, summarizeObservations} from '../tools/amazon-dryrun/cli.mjs';
 import fs from 'node:fs';
 const asin='B0FSJXSPPX';
 // Synthetic structure tests, not an assertion of live Amazon acquisition.
@@ -22,3 +22,4 @@ test('2回の同じ抽出・本文差を分離し、採用は無効のまま',()
 test('同一プロセス・取得失敗・抽出器の版差は照合成功にしない',()=>{for(const b of [{...run(2),pid:1},{...run(2),acquisitionVerdict:'FAILED'},{...run(2),extractorVersion:'other'}])assert.equal(compareRuns(run(1),b).overall,'NOT_VERIFIED');});
 test('抽出差・対象不足を検出',()=>{const b=run(2);b.observations[0].extraction.kind='INVITATION_SALE';assert.equal(compareRuns(run(1),b).overall,'DIFFERENT');b.observations=[];assert.equal(compareRuns(run(1),b).overall,'DIFFERENT');});
 test('Amazon検証にはschedule・書込み・公開工程がない',()=>{const w=fs.readFileSync(new URL('../.github/workflows/amazon-probe.yml',import.meta.url),'utf8');assert.match(w,/contents: read/);assert.doesNotMatch(w,/schedule:|contents: write|git push|deploy-pages|update-snapshot/);});
+test('HTTP200でも商品が読めなければ候補数を0件にしない',()=>{const observations=['B0FSJXSPPX','B0F18J2CJF'].map(asin=>({asin,stage:'UNEXPECTED_RESPONSE',extraction:{candidate:false}}));assert.deepEqual(summarizeObservations(observations),{acquisitionVerdict:'FAILED',candidateCount:null});assert.equal(summarizeObservations([]).candidateCount,null);});

@@ -1,12 +1,6 @@
 name: Amazon limited acquisition probe
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/amazon-probe.yml'
-      - 'tools/amazon-dryrun/**'
-      - 'tests/amazon.test.mjs'
 permissions:
   contents: read
 concurrency:
