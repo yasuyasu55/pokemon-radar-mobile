@@ -55,3 +55,14 @@ test('delivery filter works and closed lottery stays closed',()=>{
  assert.equal(matches(c,{phase:'open',receiving:['delivery'],store:''},now),false);
  assert.equal(matches(c,{phase:'all',receiving:['store'],store:''},now),false);
 });
+
+import fs from 'node:fs';
+test('public UI names Rakuten Books and preserves raw approximate shipping text',()=>{
+ const app=fs.readFileSync(new URL('../app.mjs',import.meta.url),'utf8');
+ const index=fs.readFileSync(new URL('../index.html',import.meta.url),'utf8');
+ assert.match(app,/rakutenbooks:'楽天ブックス'/);
+ assert.match(app,/shippingPeriod\?\.raw\|\|'未確認'/);
+ assert.match(app,/resultAnnouncement\?\.notAfter/);
+ assert.match(index,/モバイル閲覧版 0\.1\.17/);
+ assert.match(index,/app\.mjs\?v=0117/);
+});
