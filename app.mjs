@@ -1,4 +1,5 @@
 import {PersonalStore,personalMatches,favoriteCases} from './personal.mjs?v=0113';
+import {AmazonPersonal,readCaptureHash} from './amazon-personal.mjs?v=0114';
 import {entryState,matches,safeUrl,deadlineDisplay} from './model.mjs?v=0112';
 const $=id=>document.getElementById(id);
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -10,6 +11,21 @@ let snapshot=null, showEvidence=false;
 const cloud=document.documentElement.dataset.cloudSync==='true';
 let storage;try{storage=localStorage;}catch{}
 const personal=new PersonalStore({cloud,storage,onChange:()=>{updatePersonalStatus();render();}});
+const amazon=new AmazonPersonal({cloud,onChange:message=>{$('amazon-share-status').textContent=message||'PCの確認結果を共有しています';render();}});
+if(cloud){
+ try{
+  const capture=readCaptureHash(location.hash);
+  if(capture){
+   $('amazon-import-panel').hidden=false;
+   $('amazon-import-title').textContent=String(capture.title??'商品名未確認');
+   $('amazon-import-save').onclick=async()=>{
+    $('amazon-import-save').disabled=true;$('amazon-import-status').textContent='保存しています…';
+    try{await amazon.save(capture);history.replaceState(null,'',location.pathname+location.search);$('amazon-import-status').textContent='保存しました。スマホでも同じ個人用画面で見られます。';$('amazon-import-save').hidden=true;}
+    catch(e){$('amazon-import-status').textContent=e.message;$('amazon-import-save').disabled=false;}
+   };
+  }
+ }catch(e){$('amazon-import-panel').hidden=false;$('amazon-import-status').textContent='送信内容を読めませんでした。PCで確認し直してください。';$('amazon-import-save').hidden=true;}
+}
 function updatePersonalStatus(){
  $('sync-status').textContent=personal.message;
  $('sync-link').hidden=cloud;$('retry-sync').hidden=!cloud;
@@ -48,6 +64,7 @@ function receivingChanged(){
 receivingControls.forEach(n=>n.addEventListener('change',receivingChanged));
 $('clear-receiving').addEventListener('click',()=>{receivingControls.forEach(n=>n.checked=false);receivingChanged();});
 function card(c,now) {
+  if(c.browserCapture)return amazonCard(c,now);
   const record=personal.get(c.id);
   const state=entryState(c,now), labels={before:'応募開始前',open:'受付中',soon:'締切間近',closed:'応募締切済み',unknown:'応募期間未確認'};
   const deadline=deadlineDisplay(c,now);
@@ -57,24 +74,31 @@ function card(c,now) {
   const href=safeUrl(c.sourceUrl);
   return `<article class="card" data-id="${esc(c.id)}"><div class="card-body"><p class="card-source">${esc(c.sourceName)} · 抽選販売</p><div class="card-title"><h3>${esc(c.title)}</h3><button type="button" class="favorite-button ${record.favorite?'selected':''}" data-personal="favorite" aria-pressed="${!!record.favorite}" aria-label="${record.favorite?'お気に入りを解除':'お気に入りに追加'}">${record.favorite?'★':'☆'}</button></div><div class="applied-control"><button type="button" data-personal="applied" class="applied-button ${record.applied?'selected':''}" aria-pressed="${!!record.applied}">${record.applied?'✓ 応募済み（タップで戻す）':'応募済みにする'}</button><span>${record.appliedAt?'記録：'+esc(time(record.appliedAt))+' JST':'未応募'}</span></div><div class="badges"><span class="badge ${state==='closed'?'gray':state==='soon'?'amber':''}">${labels[state]}</span><span class="badge">${esc(c.applicationMethod)}</span><span class="badge amber">${esc(c.receivingLabel)}</span></div><div class="deadline ${deadline.tone}"><small>応募締切 · 日本時間</small><strong>${esc(deadline.dateLabel)}</strong><p class="remaining">${esc(deadline.remainingLabel)}</p></div><dl>${row('応募期間',period(c.entryPeriod))}${row('当選通知',result,'時刻未確認・公式アプリの応募履歴で確認')}${row('購入期間',period(c.purchasePeriod),c.purchasePeriod?.timeQualifier||'時刻未確認')}${row('応募方法',c.applicationMethod,c.webApplicationLabel)}${row('受取方法',c.receivingLabel,'応募時に選んだ店舗への来店が必要')}${row('受取店舗',`${c.stores.length}店舗から応募時に選択`,'所在地・営業時間は未確認。下の店舗一覧で店名を確認')}${row('価格',c.prices.map(p=>p.label).join(' / '))}</dl><div class="callout">会員資格・利用履歴・受取可能な店舗をご確認ください。あなたが応募条件を満たすかは未確認です。</div><details class="conditions"><summary>応募・購入の条件を見る（${c.conditions.length+c.handoverRestrictions.length}項目）</summary><ul>${c.conditions.map(x=>`<li>${esc(x)}</li>`).join('')}${c.handoverRestrictions.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details><details class="stores"><summary>受取店舗を見る（${c.stores.length}店舗）</summary><p class="muted">応募時に1店舗を選び、当選後は選択した店舗で購入します。掲載店舗すべてへの来店は不要です。</p>${groups}</details>${href?`<a class="card-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">公式の抽選案内を確認 ↗</a>`:''}<p class="link-note display-supplementary">このリンクは案内ページです。応募は公式アプリ内で行います。</p><details><summary>未確認の項目</summary><ul>${c.unknowns.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details></div><div class="card-bottom">${c.retainedFromPrevious?'前回の確認情報を保持 · ' : ''}情報取得：${esc(time(c.fetchedAt))} JST <span class="display-supplementary">· ${esc(c.verification)}</span></div><div class="evidence" ${showEvidence?'':'hidden'}><details><summary>取得の根拠・補足</summary><p>掲載日：${esc(date(c.publishedDate))} / 取得：${esc(c.fetchedAt)}<br>通常HTTPで独立した2回の取得・抽出を照合。今回取得できた記事での確認です。</p><pre>${esc(c.evidence.entry)}\n\n${esc(c.evidence.result)}\n\n${esc(c.evidence.purchase)}\n\n${esc(c.evidence.receiving.join('\n'))}</pre></details></div></article>`;
 }
+function amazonCard(c,now){
+ const record=personal.get(c.id),stale=now-Date.parse(c.fetchedAt)>86400000;
+ const href=safeUrl(c.sourceUrl);
+ const observed=new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(c.fetchedAt));
+ return `<article class="card" data-id="${esc(c.id)}"><div class="card-body"><p class="card-source">Amazon · 招待販売（PCで確認）</p><div class="card-title"><h3>${esc(c.title)}</h3><button type="button" class="favorite-button ${record.favorite?'selected':''}" data-personal="favorite" aria-pressed="${!!record.favorite}" aria-label="${record.favorite?'お気に入りを解除':'お気に入りに追加'}">${record.favorite?'★':'☆'}</button></div><div class="applied-control"><button type="button" data-personal="applied" class="applied-button ${record.applied?'selected':''}" aria-pressed="${!!record.applied}">${record.applied?'✓ 応募済み（タップで戻す）':'応募済みにする'}</button><span>${record.appliedAt?'記録：'+esc(time(record.appliedAt))+' JST':'未応募'}</span></div><div class="badges"><span class="badge amber">${stale?'確認から24時間以上 · 再確認が必要':'招待リクエストの操作を確認'}</span><span class="badge gray">受取条件未確認</span></div><div class="deadline unknown"><small>応募締切</small><strong>未確認</strong><p class="remaining">締切までの残り時間は計算できません</p></div><dl>${row('応募方法','Amazonの招待リクエスト')}${row('販売元','Amazon.co.jp（PCで確認した時点）')}${row('確認日時',observed+' JST')}${row('当選通知・購入期限','本人への案内を確認')}${row('受取方法','未確認')}</dl><div class="callout">保存時点の商品欄に招待リクエストの操作があった記録です。現在の受付状況と本人の応募可否はAmazonで確認してください。</div><details class="conditions"><summary>応募・購入の注意を見る</summary><p>この記録の保存では応募されません。Amazonで手続きした後に「応募済みにする」を押してください。リクエストの有効期間を応募締切とは扱いません。</p></details>${href?`<a class="card-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">Amazonで招待リクエストを確認 ↗</a>`:''}<details class="display-supplementary"><summary>確認方法</summary><p>本人がPCのChromeで開いた商品欄を確認して保存した情報です。GitHubからの自動取得ではありません。定期再確認は行いません。</p></details></div><div class="card-bottom">PC確認：${esc(observed)} JST</div></article>`;
+}
 function renderCards(container,cases,now,empty){
  const opened=[...container.querySelectorAll('article details[open]')].map(d=>[d.closest('[data-id]').dataset.id,[...d.closest('article').querySelectorAll('details')].indexOf(d)]);
  container.innerHTML=cases.length?cases.map(c=>card(c,now)).join(''):empty;
  for(const [id,index] of opened){const article=[...container.querySelectorAll('[data-id]')].find(a=>a.dataset.id===id);const d=article?.querySelectorAll('details')[index];if(d)d.open=true;}
 }
 function render(){
-  if(!snapshot)return;
+  if(!snapshot&&!amazon.cases.length)return;
   const now=Date.now(), filters={phase:$('phase').value,receiving:selectedReceiving(),store:$('store').value};
-  $('open-count').textContent=snapshot.cases.filter(c=>['open','soon'].includes(entryState(c,now))).length;
-  $('soon-count').textContent=snapshot.cases.filter(c=>entryState(c,now)==='soon').length;
-  const favorites=favoriteCases(snapshot.cases,personal.data.records);
+  const allCases=[...(snapshot?.cases??[]),...amazon.cases];
+  $('open-count').textContent=snapshot?snapshot.cases.filter(c=>['open','soon'].includes(entryState(c,now))).length:'未確認';
+  $('soon-count').textContent=snapshot?snapshot.cases.filter(c=>entryState(c,now)==='soon').length:'未確認';
+  const favorites=favoriteCases(allCases,personal.data.records);
   $('favorite-count').textContent=favorites.length;
   renderCards($('favorite-cases'),favorites,now,'<div class="empty"><strong>お気に入りはまだありません</strong><p>案件の☆を押すと、ここにまとめて表示されます。</p></div>');
   const pf={unapplied:$('unapplied-only').checked};
-  const visible=snapshot.cases.filter(c=>matches(c,filters,now)&&personalMatches(personal.get(c.id),pf));
-  $('count').textContent=`${visible.length}件 / 全${snapshot.cases.length}件`;
+  const visible=allCases.filter(c=>matches(c,filters,now)&&personalMatches(personal.get(c.id),pf));
+  $('count').textContent=`${visible.length}件 / 全${allCases.length}件`;
   $('filter-description').textContent=`表示条件：${$('phase').selectedOptions[0].text} ＞ ${filters.receiving.length?filters.receiving.map(x=>receivingLabels[x]).join('・'):'受取方法すべて'}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}${pf.favorite?' ＞ お気に入り':''}${pf.unapplied?' ＞ 未応募':''}`;
-  renderCards($('cases'),visible,now,'<div class="empty"><strong>この条件に合う案件はありません</strong><p>取得・検証済みのお宝創庫の記事が対象です。他の店舗に抽選がないことを意味しません。</p></div>');
+  renderCards($('cases'),visible,now,'<div class="empty"><strong>この条件に合う案件はありません</strong><p>読み込めたお宝創庫の記事と、個人用画面で保存したAmazonの確認結果が対象です。他の店舗に抽選がないことを意味しません。</p></div>');
 }
 for(const id of ['phase','store'])$(id).addEventListener(id==='store'?'input':'change',render);
 let refreshing=false;
@@ -97,6 +121,7 @@ async function refreshSnapshot(){
 }
 await refreshSnapshot();
 await personal.sync();
-setInterval(()=>{render();if(!document.hidden)personal.sync();},30000);
+await amazon.sync();
+setInterval(()=>{render();if(!document.hidden){personal.sync();amazon.sync();}},30000);
 setInterval(()=>{if(!document.hidden)refreshSnapshot();},300000);
-document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshSnapshot();personal.sync();}});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshSnapshot();personal.sync();amazon.sync();}});

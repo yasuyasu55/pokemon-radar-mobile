@@ -14,7 +14,7 @@ test('検索の外にお気に入り欄があり、絞り込みを適用しな�
  assert.ok(html.indexOf('id="favorites-panel"')<html.indexOf('class="search-panel"'));
  assert.doesNotMatch(html,/id="favorites-only"/);
  const app=readFileSync(new URL('../app.mjs',import.meta.url),'utf8');
- assert.match(app,/favoriteCases\(snapshot.cases,personal.data.records\)/);
+ assert.match(app,/favoriteCases\(allCases,personal.data.records\)/);
  assert.match(app,/\$\('favorite-cases'\).addEventListener\('click',handlePersonalClick\)/);
 });
 function storage(){let raw=null;return {getItem:()=>raw,setItem:(_,v)=>raw=v};}
