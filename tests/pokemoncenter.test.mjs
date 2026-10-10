@@ -45,3 +45,27 @@ test('dry-run comparison requires independent successful live processes and equa
  assert.equal(compare(a,b).ok,true);assert.throws(()=>compare(a,a));assert.throws(()=>compare({...a,mode:'REPLAY'},b));assert.throws(()=>compare({...a,ok:false},b));
  b.cases[0].title='different';assert.throws(()=>compare(a,b));
 });
+
+import {merge} from '../tools/pokemoncenter/collect.mjs';
+import {entryState,matches} from '../model.mjs';
+function adoptionRuns(){
+ const cases=parseTables(fixture,2026).map((c,i)=>({...c,id:'pokemoncenter:20260929:'+i,sourceId:'pokemoncenter',sourceUrl:'https://www.pokemoncenter-online.com/news/?id=20260929',receivingMethod:'DELIVERY',stores:[],conditions:['公式の応募枠の条件'],fetchedAt:'2026-10-11T00:00:00Z'}));
+ const a={ok:true,mode:'LIVE',pid:1,cases,ledger:Array.from({length:4},()=>({status:200,sha256:'a'.repeat(64),requestedUrl:'https://www.pokemoncenter-online.com/'})),finishedAt:'2026-10-11T00:00:00Z'};return [a,{...structuredClone(a),pid:2}];
+}
+test('adoption preserves other sources and stable personal-record identifiers',()=>{
+ const prior={schemaVersion:1,cases:[{id:'otakara:old',sourceId:'otakara',title:'既存'}, {id:'cardlabo:old',sourceId:'cardlabo',title:'既存'}]};
+ const [a,b]=adoptionRuns(),next=merge(prior,a,b);
+ assert.deepEqual(next.cases.slice(0,2),prior.cases);assert.equal(next.cases.length,4);
+ assert.deepEqual(merge(next,a,b).cases.map(c=>c.id),next.cases.map(c=>c.id));
+ assert.equal(next.sources.pokemoncenter.verifiedCases,2);
+});
+test('failure, replay, incomplete and duplicate candidates cannot replace previous data',()=>{
+ const prior={schemaVersion:1,cases:[{id:'old'}]},original=JSON.stringify(prior);const [a,b]=adoptionRuns();
+ assert.throws(()=>merge(prior,{...a,ok:false},b));assert.throws(()=>merge(prior,{...a,mode:'REPLAY'},b));
+ const incomplete=structuredClone(b);incomplete.cases[0].shippingPeriod.end=null;assert.throws(()=>merge(prior,{...incomplete,pid:1},incomplete));
+ const duplicate=structuredClone(b);duplicate.cases.push(duplicate.cases[0]);assert.throws(()=>merge(prior,{...duplicate,pid:1},duplicate));
+ assert.equal(JSON.stringify(prior),original);
+});
+test('delivery lotteries appear in delivery filter but remain closed after actual deadline',()=>{
+ for(const c of adoptionRuns()[0].cases){const now=Date.parse('2026-10-11T08:00:00+09:00');assert.equal(entryState(c,now),'closed');assert.equal(matches(c,{phase:'all',receiving:['delivery'],store:''},now),true);assert.equal(matches(c,{phase:'open',receiving:['delivery'],store:''},now),false);assert.equal(matches(c,{phase:'all',receiving:['store'],store:''},now),false);}
+});

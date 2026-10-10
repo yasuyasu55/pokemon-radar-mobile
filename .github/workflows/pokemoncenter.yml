@@ -1,4 +1,4 @@
-name: Verify Pokemon Center delivery lotteries
+name: Verify and publish Pokemon Center delivery lotteries
 on:
   workflow_dispatch:
   push:
@@ -6,14 +6,21 @@ on:
     paths: ['tools/pokemoncenter/**', 'tests/pokemoncenter.test.mjs', '.github/workflows/pokemoncenter.yml']
 permissions:
   contents: read
+concurrency:
+  group: otakara-publish
+  cancel-in-progress: false
 jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 12
+    permissions:
+      contents: write
+      actions: read
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -31,3 +38,23 @@ jobs:
           name: pokemoncenter-dryrun-evidence
           path: ${{ runner.temp }}/pokemoncenter/**/*.json
           retention-days: 7
+      - name: Adopt only matching validated results
+        run: node tools/pokemoncenter/collect.mjs adopt "$RUNNER_TEMP/pokemoncenter" data/snapshot.json
+      - name: Commit validated snapshot
+        id: commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/snapshot.json
+          if git diff --cached --quiet; then echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -m 'Add verified Pokemon Center delivery lotteries'
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $AUTH" push origin HEAD:main
+      - name: Confirm public data
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PUBLISHED_SHA: ${{ steps.commit.outputs.sha }}
+        run: node tools/mobile/wait-publication.mjs "$PUBLISHED_SHA" data/snapshot.json

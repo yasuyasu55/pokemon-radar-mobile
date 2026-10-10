@@ -69,9 +69,9 @@ export async function collect(fetcher,ocr){
   const imageUrl=scheduleImage(html,news[0].url),img=await allowed(imageUrl);
   if(!/^image\/png/.test(img.headers['content-type']??''))throw new Error('画像Content-Type不正');
   stage='OCR';const rawTables=await ocr(img.body);stage='VERIFY';
-  const cases=parseTables(rawTables,Number(publication[1])).map(c=>({...c,sourceUrl:news[0].url,scheduleImageUrl:imageUrl,receivingMethod:'DELIVERY',receivingLabel:'日本国内への配送',applicationMethod:'ポケモンセンターオンラインで応募',webApplicationUrl:null,
+  const cases=parseTables(rawTables,Number(publication[1])).map(c=>({...c,id:'pokemoncenter:'+news[0].id+':'+encodeURIComponent(c.title),sourceId:'pokemoncenter',sourceName:'ポケモンセンターオンライン',publishedDate:publication.slice(1).join('-'),sourceUrl:news[0].url,scheduleImageUrl:imageUrl,receivingMethod:'DELIVERY',receivingLabel:'日本国内への配送',applicationMethod:'ポケモンセンターオンラインで応募',webApplicationUrl:null,
    applicationConditions:text.slice(text.indexOf('【応募枠の違いについて】'),text.indexOf('【商品の注文方法について')),
-   unknowns:['あなたの本人認証・応募資格','商品ごとの応募ページURL'],fetchedAt:new Date().toISOString()}));
+   stores:[],prices:[],conditions:[text.slice(text.indexOf('【応募枠の違いについて】'),text.indexOf('【商品の注文方法について'))],handoverRestrictions:[],webApplicationLabel:'商品ごとの応募ページURLは未確認',applicationNote:'案内ページを確認し、公式サイトの対象商品から応募してください。このリンクを開くだけでは応募されません。',resultNote:'マイページの抽選履歴・メールで確認',storeSelectionNote:'日本国内への配送。店頭への来店は不要',verification:'通常HTTPと日程画像OCRを独立2回照合',evidence:{entry:c.entryPeriod.raw,result:c.resultAnnouncement.raw,purchase:c.purchasePeriod.raw,receiving:['商品のお届け先は、日本国内に限らせていただきます。'],shipping:c.shippingPeriod.raw},unknowns:['あなたの本人認証・応募資格','商品ごとの応募ページURL'],fetchedAt:new Date().toISOString()}));
   return {ok:true,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),coverage:'公式トップから発見した最新のポケカ抽選案内1記事。画像の4項目表のみ対応',cases,rawTables,ledger};
  }catch(e){return {ok:false,mode:'LIVE',pid:process.pid,stage,error:e.message,cases:null,ledger};}
 }
@@ -84,8 +84,22 @@ export function compare(a,b){
  if(!a.ok||!b.ok||a.mode!=='LIVE'||b.mode!=='LIVE'||a.pid===b.pid||!a.cases?.length||norm(a)!==norm(b))throw new Error('独立2回の実取得・抽出照合不成立');
  return {ok:true,cases:b.cases.length,requests:b.ledger.length,hashesMatch:a.ledger.length===b.ledger.length&&a.ledger.every((r,i)=>r.requestedUrl===b.ledger[i].requestedUrl&&r.sha256===b.ledger[i].sha256),notice:'dry-runのみ。公開データ・DB・応募履歴は変更しません'};
 }
+
+export function merge(previous,a,b){
+ compare(a,b);
+ for(const r of [a,b])if(r.ledger.length!==4||r.ledger.some(e=>e.status!==200||!/^([a-f0-9]{64})$/.test(e.sha256??'')||new URL(e.requestedUrl).origin!==new URL(ENTRY).origin))throw new Error('実取得の通信証拠不成立');
+ if(previous.schemaVersion!==1||!Array.isArray(previous.cases))throw new Error('前回形式不正');
+ const ids=new Set();
+ for(const c of b.cases){
+  if(c.sourceId!=='pokemoncenter'||!c.id?.startsWith('pokemoncenter:')||ids.has(c.id)||new URL(c.sourceUrl).origin!==new URL(ENTRY).origin||c.receivingMethod!=='DELIVERY'||!c.entryPeriod.end.iso||!c.resultAnnouncement.start.iso||!c.purchasePeriod.end.iso||!c.shippingPeriod.end.date||!c.conditions?.[0])throw new Error('採用項目不正');
+  ids.add(c.id);
+ }
+ const kept=previous.cases.filter(c=>!ids.has(c.id)).map(c=>c.sourceId==='pokemoncenter'?{...c,retainedFromPrevious:true}:c);
+ return {...previous,cases:[...kept,...b.cases],sources:{...(previous.sources??{}),pokemoncenter:{name:'ポケモンセンターオンライン',fetchedAt:b.finishedAt,coverage:b.coverage,verifiedCases:b.cases.length,evidence:[a,b].map(r=>({pid:r.pid,requests:r.ledger.map(e=>({url:e.requestedUrl,status:e.status,bytes:e.bytes,sha256:e.sha256}))}))}}};
+}
+
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
- const [action,target]=process.argv.slice(2);fs.mkdirSync(target,{recursive:true});
+ const [action,target]=process.argv.slice(2);if(action!=='adopt')fs.mkdirSync(target,{recursive:true});
  if(action==='run'){
   const r=await collect(createHttpsFetcher({allowedHosts:['www.pokemoncenter-online.com'],maxBytes:8*1024*1024,userAgent:'PokemonRadar/0.1 (+public lottery information check)'}),runOcr);
   fs.writeFileSync(path.join(target,'result.json'),JSON.stringify(r,null,2)+'\n');
@@ -93,5 +107,9 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
  }else if(action==='all'){
   for(let i=1;i<=2;i++){const r=spawnSync(process.execPath,[fileURLToPath(import.meta.url),'run',path.join(target,'run-'+i)],{stdio:'inherit'});if(r.status!==0){process.exitCode=r.status??99;break;}if(i===1)await new Promise(r=>setTimeout(r,20000));}
   if(!process.exitCode){const read=i=>JSON.parse(fs.readFileSync(path.join(target,'run-'+i,'result.json'),'utf8'));try{const report=compare(read(1),read(2));fs.writeFileSync(path.join(target,'comparison.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));}catch(e){console.error(e.message);process.exitCode=20;}}
- }else throw new Error('run/all only');
+ }else if(action==='adopt'){
+ const file=process.argv[4],read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+ const next=merge(read(file),read(path.join(target,'run-1/result.json')),read(path.join(target,'run-2/result.json')));
+ fs.writeFileSync(file+'.tmp',JSON.stringify(next,null,2)+'\n');fs.renameSync(file+'.tmp',file);console.log('配送抽選 '+next.sources.pokemoncenter.verifiedCases+'件を照合・追加');
+ }else throw new Error('run/all/adopt');
 }
