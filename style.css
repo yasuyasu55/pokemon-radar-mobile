@@ -3,3 +3,18 @@
 .brand-icon{border-radius:11px;flex-shrink:0}.install-help{border-top:1px solid var(--line);margin-top:16px;padding-top:14px}.install-help>strong{font-size:calc(13px * var(--text-scale,1.2));display:block}.install-help button{margin-top:10px;background:var(--green);color:white}.install-help p{line-height:1.8}@media(display-mode:standalone){header{padding-top:max(16px,env(safe-area-inset-top))}main{padding-bottom:max(28px,env(safe-area-inset-bottom))}}
 
 :root{--text-scale:1.2}html[data-text-size="standard"]{--text-scale:1}html[data-text-size="large"]{--text-scale:1.2}html[data-text-size="largest"]{--text-scale:1.4}.text-setting{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}.text-setting label{font-weight:700}.text-setting select{min-height:44px;max-width:100%;padding:8px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink)}.brand{min-width:0}.brand strong,.brand small{overflow-wrap:anywhere}.overview>div{min-width:0;overflow-wrap:anywhere}.list-heading{flex-wrap:wrap}.row{grid-template-columns:minmax(76px,25%) minmax(0,1fr)}summary{line-height:1.65;padding:8px 0}.filters select{min-width:0}
+
+/* Display preferences: essential conditions and warnings stay visible. */
+html[data-hide-details="true"] .display-supplementary{display:none!important}
+.settings h2{font-size:calc(20px * var(--text-scale,1.2));margin:0 0 18px}
+.settings p{font-size:calc(14px * var(--text-scale,1.2));line-height:1.8}
+.hide-setting{display:flex;align-items:flex-start;gap:10px;margin-top:20px}
+.hide-setting input{width:22px;height:22px;flex-shrink:0;margin-top:5px;accent-color:var(--green)}
+.row dt{font-size:calc(14px * var(--text-scale,1.2))}
+.row dd,.conditions ul,.callout{font-size:calc(16px * var(--text-scale,1.2))}
+.row dd small,.card-source,.card-bottom,.link-note,.data-notice,.muted{font-size:calc(13px * var(--text-scale,1.2))}
+.conditions h4,summary,.card-link{font-size:calc(16px * var(--text-scale,1.2))}
+.badge,.store-chip{font-size:calc(13px * var(--text-scale,1.2))}
+.card h3{font-size:calc(22px * var(--text-scale,1.2))}
+.settings .text-setting select{min-width:180px}.settings{scroll-margin-top:12px}
+@media(max-width:680px){header{flex-wrap:wrap}.card-body{padding:18px}.row{grid-template-columns:minmax(70px,26%) minmax(0,1fr);gap:10px}.card h3{font-size:calc(21px * var(--text-scale,1.2))}.overview{grid-template-columns:repeat(2,minmax(0,1fr))}.overview>div:last-child{grid-column:1/-1;border-left:0;border-top:1px solid var(--line)}.overview span{font-size:calc(12px * var(--text-scale,1.2))}}
