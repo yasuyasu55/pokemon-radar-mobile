@@ -1,4 +1,6 @@
 export const SYNC_URL='https://pokemon-radar-personal.precious-masa1997.chatgpt.site/radar/index.html';
+// Search conditions never hide saved favorites from their independent list.
+export function favoriteCases(cases,records){return cases.filter(c=>records[c.id]?.favorite===true);}
 const empty=()=>({records:{},pending:{}});
 export function personalMatches(record={},filter={}){
  return (!filter.favorite||record.favorite===true)&&(!filter.unapplied||record.applied!==true);

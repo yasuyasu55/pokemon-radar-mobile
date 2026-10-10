@@ -1,4 +1,22 @@
-import test from 'node:test';import assert from 'node:assert/strict';import {PersonalStore,personalMatches} from '../personal.mjs';
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';import {PersonalStore,personalMatches,favoriteCases} from '../personal.mjs';
+test('独立したお気に入り一覧・解除・再読込・案件更新',async()=>{
+ const memory=storage(),s=new PersonalStore({storage:memory});
+ const cases=[{id:'one',title:'A'},{id:'two',title:'B'}];
+ await s.toggle('one','favorite');await s.toggle('one','applied');
+ assert.deepEqual(favoriteCases(cases,s.data.records),[cases[0]]);
+ const reload=new PersonalStore({storage:memory});
+ assert.equal(favoriteCases([{id:'one',title:'updated'}],reload.data.records)[0].title,'updated');
+ await reload.toggle('one','favorite');assert.deepEqual(favoriteCases(cases,reload.data.records),[]);
+ assert.equal(reload.get('one').applied,true);
+});
+test('検索の外にお気に入り欄があり、絞り込みを適用しない',()=>{
+ const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
+ assert.ok(html.indexOf('id="favorites-panel"')<html.indexOf('class="search-panel"'));
+ assert.doesNotMatch(html,/id="favorites-only"/);
+ const app=readFileSync(new URL('../app.mjs',import.meta.url),'utf8');
+ assert.match(app,/favoriteCases\(snapshot.cases,personal.data.records\)/);
+ assert.match(app,/\$\('favorite-cases'\).addEventListener\('click',handlePersonalClick\)/);
+});
 function storage(){let raw=null;return {getItem:()=>raw,setItem:(_,v)=>raw=v};}
 function service(){let records={};return {get records(){return records;},fetcher:async(_,options)=>{if(options.method==='PATCH'){const p=JSON.parse(options.body);records[p.caseId]={...records[p.caseId],[p.field]:p.value,...(p.field==='applied'?{appliedAt:p.value?'2026-10-10T14:00:00Z':null}:{})};return Response.json({ok:true});}return Response.json({records:structuredClone(records)});}};}
 test('お気に入りと応募済みを別保存・再読込後も保持',async()=>{const memory=storage(),s=new PersonalStore({storage:memory});await s.toggle('one','favorite');await s.toggle('one','applied');const reload=new PersonalStore({storage:memory});assert.equal(reload.get('one').favorite,true);assert.equal(reload.get('one').applied,true);await reload.toggle('one','applied');assert.equal(reload.get('one').favorite,true);assert.equal(reload.get('one').applied,false);});
