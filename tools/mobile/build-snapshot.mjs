@@ -32,7 +32,7 @@ export function buildSnapshot(a, b, comparison) {
   const ca=a.candidates.map(select), cb=b.candidates.map(select);
   const normalized = cs=>JSON.stringify(cs.map(({fetchedAt,...c})=>c).sort((x,y)=>x.id.localeCompare(y.id)));
   if(normalized(ca)!==normalized(cb)) throw new Error('表示対象の抽出値が2回で一致しません');
-  return {schemaVersion:1,appVersion:'0.1.11',sourceId:'otakarasouko-group',evidenceRunId:a.env.runner?.details?.runId??null,fetchedAt:b.finishedAt,
+  return {schemaVersion:1,appVersion:'0.1.12',sourceId:'otakarasouko-group',evidenceRunId:a.env.runner?.details?.runId??null,fetchedAt:b.finishedAt,
     updateMode:'毎日7:17ごろ（日本時間）に自動更新・検証失敗時は前回データを保持', liveRunsVerified:2, fetchEvidence:[a,b].map(r=>({startedAt:r.startedAt,finishedAt:r.finishedAt,requests:(r.ledger??[]).map(e=>({stage:e.stage,url:e.requestedUrl,finalUrl:e.finalUrl,status:e.status,bytes:e.bytes,sha256:e.sha256,contentType:e.headers?.['content-type']??null}))})), cases:cb};
 }
 if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {

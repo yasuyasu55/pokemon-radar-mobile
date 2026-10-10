@@ -35,3 +35,7 @@ html[data-hide-details="true"] .display-supplementary{display:none!important}
 .deadline.closed .remaining{color:#b32626}
 .deadline.soon .remaining{color:#a04d00}
 .deadline small{font-size:calc(13px * var(--text-scale,1.2));font-weight:700}
+
+.personal-panel{background:white;border:1px solid var(--line);border-radius:16px;padding:18px;margin:18px 0}.personal-panel p{margin:8px 0}.card-title{display:flex;align-items:flex-start;gap:12px}.card-title h3{flex:1;min-width:0}.favorite-button{flex:none;width:54px;height:54px;padding:0;font-size:36px;line-height:1;border:1px solid var(--line);background:#f6faf7;border-radius:12px;color:var(--green)}.favorite-button.selected{color:#996b00;background:#fff5d4;border-color:#edc145}.applied-control{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:12px 0 18px}.applied-control span{font-size:calc(13px * var(--text-scale,1.2));color:#62746c}.applied-button{font-size:calc(15px * var(--text-scale,1.2));min-height:46px}.applied-button.selected{background:#e7f3eb;color:#075835;border-color:#328b5c}.personal-filter{grid-column:1/-1;border:0;margin:0;padding:12px 0}.personal-filter legend{font-weight:700}.personal-filter label{display:inline-flex;align-items:center;gap:8px;margin:8px 18px 0 0}.personal-filter input{width:22px;height:22px;min-height:0;accent-color:var(--green)}button:focus-visible,a:focus-visible{outline:3px solid #3a9175;outline-offset:3px}
+
+[hidden]{display:none!important}
