@@ -52,8 +52,8 @@ test('情報源違い・重複ID・外部URLを拒否',()=>{
  assert.throws(()=>mergeSnapshot(fresh,{...fresh,cases:[...fresh.cases,...fresh.cases]}));
  assert.throws(()=>mergeSnapshot(fresh,{...fresh,cases:[{...fresh.cases[0],sourceUrl:'https://example.com/'}]}));
 });
-test('公開成果物はviewerのみ・検証が失敗すれば公開ジョブは動かない',()=>{
+test('公開経路を重ねず、検証後に公開結果を確認する',()=>{
  const yaml=fs.readFileSync(new URL('../.github/workflows/update-otakara.yml',import.meta.url),'utf8');
- assert.match(yaml,/needs: collect/);assert.match(yaml,/persist-credentials: false/);
- assert.match(yaml,/cp -r data icons/);assert.doesNotMatch(yaml,/cp -r tools|upload-artifact@/);
+ assert.match(yaml,/wait-publication.mjs/);assert.match(yaml,/persist-credentials: false/);
+ assert.doesNotMatch(yaml,/deploy-pages@|upload-artifact@/);
 });
