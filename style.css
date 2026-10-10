@@ -29,3 +29,9 @@ html[data-hide-details="true"] .display-supplementary{display:none!important}
 #clear-receiving{margin-top:12px;font-size:calc(13px * var(--text-scale,1.2))}
 
 .search-panel{border:1px solid var(--line);border-radius:16px;background:white;margin:18px 0;padding:14px 18px}.search-panel>summary{font-size:calc(18px * var(--text-scale,1.2));font-weight:700;padding:8px 0;overflow-wrap:anywhere}.search-panel[open]>.filters{margin-top:18px;padding-bottom:8px}
+
+/* 締切と残り時間は常時表示し、補足情報の非表示対象にしない */
+.deadline .remaining{font-size:calc(17px * var(--text-scale,1.2));line-height:1.5;margin-top:8px}
+.deadline.closed .remaining{color:#b32626}
+.deadline.soon .remaining{color:#a04d00}
+.deadline small{font-size:calc(13px * var(--text-scale,1.2));font-weight:700}

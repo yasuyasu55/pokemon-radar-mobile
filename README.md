@@ -1,4 +1,4 @@
-# POKEMON RADAR Mobile 0.1.10
+# POKEMON RADAR Mobile 0.1.11
 
 公開URL: https://yasuyasu55.github.io/pokemon-radar-mobile/
 
@@ -22,6 +22,8 @@ Windows版の巡回・Chrome拡張・DBには変更していません。テニ�
 
 ## 検証と手動更新
 
-`node --test tests/update-snapshot.test.mjs`
+`node --test tests/*.test.mjs`
 
 Actionsの「Update Otakara and publish」は手動実行も可能です。監視範囲は現在お宝創庫のみで、ログイン不要の公開ページを対象にします。403/429を回避しません。
+
+締切日時・残り日数/時間/分・締切終了をカード上部に常時表示します。文字サイズ設定に追従し、補足情報を隠しても表示します。時刻が不明な場合は残り時間を推測しません。

@@ -9,7 +9,7 @@ on:
     paths:
       - '.github/workflows/update-otakara.yml'
       - 'tools/**'
-      - 'tests/update-snapshot.test.mjs'
+      - 'tests/**'
 
 permissions:
   contents: read
@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: '22'
       - name: Test adoption and previous data retention
-        run: node --test tests/update-snapshot.test.mjs
+        run: node --test tests/*.test.mjs
       - name: Fetch twice with independent processes
         id: fetch
         run: node tools/otakara-dryrun/cli.mjs all --base "$RUNNER_TEMP/otakara" --gap-seconds 20 --no-bodies

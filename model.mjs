@@ -17,3 +17,19 @@ export function matches(c, filters, now=Date.now()) {
   return !q||c.stores.some(s=>(s.brand+' '+s.name).toLocaleLowerCase().includes(q));
 }
 export function safeUrl(value) {try{const u=new URL(value);return u.protocol==='https:'?u.href:null;}catch{return null;}}
+
+export function deadlineDisplay(c,now=Date.now()) {
+  const end=c.entryPeriod?.end, ms=end?.iso?Date.parse(end.iso):NaN;
+  if(!Number.isFinite(ms))return {tone:'unknown',dateLabel:end?.date?end.date.replace(/-/g,'/')+'（時刻未確認）':'未確認',remainingLabel:'締切時刻未確認（残り時間は計算できません）'};
+  const dateLabel=new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(ms));
+  const remaining=ms-now;
+  if(remaining<=0)return {tone:'closed',dateLabel,remainingLabel:'応募締切は終了しています'};
+  const minutes=Math.ceil(remaining/60000);
+  let label;
+  if(minutes<60)label=`${minutes}分`;
+  else{
+    const hours=Math.ceil(minutes/60),days=Math.floor(hours/24),rest=hours%24;
+    label=days?`${days}日${rest?`${rest}時間`:''}`:`${hours}時間`;
+  }
+  return {tone:remaining<=86400000?'soon':'open',dateLabel,remainingLabel:`締切まであと約${label}`};
+}
