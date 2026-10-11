@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "appVersion": "0.1.12",
   "sourceId": "otakarasouko-group",
-  "evidenceRunId": "38097804110",
-  "fetchedAt": "2026-10-11T00:17:26.815Z",
+  "evidenceRunId": "38100410783",
+  "fetchedAt": "2026-10-11T01:02:09.503Z",
   "updateMode": "毎日7:17ごろ（日本時間）に自動更新・検証失敗時は前回データを保持",
   "liveRunsVerified": 2,
   "fetchEvidence": [
     {
-      "startedAt": "2026-10-11T00:16:48.658Z",
-      "finishedAt": "2026-10-11T00:16:58.111Z",
+      "startedAt": "2026-10-11T01:01:28.988Z",
+      "finishedAt": "2026-10-11T01:01:39.342Z",
       "requests": [
         {
           "stage": "robots",
@@ -25,8 +25,8 @@
           "url": "https://www.otakarasouko.com/new_information/",
           "finalUrl": "https://www.otakarasouko.com/new_information/",
           "status": 200,
-          "bytes": 78976,
-          "sha256": "8a27544d54855b1efd61670c94a808e46ff23c8c68c606a1e979f55e7f7d04a6",
+          "bytes": 79312,
+          "sha256": "868202ae0accd92c9a9ef818e0c07b2821f85419ab7be51748de729384ec6742",
           "contentType": "text/html; charset=UTF-8"
         },
         {
@@ -34,8 +34,8 @@
           "url": "https://www.otakarasouko.com/information/103177275/",
           "finalUrl": "https://www.otakarasouko.com/information/103177275/",
           "status": 200,
-          "bytes": 98713,
-          "sha256": "8d63f4cf78cfda86f5984446f1cbd055a14a14e8f6f1c3c13469fc2f7fb62c7c",
+          "bytes": 99049,
+          "sha256": "a8bf58f218d8662e1342cbbf625a7fec21d14f8342df6c95c958b9cd50913b91",
           "contentType": "text/html; charset=UTF-8"
         },
         {
@@ -43,15 +43,15 @@
           "url": "https://www.otakarasouko.com/information/103171570/",
           "finalUrl": "https://www.otakarasouko.com/information/103171570/",
           "status": 200,
-          "bytes": 97721,
-          "sha256": "eda319fe72cae7ef9afa46c8361ccb01369e95ba159228f7fa760b465e7b6132",
+          "bytes": 98057,
+          "sha256": "562cf78832a8a8385b0d35c72e5e8bd4e886cbc70cd0ec3b137c21b40ae04178",
           "contentType": "text/html; charset=UTF-8"
         }
       ]
     },
     {
-      "startedAt": "2026-10-11T00:17:18.183Z",
-      "finishedAt": "2026-10-11T00:17:26.815Z",
+      "startedAt": "2026-10-11T01:01:59.435Z",
+      "finishedAt": "2026-10-11T01:02:09.503Z",
       "requests": [
         {
           "stage": "robots",
@@ -67,8 +67,8 @@
           "url": "https://www.otakarasouko.com/new_information/",
           "finalUrl": "https://www.otakarasouko.com/new_information/",
           "status": 200,
-          "bytes": 78976,
-          "sha256": "8a27544d54855b1efd61670c94a808e46ff23c8c68c606a1e979f55e7f7d04a6",
+          "bytes": 79312,
+          "sha256": "868202ae0accd92c9a9ef818e0c07b2821f85419ab7be51748de729384ec6742",
           "contentType": "text/html; charset=UTF-8"
         },
         {
@@ -76,8 +76,8 @@
           "url": "https://www.otakarasouko.com/information/103177275/",
           "finalUrl": "https://www.otakarasouko.com/information/103177275/",
           "status": 200,
-          "bytes": 98713,
-          "sha256": "8d63f4cf78cfda86f5984446f1cbd055a14a14e8f6f1c3c13469fc2f7fb62c7c",
+          "bytes": 99049,
+          "sha256": "a8bf58f218d8662e1342cbbf625a7fec21d14f8342df6c95c958b9cd50913b91",
           "contentType": "text/html; charset=UTF-8"
         },
         {
@@ -85,8 +85,8 @@
           "url": "https://www.otakarasouko.com/information/103171570/",
           "finalUrl": "https://www.otakarasouko.com/information/103171570/",
           "status": 200,
-          "bytes": 97721,
-          "sha256": "eda319fe72cae7ef9afa46c8361ccb01369e95ba159228f7fa760b465e7b6132",
+          "bytes": 98057,
+          "sha256": "562cf78832a8a8385b0d35c72e5e8bd4e886cbc70cd0ec3b137c21b40ae04178",
           "contentType": "text/html; charset=UTF-8"
         }
       ]
@@ -98,7 +98,7 @@
       "title": "【再版/アプリ会員様限定】ポケモンカードゲーム 2種 抽選販売に関して",
       "sourceName": "お宝創庫グループ",
       "sourceUrl": "https://www.otakarasouko.com/information/103177275/",
-      "fetchedAt": "2026-10-11T00:17:23.394Z",
+      "fetchedAt": "2026-10-11T01:02:05.038Z",
       "publishedDate": "2026-10-08",
       "entryPeriod": {
         "start": {
@@ -453,7 +453,7 @@
       "title": "【アプリ会員様限定】ポケモンカードゲーム MEGA「30th CELEBRATION カードセット 9種セット」抽選販売に関して",
       "sourceName": "お宝創庫グループ",
       "sourceUrl": "https://www.otakarasouko.com/information/103171570/",
-      "fetchedAt": "2026-10-11T00:17:26.111Z",
+      "fetchedAt": "2026-10-11T01:02:08.273Z",
       "publishedDate": "2026-10-08",
       "entryPeriod": {
         "start": {
