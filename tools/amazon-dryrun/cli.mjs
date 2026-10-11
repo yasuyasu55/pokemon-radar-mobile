@@ -4,6 +4,7 @@ import {spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {extractAmazon, TARGETS, EXTRACTOR_VERSION} from './extract.mjs';
+import {SEARCH_QUERIES,discoverAmazonAsins,mergeDiscovered,searchUrl} from './discover.mjs';
 const here=fileURLToPath(import.meta.url);
 const sha=b=>createHash('sha256').update(b).digest('hex');
 export function summarizeObservations(observations) {
@@ -11,8 +12,8 @@ export function summarizeObservations(observations) {
   return {acquisitionVerdict:ok?'OK':'FAILED',candidateCount:ok?observations.filter(o=>o.extraction?.candidate).length:null};
 }
 
-async function acquire(asin) {
-  let url=`https://www.amazon.co.jp/gp/product/${asin}`;
+async function fetchPage(requestedUrl) {
+  let url=requestedUrl;
   const startedAt=new Date().toISOString();
   try {
     for(let i=0;i<4;i++) {
@@ -25,34 +26,55 @@ async function acquire(asin) {
       const chunks=[];let size=0;
       for await(const chunk of r.body??[]) {size+=chunk.length;if(size>2*1024*1024)throw new Error('Body exceeds limit');chunks.push(chunk);}
       const buf=Buffer.concat(chunks),html=buf.toString('utf8');
-      const transport={asin,requestedUrl:`https://www.amazon.co.jp/gp/product/${asin}`,finalUrl:url,startedAt,finishedAt:new Date().toISOString(),status:r.status,bytes:buf.length,sha256:sha(buf),contentType:r.headers.get('content-type')};
-      if(r.status!==200)return {...transport,stage:'FETCH_FAILED',extraction:null};
-      const extraction=extractAmazon(html,asin);
-      return {...transport,stage:extraction.title?'PRODUCT_PARSED':'UNEXPECTED_RESPONSE',extraction};
+      return {ok:r.status===200,requestedUrl,finalUrl:url,startedAt,finishedAt:new Date().toISOString(),status:r.status,bytes:buf.length,sha256:sha(buf),contentType:r.headers.get('content-type'),html};
     }
     throw new Error('Too many redirects');
-  } catch(e) {return {asin,requestedUrl:`https://www.amazon.co.jp/gp/product/${asin}`,startedAt,finishedAt:new Date().toISOString(),stage:'FETCH_FAILED',error:e.message,extraction:null};}
+  } catch(e) {return {ok:false,requestedUrl,startedAt,finishedAt:new Date().toISOString(),error:e.message,html:null};}
+}
+
+async function discover(){
+  const searches=[];
+  for(const query of SEARCH_QUERIES){
+    const r=await fetchPage(searchUrl(query));
+    searches.push({query,status:r.status,stage:r.ok?'SEARCH_PARSED':'FETCH_FAILED',bytes:r.bytes,sha256:r.sha256,items:r.ok?discoverAmazonAsins(r.html):[],error:r.error});
+  }
+  return {searches,candidates:mergeDiscovered(searches)};
+}
+
+async function acquire(asin) {
+  const requestedUrl=`https://www.amazon.co.jp/gp/product/${asin}`;
+  const r=await fetchPage(requestedUrl);
+  const transport={asin,requestedUrl,finalUrl:r.finalUrl,startedAt:r.startedAt,finishedAt:r.finishedAt,status:r.status,bytes:r.bytes,sha256:r.sha256,contentType:r.contentType};
+  if(!r.ok)return {...transport,stage:'FETCH_FAILED',extraction:null,error:r.error};
+  const extraction=extractAmazon(r.html,asin);
+  return {...transport,stage:extraction.title?'PRODUCT_PARSED':'UNEXPECTED_RESPONSE',extraction};
 }
 
 async function run(out) {
-  const result={schemaVersion:1,mode:'LIVE',environment:process.env.GITHUB_ACTIONS?'GitHub Actions':'Development environment',extractorVersion:EXTRACTOR_VERSION,pid:process.pid,startedAt:new Date().toISOString(),observations:[]};
-  for(const asin of TARGETS)result.observations.push(await acquire(asin));
+  const result={schemaVersion:2,mode:'LIVE',environment:process.env.GITHUB_ACTIONS?'GitHub Actions':'Development environment',extractorVersion:EXTRACTOR_VERSION,pid:process.pid,startedAt:new Date().toISOString(),searches:[],discovered:[],observations:[]};
+  const d=await discover();result.searches=d.searches;result.discovered=d.candidates;
+  const asins=[...new Set([...d.candidates.map(x=>x.asin),...TARGETS])].slice(0,20);
+  for(const asin of asins)result.observations.push(await acquire(asin));
   result.finishedAt=new Date().toISOString();
-  Object.assign(result,summarizeObservations(result.observations));
+  const parsed=result.observations.filter(o=>o.stage==='PRODUCT_PARSED');
+  result.acquisitionVerdict=result.searches.every(s=>s.stage==='SEARCH_PARSED')&&parsed.length?'OK':'FAILED';
+  result.candidateCount=result.acquisitionVerdict==='OK'?parsed.filter(o=>o.extraction?.candidate).length:null;
   result.adoption='NOT_ENABLED';
   fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'result.json'),JSON.stringify(result,null,2)+'\n');
-  console.log(JSON.stringify({acquisition:result.acquisitionVerdict,candidateCount:result.candidateCount,observations:result.observations.map(o=>({asin:o.asin,status:o.status,stage:o.stage,title:o.extraction?.title,kind:o.extraction?.kind,reason:o.extraction?.reason}))}));
+  console.log(JSON.stringify({acquisition:result.acquisitionVerdict,discovered:result.discovered.map(x=>x.asin),candidateCount:result.candidateCount,searches:result.searches.map(s=>({query:s.query,status:s.status,stage:s.stage,count:s.items.length})),observations:result.observations.map(o=>({asin:o.asin,status:o.status,stage:o.stage,title:o.extraction?.title,kind:o.extraction?.kind,reason:o.extraction?.reason}))}));
   return result.acquisitionVerdict==='OK'?0:10;
 }
 
 function comparable(o) {return o.extraction;}
 export function compareRuns(a,b) {
   if(a.mode!=='LIVE'||b.mode!=='LIVE'||a.extractorVersion!==b.extractorVersion||a.pid===b.pid||a.acquisitionVerdict!=='OK'||b.acquisitionVerdict!=='OK')return {overall:'NOT_VERIFIED',adoption:'NOT_ENABLED',rows:[]};
-  const rows=TARGETS.map(asin=>{
+  const asins=[...new Set([...a.observations.map(x=>x.asin),...b.observations.map(x=>x.asin)])].sort();
+  const rows=asins.map(asin=>{
     const x=a.observations.find(o=>o.asin===asin),y=b.observations.find(o=>o.asin===asin);
     return {asin,bodySame:!!x&&!!y&&x.sha256===y.sha256,extractionSame:!!x&&!!y&&JSON.stringify(comparable(x))===JSON.stringify(comparable(y)),kind:y?.extraction?.kind??'UNKNOWN'};
   });
-  return {overall:rows.every(r=>r.extractionSame)?'CONSISTENT':'DIFFERENT',adoption:'NOT_ENABLED',rows};
+  const discoverySame=JSON.stringify(a.discovered?.map(x=>x.asin).sort()??[])===JSON.stringify(b.discovered?.map(x=>x.asin).sort()??[]);
+  return {overall:discoverySame&&rows.every(r=>r.extractionSame)?'CONSISTENT':'DIFFERENT',adoption:'NOT_ENABLED',discoverySame,rows};
 }
 async function all(out) {
   const codes=[];
