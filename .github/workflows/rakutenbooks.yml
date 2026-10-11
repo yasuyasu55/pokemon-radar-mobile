@@ -57,3 +57,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PUBLISHED_SHA: ${{ steps.commit.outputs.sha }}
         run: node tools/mobile/wait-publication.mjs "$PUBLISHED_SHA" data/snapshot.json
+
+# rerun-marker: direct-entry-final-check
