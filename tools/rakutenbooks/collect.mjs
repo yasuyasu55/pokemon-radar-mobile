@@ -51,31 +51,43 @@ function directProducts(html,text){
  if(!out.length)throw new Error('対象商品名を確認できません');
  return out.map(title=>({title,id:'title:'+stableTitleId(title)}));
 }
-function exactRangeLine(text,label){
- const line=text.split('\n').find(l=>l.startsWith(label));
- if(!line)throw new Error('日程欄を確認できません: '+label);
- const dts=findDateTimes(line);
+function tableRowText(html,label){
+ for(const m of html.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr\s*>/gi)){
+  const row=htmlToText(m[1]);
+  if(row.includes(label))return row.replace(/\n+/g,' ');
+ }
+ const fallback=htmlToText(html);
+ const lines=fallback.split('\n');
+ const i=lines.findIndex(l=>l.includes(label));
+ if(i>=0)return [lines[i],lines[i+1],lines[i+2]].filter(Boolean).join(' ');
+ throw new Error('日程欄を確認できません: '+label);
+}
+function exactRangeHtml(html,label){
+ const row=tableRowText(html,label);
+ const dts=findDateTimes(row);
  if(dts.length<2)throw new Error('期間を2点確認できません: '+label);
  const start=resolveDateTime(dts[0]), end=resolveDateTime(dts[1],dts[0].year);
  if(!start.iso||!end.iso||start.reason||end.reason)throw new Error('日程を確定できません: '+label);
- return {found:true,raw:line,start,end,deadlineOnly:false,status:end.inferredYear?'INFERRED':'CONFIRMED',notes:[...(start.notes||[]),...(end.notes||[])]};
+ return {found:true,raw:row,start,end,deadlineOnly:false,status:end.inferredYear?'INFERRED':'CONFIRMED',notes:[...(start.notes||[]),...(end.notes||[])]};
 }
-function exactSingleLine(text,label){
- const line=text.split('\n').find(l=>l.startsWith(label));
- if(!line)throw new Error('日程欄を確認できません: '+label);
- const dts=findDateTimes(line);
+function exactSingleHtml(html,label){
+ const row=tableRowText(html,label);
+ const dts=findDateTimes(row);
  if(!dts.length)throw new Error('日付を確認できません: '+label);
  const start=resolveDateTime(dts[0]);
  if(!start.date||start.reason)throw new Error('日付を確定できません: '+label);
- return {found:true,raw:line,start,end:null,deadlineOnly:false,single:true,approximate:/頃/.test(line),status:'CONFIRMED',notes:start.notes||[]};
+ return {found:true,raw:row,start,end:null,deadlineOnly:false,single:true,approximate:/頃/.test(row),status:'CONFIRMED',notes:start.notes||[]};
+}
+function exactShippingHtml(html){
+ const row=tableRowText(html,'商品発送予定日');
+ return row.replace(/^.*?商品発送予定日\s*(?:\||[:：])?\s*/,'').trim();
 }
 export function extractEntryCases(html,fetchedAt){
  const text=htmlToText(html);
  const products=directProducts(html,text);
- const entry=exactRangeLine(text,'抽選受付期間');
- const result=exactSingleLine(text,'当選連絡予定日');
- const shippingLine=text.split('\n').find(l=>/商品発送予定日/.test(l));
- if(!shippingLine)throw new Error('商品発送予定を確認できません');
+ const entry=exactRangeHtml(html,'抽選受付期間');
+ const result=exactSingleHtml(html,'当選連絡予定日');
+ const shippingLine=exactShippingHtml(html);
  const conditions=text.split('\n').filter(l=>/注文履歴|楽天会員|1商品あたり1回|1世帯1名|法人|転売目的|住所|送付先|配送方法|店頭受取|郵便局受取|当選時|落選/.test(l)&&l.length>=8&&l.length<=260).slice(0,18);
  if(!conditions.length)throw new Error('抽選条件を確認できません');
  return products.map(p=>({
@@ -83,7 +95,7 @@ export function extractEntryCases(html,fetchedAt){
   entryPeriod:entry,
   resultAnnouncement:{raw:result.raw,start:result.start,end:null,deadlineOnly:false,single:true,approximate:true,status:result.status,notes:['公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない']},
   purchasePeriod:null,
-  shippingPeriod:{raw:shippingLine.replace(/^.*?商品発送予定日\s*[:：|]?\s*/, '').trim(),start:null,end:null,approximate:false,status:'UNCONFIRMED',notes:['当選者への案内のみ。発送日を推測しない']},
+  shippingPeriod:{raw:shippingLine,start:null,end:null,approximate:false,status:'UNCONFIRMED',notes:['当選者への案内のみ。発送日を推測しない']},
   applicationMethod:'楽天ブックス公式のポケモンカード抽選受付ページからエントリー',webApplicationUrl:ENTRY,webApplicationLabel:'楽天ブックス公式 抽選受付ページ',
   applicationNote:'楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。',
   receivingMethod:'DELIVERY',receivingLabel:'配送',storeSelectionNote:'配送案件。コンビニ店頭受取・郵便局受取は利用不可',
