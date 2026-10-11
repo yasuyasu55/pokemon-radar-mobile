@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {discover,extractCase,compare,merge} from '../tools/rakutenbooks/collect.mjs';
+import {discover,extractCase,extractEntryCases,compare,merge} from '../tools/rakutenbooks/collect.mjs';
 import {entryState,matches} from '../model.mjs';
 
 const detail=(id='18595282',title='ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION')=>`<!doctype html><html><head><title>${title} - 楽天ブックス</title></head><body><h1>${title}</h1>
@@ -65,4 +65,23 @@ test('public UI names Rakuten Books and preserves raw approximate shipping text'
  assert.match(app,/resultAnnouncement\?\.notAfter/);
  assert.match(index,/モバイル閲覧版 0\.1\.17/);
  assert.match(index,/app\.mjs\?v=0117/);
+});
+
+
+test('official entry page can directly produce multiple stable delivery cases',()=>{
+ const html=`<html><body>
+ <p>抽選受付期間：2026年10月10日 10:00 〜 2026年10月18日 23:59</p>
+ <p>当選連絡予定日：2026年10月22日頃</p>
+ <p>商品発送予定日：当選者へご案内</p>
+ <p>楽天会員であること。1商品あたり1回まで。1世帯1名まで。転売目的不可。配送方法を確認。コンビニ店頭受取・郵便局受取は利用不可。</p>
+ <img src="https://books.rakuten.co.jp/event/game/card/entry/img/4521329360012.jpg" alt="ポケモンカードゲーム MEGA テストA">
+ <img src="https://books.rakuten.co.jp/event/game/card/entry/img/4521329360013.jpg" alt="ポケモンカードゲーム MEGA テストB">
+ </body></html>`;
+ const cases=extractEntryCases(html,'2026-10-11T00:00:00Z');
+ assert.equal(cases.length,2);
+ assert.deepEqual(cases.map(c=>c.id),['rakutenbooks:jan:4521329360012','rakutenbooks:jan:4521329360013']);
+ assert.equal(cases[0].entryPeriod.end.iso,'2026-10-18T23:59:00+09:00');
+ assert.equal(cases[0].resultAnnouncement.start.date,'2026-10-22');
+ assert.equal(cases[0].receivingMethod,'DELIVERY');
+ assert.equal(cases[0].sourceUrl,'https://books.rakuten.co.jp/event/game/card/entry/');
 });
