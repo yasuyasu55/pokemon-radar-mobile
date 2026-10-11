@@ -1,5 +1,6 @@
 export const jstDate = now => new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);
 export function entryState(c, now=Date.now()) {
+  if(c?.lotteryType==='INVITATION_SALE'&&c?.invitationState==='REQUESTABLE') return 'open';
   const start=c.entryPeriod?.start?.iso, end=c.entryPeriod?.end?.iso;
   if(!start||!end||!Number.isFinite(Date.parse(start))||!Number.isFinite(Date.parse(end))) return 'unknown';
   if(now<Date.parse(start)) return 'before';
