@@ -37,7 +37,7 @@ try {
   if ($currentHash -ne '7e97871a27324b22fe99d6c0ab69177d20f92b2042eafcf99f1ec78b76ef51f7' -and $currentHash -ne $newHash) { throw 'popup.htmlが確認済みの版と異なります。上書きせず終了しました。' }
   $backup = Join-Path $bridgeTarget ('_backup-amazon-bridge-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
   New-Item -ItemType Directory -Path $backup | Out-Null
-  $bridgeFiles = @('popup.html', 'amazonBridgePopup.js', 'amazonBridgeCapture.js')
+  $bridgeFiles = @('popup.html', 'amazonBridgePopup.js', 'amazonBridgeCapture.js', 'amazonSearchCapture.js')
   foreach ($name in $bridgeFiles) { $old = Join-Path $bridgeTarget $name; if (Test-Path -LiteralPath $old) { Copy-Item -LiteralPath $old -Destination (Join-Path $backup $name) } }
   try {
     foreach ($name in $bridgeFiles) { Copy-Item -LiteralPath (Join-Path $bridgeSource $name) -Destination (Join-Path $bridgeTarget $name) -Force }
