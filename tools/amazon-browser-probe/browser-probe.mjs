@@ -25,8 +25,10 @@ async function searchPage(page,query,pageNo){
     await page.waitForTimeout(1500);
     const title=await page.title();
     const bodySample=(await page.locator('body').innerText({timeout:5000}).catch(()=>'' )).slice(0,1200);
-    const blocked=/ロボットではありません|画像に表示されている文字|Enter the characters you see|captcha/i.test(title+'\n'+bodySample);
-    if(blocked)return {query,page:pageNo,url,status:response?.status()??null,stage:'BLOCKED',title,count:null,items:[]};
+    const status=response?.status()??null;
+    const blocked=status===403||status===429||status===503||/ロボットではありません|画像に表示されている文字|Enter the characters you see|captcha/i.test(title+'\n'+bodySample);
+    if(blocked)return {query,page:pageNo,url,status,stage:'BLOCKED',title,count:null,items:[]};
+    if(status!==200)return {query,page:pageNo,url,status,stage:'FETCH_FAILED',title,count:null,items:[]};
     const items=await page.locator('[data-component-type="s-search-result"][data-asin]').evaluateAll(nodes=>nodes.map(n=>{
       const asin=(n.getAttribute('data-asin')||'').toUpperCase();
       const title=n.querySelector('h2 span, h2')?.textContent?.trim()||'';
@@ -55,8 +57,10 @@ async function inspectProduct(context,candidate){
     await page.waitForTimeout(1200);
     const title=await page.locator('span#productTitle').innerText({timeout:6000}).catch(()=>null);
     const bodySample=(await page.locator('body').innerText({timeout:5000}).catch(()=>'' )).slice(0,1200);
-    const blocked=/ロボットではありません|画像に表示されている文字|Enter the characters you see|captcha/i.test((await page.title())+'\n'+bodySample);
-    if(blocked)return {asin:candidate.asin,url,status:response?.status()??null,stage:'BLOCKED',candidate:false};
+    const status=response?.status()??null;
+    const blocked=status===403||status===429||status===503||/ロボットではありません|画像に表示されている文字|Enter the characters you see|captcha/i.test((await page.title())+'\n'+bodySample);
+    if(blocked)return {asin:candidate.asin,url,status,stage:'BLOCKED',candidate:false};
+    if(status!==200)return {asin:candidate.asin,url,status,stage:'FETCH_FAILED',candidate:false};
     if(!title)return {asin:candidate.asin,url,status:response?.status()??null,stage:'UNEXPECTED_RESPONSE',candidate:false,reason:'商品名を確認できません'};
     const normalized=title.trim().normalize('NFKC');
     if(!/ポケモンカード/.test(normalized)||/オリパ|中古|福袋/.test(normalized))return {asin:candidate.asin,url,status:response?.status()??null,stage:'PRODUCT_PARSED',title:normalized,candidate:false,reason:'対象商品名ではありません'};
