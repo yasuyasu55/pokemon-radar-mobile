@@ -163,7 +163,7 @@ export function merge(previous,a,b){
  if(previous.schemaVersion!==1||!Array.isArray(previous.cases))throw new Error('前回形式不正');
  const ids=new Set();
  for(const c of b.cases){
-  if(c.sourceId!=='rakutenbooks'||!/^rakutenbooks:(?:\d+|jan:\d{13})$/.test(c.id)||ids.has(c.id)||new URL(c.sourceUrl).origin!=='https://books.rakuten.co.jp'||c.receivingMethod!=='DELIVERY'||!c.entryPeriod?.end?.iso||(!(c.purchasePeriod?.end?.iso)||c.id.startsWith('rakutenbooks:jan:'))===false||!c.conditions?.length)throw new Error('採用項目不正');
+  if(c.sourceId!=='rakutenbooks'||!/^rakutenbooks:(?:\d+|jan:\d{13})$/.test(c.id)||ids.has(c.id)||new URL(c.sourceUrl).origin!=='https://books.rakuten.co.jp'||c.receivingMethod!=='DELIVERY'||!c.entryPeriod?.end?.iso||(!c.id.startsWith('rakutenbooks:jan:')&&!c.purchasePeriod?.end?.iso)||!c.conditions?.length)throw new Error('採用項目不正');
   ids.add(c.id);
  }
  const kept=previous.cases.filter(c=>!ids.has(c.id)).map(c=>c.sourceId==='rakutenbooks'?{...c,retainedFromPrevious:true}:c);
