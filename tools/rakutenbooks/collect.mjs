@@ -34,14 +34,12 @@ function stableTitleId(title){
  return createHash('sha256').update(title.normalize('NFKC')).digest('hex').slice(0,16);
 }
 function directProducts(text){
- const lines=text.split('\n');
- const start=lines.findIndex(l=>/^対象商品\s*(?:\||$)/.test(l));
- if(start<0)throw new Error('対象商品欄を確認できません');
+ const lines=text.split('\n').map(l=>l.trim());
  const out=[];
- for(let i=start;i<Math.min(lines.length,start+12);i++){
-  const line=lines[i].replace(/^対象商品\s*\|?\s*/,'').trim();
-  if(!/ポケモンカードゲーム/.test(line))continue;
-  if(/^送付先について/.test(line))break;
+ for(const raw of lines){
+  const line=raw.replace(/^対象商品\s*\|?\s*/,'').trim();
+  if(!/^ポケモンカードゲーム\s+MEGA\s+/.test(line))continue;
+  if(/抽選販売|受付|注意事項/.test(line))continue;
   if(!out.includes(line))out.push(line);
  }
  if(!out.length)throw new Error('対象商品名を確認できません');
