@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {extractAmazon} from '../tools/amazon-dryrun/extract.mjs';
+import {discoverAmazonAsins,mergeDiscovered,searchUrl} from '../tools/amazon-dryrun/discover.mjs';
 import {compareRuns, summarizeObservations} from '../tools/amazon-dryrun/cli.mjs';
 import fs from 'node:fs';
 const asin='B0FSJXSPPX';
@@ -23,3 +24,16 @@ test('同一プロセス・取得失敗・抽出器の版差は照合成功に�
 test('抽出差・対象不足を検出',()=>{const b=run(2);b.observations[0].extraction.kind='INVITATION_SALE';assert.equal(compareRuns(run(1),b).overall,'DIFFERENT');b.observations=[];assert.equal(compareRuns(run(1),b).overall,'DIFFERENT');});
 test('Amazon検証にはschedule・書込み・公開工程がない',()=>{const w=fs.readFileSync(new URL('../.github/workflows/amazon-probe.yml',import.meta.url),'utf8');assert.match(w,/contents: read/);assert.doesNotMatch(w,/schedule:|contents: write|git push|deploy-pages|update-snapshot/);});
 test('HTTP200でも商品が読めなければ候補数を0件にしない',()=>{const observations=['B0FSJXSPPX','B0F18J2CJF'].map(asin=>({asin,stage:'UNEXPECTED_RESPONSE',extraction:{candidate:false}}));assert.deepEqual(summarizeObservations(observations),{acquisitionVerdict:'FAILED',candidateCount:null});assert.equal(summarizeObservations([]).candidateCount,null);});
+
+test('Amazon検索結果は候補ASIN発見だけを行い、案件確定しない',()=>{
+ const html='<div data-asin="B0AAAAAAAA"><h2>ポケモンカードゲーム テストBOX</h2></div><a href="/dp/B0BBBBBBBB">Pokemon Card Sample</a><div data-asin="B0CCCCCCCC">一般商品</div>';
+ const items=discoverAmazonAsins(html);
+ assert.deepEqual(items.map(x=>x.asin),['B0AAAAAAAA','B0BBBBBBBB']);
+ for(const x of items)assert.equal('candidate' in x,false);
+});
+test('複数検索語のASINを重複排除し検索語を保持',()=>{
+ const m=mergeDiscovered([{query:'ポケモンカード 抽選',items:[{asin:'B0AAAAAAAA',label:'ポケモンカード',source:'x'}]},{query:'ポケモンカード 招待',items:[{asin:'B0AAAAAAAA',label:'ポケモンカード',source:'x'},{asin:'B0BBBBBBBB',label:'ポケモンカード',source:'x'}]}]);
+ assert.deepEqual(m.map(x=>x.asin),['B0AAAAAAAA','B0BBBBBBBB']);
+ assert.deepEqual(m[0].queries,['ポケモンカード 抽選','ポケモンカード 招待']);
+ assert.match(searchUrl('ポケモンカード 抽選'),/^https:\/\/www\.amazon\.co\.jp\/s\?k=/);
+});
