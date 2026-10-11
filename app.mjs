@@ -213,7 +213,7 @@ function render(){
   const amazonOnly=$('amazon-only').checked;
   const visible=allCases.filter(c=>(!amazonOnly||c.sourceId==='official-amazon-jp')&&matches(c,filters,now)&&personalMatches(personal.get(c.id),pf));
   $('count').textContent=`${visible.length}件 / 全${allCases.length}件`;
-  $('filter-description').textContent=`表示条件：${filters.phases.length?filters.phases.map(x=>phaseLabels[x]).join('・'):'受付状態なし'}（締切済み除外） ＞ ${filters.receiving.length?filters.receiving.map(x=>receivingLabels[x]).join('・'):'受取方法すべて'}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}${amazonOnly?' ＞ Amazon招待だけ':''}${pf.favorite?' ＞ お気に入り':''}${pf.unapplied?' ＞ 未応募':''}`;
+  $('filter-description').textContent=`表示条件：${filters.phases.length?filters.phases.map(x=>phaseLabels[x]).join('・'):'受付状態すべて'}（締切済み除外） ＞ ${filters.receiving.length?filters.receiving.map(x=>receivingLabels[x]).join('・'):'受取方法すべて'}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}${amazonOnly?' ＞ Amazon招待だけ':''}${pf.favorite?' ＞ お気に入り':''}${pf.unapplied?' ＞ 未応募':''}`;
   renderCards($('cases'),visible,now,'<div class="empty"><strong>この条件に合う案件はありません</strong><p>読み込めた公式抽選案内と、個人用画面で保存したAmazonの確認結果が対象です。他の店舗に抽選がないことを意味しません。</p></div>');
 }
 $('store').addEventListener('input',render);

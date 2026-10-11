@@ -10,7 +10,8 @@ export function entryState(c, now=Date.now()) {
 export function matches(c, filters, now=Date.now()) {
   const state=entryState(c,now);
   const phases=Array.isArray(filters.phases)?filters.phases:['open','soon','unknown','before'];
-  if(!phases.includes(state))return false;
+  if(state==='closed')return false;
+  if(phases.length&&!phases.includes(state))return false;
   const receiving=Array.isArray(filters.receiving)?filters.receiving:filters.receiving&&filters.receiving!=='all'?[filters.receiving]:[];
   const effectiveReceivingMethod=c?.sourceId==='official-amazon-jp'&&c?.lotteryType==='INVITATION_SALE'?'DELIVERY':c.receivingMethod;
   if(receiving.length&&!receiving.some(kind=>kind==='delivery'?['DELIVERY','BOTH'].includes(effectiveReceivingMethod):kind==='store'?['STORE_ONLY','BOTH'].includes(effectiveReceivingMethod):kind==='unknown'?!['STORE_ONLY','DELIVERY','BOTH'].includes(effectiveReceivingMethod):false))return false;
