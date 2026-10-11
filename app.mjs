@@ -34,6 +34,7 @@ function updatePersonalStatus(){
 updatePersonalStatus();
 $('retry-sync').onclick=()=>personal.sync();
  $('unapplied-only').onchange=render;
+ $('amazon-only').onchange=render;
 function handlePersonalClick(e){
  const button=e.target.closest('button[data-personal]');if(!button)return;
  const article=button.closest('[data-id]');personal.toggle(article.dataset.id,button.dataset.personal);
@@ -78,13 +79,22 @@ function amazonCard(c,now){
  const record=personal.get(c.id),stale=now-Date.parse(c.fetchedAt)>86400000;
  const href=safeUrl(c.sourceUrl),auto=!!c.automatedDiscovery;
  const sourceLabel=auto?'Amazon · 招待販売（CRAWL STORM Xで確認）':'Amazon · 招待販売（PCで確認）';
- const statusLabel=auto?(stale?'確認から24時間以上 · 再確認が必要':'招待リクエスト受付を確認'):(stale?'確認から24時間以上 · 再確認が必要':'招待リクエストの操作を確認');
+ const invitationState=c.invitationState||'REQUESTABLE';
+ const invitationLabels={
+  REQUESTABLE:'⚡ すぐ応募可能',
+  REQUEST_SENT:'✓ Amazon側で応募済み確認',
+  INVITED_ONLY_UNCONFIRMED:'招待販売 · 状態確認が必要',
+  NONE:'招待受付表示なし'
+ };
+ const invitationLabel=invitationLabels[invitationState]||'招待状態未確認';
+ const statusLabel=stale?'確認から24時間以上 · 再確認が必要':invitationLabel;
+ const statusTone=invitationState==='REQUEST_SENT'?'':invitationState==='REQUESTABLE'?'amber':'gray';
  const sellerLabel=auto?'Amazon.co.jp（Chrome商品詳細で確認）':'Amazon.co.jp（PCで確認した時点）';
  const callout=auto?'CRAWL STORM Xが商品詳細ページで「招待をリクエスト」を確認しました。現在の受付状況はAmazonで最終確認してください。':'${esc(callout)}';
  const verifyText=auto?'CRAWL STORM XのChrome実ブラウザで商品詳細ページを確認した情報です。検索結果ページだけでは案件化していません。':'${esc(verifyText)}';
  const checkedLabel=auto?'Chrome確認':'PC確認';
  const observed=new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(c.fetchedAt));
- return `<article class="card" data-id="${esc(c.id)}"><div class="card-body"><p class="card-source">${esc(sourceLabel)}</p><div class="card-title"><h3>${esc(c.title)}</h3><button type="button" class="favorite-button ${record.favorite?'selected':''}" data-personal="favorite" aria-pressed="${!!record.favorite}" aria-label="${record.favorite?'お気に入りを解除':'お気に入りに追加'}">${record.favorite?'★':'☆'}</button></div><div class="applied-control"><button type="button" data-personal="applied" class="applied-button ${record.applied?'selected':''}" aria-pressed="${!!record.applied}">${record.applied?'✓ 応募済み（タップで戻す）':'応募済みにする'}</button><span>${record.appliedAt?'記録：'+esc(time(record.appliedAt))+' JST':'未応募'}</span></div><div class="badges"><span class="badge amber">${statusLabel}</span><span class="badge gray">受取条件未確認</span></div><div class="deadline unknown"><small>応募締切</small><strong>未確認</strong><p class="remaining">締切までの残り時間は計算できません</p></div><dl>${row('応募方法','Amazonの招待リクエスト')}${row('販売元',sellerLabel)}${row('確認日時',observed+' JST')}${row('当選通知・購入期限','本人への案内を確認')}${row('受取方法','未確認')}</dl><div class="callout">保存時点の商品欄に招待リクエストの操作があった記録です。現在の受付状況と本人の応募可否はAmazonで確認してください。</div><details class="conditions"><summary>応募・購入の注意を見る</summary><p>この記録の保存では応募されません。Amazonで手続きした後に「応募済みにする」を押してください。リクエストの有効期間を応募締切とは扱いません。</p></details>${href?`<a class="card-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">Amazonで招待リクエストを確認 ↗</a>`:''}<details class="display-supplementary"><summary>確認方法</summary><p>本人がPCのChromeで開いた商品欄を確認して保存した情報です。GitHubからの自動取得ではありません。定期再確認は行いません。</p></details></div><div class="card-bottom">${esc(checkedLabel)}：${esc(observed)} JST</div></article>`;
+ return `<article class="card" data-id="${esc(c.id)}"><div class="card-body"><p class="card-source">${esc(sourceLabel)}</p><div class="card-title"><h3>${esc(c.title)}</h3><button type="button" class="favorite-button ${record.favorite?'selected':''}" data-personal="favorite" aria-pressed="${!!record.favorite}" aria-label="${record.favorite?'お気に入りを解除':'お気に入りに追加'}">${record.favorite?'★':'☆'}</button></div><div class="applied-control"><button type="button" data-personal="applied" class="applied-button ${record.applied?'selected':''}" aria-pressed="${!!record.applied}">${record.applied?'✓ 応募済み（タップで戻す）':'応募済みにする'}</button><span>${record.appliedAt?'記録：'+esc(time(record.appliedAt))+' JST':'未応募'}</span></div><div class="badges"><span class="badge ${statusTone}">${esc(statusLabel)}</span><span class="badge gray">受取条件未確認</span></div><div class="deadline unknown"><small>応募締切</small><strong>未確認</strong><p class="remaining">締切までの残り時間は計算できません</p></div><dl>${row('Amazon状態',invitationLabel)}${row('応募方法','Amazonの招待リクエスト')}${row('販売元',sellerLabel)}${row('確認日時',observed+' JST')}${row('当選通知・購入期限','本人への案内を確認')}${row('受取方法','未確認')}</dl><div class="callout">保存時点の商品欄に招待リクエストの操作があった記録です。現在の受付状況と本人の応募可否はAmazonで確認してください。</div><details class="conditions"><summary>応募・購入の注意を見る</summary><p>この記録の保存では応募されません。Amazonで手続きした後に「応募済みにする」を押してください。リクエストの有効期間を応募締切とは扱いません。</p></details>${href?`<a class="card-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">Amazonで招待をリクエスト・確認 ↗</a>`:''}<details class="display-supplementary"><summary>確認方法</summary><p>本人がPCのChromeで開いた商品欄を確認して保存した情報です。GitHubからの自動取得ではありません。定期再確認は行いません。</p></details></div><div class="card-bottom">${esc(checkedLabel)}：${esc(observed)} JST</div></article>`;
 }
 function renderCards(container,cases,now,empty){
  const opened=[...container.querySelectorAll('article details[open]')].map(d=>[d.closest('[data-id]').dataset.id,[...d.closest('article').querySelectorAll('details')].indexOf(d)]);
@@ -109,9 +119,10 @@ function render(){
   $('favorite-count').textContent=favorites.length;
   renderCards($('favorite-cases'),favorites,now,'<div class="empty"><strong>お気に入りはまだありません</strong><p>案件の☆を押すと、ここにまとめて表示されます。</p></div>');
   const pf={unapplied:$('unapplied-only').checked};
-  const visible=allCases.filter(c=>matches(c,filters,now)&&personalMatches(personal.get(c.id),pf));
+  const amazonOnly=$('amazon-only').checked;
+  const visible=allCases.filter(c=>(!amazonOnly||c.sourceId==='official-amazon-jp')&&matches(c,filters,now)&&personalMatches(personal.get(c.id),pf));
   $('count').textContent=`${visible.length}件 / 全${allCases.length}件`;
-  $('filter-description').textContent=`表示条件：${$('phase').selectedOptions[0].text} ＞ ${filters.receiving.length?filters.receiving.map(x=>receivingLabels[x]).join('・'):'受取方法すべて'}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}${pf.favorite?' ＞ お気に入り':''}${pf.unapplied?' ＞ 未応募':''}`;
+  $('filter-description').textContent=`表示条件：${$('phase').selectedOptions[0].text} ＞ ${filters.receiving.length?filters.receiving.map(x=>receivingLabels[x]).join('・'):'受取方法すべて'}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}${amazonOnly?' ＞ Amazon招待だけ':''}${pf.favorite?' ＞ お気に入り':''}${pf.unapplied?' ＞ 未応募':''}`;
   renderCards($('cases'),visible,now,'<div class="empty"><strong>この条件に合う案件はありません</strong><p>読み込めた公式抽選案内と、個人用画面で保存したAmazonの確認結果が対象です。他の店舗に抽選がないことを意味しません。</p></div>');
 }
 for(const id of ['phase','store'])$(id).addEventListener(id==='store'?'input':'change',render);
