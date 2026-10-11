@@ -42,16 +42,32 @@ html[data-hide-details="true"] .display-supplementary{display:none!important}
 .favorites-panel{margin:18px 0;padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:#fff}.favorites-panel>summary{font-size:calc(18px * var(--text-scale,1.2));font-weight:700;color:var(--green);padding:8px 0}.favorites-panel[open]>summary{margin-bottom:12px}#favorite-cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}#favorite-cases .empty{grid-column:1/-1}@media(max-width:680px){#favorite-cases{grid-template-columns:minmax(0,1fr)}.favorites-panel{padding:14px 12px}}
 
 
-/* Friend distribution */
-.share-select{margin:0 0 14px}
-.share-select button{width:100%;min-height:46px;font-weight:700;border-style:dashed;background:#fff}
-.share-select button.selected{background:#e8f3ec;border-style:solid;border-color:var(--green);color:var(--green)}
-.share-panel{position:sticky;top:8px;z-index:20;background:#fff;border:2px solid var(--green);border-radius:16px;padding:14px 16px;margin:18px 0;box-shadow:0 6px 22px rgba(20,70,55,.12)}
+
+
+/* Generic case selection */
+.card-title{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:start;gap:12px}
+.card-title h3{grid-column:2;min-width:0}
+.card-title .favorite-button{grid-column:3;grid-row:1}
+.case-select{grid-column:1;grid-row:1;display:flex;align-items:center;justify-content:center;width:38px;height:38px;cursor:pointer;flex:none}
+.case-select input{position:absolute;opacity:0;pointer-events:none}
+.case-select-box{width:24px;height:24px;border:1.5px solid #9aa9a1;border-radius:2px;background:#fff;display:block;position:relative}
+.case-select input:checked + .case-select-box{background:var(--green);border-color:var(--green)}
+.case-select input:checked + .case-select-box::after{content:"";position:absolute;left:7px;top:3px;width:6px;height:12px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
+.case-select input:focus-visible + .case-select-box{outline:3px solid #68a98b;outline-offset:3px}
+html[data-case-selection-active="true"] .card:has(.case-select input:checked){border-color:var(--green);box-shadow:0 0 0 1px var(--green)}
+.share-panel{position:sticky;top:8px;z-index:20;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:16px 0;box-shadow:0 4px 18px rgba(20,70,55,.10)}
 .share-panel>div:first-child{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.share-panel>div:first-child strong{font-size:calc(17px * var(--text-scale,1.2));color:var(--green)}
-.share-panel>div:first-child span{font-size:calc(13px * var(--text-scale,1.2));color:var(--muted)}
+.share-panel>div:first-child strong{font-size:calc(16px * var(--text-scale,1.2));color:var(--ink)}
+.share-panel>div:first-child span{font-size:calc(12px * var(--text-scale,1.2));color:var(--muted)}
 .share-actions{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
 #share-selected{background:var(--green);color:#fff;border-color:var(--green);font-weight:700;flex:1 1 220px}
 #share-clear{flex:0 0 auto}
 #share-status{margin:8px 0 0;font-size:calc(12px * var(--text-scale,1.2));color:var(--muted)}
-@media(max-width:680px){.share-panel{top:4px;margin:12px 0}.share-actions{flex-direction:column}.share-actions button{width:100%}}
+@media(max-width:680px){
+  .card-title{grid-template-columns:auto minmax(0,1fr) auto;gap:10px}
+  .case-select{width:34px;height:34px}
+  .case-select-box{width:22px;height:22px}
+  .share-panel{top:4px;margin:12px 0}
+  .share-actions{flex-direction:column}
+  .share-actions button{width:100%}
+}
