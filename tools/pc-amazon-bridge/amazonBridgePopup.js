@@ -49,11 +49,12 @@ amazonSearchScanButton?.addEventListener('click',async()=>{
    finally{if(t?.id){try{await chrome.tabs.remove(t.id);}catch{}}}
   }
   if(!captures.length)throw new Error('候補商品を確認しましたが、招待販売として確定できる商品はありませんでした。');
-  const payload={version:1,query:discovery.result.query,observedAt:new Date().toISOString(),captures,checked};
-  const bytes=new TextEncoder().encode(JSON.stringify(payload));
-  const encoded=btoa(String.fromCharCode(...bytes)).replace(/\+/g,'-').replace(/\//g,'_');
-  await chrome.tabs.create({url:'https://pokemon-radar-personal.precious-masa1997.chatgpt.site/radar/index.html#amazon-search-scan='+encoded});
-  amazonSearchScanStatus.textContent=`確認完了：${captures.length}件の招待販売候補を個人用画面へ送ります。`;
+  for(const capture of captures){
+   const bytes=new TextEncoder().encode(JSON.stringify(capture));
+   const encoded=btoa(String.fromCharCode(...bytes)).replace(/\+/g,'-').replace(/\//g,'_');
+   await chrome.tabs.create({url:'https://pokemon-radar-personal.precious-masa1997.chatgpt.site/radar/index.html#amazon-capture='+encoded});
+  }
+  amazonSearchScanStatus.textContent=`確認完了：${captures.length}件の招待販売候補を個人用画面へ開きました。各画面で保存してください。`;
  }catch(e){amazonSearchScanStatus.textContent=e.message;}
  finally{
   for(const id of opened){try{await chrome.tabs.remove(id);}catch{}}
