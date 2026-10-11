@@ -62,6 +62,8 @@ function updateSharePanel(){
  const count=shareSelected.size;
  $('share-count').textContent=String(count);
  $('share-panel').hidden=count===0;
+ $('share-line').disabled=count===0;
+ $('share-copy').disabled=count===0;
  $('share-selected').disabled=count===0;
  document.documentElement.dataset.caseSelectionActive=String(count>0);
 }
@@ -80,6 +82,25 @@ function buildShareText(){
  return ['【ポケモン抽選・招待情報】','',...cases.map((c,i)=>shareCaseText(c,i+1))].join('\n\n');
 }
 $('share-clear').onclick=()=>{shareSelected.clear();render();};
+
+$('share-line').onclick=()=>{
+ const text=buildShareText();
+ if(!text||shareSelected.size===0)return;
+ $('share-status').textContent='LINEを開きます。送信先を選んでください。';
+ location.href='https://line.me/R/share?text='+encodeURIComponent(text);
+};
+
+$('share-copy').onclick=async()=>{
+ const text=buildShareText();
+ if(!text||shareSelected.size===0)return;
+ try{
+  await navigator.clipboard.writeText(text);
+  $('share-status').textContent='配信文をコピーしました。LINEなどへ貼り付けて送れます。';
+ }catch{
+  $('share-status').textContent='コピーできませんでした。その他で共有をお試しください。';
+ }
+};
+
 $('share-selected').onclick=async()=>{
  const text=buildShareText();
  if(!text||shareSelected.size===0)return;
@@ -90,12 +111,12 @@ $('share-selected').onclick=async()=>{
    $('share-status').textContent='共有しました。';
   }else{
    await navigator.clipboard.writeText(text);
-   $('share-status').textContent='共有文をコピーしました。LINEなどへ貼り付けて送れます。';
+   $('share-status').textContent='共有機能がないため配信文をコピーしました。';
   }
  }catch(e){
   if(e?.name==='AbortError'){$('share-status').textContent='共有をキャンセルしました。';return;}
-  try{await navigator.clipboard.writeText(text);$('share-status').textContent='共有文をコピーしました。LINEなどへ貼り付けて送れます。';}
-  catch{$('share-status').textContent='共有できませんでした。案件を減らして再度お試しください。';}
+  try{await navigator.clipboard.writeText(text);$('share-status').textContent='共有できなかったため配信文をコピーしました。';}
+  catch{$('share-status').textContent='共有できませんでした。';}
  }
 };
 try{showEvidence=localStorage.getItem('radar:hide-details')!==null?localStorage.getItem('radar:hide-details')==='false':localStorage.getItem('radar:show-evidence')==='true';}catch{}
