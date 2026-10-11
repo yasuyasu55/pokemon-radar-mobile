@@ -20,3 +20,21 @@ test('対象商品の可視購入欄だけを共有し、個人情報を返さ�
 test('中古欄・隠しボタン・第三者販売元・無効操作・別ASINを拒否',()=>{for(const o of [{used:true},{hidden:true},{seller:'他店'},{disabled:true},{linked:'B0F18J2CJF'},{invitation:false}])assert.equal(execute(o).ok,false);});
 test('Amazonの検索・他サイトでは動作しない',()=>{for(const url of ['https://www.amazon.co.jp/s?k=pokemon','https://evil.example/dp/B0FSJXSPPX'])assert.equal(execute({},url).ok,false);});
 test('PC側は既存の権限だけで、個人用画面へ限定した情報を送る',()=>{const popup=readFileSync(new URL('../tools/pc-amazon-bridge/amazonBridgePopup.js',import.meta.url),'utf8');assert.match(popup,/active:true,currentWindow:true/);assert.match(popup,/pokemon-radar-personal/);assert.doesNotMatch(popup,/cookies\.|document\.cookie|fetch\(|innerHTML/);});
+
+test('Amazon検索巡回PoCは検索結果だけで案件確定せず、個人情報を読まない',()=>{
+ const search=readFileSync(new URL('../tools/pc-amazon-bridge/amazonSearchCapture.js',import.meta.url),'utf8');
+ const popup=readFileSync(new URL('../tools/pc-amazon-bridge/amazonBridgePopup.js',import.meta.url),'utf8');
+ assert.match(search,/data-component-type="s-search-result"/);
+ assert.match(search,/found\.length>=12/);
+ assert.doesNotMatch(search,/document\.cookie|cookies\.|localStorage|sessionStorage/);
+ assert.doesNotMatch(search,/candidate\s*:/);
+ assert.match(popup,/amazonSearchCapture\.js/);
+ assert.match(popup,/amazonBridgeCapture\.js/);
+ assert.match(popup,/#amazon-capture=/);
+ assert.doesNotMatch(popup,/#amazon-search-scan=/);
+ assert.doesNotMatch(popup,/submit\.inviteButton.*click\(|\.click\(\).*invite/i);
+});
+test('Amazon検索巡回ファイルをWindows適用対象に含める',()=>{
+ const ps=readFileSync(new URL('../tools/pc-amazon-bridge/apply-bridge.ps1',import.meta.url),'utf8');
+ assert.match(ps,/amazonSearchCapture\.js/);
+});
