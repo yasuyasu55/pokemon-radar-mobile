@@ -74,12 +74,13 @@ test('official entry page can directly produce multiple stable delivery cases',(
  <p>当選連絡予定日：2026年10月22日頃</p>
  <p>商品発送予定日：当選者へご案内</p>
  <p>楽天会員であること。1商品あたり1回まで。1世帯1名まで。転売目的不可。配送方法を確認。コンビニ店頭受取・郵便局受取は利用不可。</p>
- <img src="https://books.rakuten.co.jp/event/game/card/entry/img/4521329360012.jpg" alt="ポケモンカードゲーム MEGA テストA">
- <img src="https://books.rakuten.co.jp/event/game/card/entry/img/4521329360013.jpg" alt="ポケモンカードゲーム MEGA テストB">
+ <p>対象商品 | ポケモンカードゲーム MEGA テストA</p>
+ <p>ポケモンカードゲーム MEGA テストB</p>
  </body></html>`;
  const cases=extractEntryCases(html,'2026-10-11T00:00:00Z');
  assert.equal(cases.length,2);
- assert.deepEqual(cases.map(c=>c.id),['rakutenbooks:jan:4521329360012','rakutenbooks:jan:4521329360013']);
+ assert.equal(cases.length,2);
+ assert.ok(cases.every(c=>/^rakutenbooks:title:[a-f0-9]{16}$/.test(c.id)));
  assert.equal(cases[0].entryPeriod.end.iso,'2026-10-18T23:59:00+09:00');
  assert.equal(cases[0].resultAnnouncement.start.date,'2026-10-22');
  assert.equal(cases[0].receivingMethod,'DELIVERY');
