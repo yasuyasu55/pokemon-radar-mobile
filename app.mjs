@@ -82,7 +82,12 @@ function amazonCard(c,now){
 }
 function renderCards(container,cases,now,empty){
  const opened=[...container.querySelectorAll('article details[open]')].map(d=>[d.closest('[data-id]').dataset.id,[...d.closest('article').querySelectorAll('details')].indexOf(d)]);
- container.innerHTML=cases.length?cases.map(c=>card(c,now)).join(''):empty;
+ const rendered=[];const failed=[];
+ for(const c of cases){
+  try{rendered.push(card(c,now));}
+  catch(e){failed.push(c?.id??'unknown');console.error('POKEMON RADAR card render failed',c?.id,e);}
+ }
+ container.innerHTML=rendered.length?rendered.join('')+(failed.length?'<div class="empty"><strong>'+failed.length+'件は表示情報不足で保留しました</strong><p>他の案件は通常どおり表示しています。</p></div>':''):(cases.length?'<div class="empty"><strong>案件データの表示に失敗しました</strong><p>データ自体は取得済みです。再読み込みしてください。</p></div>':empty);
  for(const [id,index] of opened){const article=[...container.querySelectorAll('[data-id]')].find(a=>a.dataset.id===id);const d=article?.querySelectorAll('details')[index];if(d)d.open=true;}
 }
 function render(){
