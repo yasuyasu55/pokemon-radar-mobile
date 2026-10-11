@@ -82,11 +82,31 @@ function buildShareText(){
 }
 $('share-clear').onclick=()=>{shareSelected.clear();render();};
 
-$('share-line').onclick=()=>{
+const isMobileLineShare=()=>/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+function updateLineShareButton(){
+ const button=$('share-line');
+ if(!button)return;
+ button.textContent=isMobileLineShare()?'LINEで送る':'LINE用にコピー';
+ button.title=isMobileLineShare()?'LINEアプリの送信先選択画面を開きます':'PC版LINEではURL共有が非対応のため、配信文をコピーします';
+}
+updateLineShareButton();
+
+$('share-line').onclick=async()=>{
  const text=buildShareText();
  if(!text||shareSelected.size===0)return;
- $('share-status').textContent='LINEを開きます。送信先を選んでください。';
- location.href='https://line.me/R/share?text='+encodeURIComponent(text);
+
+ if(isMobileLineShare()){
+  $('share-status').textContent='LINEを開きます。送信先を選んでください。';
+  location.href='https://line.me/R/share?text='+encodeURIComponent(text);
+  return;
+ }
+
+ try{
+  await navigator.clipboard.writeText(text);
+  $('share-status').textContent='LINE用の配信文をコピーしました。PC版LINEのトークへ貼り付けて送信してください。';
+ }catch{
+  $('share-status').textContent='コピーできませんでした。下の「コピー」をお試しください。';
+ }
 };
 
 $('share-copy').onclick=async()=>{
