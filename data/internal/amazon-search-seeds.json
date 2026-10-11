@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T02:29:50.967Z",
+  "generatedAt": "2026-10-11T05:36:49.218Z",
   "recentClosedDays": 14,
   "seeds": [
     {
@@ -103,6 +103,402 @@
         "otakarasouko:103171570"
       ],
       "sourceIds": [],
+      "priority": 100
+    },
+    {
+      "id": "seed:7040b7f258e4de99",
+      "query": "MEGA 30th CELEBRATION カードセット キモリ・アチャモ・ミズゴロウ",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCX36HP"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:d7c62164e3ee0c85",
+      "query": "MEGA 30th CELEBRATION カードセット キモリ・アチャモ・ミズゴロウ 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCX36HP"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:ea09d1c9a3cf0103",
+      "query": "MEGA 30th CELEBRATION カードセット キモリ・アチャモ・ミズゴロウ 抽選",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCX36HP"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:83e98ad369976253",
+      "query": "MEGA 30th CELEBRATION カードセット サルノリ・ヒバニー・メッソン",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCTRZ8L"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:97c2a8bdfbf691d9",
+      "query": "MEGA 30th CELEBRATION カードセット サルノリ・ヒバニー・メッソン 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCTRZ8L"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:08ce8641e12b818b",
+      "query": "MEGA 30th CELEBRATION カードセット サルノリ・ヒバニー・メッソン 抽選",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCTRZ8L"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:d206859e08802ee9",
+      "query": "MEGA 30th CELEBRATION カードセット チコリータ・ヒノアラシ・ワニノコ",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCC7W7Q"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:2c8689afec11340f",
+      "query": "MEGA 30th CELEBRATION カードセット チコリータ・ヒノアラシ・ワニノコ 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCC7W7Q"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:5395ddef4f909622",
+      "query": "MEGA 30th CELEBRATION カードセット チコリータ・ヒノアラシ・ワニノコ 抽選",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCC7W7Q"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:9ba0d9a5292d7b1f",
+      "query": "MEGA 30th CELEBRATION カードセット ツタージャ・ポカブ・ミジュマル",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCZ1VDC"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:848f4ee512f810ba",
+      "query": "MEGA 30th CELEBRATION カードセット ツタージャ・ポカブ・ミジュマル 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCZ1VDC"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:e33549254c65aaba",
+      "query": "MEGA 30th CELEBRATION カードセット ツタージャ・ポカブ・ミジュマル 抽選",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCZ1VDC"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:473ed8280ce779a6",
+      "query": "MEGA 30th CELEBRATION カードセット ナエトル・ヒコザル・ポッチャマ",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCX46KQ"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:1bffc12524460d40",
+      "query": "MEGA 30th CELEBRATION カードセット ナエトル・ヒコザル・ポッチャマ 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCX46KQ"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:8a9a7f23c81c1d30",
+      "query": "MEGA 30th CELEBRATION カードセット ナエトル・ヒコザル・ポッチャマ 抽選",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCX46KQ"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:40812d4f6b841583",
+      "query": "MEGA 30th CELEBRATION カードセット ニャオハ・ホゲータ・クワッス",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCT83HB"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:4c3f487c7d7c0253",
+      "query": "MEGA 30th CELEBRATION カードセット ニャオハ・ホゲータ・クワッス 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCT83HB"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:4da43a774d1928d2",
+      "query": "MEGA 30th CELEBRATION カードセット ニャオハ・ホゲータ・クワッス 抽選",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCT83HB"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:da8ff4a4bc0753e7",
+      "query": "MEGA 30th CELEBRATION カードセット ハリマロン・フォッコ・ケロマツ",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCSGX8Y"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:8f40d55b27e24557",
+      "query": "MEGA 30th CELEBRATION カードセット ハリマロン・フォッコ・ケロマツ 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCSGX8Y"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:213069e150ae383e",
+      "query": "MEGA 30th CELEBRATION カードセット ハリマロン・フォッコ・ケロマツ 抽選",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCSGX8Y"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:ebcb9097e35f4dfb",
+      "query": "MEGA 30th CELEBRATION カードセット フシギダネ・ヒトカゲ・ゼニガメ",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCYMRGL"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:c24c635f88cb3c95",
+      "query": "MEGA 30th CELEBRATION カードセット フシギダネ・ヒトカゲ・ゼニガメ 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCYMRGL"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:6ab13cb24f594b7f",
+      "query": "MEGA 30th CELEBRATION カードセット フシギダネ・ヒトカゲ・ゼニガメ 抽選",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCYMRGL"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:4697fde115f29482",
+      "query": "MEGA 30th CELEBRATION カードセット モクロー・ニャビー・アシマリ",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCPF84C"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:cee8a8dac3c7a340",
+      "query": "MEGA 30th CELEBRATION カードセット モクロー・ニャビー・アシマリ 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCPF84C"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:33675086e846c87b",
+      "query": "MEGA 30th CELEBRATION カードセット モクロー・ニャビー・アシマリ 抽選",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCPF84C"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:d3be97ead366a82c",
+      "query": "MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCM4BCZ"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:8e0b6bf80a238d7f",
+      "query": "MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCM4BCZ"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:26e2fb1b46eea1ef",
+      "query": "MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー 抽選",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCM4BCZ"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:d56562b443c7245e",
+      "query": "MEGA ハイクラスパック MEGAドリームex BOX",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0FLCWJ1VK"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:3f6912849bf52018",
+      "query": "MEGA ハイクラスパック MEGAドリームex BOX 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0FLCWJ1VK"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:0580a337ab3ffe7a",
+      "query": "MEGA ハイクラスパック MEGAドリームex BOX 抽選",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0FLCWJ1VK"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
       "priority": 100
     },
     {
