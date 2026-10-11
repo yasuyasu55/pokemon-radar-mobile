@@ -1,0 +1,38 @@
+name: Amazon search discovery probe
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/amazon-dryrun/**'
+      - 'tests/amazon.test.mjs'
+      - '.github/workflows/amazon-discovery-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: amazon-discovery-probe
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run all tests
+        run: node --test tests/*.test.mjs
+      - name: Search discovery and product verification twice
+        run: node tools/amazon-dryrun/cli.mjs all evidence/amazon-discovery
+      - name: Save structured evidence only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: amazon-search-discovery-evidence
+          path: |
+            evidence/amazon-discovery/run-*/result.json
+            evidence/amazon-discovery/compare.json
+            evidence/amazon-discovery/SUMMARY.md
+          if-no-files-found: warn
+          retention-days: 7
