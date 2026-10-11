@@ -8,8 +8,11 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/update-otakara.yml'
-      - 'tools/**'
-      - 'tests/**'
+      - 'tools/otakara-dryrun/**'
+      - 'tools/mobile/**'
+      - 'tests/deadline.test.mjs'
+      - 'tests/update-snapshot.test.mjs'
+      - 'tests/fixtures/**'
 
 permissions:
   contents: read
