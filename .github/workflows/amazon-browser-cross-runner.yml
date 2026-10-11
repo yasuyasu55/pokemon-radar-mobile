@@ -1,0 +1,41 @@
+name: Amazon Chromium cross-runner probe
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/amazon-browser-cross-runner.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium temporarily
+        shell: bash
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+      - name: Run Amazon Chromium probe
+        shell: bash
+        run: node tools/amazon-browser-probe/browser-probe.mjs evidence/amazon-browser-cross-${{ runner.os }}
+      - name: Save structured evidence only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: amazon-browser-cross-${{ runner.os }}
+          path: |
+            evidence/amazon-browser-cross-${{ runner.os }}/result.json
+            evidence/amazon-browser-cross-${{ runner.os }}/SUMMARY.md
+          if-no-files-found: warn
+          retention-days: 7
