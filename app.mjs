@@ -207,7 +207,7 @@ function render(){
   $('open-count').textContent=snapshot?snapshot.cases.filter(c=>['open','soon'].includes(entryState(c,now))).length:'未確認';
   $('soon-count').textContent=snapshot?snapshot.cases.filter(c=>entryState(c,now)==='soon').length:'未確認';
   const sources=[...new Set((snapshot?.cases??[]).map(c=>c.sourceId||'otakara'))];
-  const names={otakara:'お宝創庫',cardlabo:'カードラボ',pokemoncenter:'ポケモンセンター',rakutenbooks:'楽天ブックス',geo:'GEO','shibuya-tsutaya':'SHIBUYA TSUTAYA','official-amazon-jp':'Amazon'};
+  const names={otakara:'お宝創庫',cardlabo:'カードラボ',pokemoncenter:'ポケモンセンター',rakutenbooks:'楽天ブックス',geo:'GEO','shibuya-tsutaya':'SHIBUYA TSUTAYA',furuichi:'ふるいち／古本市場','official-amazon-jp':'Amazon'};
   $('source-count').textContent=sources.length+' / '+sources.map(x=>names[x]||x).join('・');
   const favorites=favoriteCases(allCases,personal.data.records);
   $('favorite-count').textContent=favorites.length;
