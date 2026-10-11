@@ -9,9 +9,8 @@ export function entryState(c, now=Date.now()) {
 }
 export function matches(c, filters, now=Date.now()) {
   const state=entryState(c,now);
-  if(filters.phase==='open'&&!['open','soon'].includes(state))return false;
-  if(filters.phase==='soon'&&state!=='soon')return false;
-  if(filters.phase==='closed'&&state!=='closed')return false;
+  const phases=Array.isArray(filters.phases)&&filters.phases.length?filters.phases:['open','soon','unknown','before'];
+  if(!phases.includes(state))return false;
   const receiving=Array.isArray(filters.receiving)?filters.receiving:filters.receiving&&filters.receiving!=='all'?[filters.receiving]:[];
   if(receiving.length&&!receiving.some(kind=>kind==='delivery'?['DELIVERY','BOTH'].includes(c.receivingMethod):kind==='store'?['STORE_ONLY','BOTH'].includes(c.receivingMethod):kind==='unknown'?!['STORE_ONLY','DELIVERY','BOTH'].includes(c.receivingMethod):false))return false;
   const q=(filters.store||'').trim().toLocaleLowerCase();
