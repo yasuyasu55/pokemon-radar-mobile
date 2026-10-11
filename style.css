@@ -84,3 +84,18 @@ html[data-case-selection-active="true"] .card:has(.case-select input:checked){bo
 .phase-options label:has(input:checked){background:#e8f3ec;border-color:var(--green);color:var(--green)}
 #reset-phase{margin-top:12px;font-size:calc(13px * var(--text-scale,1.2))}
 .filter-note{margin:8px 0 0;color:var(--muted);font-size:calc(12px * var(--text-scale,1.2))}
+
+/* Compact mobile selection toolbar; reset width-oriented flex bases. */
+@media(max-width:680px){
+ html[data-case-selection-active="true"] main{padding-bottom:calc(150px + env(safe-area-inset-bottom,0px))}
+ html[data-case-selection-active="true"]{scroll-padding-bottom:calc(150px + env(safe-area-inset-bottom,0px))}
+ #share-panel{position:fixed;top:auto;bottom:0;left:0;right:0;z-index:50;margin:0;border-radius:14px 14px 0 0;padding:8px 12px calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -4px 18px rgba(20,70,55,.12)}
+ #share-panel>div:first-child{min-height:44px;padding-right:90px}
+ #share-panel>div:first-child strong{font-size:16px;line-height:1.4}
+ #share-panel>div:first-child span{display:none}
+ #share-panel .share-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:4px}
+ #share-panel .share-actions button{flex:0 1 auto;width:100%;min-width:0;height:44px;min-height:44px;padding:6px 3px;font-size:13px;line-height:1.4;border-radius:8px}
+ #share-panel #share-clear{position:absolute;top:8px;right:12px;width:auto;padding:8px;font-size:13px;background:transparent;border-color:transparent}
+ #share-status{font-size:12px;line-height:1.5;margin:6px 0 0}
+ #share-status:empty{display:none}
+}
