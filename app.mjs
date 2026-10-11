@@ -114,15 +114,11 @@ const defaultPhases=['open','soon','unknown','before'];
 const phaseLabels={open:'受付中',soon:'24時間以内に締切',unknown:'期間未確認',before:'応募開始前'};
 try{
  const saved=JSON.parse(localStorage.getItem('radar:phase-filter')||'null');
- if(Array.isArray(saved)&&saved.length)phaseControls.forEach(n=>n.checked=saved.includes(n.value));
+ if(Array.isArray(saved))phaseControls.forEach(n=>n.checked=saved.includes(n.value));
 }catch{}
 const selectedPhases=()=>phaseControls.filter(n=>n.checked).map(n=>n.value);
 function phaseChanged(){
- let selected=selectedPhases();
- if(!selected.length){
-  phaseControls.forEach(n=>n.checked=defaultPhases.includes(n.value));
-  selected=selectedPhases();
- }
+ const selected=selectedPhases();
  try{localStorage.setItem('radar:phase-filter',JSON.stringify(selected));}catch{}
  render();
 }
@@ -217,7 +213,7 @@ function render(){
   const amazonOnly=$('amazon-only').checked;
   const visible=allCases.filter(c=>(!amazonOnly||c.sourceId==='official-amazon-jp')&&matches(c,filters,now)&&personalMatches(personal.get(c.id),pf));
   $('count').textContent=`${visible.length}件 / 全${allCases.length}件`;
-  $('filter-description').textContent=`表示条件：${filters.phases.map(x=>phaseLabels[x]).join('・')}（締切済み除外） ＞ ${filters.receiving.length?filters.receiving.map(x=>receivingLabels[x]).join('・'):'受取方法すべて'}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}${amazonOnly?' ＞ Amazon招待だけ':''}${pf.favorite?' ＞ お気に入り':''}${pf.unapplied?' ＞ 未応募':''}`;
+  $('filter-description').textContent=`表示条件：${filters.phases.length?filters.phases.map(x=>phaseLabels[x]).join('・'):'受付状態なし'}（締切済み除外） ＞ ${filters.receiving.length?filters.receiving.map(x=>receivingLabels[x]).join('・'):'受取方法すべて'}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}${amazonOnly?' ＞ Amazon招待だけ':''}${pf.favorite?' ＞ お気に入り':''}${pf.unapplied?' ＞ 未応募':''}`;
   renderCards($('cases'),visible,now,'<div class="empty"><strong>この条件に合う案件はありません</strong><p>読み込めた公式抽選案内と、個人用画面で保存したAmazonの確認結果が対象です。他の店舗に抽選がないことを意味しません。</p></div>');
 }
 $('store').addEventListener('input',render);
