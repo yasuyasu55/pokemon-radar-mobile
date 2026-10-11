@@ -6,7 +6,8 @@ import {createHttpsFetcher,parseRobots,isPathAllowed} from '../otakara-dryrun/co
 import {extractAnchors,extractTitles,htmlToText,decodeBody} from '../otakara-dryrun/core/htmlText.mjs';
 import {parsePeriodAfterLabel} from '../otakara-dryrun/core/dates.mjs';
 
-export const ENTRY='https://books.rakuten.co.jp/event/game/card/entry/index-sp.html?slide=modal';
+export const ENTRY='https://books.rakuten.co.jp/event/game/card/entry/';
+export const ENTRY_LEGACY='https://books.rakuten.co.jp/event/game/card/entry/index-sp.html?slide=modal';
 export const SEARCH='https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8';
 export const MAX_DETAILS=30;
 
@@ -26,6 +27,47 @@ export function discover(html,base=ENTRY){
   if(!out.some(x=>x.id===m[1]))out.push({id:m[1],url:u.href,label});
  }
  return out;
+}
+
+function imageProducts(html){
+ const out=[];
+ for(const m of html.matchAll(/<img\b[^>]*>/gi)){
+  const tag=m[0];
+  const src=(tag.match(/\bsrc\s*=\s*["']([^"']+)["']/i)?.[1]??'').normalize('NFKC');
+  const alt=decodeBody(Buffer.from(tag.match(/\balt\s*=\s*["']([^"']*)["']/i)?.[1]??''),'text/plain; charset=utf-8').text.normalize('NFKC').replace(/\s+/g,' ').trim();
+  const jan=src.match(/\/(\d{13})\.(?:jpe?g|png|webp)(?:[?#]|$)/i)?.[1];
+  if(!jan||!/ポケモンカードゲーム/.test(alt))continue;
+  if(!out.some(x=>x.jan===jan))out.push({jan,title:alt});
+ }
+ return out;
+}
+
+export function extractEntryCases(html,fetchedAt){
+ const text=htmlToText(html);
+ const products=imageProducts(html);
+ if(!products.length)throw new Error('抽選受付ページの商品を特定できません');
+ const entry=requiredPeriod(text,'抽選受付期間\\s*[:：|]?');
+ const result=parsePeriodAfterLabel(text,'当選連絡予定日\\s*[:：|]?');
+ if(!result.found||!result.start?.date)throw new Error('当選連絡予定日を確認できません');
+ const shippingLine=text.split('\n').find(l=>/商品発送予定日/.test(l));
+ if(!shippingLine)throw new Error('商品発送予定を確認できません');
+ const conditions=text.split('\n').filter(l=>/注文履歴|楽天会員|1商品あたり1回|1世帯1名|法人|転売目的|住所|送付先|配送方法|店頭受取|郵便局受取|当選時|落選/.test(l)&&l.length>=8&&l.length<=260).slice(0,18);
+ if(!conditions.length)throw new Error('抽選条件を確認できません');
+ return products.map(p=>({
+  id:'rakutenbooks:jan:'+p.jan,sourceId:'rakutenbooks',title:p.title,sourceName:'楽天ブックス',sourceUrl:ENTRY,fetchedAt,publishedDate:null,
+  entryPeriod:entry,
+  resultAnnouncement:{raw:result.raw,start:result.start,end:null,deadlineOnly:false,single:true,approximate:true,status:result.status,notes:['公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない']},
+  purchasePeriod:null,
+  shippingPeriod:{raw:shippingLine.replace(/^.*?商品発送予定日\s*[:：|]?\s*/, '').trim(),start:null,end:null,approximate:false,status:'UNCONFIRMED',notes:['当選者への案内のみ。発送日を推測しない']},
+  applicationMethod:'楽天ブックス公式のポケモンカード抽選受付ページからエントリー',webApplicationUrl:ENTRY,webApplicationLabel:'楽天ブックス公式 抽選受付ページ',
+  applicationNote:'楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。',
+  receivingMethod:'DELIVERY',receivingLabel:'配送',storeSelectionNote:'配送案件。コンビニ店頭受取・郵便局受取は利用不可',
+  resultNote:'当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認',
+  stores:[],prices:[],conditions:[...new Set(conditions)],handoverRestrictions:[],
+  unknowns:['あなたの楽天会員としての応募資格・応募状況','当選メールの正確な送信時刻','商品発送の具体的な日付'],
+  evidence:{entry:entry.raw,result:result.raw,shipping:shippingLine,jan:p.jan},
+  verification:'楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合'
+ }));
 }
 function requiredPeriod(text,label){
  const p=parsePeriodAfterLabel(text,label);
@@ -87,24 +129,28 @@ export async function collect(fetcher){
    return raw(url);
   }
   const entryHtml=await allowed(ENTRY);
-  let candidates=discover(entryHtml,ENTRY),discovery='OFFICIAL_LOTTERY_ENTRY';
+  const entryCases=extractEntryCases(entryHtml,new Date().toISOString());
+  let candidates=discover(entryHtml,ENTRY),discovery='OFFICIAL_LOTTERY_ENTRY_DIRECT';
   if(!candidates.length){
    const searchHtml=await allowed(SEARCH);
-   candidates=discover(searchHtml,SEARCH);discovery='OFFICIAL_SEARCH_FALLBACK';
+   candidates=discover(searchHtml,SEARCH);discovery='OFFICIAL_ENTRY_PLUS_SEARCH';
   }
-  if(!candidates.length)throw new Error('公式ページから商品候補を発見できません。0件とは扱いません');
+  if(!candidates.length&&!entryCases.length)throw new Error('公式ページから商品候補を発見できません。0件とは扱いません');
   const parsed=[],rejected=[];
   for(const c of candidates.slice(0,MAX_DETAILS)){
    try{parsed.push(extractCase(await allowed(c.url),c.url,new Date().toISOString()));}
    catch(e){rejected.push({id:c.id,url:c.url,reason:e.message});}
   }
-  if(!parsed.length)throw new Error('抽選販売スケジュールを検証できる商品が0件。前回データを保持');
-  const latest=parsed.map(c=>c.entryPeriod.end.iso).sort().at(-1);
-  const cases=parsed.filter(c=>c.entryPeriod.end.iso===latest).sort((a,b)=>a.id.localeCompare(b.id));
-  if(!cases.length)throw new Error('最新抽選日程の案件を確定できません');
+  const merged=new Map();
+  for(const item of [...entryCases,...parsed]){
+   const key=item.title.normalize('NFKC').replace(/【[^】]*】|\s+/g,'').toLowerCase();
+   if(!merged.has(key)||item.id.startsWith('rakutenbooks:jan:'))merged.set(key,item);
+  }
+  const cases=[...merged.values()].sort((a,b)=>a.id.localeCompare(b.id));
+  if(!cases.length)throw new Error('楽天ブックス抽選案件を確定できません');
   return {ok:true,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),
-   coverage:'楽天ブックス公式のポケモンカード抽選入口を確認。入口HTMLに商品リンクが無い場合は公式検索を発見補助にし、商品詳細で抽選販売スケジュールを検証した最新日程の案件のみ採用',
-   discovery,candidates:candidates.length,checked:Math.min(candidates.length,MAX_DETAILS),cases,rejected,ledger};
+   coverage:'楽天ブックス公式のポケモンカード抽選受付ページを直接案件化。受付ページの商品コード・抽選期間・当選連絡予定日を採用し、公式検索と商品詳細の抽選販売情報も補助的に統合',
+   discovery,candidates:candidates.length,entryCases:entryCases.length,checked:Math.min(candidates.length,MAX_DETAILS),cases,rejected,ledger};
  }catch(e){return {ok:false,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),error:e.message,cases:null,ledger};}
 }
 const normalized=r=>JSON.stringify(r.cases.map(({fetchedAt,...c})=>c).sort((a,b)=>a.id.localeCompare(b.id)));
@@ -117,7 +163,7 @@ export function merge(previous,a,b){
  if(previous.schemaVersion!==1||!Array.isArray(previous.cases))throw new Error('前回形式不正');
  const ids=new Set();
  for(const c of b.cases){
-  if(c.sourceId!=='rakutenbooks'||!/^rakutenbooks:\d+$/.test(c.id)||ids.has(c.id)||new URL(c.sourceUrl).origin!=='https://books.rakuten.co.jp'||c.receivingMethod!=='DELIVERY'||!c.entryPeriod?.end?.iso||!c.purchasePeriod?.end?.iso||!c.conditions?.length)throw new Error('採用項目不正');
+  if(c.sourceId!=='rakutenbooks'||!/^rakutenbooks:(?:\d+|jan:\d{13})$/.test(c.id)||ids.has(c.id)||new URL(c.sourceUrl).origin!=='https://books.rakuten.co.jp'||c.receivingMethod!=='DELIVERY'||!c.entryPeriod?.end?.iso||!c.purchasePeriod?.end?.iso||!c.conditions?.length)throw new Error('採用項目不正');
   ids.add(c.id);
  }
  const kept=previous.cases.filter(c=>!ids.has(c.id)).map(c=>c.sourceId==='rakutenbooks'?{...c,retainedFromPrevious:true}:c);
