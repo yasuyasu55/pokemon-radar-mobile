@@ -33,7 +33,7 @@ export function discover(html,base=ENTRY){
 function stableTitleId(title){
  return createHash('sha256').update(title.normalize('NFKC')).digest('hex').slice(0,16);
 }
-function directProducts(text){
+function directProducts(html,text){
  const lines=text.split('\n').map(l=>l.trim());
  const out=[];
  for(const raw of lines){
@@ -41,6 +41,12 @@ function directProducts(text){
   if(!/^ポケモンカードゲーム\s+MEGA\s+/.test(line))continue;
   if(/抽選販売|受付|注意事項/.test(line))continue;
   if(!out.includes(line))out.push(line);
+ }
+ for(const m of html.matchAll(/<img\b[^>]*\balt\s*=\s*["']([^"']+)["'][^>]*>/gi)){
+  const title=decodeEntities(m[1]).normalize('NFKC').replace(/\s+/g,' ').trim();
+  if(!/^ポケモンカードゲーム\s+MEGA\s+/.test(title))continue;
+  if(/抽選販売|受付|注意事項/.test(title))continue;
+  if(!out.includes(title))out.push(title);
  }
  if(!out.length)throw new Error('対象商品名を確認できません');
  return out.map(title=>({title,id:'title:'+stableTitleId(title)}));
@@ -65,7 +71,7 @@ function exactSingleLine(text,label){
 }
 export function extractEntryCases(html,fetchedAt){
  const text=htmlToText(html);
- const products=directProducts(text);
+ const products=directProducts(html,text);
  const entry=exactRangeLine(text,'抽選受付期間');
  const result=exactSingleLine(text,'当選連絡予定日');
  const shippingLine=text.split('\n').find(l=>/商品発送予定日/.test(l));
