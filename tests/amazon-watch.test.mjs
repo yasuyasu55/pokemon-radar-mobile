@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {buildSeeds,buildStormHandoff} from '../tools/amazon-watch/build-seeds.mjs';
+import {mergeDiscoveredAsins,stormBatchInput} from '../tools/amazon-watch/asin-pool.mjs';
 
 test('recent concrete lottery cases become Amazon discovery seeds',()=>{
  const snapshot={cases:[
@@ -23,4 +24,31 @@ test('CRAWL STORM handoff contains only live ASIN pool items',()=>{
  assert.equal(out.items.length,1);
  assert.equal(out.items[0].url,'https://www.amazon.co.jp/dp/B0ABCDEFGHI');
  assert.equal(out.items[0].priority,90);
+});
+
+
+test('discovered ASINs are deduplicated and kept for fixed monitoring',()=>{
+ const pool={schemaVersion:1,items:[{asin:'B0ABCDEFGHI',state:'watching',queries:['old'],firstSeenAt:'x'}]};
+ const out=mergeDiscoveredAsins(pool,[
+  {asin:'B0ABCDEFGHI',query:'MEGA 招待',title:'商品A'},
+  {asin:'B0ZZZZZZZZZ',query:'MEGA 抽選',title:'商品B'},
+  {asin:'bad',query:'x'}
+ ],{now:new Date('2026-10-11T00:00:00Z')});
+ assert.equal(out.items.length,2);
+ const a=out.items.find(x=>x.asin==='B0ABCDEFGHI');
+ assert.deepEqual(a.queries.sort(),['MEGA 招待','old'].sort());
+ assert.equal(a.state,'watching');
+ const b=out.items.find(x=>x.asin==='B0ZZZZZZZZZ');
+ assert.equal(b.state,'new');
+});
+test('ASIN pool converts to CRAWL STORM batch URLs without retired items',()=>{
+ const out=stormBatchInput({items:[
+  {asin:'B0ABCDEFGHI',state:'new',title:'A'},
+  {asin:'B0ZZZZZZZZZ',state:'invitation-active',title:'B'},
+  {asin:'B0XXXXXXXXX',state:'retired',title:'C'}
+ ]});
+ assert.equal(out.kind,'POKEMON_RADAR_AMAZON_ASIN_BATCH');
+ assert.equal(out.urls.length,2);
+ assert.equal(out.urls[0].sourceId,'amazon');
+ assert.ok(out.urls.every(x=>x.url.startsWith('https://www.amazon.co.jp/dp/')));
 });
