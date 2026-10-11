@@ -1,0 +1,39 @@
+name: Amazon Chromium acquisition probe
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/amazon-browser-probe/**'
+      - '.github/workflows/amazon-browser-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: amazon-browser-probe
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium temporarily
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Run Amazon Chromium probe
+        run: node tools/amazon-browser-probe/browser-probe.mjs evidence/amazon-browser
+      - name: Save structured evidence only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: amazon-browser-probe-evidence
+          path: |
+            evidence/amazon-browser/result.json
+            evidence/amazon-browser/SUMMARY.md
+          if-no-files-found: warn
+          retention-days: 7
