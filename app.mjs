@@ -64,7 +64,6 @@ function updateSharePanel(){
  $('share-panel').hidden=count===0;
  $('share-line').disabled=count===0;
  $('share-copy').disabled=count===0;
- $('share-selected').disabled=count===0;
  document.documentElement.dataset.caseSelectionActive=String(count>0);
 }
 function shareCaseText(c,index){
@@ -101,24 +100,6 @@ $('share-copy').onclick=async()=>{
  }
 };
 
-$('share-selected').onclick=async()=>{
- const text=buildShareText();
- if(!text||shareSelected.size===0)return;
- $('share-status').textContent='共有を準備しています…';
- try{
-  if(navigator.share){
-   await navigator.share({title:'ポケモン抽選・招待情報',text});
-   $('share-status').textContent='共有しました。';
-  }else{
-   await navigator.clipboard.writeText(text);
-   $('share-status').textContent='共有機能がないため配信文をコピーしました。';
-  }
- }catch(e){
-  if(e?.name==='AbortError'){$('share-status').textContent='共有をキャンセルしました。';return;}
-  try{await navigator.clipboard.writeText(text);$('share-status').textContent='共有できなかったため配信文をコピーしました。';}
-  catch{$('share-status').textContent='共有できませんでした。';}
- }
-};
 try{showEvidence=localStorage.getItem('radar:hide-details')!==null?localStorage.getItem('radar:hide-details')==='false':localStorage.getItem('radar:show-evidence')==='true';}catch{}
 function applyDetailVisibility(){
  document.documentElement.dataset.hideDetails=String(!showEvidence);
