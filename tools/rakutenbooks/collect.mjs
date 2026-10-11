@@ -211,7 +211,7 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
  if(action==='run'){
   const r=await collect(createHttpsFetcher({allowedHosts:['books.rakuten.co.jp'],maxBytes:4*1024*1024,userAgent:'PokemonRadar/0.1 (+public lottery information check)'}));
   fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,JSON.stringify(r,null,2)+'\n');
-  console.log(JSON.stringify({ok:r.ok,pid:r.pid,discovery:r.discovery,candidates:r.candidates,checked:r.checked,cases:r.cases?.map(c=>({id:c.id,title:c.title,entryEnd:c.entryPeriod.end.iso,purchaseEnd:c.purchasePeriod.end.iso,shipping:c.shippingPeriod.raw}))??null,error:r.error,requests:r.ledger.map(x=>({url:x.requestedUrl,status:x.status,bytes:x.bytes,sha256:x.sha256}))}));
+  console.log(JSON.stringify({ok:r.ok,pid:r.pid,discovery:r.discovery,candidates:r.candidates,checked:r.checked,cases:r.cases?.map(c=>({id:c.id,title:c.title,entryEnd:c.entryPeriod.end.iso,purchaseEnd:c.purchasePeriod?.end?.iso??null,shipping:c.shippingPeriod.raw}))??null,error:r.error,requests:r.ledger.map(x=>({url:x.requestedUrl,status:x.status,bytes:x.bytes,sha256:x.sha256}))}));
   process.exitCode=r.ok?0:10;
  }else if(action==='all'){
   fs.mkdirSync(target,{recursive:true});
