@@ -3,7 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
 import {createHttpsFetcher,parseRobots,isPathAllowed} from '../otakara-dryrun/core/http.mjs';
-import {extractAnchors,extractTitles,htmlToText,decodeBody} from '../otakara-dryrun/core/htmlText.mjs';
+import {extractAnchors,extractTitles,htmlToText,decodeBody,decodeEntities} from '../otakara-dryrun/core/htmlText.mjs';
 import {parsePeriodAfterLabel} from '../otakara-dryrun/core/dates.mjs';
 
 export const ENTRY='https://books.rakuten.co.jp/event/game/card/entry/';
@@ -34,7 +34,7 @@ function imageProducts(html){
  for(const m of html.matchAll(/<img\b[^>]*>/gi)){
   const tag=m[0];
   const src=(tag.match(/\bsrc\s*=\s*["']([^"']+)["']/i)?.[1]??'').normalize('NFKC');
-  const alt=decodeBody(Buffer.from(tag.match(/\balt\s*=\s*["']([^"']*)["']/i)?.[1]??''),'text/plain; charset=utf-8').text.normalize('NFKC').replace(/\s+/g,' ').trim();
+  const alt=decodeEntities(tag.match(/\balt\s*=\s*["']([^"']*)["']/i)?.[1]??'').normalize('NFKC').replace(/\s+/g,' ').trim();
   const jan=src.match(/\/(\d{13})\.(?:jpe?g|png|webp)(?:[?#]|$)/i)?.[1];
   if(!jan||!/ポケモンカードゲーム/.test(alt))continue;
   if(!out.some(x=>x.jan===jan))out.push({jan,title:alt});
@@ -163,7 +163,7 @@ export function merge(previous,a,b){
  if(previous.schemaVersion!==1||!Array.isArray(previous.cases))throw new Error('前回形式不正');
  const ids=new Set();
  for(const c of b.cases){
-  if(c.sourceId!=='rakutenbooks'||!/^rakutenbooks:(?:\d+|jan:\d{13})$/.test(c.id)||ids.has(c.id)||new URL(c.sourceUrl).origin!=='https://books.rakuten.co.jp'||c.receivingMethod!=='DELIVERY'||!c.entryPeriod?.end?.iso||!c.purchasePeriod?.end?.iso||!c.conditions?.length)throw new Error('採用項目不正');
+  if(c.sourceId!=='rakutenbooks'||!/^rakutenbooks:(?:\d+|jan:\d{13})$/.test(c.id)||ids.has(c.id)||new URL(c.sourceUrl).origin!=='https://books.rakuten.co.jp'||c.receivingMethod!=='DELIVERY'||!c.entryPeriod?.end?.iso||(!(c.purchasePeriod?.end?.iso)||c.id.startsWith('rakutenbooks:jan:'))===false||!c.conditions?.length)throw new Error('採用項目不正');
   ids.add(c.id);
  }
  const kept=previous.cases.filter(c=>!ids.has(c.id)).map(c=>c.sourceId==='rakutenbooks'?{...c,retainedFromPrevious:true}:c);
