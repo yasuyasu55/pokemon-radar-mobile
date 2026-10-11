@@ -128,6 +128,26 @@ function applyDetailVisibility(){
 applyDetailVisibility();
 $('settings').onclick=()=>{const open=$('settings-panel').hidden;$('settings-panel').hidden=!open;$('settings').setAttribute('aria-expanded',String(open));};
 $('hide-details').onchange=()=>{showEvidence=!$('hide-details').checked;try{localStorage.setItem('radar:hide-details',String(!showEvidence));}catch{}applyDetailVisibility();};
+const phaseControls=[...document.querySelectorAll('input[name="phase"]')];
+const defaultPhases=['open','soon','unknown','before'];
+const phaseLabels={open:'受付中',soon:'24時間以内に締切',unknown:'期間未確認',before:'応募開始前'};
+try{
+ const saved=JSON.parse(localStorage.getItem('radar:phase-filter')||'null');
+ if(Array.isArray(saved)&&saved.length)phaseControls.forEach(n=>n.checked=saved.includes(n.value));
+}catch{}
+const selectedPhases=()=>phaseControls.filter(n=>n.checked).map(n=>n.value);
+function phaseChanged(){
+ let selected=selectedPhases();
+ if(!selected.length){
+  phaseControls.forEach(n=>n.checked=defaultPhases.includes(n.value));
+  selected=selectedPhases();
+ }
+ try{localStorage.setItem('radar:phase-filter',JSON.stringify(selected));}catch{}
+ render();
+}
+phaseControls.forEach(n=>n.addEventListener('change',phaseChanged));
+$('reset-phase').addEventListener('click',()=>{phaseControls.forEach(n=>n.checked=defaultPhases.includes(n.value));phaseChanged();});
+
 const receivingControls=[...document.querySelectorAll('input[name="receiving"]')];
 const receivingLabels={delivery:'配送・郵送',store:'店頭受取',unknown:'未確認'};
 try{
@@ -199,7 +219,7 @@ function renderCards(container,cases,now,empty){
 }
 function render(){
   if(!snapshot&&!amazon.cases.length)return;
-  const now=Date.now(), filters={phase:$('phase').value,receiving:selectedReceiving(),store:$('store').value};
+  const now=Date.now(), filters={phases:selectedPhases(),receiving:selectedReceiving(),store:$('store').value};
   const allCases=[...new Map([...amazon.cases,...(snapshot?.cases??[])].map(c=>[c.id,c])).values()];
   currentCasesById=new Map(allCases.map(c=>[c.id,c]));
   for(const id of [...shareSelected])if(!currentCasesById.has(id))shareSelected.delete(id);
@@ -216,10 +236,10 @@ function render(){
   const amazonOnly=$('amazon-only').checked;
   const visible=allCases.filter(c=>(!amazonOnly||c.sourceId==='official-amazon-jp')&&matches(c,filters,now)&&personalMatches(personal.get(c.id),pf));
   $('count').textContent=`${visible.length}件 / 全${allCases.length}件`;
-  $('filter-description').textContent=`表示条件：${$('phase').selectedOptions[0].text} ＞ ${filters.receiving.length?filters.receiving.map(x=>receivingLabels[x]).join('・'):'受取方法すべて'}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}${amazonOnly?' ＞ Amazon招待だけ':''}${pf.favorite?' ＞ お気に入り':''}${pf.unapplied?' ＞ 未応募':''}`;
+  $('filter-description').textContent=`表示条件：${filters.phases.map(x=>phaseLabels[x]).join('・')}（締切済み除外） ＞ ${filters.receiving.length?filters.receiving.map(x=>receivingLabels[x]).join('・'):'受取方法すべて'}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}${amazonOnly?' ＞ Amazon招待だけ':''}${pf.favorite?' ＞ お気に入り':''}${pf.unapplied?' ＞ 未応募':''}`;
   renderCards($('cases'),visible,now,'<div class="empty"><strong>この条件に合う案件はありません</strong><p>読み込めた公式抽選案内と、個人用画面で保存したAmazonの確認結果が対象です。他の店舗に抽選がないことを意味しません。</p></div>');
 }
-for(const id of ['phase','store'])$(id).addEventListener(id==='store'?'input':'change',render);
+$('store').addEventListener('input',render);
 let refreshing=false;
 async function refreshSnapshot(){
  if(refreshing)return;refreshing=true;
