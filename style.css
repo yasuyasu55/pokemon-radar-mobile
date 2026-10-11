@@ -60,7 +60,9 @@ html[data-case-selection-active="true"] .card:has(.case-select input:checked){bo
 .share-panel>div:first-child strong{font-size:calc(16px * var(--text-scale,1.2));color:var(--ink)}
 .share-panel>div:first-child span{font-size:calc(12px * var(--text-scale,1.2));color:var(--muted)}
 .share-actions{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
-#share-selected{background:var(--green);color:#fff;border-color:var(--green);font-weight:700;flex:1 1 220px}
+#share-line{background:#06c755;color:#fff;border-color:#06c755;font-weight:800;flex:1 1 180px}
+#share-copy{background:#fff;color:var(--ink);font-weight:700;flex:1 1 120px}
+#share-selected{background:var(--green);color:#fff;border-color:var(--green);font-weight:700;flex:1 1 160px}
 #share-clear{flex:0 0 auto}
 #share-status{margin:8px 0 0;font-size:calc(12px * var(--text-scale,1.2));color:var(--muted)}
 @media(max-width:680px){
