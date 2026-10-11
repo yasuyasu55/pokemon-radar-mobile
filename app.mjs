@@ -8,6 +8,8 @@ const time=iso=>iso?new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',month
 const period=p=>p?.start?(p.start.iso?time(p.start.iso):date(p.start.date))+(p.end?' 〜 '+(p.end.iso?time(p.end.iso):date(p.end.date)):''):'未確認';
 const row=(label,value,note='')=>`<div class="row"><dt>${esc(label)}</dt><dd>${esc(value)}${note?`<small>${esc(note)}</small>`:''}</dd></div>`;
 let snapshot=null, showEvidence=false;
+const shareSelected=new Set();
+let currentCasesById=new Map();
 const cloud=document.documentElement.dataset.cloudSync==='true';
 let storage;try{storage=localStorage;}catch{}
 const personal=new PersonalStore({cloud,storage,onChange:()=>{updatePersonalStatus();render();}});
@@ -42,6 +44,59 @@ function handlePersonalClick(e){
 }
 $('cases').addEventListener('click',handlePersonalClick);
 $('favorite-cases').addEventListener('click',handlePersonalClick);
+
+function shareControl(c){
+ const selected=shareSelected.has(c.id);
+ return `<div class="share-select"><button type="button" data-share-case="${esc(c.id)}" class="${selected?'selected':''}" aria-pressed="${selected}">${selected?'✓ 配信用に選択済み':'＋ 配信用に選択'}</button></div>`;
+}
+function handleShareSelect(e){
+ const button=e.target.closest('button[data-share-case]');if(!button)return;
+ const id=button.dataset.shareCase;
+ if(shareSelected.has(id))shareSelected.delete(id);else shareSelected.add(id);
+ render();
+}
+$('cases').addEventListener('click',handleShareSelect);
+$('favorite-cases').addEventListener('click',handleShareSelect);
+
+function updateSharePanel(){
+ const count=shareSelected.size;
+ $('share-count').textContent=String(count);
+ $('share-panel').hidden=count===0;
+ $('share-selected').disabled=count===0;
+}
+function shareCaseText(c,index){
+ const amazon=c.sourceId==='official-amazon-jp';
+ const seller=amazon?'Amazon':(c.sourceName||'販売先未確認');
+ let deadline='未確認';
+ if(!amazon){
+  try{deadline=deadlineDisplay(c,Date.now()).dateLabel||'未確認';}catch{}
+ }
+ const url=safeUrl(c.sourceUrl);
+ return [`${index}. ${c.title||'商品名未確認'}`,`販売先：${seller}`,`締切：${deadline}`,url?`応募・確認：${url}`:null].filter(Boolean).join('\n');
+}
+function buildShareText(){
+ const cases=[...shareSelected].map(id=>currentCasesById.get(id)).filter(Boolean);
+ return ['【ポケモン抽選・招待情報】','',...cases.map((c,i)=>shareCaseText(c,i+1))].join('\n\n');
+}
+$('share-clear').onclick=()=>{shareSelected.clear();render();};
+$('share-selected').onclick=async()=>{
+ const text=buildShareText();
+ if(!text||shareSelected.size===0)return;
+ $('share-status').textContent='共有を準備しています…';
+ try{
+  if(navigator.share){
+   await navigator.share({title:'ポケモン抽選・招待情報',text});
+   $('share-status').textContent='共有しました。';
+  }else{
+   await navigator.clipboard.writeText(text);
+   $('share-status').textContent='共有文をコピーしました。LINEなどへ貼り付けて送れます。';
+  }
+ }catch(e){
+  if(e?.name==='AbortError'){$('share-status').textContent='共有をキャンセルしました。';return;}
+  try{await navigator.clipboard.writeText(text);$('share-status').textContent='共有文をコピーしました。LINEなどへ貼り付けて送れます。';}
+  catch{$('share-status').textContent='共有できませんでした。案件を減らして再度お試しください。';}
+ }
+};
 try{showEvidence=localStorage.getItem('radar:hide-details')!==null?localStorage.getItem('radar:hide-details')==='false':localStorage.getItem('radar:show-evidence')==='true';}catch{}
 function applyDetailVisibility(){
  document.documentElement.dataset.hideDetails=String(!showEvidence);
@@ -73,7 +128,7 @@ function card(c,now) {
   const groups=Object.entries(brandMap).map(([brand,names])=>`<h4 class="store-brand">${esc(brand)} · ${names.length}店舗</h4><div class="store-list">${names.map(n=>`<span class="store-chip">${esc(n)}</span>`).join('')}</div>`).join('');
   const result=(c.resultAnnouncement?.notAfter?period(c.resultAnnouncement)+' まで':period(c.resultAnnouncement))+(c.resultAnnouncement?.approximate?' 頃':'')+(c.resultAnnouncement?.notBefore?' 以降':'');
   const href=safeUrl(c.sourceUrl);
-  return `<article class="card" data-id="${esc(c.id)}"><div class="card-body"><p class="card-source">${esc(c.sourceName)} · 抽選販売</p><div class="card-title"><h3>${esc(c.title)}</h3><button type="button" class="favorite-button ${record.favorite?'selected':''}" data-personal="favorite" aria-pressed="${!!record.favorite}" aria-label="${record.favorite?'お気に入りを解除':'お気に入りに追加'}">${record.favorite?'★':'☆'}</button></div><div class="applied-control"><button type="button" data-personal="applied" class="applied-button ${record.applied?'selected':''}" aria-pressed="${!!record.applied}">${record.applied?'✓ 応募済み（タップで戻す）':'応募済みにする'}</button><span>${record.appliedAt?'記録：'+esc(time(record.appliedAt))+' JST':'未応募'}</span></div><div class="badges"><span class="badge ${state==='closed'?'gray':state==='soon'?'amber':''}">${labels[state]}</span><span class="badge">${esc(c.applicationMethod)}</span><span class="badge amber">${esc(c.receivingLabel)}</span></div><div class="deadline ${deadline.tone}"><small>応募締切 · 日本時間</small><strong>${esc(deadline.dateLabel)}</strong><p class="remaining">${esc(deadline.remainingLabel)}</p></div><dl>${row('応募期間',period(c.entryPeriod))}${row('当選通知',result,c.resultNote||'時刻未確認・公式アプリの応募履歴で確認')}${row('購入期間',period(c.purchasePeriod),c.purchasePeriod?.timeQualifier||(c.purchasePeriod?.end?.iso?'':'時刻未確認'))}${row('応募方法',c.applicationMethod,c.webApplicationLabel)}${row('受取方法',c.receivingLabel,c.storeSelectionNote||'応募時に選んだ店舗への来店が必要')}${c.receivingMethod==='DELIVERY'?row('発送予定',c.shippingPeriod?.start?period(c.shippingPeriod):(c.shippingPeriod?.raw||'未確認'),c.shippingPeriod?.start?'発送予定であり、到着日ではありません':'公式の表現をそのまま表示。正確な日付は推測していません'):row('受取店舗',c.sourceId==='cardlabo'?c.stores[0].name:`${c.stores.length}店舗から応募時に選択`,c.sourceId==='cardlabo'?c.stores[0].address:'所在地・営業時間は未確認。下の店舗一覧で店名を確認')}${row('価格',c.prices.map(p=>p.label).join(' / ')||'未確認')}</dl><div class="callout">${c.receivingMethod==='DELIVERY'?'配送先と応募条件':'受取店舗と応募条件'}をご確認ください。あなたが応募条件を満たすかは未確認です。</div><details class="conditions"><summary>応募・購入の条件を見る（${c.conditions.length+c.handoverRestrictions.length}項目）</summary><ul>${c.conditions.map(x=>`<li>${esc(x)}</li>`).join('')}${c.handoverRestrictions.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>${c.receivingMethod==='DELIVERY'?'':`<details class="stores"><summary>受取店舗を見る（${c.stores.length}店舗）</summary><p class="muted">${esc(c.storeSelectionNote||'応募時に1店舗を選び、当選後は選択した店舗で購入します。掲載店舗すべてへの来店は不要です。')}</p>${groups}</details>`}${href?`<a class="card-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">公式の抽選案内を確認 ↗</a>`:''}<p class="link-note display-supplementary">${esc(c.applicationNote||'このリンクは案内ページです。応募は公式アプリ内で行います。')}</p><details><summary>未確認の項目</summary><ul>${c.unknowns.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details></div><div class="card-bottom">${c.retainedFromPrevious?'前回の確認情報を保持 · ' : ''}情報取得：${esc(time(c.fetchedAt))} JST <span class="display-supplementary">· ${esc(c.verification)}</span></div><div class="evidence" ${showEvidence?'':'hidden'}><details><summary>取得の根拠・補足</summary><p>掲載日：${esc(date(c.publishedDate))} / 取得：${esc(c.fetchedAt)}<br>通常HTTPで独立した2回の取得・抽出を照合。今回取得できた記事での確認です。</p><pre>${esc(c.sourceId==='pokemoncenter'?'日程は公式画像のOCR。年は案内の掲載年から補助（画像には年なし・曜日一致）。最新1記事のみの確認。\n\n':'')}${esc(c.evidence?.entry)}\n\n${esc(c.evidence?.result)}\n\n${esc(c.evidence?.purchase)}\n\n${esc((Array.isArray(c.evidence?.receiving)?c.evidence.receiving:[]).join('\n'))}</pre></details></div></article>`;
+  return `<article class="card" data-id="${esc(c.id)}"><div class="card-body"><p class="card-source">${esc(c.sourceName)} · 抽選販売</p><div class="card-title"><h3>${esc(c.title)}</h3><button type="button" class="favorite-button ${record.favorite?'selected':''}" data-personal="favorite" aria-pressed="${!!record.favorite}" aria-label="${record.favorite?'お気に入りを解除':'お気に入りに追加'}">${record.favorite?'★':'☆'}</button></div><div class="applied-control"><button type="button" data-personal="applied" class="applied-button ${record.applied?'selected':''}" aria-pressed="${!!record.applied}">${record.applied?'✓ 応募済み（タップで戻す）':'応募済みにする'}</button><span>${record.appliedAt?'記録：'+esc(time(record.appliedAt))+' JST':'未応募'}</span></div>${shareControl(c)}<div class="badges"><span class="badge ${state==='closed'?'gray':state==='soon'?'amber':''}">${labels[state]}</span><span class="badge">${esc(c.applicationMethod)}</span><span class="badge amber">${esc(c.receivingLabel)}</span></div><div class="deadline ${deadline.tone}"><small>応募締切 · 日本時間</small><strong>${esc(deadline.dateLabel)}</strong><p class="remaining">${esc(deadline.remainingLabel)}</p></div><dl>${row('応募期間',period(c.entryPeriod))}${row('当選通知',result,c.resultNote||'時刻未確認・公式アプリの応募履歴で確認')}${row('購入期間',period(c.purchasePeriod),c.purchasePeriod?.timeQualifier||(c.purchasePeriod?.end?.iso?'':'時刻未確認'))}${row('応募方法',c.applicationMethod,c.webApplicationLabel)}${row('受取方法',c.receivingLabel,c.storeSelectionNote||'応募時に選んだ店舗への来店が必要')}${c.receivingMethod==='DELIVERY'?row('発送予定',c.shippingPeriod?.start?period(c.shippingPeriod):(c.shippingPeriod?.raw||'未確認'),c.shippingPeriod?.start?'発送予定であり、到着日ではありません':'公式の表現をそのまま表示。正確な日付は推測していません'):row('受取店舗',c.sourceId==='cardlabo'?c.stores[0].name:`${c.stores.length}店舗から応募時に選択`,c.sourceId==='cardlabo'?c.stores[0].address:'所在地・営業時間は未確認。下の店舗一覧で店名を確認')}${row('価格',c.prices.map(p=>p.label).join(' / ')||'未確認')}</dl><div class="callout">${c.receivingMethod==='DELIVERY'?'配送先と応募条件':'受取店舗と応募条件'}をご確認ください。あなたが応募条件を満たすかは未確認です。</div><details class="conditions"><summary>応募・購入の条件を見る（${c.conditions.length+c.handoverRestrictions.length}項目）</summary><ul>${c.conditions.map(x=>`<li>${esc(x)}</li>`).join('')}${c.handoverRestrictions.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>${c.receivingMethod==='DELIVERY'?'':`<details class="stores"><summary>受取店舗を見る（${c.stores.length}店舗）</summary><p class="muted">${esc(c.storeSelectionNote||'応募時に1店舗を選び、当選後は選択した店舗で購入します。掲載店舗すべてへの来店は不要です。')}</p>${groups}</details>`}${href?`<a class="card-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">公式の抽選案内を確認 ↗</a>`:''}<p class="link-note display-supplementary">${esc(c.applicationNote||'このリンクは案内ページです。応募は公式アプリ内で行います。')}</p><details><summary>未確認の項目</summary><ul>${c.unknowns.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details></div><div class="card-bottom">${c.retainedFromPrevious?'前回の確認情報を保持 · ' : ''}情報取得：${esc(time(c.fetchedAt))} JST <span class="display-supplementary">· ${esc(c.verification)}</span></div><div class="evidence" ${showEvidence?'':'hidden'}><details><summary>取得の根拠・補足</summary><p>掲載日：${esc(date(c.publishedDate))} / 取得：${esc(c.fetchedAt)}<br>通常HTTPで独立した2回の取得・抽出を照合。今回取得できた記事での確認です。</p><pre>${esc(c.sourceId==='pokemoncenter'?'日程は公式画像のOCR。年は案内の掲載年から補助（画像には年なし・曜日一致）。最新1記事のみの確認。\n\n':'')}${esc(c.evidence?.entry)}\n\n${esc(c.evidence?.result)}\n\n${esc(c.evidence?.purchase)}\n\n${esc((Array.isArray(c.evidence?.receiving)?c.evidence.receiving:[]).join('\n'))}</pre></details></div></article>`;
 }
 function amazonCard(c,now){
  const record=personal.get(c.id),stale=now-Date.parse(c.fetchedAt)>86400000;
@@ -94,7 +149,7 @@ function amazonCard(c,now){
  const verifyText=auto?'CRAWL STORM XのChrome実ブラウザで商品詳細ページを確認した情報です。検索結果ページだけでは案件化していません。':'${esc(verifyText)}';
  const checkedLabel=auto?'Chrome確認':'PC確認';
  const observed=new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(c.fetchedAt));
- return `<article class="card" data-id="${esc(c.id)}"><div class="card-body"><p class="card-source">${esc(sourceLabel)}</p><div class="card-title"><h3>${esc(c.title)}</h3><button type="button" class="favorite-button ${record.favorite?'selected':''}" data-personal="favorite" aria-pressed="${!!record.favorite}" aria-label="${record.favorite?'お気に入りを解除':'お気に入りに追加'}">${record.favorite?'★':'☆'}</button></div><div class="applied-control"><button type="button" data-personal="applied" class="applied-button ${record.applied?'selected':''}" aria-pressed="${!!record.applied}">${record.applied?'✓ 応募済み（タップで戻す）':'応募済みにする'}</button><span>${record.appliedAt?'記録：'+esc(time(record.appliedAt))+' JST':'未応募'}</span></div><div class="badges"><span class="badge ${statusTone}">${esc(statusLabel)}</span><span class="badge gray">受取条件未確認</span></div><div class="deadline unknown"><small>応募締切</small><strong>未確認</strong><p class="remaining">締切までの残り時間は計算できません</p></div><dl>${row('Amazon状態',invitationLabel)}${row('応募方法','Amazonの招待リクエスト')}${row('販売元',sellerLabel)}${row('確認日時',observed+' JST')}${row('当選通知・購入期限','本人への案内を確認')}${row('受取方法','未確認')}</dl><div class="callout">保存時点の商品欄に招待リクエストの操作があった記録です。現在の受付状況と本人の応募可否はAmazonで確認してください。</div><details class="conditions"><summary>応募・購入の注意を見る</summary><p>この記録の保存では応募されません。Amazonで手続きした後に「応募済みにする」を押してください。リクエストの有効期間を応募締切とは扱いません。</p></details>${href?`<a class="card-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">Amazonで招待をリクエスト・確認 ↗</a>`:''}<details class="display-supplementary"><summary>確認方法</summary><p>本人がPCのChromeで開いた商品欄を確認して保存した情報です。GitHubからの自動取得ではありません。定期再確認は行いません。</p></details></div><div class="card-bottom">${esc(checkedLabel)}：${esc(observed)} JST</div></article>`;
+ return `<article class="card" data-id="${esc(c.id)}"><div class="card-body"><p class="card-source">${esc(sourceLabel)}</p><div class="card-title"><h3>${esc(c.title)}</h3><button type="button" class="favorite-button ${record.favorite?'selected':''}" data-personal="favorite" aria-pressed="${!!record.favorite}" aria-label="${record.favorite?'お気に入りを解除':'お気に入りに追加'}">${record.favorite?'★':'☆'}</button></div><div class="applied-control"><button type="button" data-personal="applied" class="applied-button ${record.applied?'selected':''}" aria-pressed="${!!record.applied}">${record.applied?'✓ 応募済み（タップで戻す）':'応募済みにする'}</button><span>${record.appliedAt?'記録：'+esc(time(record.appliedAt))+' JST':'未応募'}</span></div>${shareControl(c)}<div class="badges"><span class="badge ${statusTone}">${esc(statusLabel)}</span><span class="badge gray">受取条件未確認</span></div><div class="deadline unknown"><small>応募締切</small><strong>未確認</strong><p class="remaining">締切までの残り時間は計算できません</p></div><dl>${row('Amazon状態',invitationLabel)}${row('応募方法','Amazonの招待リクエスト')}${row('販売元',sellerLabel)}${row('確認日時',observed+' JST')}${row('当選通知・購入期限','本人への案内を確認')}${row('受取方法','未確認')}</dl><div class="callout">保存時点の商品欄に招待リクエストの操作があった記録です。現在の受付状況と本人の応募可否はAmazonで確認してください。</div><details class="conditions"><summary>応募・購入の注意を見る</summary><p>この記録の保存では応募されません。Amazonで手続きした後に「応募済みにする」を押してください。リクエストの有効期間を応募締切とは扱いません。</p></details>${href?`<a class="card-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">Amazonで招待をリクエスト・確認 ↗</a>`:''}<details class="display-supplementary"><summary>確認方法</summary><p>本人がPCのChromeで開いた商品欄を確認して保存した情報です。GitHubからの自動取得ではありません。定期再確認は行いません。</p></details></div><div class="card-bottom">${esc(checkedLabel)}：${esc(observed)} JST</div></article>`;
 }
 function renderCards(container,cases,now,empty){
  const opened=[...container.querySelectorAll('article details[open]')].map(d=>[d.closest('[data-id]').dataset.id,[...d.closest('article').querySelectorAll('details')].indexOf(d)]);
@@ -110,6 +165,9 @@ function render(){
   if(!snapshot&&!amazon.cases.length)return;
   const now=Date.now(), filters={phase:$('phase').value,receiving:selectedReceiving(),store:$('store').value};
   const allCases=[...new Map([...amazon.cases,...(snapshot?.cases??[])].map(c=>[c.id,c])).values()];
+  currentCasesById=new Map(allCases.map(c=>[c.id,c]));
+  for(const id of [...shareSelected])if(!currentCasesById.has(id))shareSelected.delete(id);
+  updateSharePanel();
   $('open-count').textContent=snapshot?snapshot.cases.filter(c=>['open','soon'].includes(entryState(c,now))).length:'未確認';
   $('soon-count').textContent=snapshot?snapshot.cases.filter(c=>entryState(c,now)==='soon').length:'未確認';
   const sources=[...new Set((snapshot?.cases??[]).map(c=>c.sourceId||'otakara'))];
