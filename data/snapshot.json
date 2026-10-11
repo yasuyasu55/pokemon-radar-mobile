@@ -3,8 +3,8 @@
   "appVersion": "0.1.12",
   "sourceId": "otakarasouko-group",
   "evidenceRunId": "38102956798",
-  "fetchedAt": "2026-10-11T01:47:19.393Z",
-  "updateMode": "毎日7:17ごろ（日本時間）に自動更新・検証失敗時は前回データを保持",
+  "fetchedAt": "2026-10-11T05:04:10.428Z",
+  "updateMode": "各情報源を定期更新。AmazonはCRAWL STORM XのChrome実ブラウザ確認で招待受付中を反映",
   "liveRunsVerified": 2,
   "fetchEvidence": [
     {
@@ -2358,6 +2358,171 @@
         "productTitle": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ【30パック】"
       },
       "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合"
+    },
+    {
+      "id": "amazon:B0GXCX46KQ",
+      "sourceId": "official-amazon-jp",
+      "sourceName": "Amazon",
+      "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット ナエトル・ヒコザル・ポッチャマ",
+      "sourceUrl": "https://www.amazon.co.jp/dp/B0GXCX46KQ",
+      "fetchedAt": "2026-10-11T05:04:10.428Z",
+      "publishedDate": null,
+      "browserCapture": true,
+      "automatedDiscovery": true,
+      "lotteryType": "INVITATION_SALE",
+      "invitationState": "REQUESTABLE",
+      "applicationMethod": "Amazonの招待をリクエスト",
+      "entryPeriod": null,
+      "resultAnnouncement": null,
+      "purchasePeriod": null,
+      "receivingMethod": "UNKNOWN",
+      "receivingLabel": "受取方法未確認",
+      "stores": [],
+      "conditions": [
+        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+      ],
+      "handoverRestrictions": [],
+      "prices": [],
+      "unknowns": [
+        "応募締切",
+        "当選通知時期",
+        "購入期限",
+        "受取方法"
+      ],
+      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "asin": "B0GXCX46KQ"
+    },
+    {
+      "id": "amazon:B0GXCSGX8Y",
+      "sourceId": "official-amazon-jp",
+      "sourceName": "Amazon",
+      "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット ハリマロン・フォッコ・ケロマツ",
+      "sourceUrl": "https://www.amazon.co.jp/dp/B0GXCSGX8Y",
+      "fetchedAt": "2026-10-11T05:04:00.723Z",
+      "publishedDate": null,
+      "browserCapture": true,
+      "automatedDiscovery": true,
+      "lotteryType": "INVITATION_SALE",
+      "invitationState": "REQUESTABLE",
+      "applicationMethod": "Amazonの招待をリクエスト",
+      "entryPeriod": null,
+      "resultAnnouncement": null,
+      "purchasePeriod": null,
+      "receivingMethod": "UNKNOWN",
+      "receivingLabel": "受取方法未確認",
+      "stores": [],
+      "conditions": [
+        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+      ],
+      "handoverRestrictions": [],
+      "prices": [],
+      "unknowns": [
+        "応募締切",
+        "当選通知時期",
+        "購入期限",
+        "受取方法"
+      ],
+      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "asin": "B0GXCSGX8Y"
+    },
+    {
+      "id": "amazon:B0GXCPF84C",
+      "sourceId": "official-amazon-jp",
+      "sourceName": "Amazon",
+      "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット モクロー・ニャビー・アシマリ",
+      "sourceUrl": "https://www.amazon.co.jp/dp/B0GXCPF84C",
+      "fetchedAt": "2026-10-11T05:03:45.474Z",
+      "publishedDate": null,
+      "browserCapture": true,
+      "automatedDiscovery": true,
+      "lotteryType": "INVITATION_SALE",
+      "invitationState": "REQUESTABLE",
+      "applicationMethod": "Amazonの招待をリクエスト",
+      "entryPeriod": null,
+      "resultAnnouncement": null,
+      "purchasePeriod": null,
+      "receivingMethod": "UNKNOWN",
+      "receivingLabel": "受取方法未確認",
+      "stores": [],
+      "conditions": [
+        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+      ],
+      "handoverRestrictions": [],
+      "prices": [],
+      "unknowns": [
+        "応募締切",
+        "当選通知時期",
+        "購入期限",
+        "受取方法"
+      ],
+      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "asin": "B0GXCPF84C"
+    },
+    {
+      "id": "amazon:B0GXCM4BCZ",
+      "sourceId": "official-amazon-jp",
+      "sourceName": "Amazon",
+      "title": "ポケモンカードゲーム MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+      "sourceUrl": "https://www.amazon.co.jp/dp/B0GXCM4BCZ",
+      "fetchedAt": "2026-10-11T05:02:28.215Z",
+      "publishedDate": null,
+      "browserCapture": true,
+      "automatedDiscovery": true,
+      "lotteryType": "INVITATION_SALE",
+      "invitationState": "REQUESTABLE",
+      "applicationMethod": "Amazonの招待をリクエスト",
+      "entryPeriod": null,
+      "resultAnnouncement": null,
+      "purchasePeriod": null,
+      "receivingMethod": "UNKNOWN",
+      "receivingLabel": "受取方法未確認",
+      "stores": [],
+      "conditions": [
+        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+      ],
+      "handoverRestrictions": [],
+      "prices": [],
+      "unknowns": [
+        "応募締切",
+        "当選通知時期",
+        "購入期限",
+        "受取方法"
+      ],
+      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "asin": "B0GXCM4BCZ"
+    },
+    {
+      "id": "amazon:B0FLCWJ1VK",
+      "sourceId": "official-amazon-jp",
+      "sourceName": "Amazon",
+      "title": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex BOX",
+      "sourceUrl": "https://www.amazon.co.jp/dp/B0FLCWJ1VK",
+      "fetchedAt": "2026-10-11T05:00:05.243Z",
+      "publishedDate": null,
+      "browserCapture": true,
+      "automatedDiscovery": true,
+      "lotteryType": "INVITATION_SALE",
+      "invitationState": "REQUESTABLE",
+      "applicationMethod": "Amazonの招待をリクエスト",
+      "entryPeriod": null,
+      "resultAnnouncement": null,
+      "purchasePeriod": null,
+      "receivingMethod": "UNKNOWN",
+      "receivingLabel": "受取方法未確認",
+      "stores": [],
+      "conditions": [
+        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+      ],
+      "handoverRestrictions": [],
+      "prices": [],
+      "unknowns": [
+        "応募締切",
+        "当選通知時期",
+        "購入期限",
+        "受取方法"
+      ],
+      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "asin": "B0FLCWJ1VK"
     }
   ],
   "sources": {
@@ -2869,6 +3034,14 @@
           ]
         }
       ]
+    },
+    "amazon": {
+      "name": "Amazon.co.jp",
+      "fetchedAt": "2026-10-11T05:04:10.428Z",
+      "coverage": "CRAWL STORM Xで再確認できた固定監視ASINのうち、商品詳細ページで「招待をリクエスト」を確認できた案件のみ",
+      "verifiedCases": 5,
+      "verification": "Chrome実ブラウザの商品詳細確認",
+      "excluded": "検索結果ページ・通常商品・古い確認のみのASINは公開対象外"
     }
   },
   "retainedCount": 7
