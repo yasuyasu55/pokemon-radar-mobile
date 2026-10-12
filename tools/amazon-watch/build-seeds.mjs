@@ -5,9 +5,25 @@ import {fileURLToPath} from 'node:url';
 
 const RECENT_CLOSED_DAYS=14;
 const BROAD_QUERIES=[
-  'ポケモンカード 招待',
-  'ポケモンカード 招待販売',
-  'ポケモンカード 抽選'
+  'ポケモンカードゲーム BOX 招待',
+  'ポケモンカードゲーム 拡張パック BOX 招待',
+  'ポケモンカードゲーム ハイクラスパック BOX 招待',
+  'ポケモンカードゲーム スターターセット 招待',
+  'ポケモンカードゲーム プレミアムデッキセット 招待',
+  'ポケモンカードゲーム カードセット 招待',
+  'ポケモンカード 招待販売'
+];
+
+const OFFICIAL_PRIORITY_PRODUCTS=[
+  '30th CELEBRATION',
+  'ストームエメラルダ',
+  'アビスアイ',
+  'ニンジャスピナー',
+  'ムニキスゼロ',
+  'MEGAドリームex',
+  'インフェルノX',
+  'メガブレイブ',
+  'メガシンフォニア'
 ];
 
 function norm(s=''){
@@ -46,8 +62,7 @@ export function buildSeeds(snapshot,{now=new Date()}={}){
     if(!core)continue;
     const variants=[
       core,
-      core+' 招待',
-      core+' 抽選'
+      core+' 招待'
     ];
     for(const query of variants){
       const q=norm(query);
@@ -59,6 +74,10 @@ export function buildSeeds(snapshot,{now=new Date()}={}){
   }
   for(const q of BROAD_QUERIES){
     byQuery.set(q,{id:'seed:'+stableSeedId(q),query:q,kind:'broad-safety-net',caseIds:[],sourceIds:[],priority:40});
+  }
+  for(const product of OFFICIAL_PRIORITY_PRODUCTS){
+    const q=norm('ポケモンカードゲーム '+product+' BOX 招待');
+    byQuery.set(q,{id:'seed:'+stableSeedId(q),query:q,kind:'official-priority-product',caseIds:[],sourceIds:['pokemon-card.com'],priority:85});
   }
   return {
     schemaVersion:1,
