@@ -66,6 +66,14 @@ test('failure, replay, incomplete and duplicate candidates cannot replace previo
  const duplicate=structuredClone(b);duplicate.cases.push(duplicate.cases[0]);assert.throws(()=>merge(prior,{...duplicate,pid:1},duplicate));
  assert.equal(JSON.stringify(prior),original);
 });
-test('delivery lotteries appear in delivery filter but remain closed after actual deadline',()=>{
- for(const c of adoptionRuns()[0].cases){const now=Date.parse('2026-10-11T08:00:00+09:00');assert.equal(entryState(c,now),'closed');assert.equal(matches(c,{phase:'all',receiving:['delivery'],store:''},now),true);assert.equal(matches(c,{phase:'open',receiving:['delivery'],store:''},now),false);assert.equal(matches(c,{phase:'all',receiving:['store'],store:''},now),false);}
+test('delivery filter matches while open, and closed lotteries stay excluded',()=>{
+ for(const c of adoptionRuns()[0].cases){
+  const openNow=Date.parse('2026-10-03T12:00:00+09:00');
+  const closedNow=Date.parse('2026-10-11T08:00:00+09:00');
+  assert.equal(entryState(c,openNow),'open');
+  assert.equal(matches(c,{phases:[],receiving:['delivery'],store:''},openNow),true);
+  assert.equal(matches(c,{phases:[],receiving:['store'],store:''},openNow),false);
+  assert.equal(entryState(c,closedNow),'closed');
+  assert.equal(matches(c,{phases:[],receiving:['delivery'],store:''},closedNow),false);
+ }
 });
