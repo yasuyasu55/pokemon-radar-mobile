@@ -1,11 +1,6 @@
 name: Verify Furuichi lotteries and publish
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '45 22 * * *'
-  push:
-    branches: [main]
-    paths: ['tools/furuichi/**', '.github/workflows/furuichi.yml']
 permissions:
   contents: read
 concurrency:
