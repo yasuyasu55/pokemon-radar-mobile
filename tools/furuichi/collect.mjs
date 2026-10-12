@@ -6,7 +6,12 @@ import {createHttpsFetcher,parseRobots,isPathAllowed} from '../otakara-dryrun/co
 import {extractAnchors,extractTitles,htmlToText,pickArticleScope,decodeBody} from '../otakara-dryrun/core/htmlText.mjs';
 import {findDateTimes,resolveDateTime} from '../otakara-dryrun/core/dates.mjs';
 
-export const ENTRY='https://www.furu1.net/news';
+export const ENTRY='https://www.furu1.net/';
+export const ENTRYPOINTS=[
+  'https://www.furu1.net/',
+  'https://www.furu1.net/news.html?media=pc',
+  'https://www.furu1.net/news/news_information.html',
+];
 export const MAX_ARTICLES=5;
 
 function near(lines,labelRe,count=10){
@@ -34,10 +39,10 @@ function articleId(url){
   const u=new URL(url);
   return u.pathname.replace(/^\/news\//,'').replace(/\/$/,'').replaceAll('/','-');
 }
-export function discover(html){
+export function discover(html,base=ENTRY){
   const out=[];
   for(const a of extractAnchors(html)){
-    let u;try{u=new URL(a.href,ENTRY);}catch{continue;}
+    let u;try{u=new URL(a.href,base);}catch{continue;}
     if(!/^https:\/\/(?:www\.)?furu1\.net$/.test(u.origin)||!u.pathname.startsWith('/news/'))continue;
     const label=(a.text||'').normalize('NFKC').replace(/\s+/g,' ').trim();
     if(!/ポケモンカードゲーム|ポケモンカード/.test(label))continue;
@@ -84,18 +89,67 @@ export function extractCase(html,url,fetchedAt){
 }
 export async function collect(fetcher){
   const ledger=[];
-  async function raw(url){const r=await fetcher(url);const{body,...record}=r;ledger.push(record);if(!r.ok)throw new Error(r.error??('HTTP '+r.status));return decodeBody(body,r.headers['content-type']).text;}
+  async function request(url){
+    const r=await fetcher(url);
+    const {body,...record}=r;
+    ledger.push(record);
+    return {r,body};
+  }
+  async function raw(url){
+    const {r,body}=await request(url);
+    if(!r.ok)throw new Error(r.error??('HTTP '+r.status));
+    return decodeBody(body,r.headers['content-type']).text;
+  }
   try{
-    const robots=await raw('https://www.furu1.net/robots.txt');
-    const rules=parseRobots(robots,'PokemonRadar');
-    async function allowed(url){const u=new URL(url);if(!/^(?:www\.)?furu1\.net$/.test(u.hostname))throw new Error('許可外ホスト');if(!isPathAllowed(rules,u.pathname+u.search))throw new Error('robotsで禁止されたURL');return raw(url);}
-    const list=await allowed(ENTRY),candidates=discover(list);
-    if(!candidates.length)throw new Error('ふるいち公式ニュースから明示的なポケカ抽選記事を発見できません。0件とは扱いません');
+    // robots.txt が無い(404)サイトは標準仕様上「禁止規則なし」として扱う。
+    // 403/429/5xx 等は取得失敗として安全停止する。
+    const robotsResult=await request('https://www.furu1.net/robots.txt');
+    let rules;
+    if(robotsResult.r.ok){
+      rules=parseRobots(decodeBody(robotsResult.body,robotsResult.r.headers['content-type']).text,'PokemonRadar');
+    }else if(robotsResult.r.status===404){
+      rules=parseRobots('','PokemonRadar');
+    }else{
+      throw new Error(robotsResult.r.error??('robots HTTP '+robotsResult.r.status));
+    }
+
+    async function allowed(url){
+      const u=new URL(url);
+      if(!/^(?:www\.)?furu1\.net$/.test(u.hostname))throw new Error('許可外ホスト');
+      if(!isPathAllowed(rules,u.pathname+u.search))throw new Error('robotsで禁止されたURL');
+      return raw(url);
+    }
+
+    const discovered=[],entryErrors=[];
+    for(const entry of ENTRYPOINTS){
+      try{
+        const html=await allowed(entry);
+        for(const c of discover(html,entry)){
+          if(!discovered.some(x=>x.url===c.url))discovered.push(c);
+        }
+      }catch(e){
+        entryErrors.push({url:entry,reason:e.message});
+      }
+    }
+
+    const candidates=discovered.slice(0,MAX_ARTICLES);
+    if(!candidates.length)throw new Error('ふるいち公式トップ・新着一覧・お知らせ一覧から明示的なポケカ抽選記事を発見できません。0件とは扱いません');
+
     const cases=[],rejected=[];
-    for(const c of candidates){try{cases.push(extractCase(await allowed(c.url),c.url,new Date().toISOString()));}catch(e){rejected.push({url:c.url,title:c.title,reason:e.message});}}
+    for(const c of candidates){
+      try{cases.push(extractCase(await allowed(c.url),c.url,new Date().toISOString()));}
+      catch(e){rejected.push({url:c.url,title:c.title,reason:e.message});}
+    }
     if(!cases.length)throw new Error('ふるいち抽選案件を確定できません');
-    return {ok:true,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),coverage:'ふるいち公式ニュース一覧でタイトルにポケモンカードと抽選が明示された最新記事を最大5件確認',cases,rejected,ledger};
-  }catch(e){return {ok:false,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),error:e.message,cases:null,ledger};}
+
+    return {
+      ok:true,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),
+      coverage:'ふるいち公式トップ・新着一覧・お知らせ一覧の3入口から、タイトルにポケモンカードと抽選が明示された最新記事を最大5件確認',
+      cases,rejected,entryErrors,ledger
+    };
+  }catch(e){
+    return {ok:false,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),error:e.message,cases:null,ledger};
+  }
 }
 const norm=r=>JSON.stringify(r.cases.map(({fetchedAt,...c})=>c).sort((a,b)=>a.id.localeCompare(b.id)));
 export function merge(previous,a,b){
