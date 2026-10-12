@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
 import {createHttpsFetcher,parseRobots,isPathAllowed} from '../otakara-dryrun/core/http.mjs';
 import {extractAnchors,extractTitles,htmlToText,pickArticleScope,decodeBody} from '../otakara-dryrun/core/htmlText.mjs';
 import {findDateTimes,resolveDateTime} from '../otakara-dryrun/core/dates.mjs';
@@ -52,6 +53,55 @@ export function discover(html,base=ENTRY){
     if(!out.some(x=>x.url===u.href))out.push({url:u.href,title:label});
   }
   return out.slice(0,MAX_ARTICLES);
+}
+
+function stableTitleId(title){
+  return createHash('sha256').update(title.normalize('NFKC')).digest('hex').slice(0,16);
+}
+export function discoverStrongListings(html,sourceUrl=ENTRY){
+  const out=[];
+  for(const raw of htmlToText(html).split('\n')){
+    const line=raw.normalize('NFKC').replace(/\s+/g,' ').trim();
+    const i=line.indexOf('ポケモンカード');
+    if(i<0)continue;
+    const title=line.slice(i).replace(/\s+NEW\s*$/i,'').trim();
+    if(!/ポケモンカードゲーム|ポケモンカード/.test(title))continue;
+    if(!/抽選受付|抽選販売|抽選/.test(title))continue;
+    if(/中止|取消|当選発表のみ|結果/.test(title))continue;
+    const dm=line.match(/(20\d{2})[/.](\d{1,2})[/.](\d{1,2})/);
+    const publishedDate=dm?dm[1]+'-'+String(dm[2]).padStart(2,'0')+'-'+String(dm[3]).padStart(2,'0'):null;
+    if(!out.some(x=>x.title===title))out.push({title,sourceUrl,publishedDate});
+  }
+  return out.slice(0,MAX_ARTICLES);
+}
+function listingOnlyCase(item,fetchedAt){
+  return {
+    id:'furuichi:list:'+stableTitleId(item.title),
+    sourceId:'furuichi',
+    title:item.title,
+    sourceName:'ふるいち／古本市場',
+    sourceUrl:item.sourceUrl,
+    fetchedAt,
+    publishedDate:item.publishedDate,
+    entryPeriod:{raw:'公式一覧では応募期間未確認',start:null,end:null,deadlineOnly:false,status:'UNCONFIRMED',notes:['公式一覧で抽選受付記事を確認。詳細日程は未確認']},
+    resultAnnouncement:null,
+    purchasePeriod:null,
+    applicationMethod:'公式お知らせで抽選受付を確認',
+    webApplicationUrl:null,
+    webApplicationLabel:'ふるいち公式のお知らせ一覧で詳細を確認',
+    applicationNote:'公式一覧で抽選受付記事を確認しています。応募方法・締切・受取方法は公式案内で確認してください。',
+    receivingMethod:'UNKNOWN',
+    receivingLabel:'未確認',
+    storeSelectionNote:'公式案内で確認',
+    resultNote:'当選発表日時は未確認',
+    stores:[],
+    prices:[],
+    conditions:['ふるいち公式一覧でポケモンカードの抽選受付記事を確認'],
+    handoverRestrictions:[],
+    unknowns:['応募期間','応募方法','当選発表日時','購入・受取期間','受取方法','あなたの応募資格・応募状況'],
+    evidence:{entry:'公式一覧で抽選受付記事を確認',result:null,purchase:null},
+    verification:'ふるいち公式一覧を独立2回取得し、同一の抽選受付タイトルを確認'
+  };
 }
 export function extractCase(html,url,fetchedAt){
   const scope=pickArticleScope(html);
@@ -120,12 +170,15 @@ export async function collect(fetcher){
       return raw(url);
     }
 
-    const discovered=[],entryErrors=[];
+    const discovered=[],strongListings=[],entryErrors=[];
     for(const entry of ENTRYPOINTS){
       try{
         const html=await allowed(entry);
         for(const c of discover(html,entry)){
           if(!discovered.some(x=>x.url===c.url))discovered.push(c);
+        }
+        for(const c of discoverStrongListings(html,entry)){
+          if(!strongListings.some(x=>x.title===c.title))strongListings.push(c);
         }
       }catch(e){
         entryErrors.push({url:entry,reason:e.message});
@@ -133,18 +186,26 @@ export async function collect(fetcher){
     }
 
     const candidates=discovered.slice(0,MAX_ARTICLES);
-    if(!candidates.length)throw new Error('ふるいち公式トップ・新着一覧・お知らせ一覧から明示的なポケカ抽選記事を発見できません。0件とは扱いません');
-
     const cases=[],rejected=[];
     for(const c of candidates){
       try{cases.push(extractCase(await allowed(c.url),c.url,new Date().toISOString()));}
       catch(e){rejected.push({url:c.url,title:c.title,reason:e.message});}
     }
-    if(!cases.length)throw new Error('ふるいち抽選案件を確定できません');
+
+    const knownTitles=new Set(cases.map(c=>c.title.normalize('NFKC').replace(/\s+/g,'')));
+    for(const item of strongListings){
+      const key=item.title.normalize('NFKC').replace(/\s+/g,'');
+      if(!knownTitles.has(key)){
+        cases.push(listingOnlyCase(item,new Date().toISOString()));
+        knownTitles.add(key);
+      }
+    }
+
+    if(!cases.length)throw new Error('ふるいち公式3入口からポケカ抽選案件を確認できません。0件とは扱いません');
 
     return {
       ok:true,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),
-      coverage:'ふるいち公式トップ・新着一覧・お知らせ一覧の3入口から、タイトルにポケモンカードと抽選が明示された最新記事を最大5件確認',
+      coverage:'ふるいち公式トップ・新着一覧・お知らせ一覧の3入口から最新ポケカ抽選を確認。詳細URL取得時は日程まで解析し、一覧タイトルのみ確認できた場合は期間未確認として保持',
       cases,rejected,entryErrors,ledger
     };
   }catch(e){
