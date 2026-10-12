@@ -14,6 +14,9 @@ test('recent concrete lottery cases become Amazon discovery seeds',()=>{
  assert.ok(!out.seeds.some(x=>x.query.includes('ムニキスゼロ')));
  assert.ok(!out.seeds.some(x=>/^2種/.test(x.query)));
  assert.ok(out.seeds.some(x=>x.query==='ポケモンカード 招待販売'));
+ assert.ok(out.seeds.some(x=>x.query==='ポケモンカードゲーム MEGAドリームex BOX 招待'));
+ assert.ok(out.seeds.some(x=>x.kind==='official-priority-product'));
+ assert.ok(!out.seeds.some(x=>x.query==='ストームエメラルダ 抽選'));
 });
 test('CRAWL STORM handoff contains only live ASIN pool items',()=>{
  const out=buildStormHandoff({items:[
