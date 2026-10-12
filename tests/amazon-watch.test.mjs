@@ -11,7 +11,8 @@ test('recent concrete lottery cases become Amazon discovery seeds',()=>{
  ]};
  const out=buildSeeds(snapshot,{now:new Date('2026-10-11T12:00:00+09:00')});
  assert.ok(out.seeds.some(x=>x.query.includes('ストームエメラルダ')));
- assert.ok(!out.seeds.some(x=>x.query.includes('ムニキスゼロ')));
+ assert.ok(!out.seeds.some(x=>x.kind==='case-derived'&&x.query.includes('ムニキスゼロ')));
+ assert.ok(out.seeds.some(x=>x.kind==='official-priority-product'&&x.query.includes('ムニキスゼロ')));
  assert.ok(!out.seeds.some(x=>/^2種/.test(x.query)));
  assert.ok(out.seeds.some(x=>x.query==='ポケモンカード 招待販売'));
  assert.ok(out.seeds.some(x=>x.query==='ポケモンカードゲーム MEGAドリームex BOX 招待'));
