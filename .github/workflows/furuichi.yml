@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: '22'
       - name: Collector preflight tests
-        run: node --test tests/amazon-personal.test.mjs tests/amazon-watch.test.mjs tests/amazon.test.mjs tests/cardlabo.test.mjs tests/deadline.test.mjs tests/personal.test.mjs tests/update-snapshot.test.mjs
+        run: node --test tests/amazon-personal.test.mjs tests/amazon-watch.test.mjs tests/amazon.test.mjs tests/cardlabo.test.mjs tests/deadline.test.mjs tests/personal.test.mjs tests/update-snapshot.test.mjs tests/furuichi.test.mjs
       - name: Independent live fetch twice
         run: node tools/furuichi/collect.mjs all "$RUNNER_TEMP/furuichi"
       - name: Save structured evidence only
