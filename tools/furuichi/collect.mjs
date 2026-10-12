@@ -4,7 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {createHttpsFetcher,parseRobots,isPathAllowed} from '../otakara-dryrun/core/http.mjs';
-import {extractAnchors,extractTitles,htmlToText,pickArticleScope,decodeBody} from '../otakara-dryrun/core/htmlText.mjs';
+import {extractAnchors,extractTitles,htmlToText,pickArticleScope,decodeBody,decodeEntities} from '../otakara-dryrun/core/htmlText.mjs';
 import {findDateTimes,resolveDateTime} from '../otakara-dryrun/core/dates.mjs';
 
 export const ENTRY='https://www.furu1.net/';
@@ -44,7 +44,8 @@ export function discover(html,base=ENTRY){
   const out=[];
   for(const a of extractAnchors(html)){
     let u;try{u=new URL(a.href,base);}catch{continue;}
-    if(!/^https:\/\/(?:www\.)?furu1\.net$/.test(u.origin)||!u.pathname.startsWith('/news/'))continue;
+    if(!/^https:\/\/(?:www\.)?furu1\.net$/.test(u.origin))continue;
+    if(/^\/(?:shop|service|contact|faq|company|sitemap|buy|sell|assets?|css|js|img|images?)(?:\/|$)/i.test(u.pathname))continue;
     const label=(a.text||'').normalize('NFKC').replace(/\s+/g,' ').trim();
     if(!/ポケモンカードゲーム|ポケモンカード/.test(label))continue;
     if(!/抽選受付|抽選販売|抽選/.test(label))continue;
@@ -60,17 +61,40 @@ function stableTitleId(title){
 }
 export function discoverStrongListings(html,sourceUrl=ENTRY){
   const out=[];
-  for(const raw of htmlToText(html).split('\n')){
-    const line=raw.normalize('NFKC').replace(/\s+/g,' ').trim();
-    const i=line.indexOf('ポケモンカード');
-    if(i<0)continue;
-    const title=line.slice(i).replace(/\s+NEW\s*$/i,'').trim();
-    if(!/ポケモンカードゲーム|ポケモンカード/.test(title))continue;
-    if(!/抽選受付|抽選販売|抽選/.test(title))continue;
-    if(/中止|取消|当選発表のみ|結果/.test(title))continue;
-    const dm=line.match(/(20\d{2})[/.](\d{1,2})[/.](\d{1,2})/);
-    const publishedDate=dm?dm[1]+'-'+String(dm[2]).padStart(2,'0')+'-'+String(dm[3]).padStart(2,'0'):null;
-    if(!out.some(x=>x.title===title))out.push({title,sourceUrl,publishedDate});
+  const rawDecoded=decodeEntities(html)
+    .replace(/\\u([0-9a-fA-F]{4})/g,(_,h)=>String.fromCharCode(parseInt(h,16)))
+    .replace(/<[^>]+>/g,'\n');
+  const inputs=[htmlToText(html),rawDecoded];
+
+  for(const text of inputs){
+    const normalized=text.normalize('NFKC').replace(/\r/g,'');
+    const lines=normalized.split('\n');
+    for(let n=0;n<lines.length;n++){
+      const line=lines[n].replace(/\s+/g,' ').trim();
+      let i=line.indexOf('ポケモンカード');
+      if(i<0)continue;
+
+      let title=line.slice(i)
+        .replace(/["'<>\[\]{}].*$/,'')
+        .replace(/\s+NEW\s*$/i,'')
+        .replace(/\s{2,}/g,' ')
+        .trim();
+
+      // 埋め込みデータで1行が長い場合は「抽選...について」までに切る。
+      const end=title.match(/^(.*?(?:抽選受付について|抽選販売について|抽選受付|抽選販売))/);
+      if(end)title=end[1].trim();
+
+      if(!/ポケモンカードゲーム|ポケモンカード/.test(title))continue;
+      if(!/抽選受付|抽選販売|抽選/.test(title))continue;
+      if(/中止|取消|当選発表のみ|抽選結果/.test(title))continue;
+      if(title.length>240)continue;
+
+      const around=[lines[n-1]||'',line].join(' ');
+      const dm=around.match(/(20\d{2})[/.年](\d{1,2})[/.月](\d{1,2})日?/);
+      const publishedDate=dm?dm[1]+'-'+String(dm[2]).padStart(2,'0')+'-'+String(dm[3]).padStart(2,'0'):null;
+
+      if(!out.some(x=>x.title===title))out.push({title,sourceUrl,publishedDate});
+    }
   }
   return out.slice(0,MAX_ARTICLES);
 }
@@ -222,7 +246,7 @@ export function merge(previous,a,b){
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   const [action,target]=process.argv.slice(2);
   if(action==='run'){
-    const r=await collect(createHttpsFetcher({allowedHosts:['www.furu1.net','furu1.net'],maxBytes:4*1024*1024,userAgent:'PokemonRadar/0.1 (+public lottery information check)'}));
+    const r=await collect(createHttpsFetcher({allowedHosts:['www.furu1.net','furu1.net'],maxBytes:4*1024*1024,userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/154 Safari/537.36 PokemonRadar/0.1'}));
     fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,JSON.stringify(r,null,2)+'\n');process.exitCode=r.ok?0:10;
   }else if(action==='all'){
     fs.mkdirSync(target,{recursive:true});
