@@ -54,8 +54,17 @@ export async function collect(fetcher){
  const ledger=[];
  async function raw(url){const r=await fetcher(url);const{body,...record}=r;ledger.push(record);if(!r.ok)throw new Error(r.error??('HTTP '+r.status));return decodeBody(body,r.headers['content-type']).text;}
  try{
-  const robots=await raw('https://shibuyatsutaya.tsite.jp/robots.txt');
-  const rules=parseRobots(robots,'PokemonRadar');
+  const robotsResponse=await fetcher('https://shibuyatsutaya.tsite.jp/robots.txt');
+  const {body:robotsBody,...robotsRecord}=robotsResponse;
+  ledger.push(robotsRecord);
+  let rules;
+  if(robotsResponse.ok){
+    rules=parseRobots(decodeBody(robotsBody,robotsResponse.headers['content-type']).text,'PokemonRadar');
+  }else if(robotsResponse.status===404){
+    rules=parseRobots('','PokemonRadar');
+  }else{
+    throw new Error(robotsResponse.error??('robots HTTP '+robotsResponse.status));
+  }
   async function allowed(url){const u=new URL(url);if(u.origin!=='https://shibuyatsutaya.tsite.jp')throw new Error('許可外ホスト');if(!isPathAllowed(rules,u.pathname+u.search))throw new Error('robotsで禁止されたURL');return raw(url);}
   const list=await allowed(ENTRY),candidates=discover(list);
   if(!candidates.length)throw new Error('SHIBUYA TSUTAYA公式EVENTからポケカ抽選記事を発見できません。0件とは扱いません');
