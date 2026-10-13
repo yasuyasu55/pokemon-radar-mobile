@@ -10,7 +10,7 @@ export const ENTRY='https://shibuyatsutaya.tsite.jp/event/?article_tag=%E3%83%9D
 export const MAX_ARTICLES=5;
 
 function near(lines,labelRe,count=10){const i=lines.findIndex(l=>labelRe.test(l));return i<0?null:lines.slice(i,i+count).join(' ');}
-function range(seg,label){if(!seg)return null;const dts=findDateTimes(seg);if(dts.length<2)return null;const start=resolveDateTime(dts[0]);let year=start.date?Number(start.date.slice(0,4)):dts[0].year;const end=resolveDateTime(dts[dts.length-1],year);if(!start.date||!end.date||start.reason||end.reason)return null;return {found:true,raw:seg,start,end,deadlineOnly:false,status:(start.inferredYear||end.inferredYear)?'INFERRED':'CONFIRMED',notes:[...(start.notes||[]),...(end.notes||[]),label]};}
+function range(seg,label){if(!seg)return null;const dts=findDateTimes(seg);if(dts.length<2)return null;const start=resolveDateTime(dts[0]);let year=start.date?Number(start.date.slice(0,4)):dts[0].year;const end=resolveDateTime(dts[1],year);if(!start.date||!end.date||start.reason||end.reason)return null;return {found:true,raw:seg,start,end,deadlineOnly:false,status:(start.inferredYear||end.inferredYear)?'INFERRED':'CONFIRMED',notes:[...(start.notes||[]),...(end.notes||[]),label]};}
 function single(seg){if(!seg)return null;const dt=findDateTimes(seg)[0];if(!dt)return null;const start=resolveDateTime(dt);if(!start.date||start.reason)return null;return {found:true,raw:seg,start,end:null,deadlineOnly:false,single:true,approximate:/以降|順次|頃/.test(seg),status:start.inferredYear?'INFERRED':'CONFIRMED',notes:start.notes||[]};}
 export function discover(html){
  const out=[];
