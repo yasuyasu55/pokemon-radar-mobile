@@ -2728,7 +2728,7 @@
       "title": "10月16日(金)発売『ポケモンカードゲーム MEGA「30th CELEBRATION カードセット」(9種セット)』抽選販売受付のお知らせ",
       "sourceName": "GEO",
       "sourceUrl": "https://geo-online.co.jp/news/783",
-      "fetchedAt": "2026-10-12T02:14:07.286Z",
+      "fetchedAt": "2026-10-13T03:04:42.113Z",
       "publishedDate": "2026-09-18",
       "entryPeriod": {
         "found": true,
@@ -2843,7 +2843,7 @@
       "title": "「ポケモンカードゲーム 」「ONE PIECEカードゲーム』再販商品 抽選販売受付のお知らせ",
       "sourceName": "GEO",
       "sourceUrl": "https://geo-online.co.jp/news/785",
-      "fetchedAt": "2026-10-12T02:14:07.532Z",
+      "fetchedAt": "2026-10-13T03:04:42.384Z",
       "publishedDate": "2026-09-18",
       "entryPeriod": {
         "found": true,
@@ -3473,12 +3473,12 @@
     },
     "geo": {
       "name": "GEO",
-      "fetchedAt": "2026-10-12T02:14:07.535Z",
+      "fetchedAt": "2026-10-13T03:04:42.386Z",
       "coverage": "GEO公式ニュース一覧から最新のポケモンカード抽選販売記事を最大5件確認",
       "verifiedCases": 2,
       "evidence": [
         {
-          "pid": 2488,
+          "pid": 2418,
           "requests": [
             {
               "url": "https://geo-online.co.jp/robots.txt",
@@ -3490,24 +3490,24 @@
               "url": "https://geo-online.co.jp/news/",
               "status": 200,
               "bytes": 39387,
-              "sha256": "aa1f275617ebd1cf43c449c30ae267d41054bd65c76d03045deeeb48e3884553"
+              "sha256": "a0f5f977541dccc632607e29c2cf5e25b54ed7c0bd979e9ec08022b092051ec3"
             },
             {
               "url": "https://geo-online.co.jp/news/783",
               "status": 200,
               "bytes": 50837,
-              "sha256": "34042f6438171e675f96de273aabb30bf709cc2cad6951e83d9b5ca5877f0ced"
+              "sha256": "959f31d81b80df1ffe3e1e138af1715c2e5e08007fe1edd13e4a37f14d1c23b9"
             },
             {
               "url": "https://geo-online.co.jp/news/785",
               "status": 200,
               "bytes": 50308,
-              "sha256": "c3d7d1a40252c7909efc0b193efee518f2951434301fa4d020ce82876f6faf60"
+              "sha256": "bd655b6f971658f58aabe879cbb166ed9214f36ec036f508995207801a08d993"
             }
           ]
         },
         {
-          "pid": 2502,
+          "pid": 2431,
           "requests": [
             {
               "url": "https://geo-online.co.jp/robots.txt",
@@ -3519,19 +3519,19 @@
               "url": "https://geo-online.co.jp/news/",
               "status": 200,
               "bytes": 39387,
-              "sha256": "ddf4ce46ce8db97d026554279cf32da00efdb9e800c42998c2e066a238ccd97e"
+              "sha256": "a0f5f977541dccc632607e29c2cf5e25b54ed7c0bd979e9ec08022b092051ec3"
             },
             {
               "url": "https://geo-online.co.jp/news/783",
               "status": 200,
               "bytes": 50837,
-              "sha256": "2b574eefb8b4abb0e5e1b26b88fd0bcde081bce6cdecba4bb6f4590c75bdadcc"
+              "sha256": "959f31d81b80df1ffe3e1e138af1715c2e5e08007fe1edd13e4a37f14d1c23b9"
             },
             {
               "url": "https://geo-online.co.jp/news/785",
               "status": 200,
               "bytes": 50308,
-              "sha256": "449d86d40481d0731dbccb6e3a3d6c9036220bd81a982f3b169099739e33f4aa"
+              "sha256": "bd655b6f971658f58aabe879cbb166ed9214f36ec036f508995207801a08d993"
             }
           ]
         }
