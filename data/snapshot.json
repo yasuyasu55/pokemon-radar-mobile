@@ -2958,7 +2958,7 @@
       "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット 9種セット 抽選販売",
       "sourceName": "SHIBUYA TSUTAYA",
       "sourceUrl": "https://shibuyatsutaya.tsite.jp/article/2715.html",
-      "fetchedAt": "2026-10-13T03:17:36.961Z",
+      "fetchedAt": "2026-10-13T05:18:57.866Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -2975,12 +2975,12 @@
           "reason": null
         },
         "end": {
-          "raw": "2026年10月9日(金) 18時",
-          "iso": "2026-10-09T18:00:00+09:00",
-          "date": "2026-10-09",
+          "raw": "2026年9月27日(日) 23:59",
+          "iso": "2026-09-27T23:59:00+09:00",
+          "date": "2026-09-27",
           "timeUnconfirmed": false,
           "inferredYear": false,
-          "weekday": "金",
+          "weekday": "日",
           "weekdayMatches": true,
           "notes": [],
           "reason": null
@@ -3027,12 +3027,12 @@
           "reason": null
         },
         "end": {
-          "raw": "2026年10月9日(金) 18時",
-          "iso": "2026-10-09T18:00:00+09:00",
-          "date": "2026-10-09",
-          "timeUnconfirmed": false,
+          "raw": "2026年10月25日(日)",
+          "iso": null,
+          "date": "2026-10-25",
+          "timeUnconfirmed": true,
           "inferredYear": false,
-          "weekday": "金",
+          "weekday": "日",
           "weekdayMatches": true,
           "notes": [],
           "reason": null
@@ -3104,7 +3104,7 @@
       "title": "ポケモンカードゲーム MEGA 拡張パック「30th CELEBRATION」・「30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー」抽選販売",
       "sourceName": "SHIBUYA TSUTAYA",
       "sourceUrl": "https://shibuyatsutaya.tsite.jp/article/2596.html",
-      "fetchedAt": "2026-10-13T03:17:37.268Z",
+      "fetchedAt": "2026-10-13T05:18:58.237Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -3121,12 +3121,12 @@
           "reason": null
         },
         "end": {
-          "raw": "2026年9月8日(火) 18時",
-          "iso": "2026-09-08T18:00:00+09:00",
-          "date": "2026-09-08",
+          "raw": "2026年8月30日(日)23:59",
+          "iso": "2026-08-30T23:59:00+09:00",
+          "date": "2026-08-30",
           "timeUnconfirmed": false,
           "inferredYear": false,
-          "weekday": "火",
+          "weekday": "日",
           "weekdayMatches": true,
           "notes": [],
           "reason": null
@@ -3173,12 +3173,12 @@
           "reason": null
         },
         "end": {
-          "raw": "2026年9月8日(火) 18時",
-          "iso": "2026-09-08T18:00:00+09:00",
-          "date": "2026-09-08",
-          "timeUnconfirmed": false,
+          "raw": "2026年9月23日(水)",
+          "iso": null,
+          "date": "2026-09-23",
+          "timeUnconfirmed": true,
           "inferredYear": false,
-          "weekday": "火",
+          "weekday": "水",
           "weekdayMatches": true,
           "notes": [],
           "reason": null
@@ -3251,7 +3251,7 @@
       "title": "ポケモンカードゲーム MEGA 拡張パック「ストームエメラルダ」・スターターセットex「イーブイex」「ゾロア&ゾロアークex」「ニャオハ&マスカーニャex」抽選販売",
       "sourceName": "SHIBUYA TSUTAYA",
       "sourceUrl": "https://shibuyatsutaya.tsite.jp/article/2356.html",
-      "fetchedAt": "2026-10-13T03:17:37.553Z",
+      "fetchedAt": "2026-10-13T05:18:58.989Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -3268,12 +3268,12 @@
           "reason": null
         },
         "end": {
-          "raw": "2026年7月24日(金) 18時",
-          "iso": "2026-07-24T18:00:00+09:00",
-          "date": "2026-07-24",
+          "raw": "2026年7月12日(日)23:59",
+          "iso": "2026-07-12T23:59:00+09:00",
+          "date": "2026-07-12",
           "timeUnconfirmed": false,
           "inferredYear": false,
-          "weekday": "金",
+          "weekday": "日",
           "weekdayMatches": true,
           "notes": [],
           "reason": null
@@ -3320,10 +3320,10 @@
           "reason": null
         },
         "end": {
-          "raw": "2026年7月12日(日)23:59",
-          "iso": "2026-07-12T23:59:00+09:00",
-          "date": "2026-07-12",
-          "timeUnconfirmed": false,
+          "raw": "2026年8月2日(日)",
+          "iso": null,
+          "date": "2026-08-02",
+          "timeUnconfirmed": true,
           "inferredYear": false,
           "weekday": "日",
           "weekdayMatches": true,
@@ -3398,7 +3398,7 @@
       "title": "ポケモンカードゲーム MEGA 拡張パック 「アビスアイ」抽選販売",
       "sourceName": "SHIBUYA TSUTAYA",
       "sourceUrl": "https://shibuyatsutaya.tsite.jp/article/2085.html",
-      "fetchedAt": "2026-10-13T03:17:38.714Z",
+      "fetchedAt": "2026-10-13T05:18:59.239Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -3415,12 +3415,12 @@
           "reason": null
         },
         "end": {
-          "raw": "2026年5月15日(金) 18時",
-          "iso": "2026-05-15T18:00:00+09:00",
-          "date": "2026-05-15",
+          "raw": "2026年5月3日(日)23:59",
+          "iso": "2026-05-03T23:59:00+09:00",
+          "date": "2026-05-03",
           "timeUnconfirmed": false,
           "inferredYear": false,
-          "weekday": "金",
+          "weekday": "日",
           "weekdayMatches": true,
           "notes": [],
           "reason": null
@@ -3467,10 +3467,10 @@
           "reason": null
         },
         "end": {
-          "raw": "2026年5月3日(日)23:59",
-          "iso": "2026-05-03T23:59:00+09:00",
-          "date": "2026-05-03",
-          "timeUnconfirmed": false,
+          "raw": "2026年5月24日(日)",
+          "iso": null,
+          "date": "2026-05-24",
+          "timeUnconfirmed": true,
           "inferredYear": false,
           "weekday": "日",
           "weekdayMatches": true,
@@ -3543,7 +3543,7 @@
       "title": "ポケモンカードゲーム MEGA 拡張パック 「ニンジャスピナー」抽選販売",
       "sourceName": "SHIBUYA TSUTAYA",
       "sourceUrl": "https://shibuyatsutaya.tsite.jp/article/1883.html",
-      "fetchedAt": "2026-10-13T03:17:39.956Z",
+      "fetchedAt": "2026-10-13T05:18:59.515Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -3560,12 +3560,12 @@
           "reason": null
         },
         "end": {
-          "raw": "2026年3月5日(木) 18時",
-          "iso": "2026-03-05T18:00:00+09:00",
-          "date": "2026-03-05",
+          "raw": "2026年2月22日(日)23:59",
+          "iso": "2026-02-22T23:59:00+09:00",
+          "date": "2026-02-22",
           "timeUnconfirmed": false,
           "inferredYear": false,
-          "weekday": "木",
+          "weekday": "日",
           "weekdayMatches": true,
           "notes": [],
           "reason": null
@@ -3612,10 +3612,10 @@
           "reason": null
         },
         "end": {
-          "raw": "2026年2月22日(日)23:59",
-          "iso": "2026-02-22T23:59:00+09:00",
-          "date": "2026-02-22",
-          "timeUnconfirmed": false,
+          "raw": "2026年3月15日(日)",
+          "iso": null,
+          "date": "2026-03-15",
+          "timeUnconfirmed": true,
           "inferredYear": false,
           "weekday": "日",
           "weekdayMatches": true,
@@ -4268,12 +4268,12 @@
     },
     "shibuya-tsutaya": {
       "name": "SHIBUYA TSUTAYA",
-      "fetchedAt": "2026-10-13T03:17:39.957Z",
+      "fetchedAt": "2026-10-13T05:18:59.516Z",
       "coverage": "SHIBUYA TSUTAYA公式ポケカEVENT一覧から最新の抽選販売記事を最大5件確認",
       "verifiedCases": 5,
       "evidence": [
         {
-          "pid": 2475,
+          "pid": 2292,
           "requests": [
             {
               "url": "https://shibuyatsutaya.tsite.jp/robots.txt",
@@ -4290,37 +4290,37 @@
             {
               "url": "https://shibuyatsutaya.tsite.jp/article/2715.html",
               "status": 200,
-              "bytes": 91890,
-              "sha256": "28fadfc3efefd7957d48ae45b9f7760c0d660c5bc0acd4484c3160c28cfab10c"
+              "bytes": 91869,
+              "sha256": "064480975a55453f9b8acdcacda6b6bd9ca6ddfe49287953210a197a1eb822ae"
             },
             {
               "url": "https://shibuyatsutaya.tsite.jp/article/2596.html",
               "status": 200,
-              "bytes": 92761,
-              "sha256": "9cfea9b3d79d5b916f4a3733e66dfba542a59df6040866e1700b10d18af31e76"
+              "bytes": 92740,
+              "sha256": "a0ceef313e892bc8fa0bf3cd9a9e311433db0adcff1f7396f259df6e56280d03"
             },
             {
               "url": "https://shibuyatsutaya.tsite.jp/article/2356.html",
               "status": 200,
-              "bytes": 94195,
-              "sha256": "b409350e028fa64e0dc41586ce881ba4932a4fd780fc162f4e8ebbfadececc60"
+              "bytes": 94174,
+              "sha256": "309c33a27f114dfea6f89eb415699c3491c7d74174733d553029b27ef2e91f00"
             },
             {
               "url": "https://shibuyatsutaya.tsite.jp/article/2085.html",
               "status": 200,
-              "bytes": 90988,
-              "sha256": "85ec1c540950584c839891e3bd895638efa6a8d6f05b781c29a27e96b4228dc4"
+              "bytes": 90967,
+              "sha256": "d1b24a6d1c1c91b670965ebcc492dfe0bfb1f15e18988e0fe4bb7f4e565b5c2c"
             },
             {
               "url": "https://shibuyatsutaya.tsite.jp/article/1883.html",
               "status": 200,
-              "bytes": 91031,
-              "sha256": "f4c44900fd9133a9fcca6806524c03678bfddf4ba9783ede54a92c9185526915"
+              "bytes": 91010,
+              "sha256": "a395a14cb60dded2315708e897569fad3036c049618b95dcb0a5700ba48e0cdc"
             }
           ]
         },
         {
-          "pid": 2517,
+          "pid": 2309,
           "requests": [
             {
               "url": "https://shibuyatsutaya.tsite.jp/robots.txt",
@@ -4337,32 +4337,32 @@
             {
               "url": "https://shibuyatsutaya.tsite.jp/article/2715.html",
               "status": 200,
-              "bytes": 91890,
-              "sha256": "28fadfc3efefd7957d48ae45b9f7760c0d660c5bc0acd4484c3160c28cfab10c"
+              "bytes": 91869,
+              "sha256": "064480975a55453f9b8acdcacda6b6bd9ca6ddfe49287953210a197a1eb822ae"
             },
             {
               "url": "https://shibuyatsutaya.tsite.jp/article/2596.html",
               "status": 200,
-              "bytes": 92761,
-              "sha256": "9cfea9b3d79d5b916f4a3733e66dfba542a59df6040866e1700b10d18af31e76"
+              "bytes": 92740,
+              "sha256": "a0ceef313e892bc8fa0bf3cd9a9e311433db0adcff1f7396f259df6e56280d03"
             },
             {
               "url": "https://shibuyatsutaya.tsite.jp/article/2356.html",
               "status": 200,
-              "bytes": 94195,
-              "sha256": "b409350e028fa64e0dc41586ce881ba4932a4fd780fc162f4e8ebbfadececc60"
+              "bytes": 94174,
+              "sha256": "309c33a27f114dfea6f89eb415699c3491c7d74174733d553029b27ef2e91f00"
             },
             {
               "url": "https://shibuyatsutaya.tsite.jp/article/2085.html",
               "status": 200,
-              "bytes": 90988,
-              "sha256": "85ec1c540950584c839891e3bd895638efa6a8d6f05b781c29a27e96b4228dc4"
+              "bytes": 90967,
+              "sha256": "d1b24a6d1c1c91b670965ebcc492dfe0bfb1f15e18988e0fe4bb7f4e565b5c2c"
             },
             {
               "url": "https://shibuyatsutaya.tsite.jp/article/1883.html",
               "status": 200,
-              "bytes": 91031,
-              "sha256": "f4c44900fd9133a9fcca6806524c03678bfddf4ba9783ede54a92c9185526915"
+              "bytes": 91010,
+              "sha256": "a395a14cb60dded2315708e897569fad3036c049618b95dcb0a5700ba48e0cdc"
             }
           ]
         }
