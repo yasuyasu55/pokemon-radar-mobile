@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "policy": "candidate-only",
+  "notes": "X投稿は候補発見にのみ使い、正式案件化はAmazon商品詳細または公式応募ページの再確認を必須とする。",
+  "accounts": [
+    {
+      "handle": "pokecamatomeru",
+      "url": "https://x.com/pokecamatomeru",
+      "type": "aggregator",
+      "priority": 100,
+      "genres": ["pokemon-card"],
+      "enabled": true,
+      "trust": "candidate-only",
+      "reason": "Amazon招待ASIN・抽選・再販情報の候補発見源"
+    },
+    {
+      "handle": "DisneyLOR_JP",
+      "url": "https://x.com/DisneyLOR_JP",
+      "type": "official",
+      "priority": 85,
+      "genres": ["disney-lorcana"],
+      "enabled": true,
+      "trust": "official-announcement"
+    },
+    {
+      "handle": "UNION_ARENA_TCG",
+      "url": "https://x.com/UNION_ARENA_TCG",
+      "type": "official",
+      "priority": 80,
+      "genres": ["union-arena"],
+      "enabled": true,
+      "trust": "official-announcement"
+    },
+    {
+      "handle": "GUNDAM_GCG_JP",
+      "url": "https://x.com/GUNDAM_GCG_JP",
+      "type": "official",
+      "priority": 85,
+      "genres": ["gundam-card"],
+      "enabled": true,
+      "trust": "official-announcement"
+    },
+    {
+      "handle": "ONEPIECEtcgSHOP",
+      "url": "https://x.com/ONEPIECEtcgSHOP",
+      "type": "official-shop",
+      "priority": 80,
+      "genres": ["one-piece-card"],
+      "enabled": true,
+      "trust": "official-shop-announcement"
+    }
+  ],
+  "genres": [
+    {
+      "id": "pokemon-card",
+      "label": "ポケモンカード",
+      "priority": 100,
+      "aliases": ["ポケモンカード", "ポケカ"],
+      "onlinePriority": true
+    },
+    {
+      "id": "one-piece-card",
+      "label": "ONE PIECEカード",
+      "priority": 90,
+      "aliases": ["ONE PIECEカード", "ワンピースカード"],
+      "onlinePriority": true
+    },
+    {
+      "id": "gundam-card",
+      "label": "ガンダムカードゲーム",
+      "priority": 85,
+      "aliases": ["ガンダムカードゲーム", "ガンダムカード"],
+      "onlinePriority": true
+    },
+    {
+      "id": "disney-lorcana",
+      "label": "ディズニー・ロルカナ",
+      "priority": 80,
+      "aliases": ["ディズニーロルカナ", "ロルカナ"],
+      "onlinePriority": true
+    },
+    {
+      "id": "dragon-ball-fw",
+      "label": "ドラゴンボールFW",
+      "priority": 75,
+      "aliases": ["フュージョンワールド", "ドラゴンボールカード"],
+      "onlinePriority": true
+    },
+    {
+      "id": "union-arena",
+      "label": "UNION ARENA",
+      "priority": 70,
+      "aliases": ["UNION ARENA", "ユニオンアリーナ", "ユニアリ"],
+      "onlinePriority": true
+    }
+  ],
+  "triggers": [
+    "抽選",
+    "抽選販売",
+    "招待",
+    "招待販売",
+    "招待をリクエスト",
+    "予約抽選",
+    "購入権",
+    "再販",
+    "再入荷",
+    "Amazon",
+    "楽天ブックス",
+    "LivePocket"
+  ],
+  "profitCandidateSignals": [
+    "BOX",
+    "限定",
+    "プレミアム",
+    "抽選販売",
+    "招待販売",
+    "再販",
+    "再入荷"
+  ],
+  "validation": {
+    "amazon": {
+      "extractAsin": true,
+      "requireDetailPageVerification": true,
+      "publishOnlyWhenRequestable": true
+    },
+    "other": {
+      "requireOfficialLandingPage": true,
+      "allowXOnlyPublication": false
+    }
+  }
+}

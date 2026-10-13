@@ -1,0 +1,43 @@
+name: Build X social discovery inputs
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 */6 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'data/internal/x-social-discovery-config.json'
+      - 'tools/x-social-discovery/**'
+      - 'tests/x-social-discovery.test.mjs'
+      - '.github/workflows/x-social-discovery-inputs.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: x-social-discovery-inputs
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test X social discovery logic
+        run: node --test tests/x-social-discovery.test.mjs
+      - name: Build CRAWL STORM X social targets
+        run: node tools/x-social-discovery/build-targets.mjs data/internal/x-social-discovery-config.json data/internal/x-social-discovery-targets.json
+      - name: Commit generated target list
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/internal/x-social-discovery-targets.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Refresh X social discovery targets'
+          git push origin HEAD:main
