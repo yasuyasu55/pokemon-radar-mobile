@@ -1,56 +1,19 @@
 {
-  "checkedAt": "2026-10-14T15:27:33.505Z",
-  "method": "public-browser",
-  "accounts": [
-    {
-      "handle": "pokecamatomeru",
-      "outcome": "fetch-failed",
-      "status": 403
-    },
-    {
-      "handle": "pokecasokuhou",
-      "outcome": "fetch-failed",
-      "status": 403
-    },
-    {
-      "handle": "lifeprep_list",
-      "outcome": "fetch-failed",
-      "status": 403
-    },
-    {
-      "handle": "kotatsudemikanm",
-      "outcome": "fetch-failed",
-      "status": 403
-    },
-    {
-      "handle": "mymyme0901",
-      "outcome": "fetch-failed",
-      "status": 403
-    },
-    {
-      "handle": "manimegame336",
-      "outcome": "fetch-failed",
-      "status": 403
-    },
-    {
-      "handle": "medakadesu41",
-      "outcome": "fetch-failed",
-      "status": 403
-    },
-    {
-      "handle": "PokeGetInfoMain",
-      "outcome": "fetch-failed",
-      "status": 403
-    },
-    {
-      "handle": "pokecayoyaku",
-      "outcome": "fetch-failed",
-      "status": 403
-    }
-  ],
+  "checkedAt": "2026-10-14T15:45:37.387Z",
+  "method": "none",
+  "accounts": [],
   "publication": "candidate-only",
   "apiConfigured": false,
-  "status": "PARTIAL_OR_FAILED",
+  "auth": "UNSET",
+  "collection": "NOT_RUNNING",
+  "status": "NOT_RUNNING_AUTH_UNSET",
+  "notice": "X_BEARER_TOKEN is not set. X API acquisition is not running, so no X monitoring coverage exists.",
+  "publicFallback": {
+    "role": "supplementary visible-sample attempt only; not monitoring",
+    "attempted": 0,
+    "usable": 0,
+    "failed": 0
+  },
   "amazonCandidates": 0,
   "officialCandidates": 0
 }
