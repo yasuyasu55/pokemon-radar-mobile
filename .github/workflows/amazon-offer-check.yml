@@ -1,4 +1,4 @@
-name: Diagnose two Amazon offer layouts
+name: Diagnose three Amazon page responses (read only)
 on:
   workflow_dispatch:
   push:
@@ -19,11 +19,13 @@ jobs:
         run: |
           npm install --no-save --package-lock=false playwright@1.55.0
           npx playwright install --with-deps chromium
-      - name: Read offers without clicking
-        run: node tools/amazon-offer-check/check.mjs
+      - name: Verify diagnostic rules
+        run: node --test tests/amazon-page-health.test.mjs
+      - name: Diagnose page health without clicking or publishing
+        run: node tools/amazon-offer-check/diagnose.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: two-amazon-offer-layouts
-          path: amazon-offer-check.json
+          name: three-amazon-page-health
+          path: amazon-page-health.json
           retention-days: 7
