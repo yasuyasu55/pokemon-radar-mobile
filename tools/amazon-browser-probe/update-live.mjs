@@ -3,6 +3,18 @@ import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {run} from './browser-probe.mjs';
+import {mergeDiscoveredAsins} from '../amazon-watch/asin-pool.mjs';
+export function saveDiscoveryPool(previous,result) {
+  const next=mergeDiscoveredAsins(previous,(result.discovered || []).map(d=>({asin:d.asin,title:d.title,query:(d.queries || []).join(' / ')})));
+  for(const item of next.items) {
+    const detail=result.details.find(d=>d.asin===item.asin);
+    if(detail?.stage==='PRODUCT_PARSED') {
+      item.lastCheckedAt=result.finishedAt;
+      item.detailCandidate=detail.candidate===true;
+    }
+  }
+  return next;
+}
 export function verifiedRows(a,b) {
   if(a.mode!=='BROWSER_POC' || b.mode!=='BROWSER_POC' || !a.pid || !b.pid || a.pid===b.pid) throw new Error('Independent live browser results required');
   return b.details.filter(y=>{
@@ -37,8 +49,12 @@ if(process.argv[1] && path.resolve(process.argv[1])===here) {
   if(action==='one') {
     const prior=read(snapshot),items=fs.existsSync(pool)?read(pool).items:[];
     const published=prior.cases.filter(c=>c.id.startsWith('amazon:')).map(c=>c.asin || c.id.split(':')[1]);
-    const candidates=items.filter(x=>x.state!=='retired').map(x=>x.asin);
+    const candidates=items.filter(x=>x.state!=='retired').sort((a,b)=>Number(b.detailCandidate===true)-Number(a.detailCandidate===true) || String(a.lastCheckedAt || '').localeCompare(String(b.lastCheckedAt || ''))).map(x=>x.asin);
     await run(out,[...new Set([...candidates,...published])]);
+    const result=read(path.join(out,'result.json'));
+    const nextPool=saveDiscoveryPool(fs.existsSync(pool)?read(pool):{items:[]},result);
+    fs.mkdirSync(path.dirname(pool),{recursive:true});
+    fs.writeFileSync(pool+'.tmp',JSON.stringify(nextPool,null,2)+'\n');fs.renameSync(pool+'.tmp',pool);
   } else if(action==='all') {
     fs.mkdirSync(out,{recursive:true});
     for(const n of [1,2]) {

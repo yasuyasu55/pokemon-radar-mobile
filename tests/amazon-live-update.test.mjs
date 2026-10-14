@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {adoptAmazon,verifiedRows} from '../tools/amazon-browser-probe/update-live.mjs';
+import {adoptAmazon,verifiedRows,saveDiscoveryPool} from '../tools/amazon-browser-probe/update-live.mjs';
 const detail={asin:'B0GP9QHQ3Y',url:'https://www.amazon.co.jp/dp/B0GP9QHQ3Y',title:'ポケモンカードゲーム BOX',stage:'PRODUCT_PARSED',status:200,candidate:true,checks:{asinMatched:true,amazonSeller:true,invitationNotice:true,requestButton:true}};
 const run={mode:'BROWSER_POC',pid:1,finishedAt:'2026-10-14T00:00:00Z',details:[detail]};
 test('only matching strict detail checks become published rows',()=>{
@@ -16,4 +16,10 @@ test('only matching strict detail checks become published rows',()=>{
 test('blocked, mismatched titles, and missing browser evidence never publish or erase',()=>{
   const bad=structuredClone(run);bad.pid=2;bad.details[0].title='別商品';assert.equal(verifiedRows(run,bad).length,0);
   bad.details[0].title=detail.title;bad.details[0].stage='BLOCKED';assert.equal(verifiedRows(run,bad).length,0);
+});
+test('new search ASINs survive a run without two-pass confirmation',()=>{
+  const next=saveDiscoveryPool({items:[]},{...run,discovered:[{asin:detail.asin,title:detail.title,queries:['search']}]});
+  assert.equal(next.items.length,1);assert.equal(next.items[0].state,'new');
+  assert.equal(next.items[0].detailCandidate,true);
+  assert.equal(saveDiscoveryPool(next,{...run,discovered:[]}).items.length,1);
 });
