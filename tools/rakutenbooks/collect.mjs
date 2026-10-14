@@ -216,6 +216,8 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
  if(action==='run'){
   const socialPath='data/internal/x-candidates.json';
   const extra=fs.existsSync(socialPath)?JSON.parse(fs.readFileSync(socialPath,'utf8')).official?.map(c=>c.canonicalUrl)||[]:[];
+  const watchPath='data/internal/rakutenbooks-watch-urls.json';
+  if(fs.existsSync(watchPath))extra.push(...JSON.parse(fs.readFileSync(watchPath,'utf8')).urls);
   const r=await collect(createHttpsFetcher({allowedHosts:['books.rakuten.co.jp'],maxBytes:4*1024*1024,userAgent:'PokemonRadar/0.1 (+public lottery information check)'}),extra);
   fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,JSON.stringify(r,null,2)+'\n');
   console.log(JSON.stringify({ok:r.ok,pid:r.pid,discovery:r.discovery,candidates:r.candidates,checked:r.checked,cases:r.cases?.map(c=>({id:c.id,title:c.title,entryEnd:c.entryPeriod.end.iso,purchaseEnd:c.purchasePeriod?.end?.iso??null,shipping:c.shippingPeriod.raw}))??null,error:r.error,requests:r.ledger.map(x=>({url:x.requestedUrl,status:x.status,bytes:x.bytes,sha256:x.sha256}))}));
