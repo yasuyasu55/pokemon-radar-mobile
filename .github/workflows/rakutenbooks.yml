@@ -1,6 +1,8 @@
 name: Verify and publish Rakuten Books lotteries
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '11 * * * *'
   push:
     branches: [main]
     paths:
@@ -60,3 +62,4 @@ jobs:
 
 
 # rerun-marker: direct-entry-after-trigger-fix
+

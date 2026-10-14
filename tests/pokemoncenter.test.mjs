@@ -67,5 +67,6 @@ test('failure, replay, incomplete and duplicate candidates cannot replace previo
  assert.equal(JSON.stringify(prior),original);
 });
 test('delivery lotteries appear in delivery filter but remain closed after actual deadline',()=>{
- for(const c of adoptionRuns()[0].cases){const now=Date.parse('2026-10-11T08:00:00+09:00');assert.equal(entryState(c,now),'closed');assert.equal(matches(c,{phase:'all',receiving:['delivery'],store:''},now),true);assert.equal(matches(c,{phase:'open',receiving:['delivery'],store:''},now),false);assert.equal(matches(c,{phase:'all',receiving:['store'],store:''},now),false);}
+ for(const c of adoptionRuns()[0].cases){const now=Date.parse('2026-10-11T08:00:00+09:00');assert.equal(entryState(c,now),'closed');assert.equal(matches(c,{phases:[],receiving:['delivery'],store:''},Date.parse(c.entryPeriod.start.iso)+1000),true);assert.equal(matches(c,{phases:[],receiving:['delivery'],store:''},now),false);assert.equal(matches(c,{phases:['open'],receiving:['delivery'],store:''},now),false);assert.equal(matches(c,{phase:'all',receiving:['store'],store:''},now),false);}
 });
+

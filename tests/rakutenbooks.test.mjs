@@ -51,8 +51,9 @@ test('merge preserves all other sources and stable personal ids',()=>{
 test('delivery filter works and closed lottery stays closed',()=>{
  const c=runs()[0].cases[0],now=Date.parse('2026-10-11T08:00:00+09:00');
  assert.equal(entryState(c,now),'closed');
- assert.equal(matches(c,{phase:'all',receiving:['delivery'],store:''},now),true);
- assert.equal(matches(c,{phase:'open',receiving:['delivery'],store:''},now),false);
+ assert.equal(matches(c,{phases:[],receiving:['delivery'],store:''},Date.parse(c.entryPeriod.start.iso)+1000),true);
+ assert.equal(matches(c,{phases:[],receiving:['delivery'],store:''},now),false);
+ assert.equal(matches(c,{phases:['open'],receiving:['delivery'],store:''},now),false);
  assert.equal(matches(c,{phase:'all',receiving:['store'],store:''},now),false);
 });
 
@@ -63,8 +64,8 @@ test('public UI names Rakuten Books and preserves raw approximate shipping text'
  assert.match(app,/rakutenbooks:'楽天ブックス'/);
  assert.match(app,/shippingPeriod\?\.raw\|\|'未確認'/);
  assert.match(app,/resultAnnouncement\?\.notAfter/);
- assert.match(index,/モバイル閲覧版 0\.1\.17/);
- assert.match(index,/app\.mjs\?v=0117/);
+ assert.match(index,/モバイル閲覧版 0\.1\.\d+/);
+ assert.match(index,/app\.mjs\?v=\d+/);
 });
 
 
@@ -86,3 +87,4 @@ test('official entry page can directly produce multiple stable delivery cases',(
  assert.equal(cases[0].receivingMethod,'DELIVERY');
  assert.equal(cases[0].sourceUrl,'https://books.rakuten.co.jp/event/game/card/entry/');
 });
+

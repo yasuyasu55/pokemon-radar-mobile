@@ -149,7 +149,7 @@ export function extractCase(html,url,fetchedAt){
   verification:'楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合'
  };
 }
-export async function collect(fetcher){
+export async function collect(fetcher,extraUrls=[]){
  const ledger=[];
  async function raw(url){
   const r=await fetcher(url);const{body,...record}=r;ledger.push(record);
@@ -166,11 +166,16 @@ export async function collect(fetcher){
    return raw(url);
   }
   const entryHtml=await allowed(ENTRY);
-  const entryCases=extractEntryCases(entryHtml,new Date().toISOString());
+  let entryCases=[];let entryParseError=null;
+  try{entryCases=extractEntryCases(entryHtml,new Date().toISOString());}catch(e){entryParseError=e.message;}
   let candidates=discover(entryHtml,ENTRY),discovery='OFFICIAL_LOTTERY_ENTRY_DIRECT';
   if(!candidates.length){
    const searchHtml=await allowed(SEARCH);
    candidates=discover(searchHtml,SEARCH);discovery='OFFICIAL_ENTRY_PLUS_SEARCH';
+  }
+  for(const rawUrl of extraUrls){
+   const c=discover(`<a href="${String(rawUrl).replace(/"/g,'&quot;')}"></a>`,ENTRY)[0];
+   if(c&&!candidates.some(x=>x.id===c.id))candidates.unshift(c);
   }
   if(!candidates.length&&!entryCases.length)throw new Error('公式ページから商品候補を発見できません。0件とは扱いません');
   const parsed=[],rejected=[];
@@ -187,7 +192,7 @@ export async function collect(fetcher){
   if(!cases.length)throw new Error('楽天ブックス抽選案件を確定できません');
   return {ok:true,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),
    coverage:'楽天ブックス公式のポケモンカード抽選受付ページを直接案件化。受付ページの商品コード・抽選期間・当選連絡予定日を採用し、公式検索と商品詳細の抽選販売情報も補助的に統合',
-   discovery,candidates:candidates.length,entryCases:entryCases.length,checked:Math.min(candidates.length,MAX_DETAILS),cases,rejected,ledger};
+   discovery,candidates:candidates.length,entryCases:entryCases.length,entryParseError,checked:Math.min(candidates.length,MAX_DETAILS),cases,rejected,ledger};
  }catch(e){return {ok:false,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),error:e.message,cases:null,ledger};}
 }
 const normalized=r=>JSON.stringify(r.cases.map(({fetchedAt,...c})=>c).sort((a,b)=>a.id.localeCompare(b.id)));
@@ -209,7 +214,9 @@ export function merge(previous,a,b){
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  const [action,target]=process.argv.slice(2);
  if(action==='run'){
-  const r=await collect(createHttpsFetcher({allowedHosts:['books.rakuten.co.jp'],maxBytes:4*1024*1024,userAgent:'PokemonRadar/0.1 (+public lottery information check)'}));
+  const socialPath='data/internal/x-candidates.json';
+  const extra=fs.existsSync(socialPath)?JSON.parse(fs.readFileSync(socialPath,'utf8')).official?.map(c=>c.canonicalUrl)||[]:[];
+  const r=await collect(createHttpsFetcher({allowedHosts:['books.rakuten.co.jp'],maxBytes:4*1024*1024,userAgent:'PokemonRadar/0.1 (+public lottery information check)'}),extra);
   fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,JSON.stringify(r,null,2)+'\n');
   console.log(JSON.stringify({ok:r.ok,pid:r.pid,discovery:r.discovery,candidates:r.candidates,checked:r.checked,cases:r.cases?.map(c=>({id:c.id,title:c.title,entryEnd:c.entryPeriod.end.iso,purchaseEnd:c.purchasePeriod?.end?.iso??null,shipping:c.shippingPeriod.raw}))??null,error:r.error,requests:r.ledger.map(x=>({url:x.requestedUrl,status:x.status,bytes:x.bytes,sha256:x.sha256}))}));
   process.exitCode=r.ok?0:10;
@@ -233,3 +240,4 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
   console.log('楽天ブックス抽選 '+next.sources.rakutenbooks.verifiedCases+'件を照合・追加');
  }else throw new Error('run/all/adopt');
 }
+
