@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T03:57:59.669Z",
+  "generatedAt": "2026-10-14T04:50:19.297Z",
   "recentClosedDays": 14,
   "seeds": [
     {
@@ -292,12 +292,12 @@
       "query": "MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
       "kind": "case-derived",
       "caseIds": [
-        "rakutenbooks:18595283",
-        "amazon:B0GXCM4BCZ"
+        "amazon:B0GXCM4BCZ",
+        "rakutenbooks:18595283"
       ],
       "sourceIds": [
-        "rakutenbooks",
-        "official-amazon-jp"
+        "official-amazon-jp",
+        "rakutenbooks"
       ],
       "priority": 100
     },
@@ -306,12 +306,12 @@
       "query": "MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー 招待",
       "kind": "case-derived",
       "caseIds": [
-        "rakutenbooks:18595283",
-        "amazon:B0GXCM4BCZ"
+        "amazon:B0GXCM4BCZ",
+        "rakutenbooks:18595283"
       ],
       "sourceIds": [
-        "rakutenbooks",
-        "official-amazon-jp"
+        "official-amazon-jp",
+        "rakutenbooks"
       ],
       "priority": 100
     },
@@ -745,6 +745,78 @@
       "kind": "case-derived",
       "caseIds": [
         "rakutenbooks:18182237"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:fd814684c1b40c72",
+      "query": "ONE PIECEカードゲーム エクストラブースター ONE PIECE Heroines Edition vol.2",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18771764"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:96bcd6853be55035",
+      "query": "ONE PIECEカードゲーム エクストラブースター ONE PIECE Heroines Edition vol.2 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18771764"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:360e4a2d8064dacb",
+      "query": "ONE PIECEカードゲーム ブースターパック 世界最強の戦士",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18669675"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:709d580087d42cc0",
+      "query": "ONE PIECEカードゲーム ブースターパック 世界最強の戦士 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18669675"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:4eeae312a47b85f5",
+      "query": "ドラゴンボールスーパーカードゲーム フュージョンワールド ブースターパック DUAL EVOLUTION",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18450269"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:d0cd01906b24e4d9",
+      "query": "ドラゴンボールスーパーカードゲーム フュージョンワールド ブースターパック DUAL EVOLUTION 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18450269"
       ],
       "sourceIds": [
         "rakutenbooks"
