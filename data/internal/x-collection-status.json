@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-10-14T03:41:45.231Z",
+  "method": "public-browser",
+  "accounts": [
+    {
+      "handle": "pokecamatomeru",
+      "outcome": "fetch-failed",
+      "status": 403
+    },
+    {
+      "handle": "pokecasokuhou",
+      "outcome": "fetch-failed",
+      "status": 403
+    },
+    {
+      "handle": "lifeprep_list",
+      "outcome": "fetch-failed",
+      "status": 403
+    },
+    {
+      "handle": "kotatsudemikanm",
+      "outcome": "fetch-failed",
+      "status": 403
+    },
+    {
+      "handle": "mymyme0901",
+      "outcome": "fetch-failed",
+      "status": 403
+    },
+    {
+      "handle": "manimegame336",
+      "outcome": "fetch-failed",
+      "status": 403
+    },
+    {
+      "handle": "medakadesu41",
+      "outcome": "fetch-failed",
+      "status": 403
+    },
+    {
+      "handle": "PokeGetInfoMain",
+      "outcome": "fetch-failed",
+      "status": 403
+    },
+    {
+      "handle": "pokecayoyaku",
+      "outcome": "fetch-failed",
+      "status": 403
+    }
+  ],
+  "publication": "candidate-only",
+  "apiConfigured": false,
+  "status": "PARTIAL_OR_FAILED",
+  "amazonCandidates": 0,
+  "officialCandidates": 0
+}

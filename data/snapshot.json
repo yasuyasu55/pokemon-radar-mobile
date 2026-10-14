@@ -2398,7 +2398,7 @@
       "sourceName": "Amazon",
       "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット ハリマロン・フォッコ・ケロマツ",
       "sourceUrl": "https://www.amazon.co.jp/dp/B0GXCSGX8Y",
-      "fetchedAt": "2026-10-11T05:04:00.723Z",
+      "fetchedAt": "2026-10-14T03:45:54.399Z",
       "publishedDate": null,
       "browserCapture": true,
       "automatedDiscovery": true,
@@ -2408,11 +2408,11 @@
       "entryPeriod": null,
       "resultAnnouncement": null,
       "purchasePeriod": null,
-      "receivingMethod": "UNKNOWN",
-      "receivingLabel": "受取方法未確認",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
       "stores": [],
       "conditions": [
-        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+        "Amazon商品詳細の招待リクエスト操作を独立した2回のサーバーブラウザで確認"
       ],
       "handoverRestrictions": [],
       "prices": [],
@@ -2420,9 +2420,9 @@
         "応募締切",
         "当選通知時期",
         "購入期限",
-        "受取方法"
+        "本人の応募資格・リクエスト状況"
       ],
-      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
       "asin": "B0GXCSGX8Y"
     },
     {
@@ -2431,7 +2431,7 @@
       "sourceName": "Amazon",
       "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット モクロー・ニャビー・アシマリ",
       "sourceUrl": "https://www.amazon.co.jp/dp/B0GXCPF84C",
-      "fetchedAt": "2026-10-11T05:03:45.474Z",
+      "fetchedAt": "2026-10-14T03:45:54.399Z",
       "publishedDate": null,
       "browserCapture": true,
       "automatedDiscovery": true,
@@ -2441,11 +2441,11 @@
       "entryPeriod": null,
       "resultAnnouncement": null,
       "purchasePeriod": null,
-      "receivingMethod": "UNKNOWN",
-      "receivingLabel": "受取方法未確認",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
       "stores": [],
       "conditions": [
-        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+        "Amazon商品詳細の招待リクエスト操作を独立した2回のサーバーブラウザで確認"
       ],
       "handoverRestrictions": [],
       "prices": [],
@@ -2453,9 +2453,9 @@
         "応募締切",
         "当選通知時期",
         "購入期限",
-        "受取方法"
+        "本人の応募資格・リクエスト状況"
       ],
-      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
       "asin": "B0GXCPF84C"
     },
     {
@@ -2464,7 +2464,7 @@
       "sourceName": "Amazon",
       "title": "ポケモンカードゲーム MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
       "sourceUrl": "https://www.amazon.co.jp/dp/B0GXCM4BCZ",
-      "fetchedAt": "2026-10-11T05:02:28.215Z",
+      "fetchedAt": "2026-10-14T03:45:54.399Z",
       "publishedDate": null,
       "browserCapture": true,
       "automatedDiscovery": true,
@@ -2474,11 +2474,11 @@
       "entryPeriod": null,
       "resultAnnouncement": null,
       "purchasePeriod": null,
-      "receivingMethod": "UNKNOWN",
-      "receivingLabel": "受取方法未確認",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
       "stores": [],
       "conditions": [
-        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+        "Amazon商品詳細の招待リクエスト操作を独立した2回のサーバーブラウザで確認"
       ],
       "handoverRestrictions": [],
       "prices": [],
@@ -2486,9 +2486,9 @@
         "応募締切",
         "当選通知時期",
         "購入期限",
-        "受取方法"
+        "本人の応募資格・リクエスト状況"
       ],
-      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
       "asin": "B0GXCM4BCZ"
     },
     {
@@ -2497,7 +2497,7 @@
       "sourceName": "Amazon",
       "title": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex BOX",
       "sourceUrl": "https://www.amazon.co.jp/dp/B0FLCWJ1VK",
-      "fetchedAt": "2026-10-11T05:00:05.243Z",
+      "fetchedAt": "2026-10-14T03:45:54.399Z",
       "publishedDate": null,
       "browserCapture": true,
       "automatedDiscovery": true,
@@ -2507,11 +2507,11 @@
       "entryPeriod": null,
       "resultAnnouncement": null,
       "purchasePeriod": null,
-      "receivingMethod": "UNKNOWN",
-      "receivingLabel": "受取方法未確認",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
       "stores": [],
       "conditions": [
-        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+        "Amazon商品詳細の招待リクエスト操作を独立した2回のサーバーブラウザで確認"
       ],
       "handoverRestrictions": [],
       "prices": [],
@@ -2519,9 +2519,9 @@
         "応募締切",
         "当選通知時期",
         "購入期限",
-        "受取方法"
+        "本人の応募資格・リクエスト状況"
       ],
-      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
       "asin": "B0FLCWJ1VK"
     },
     {
@@ -2530,7 +2530,7 @@
       "sourceName": "Amazon",
       "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット ニャオハ・ホゲータ・クワッス",
       "sourceUrl": "https://www.amazon.co.jp/dp/B0GXCT83HB",
-      "fetchedAt": "2026-10-11T05:22:58.260Z",
+      "fetchedAt": "2026-10-14T03:45:54.399Z",
       "publishedDate": null,
       "browserCapture": true,
       "automatedDiscovery": true,
@@ -2540,11 +2540,11 @@
       "entryPeriod": null,
       "resultAnnouncement": null,
       "purchasePeriod": null,
-      "receivingMethod": "UNKNOWN",
-      "receivingLabel": "受取方法未確認",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
       "stores": [],
       "conditions": [
-        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+        "Amazon商品詳細の招待リクエスト操作を独立した2回のサーバーブラウザで確認"
       ],
       "handoverRestrictions": [],
       "prices": [],
@@ -2552,9 +2552,9 @@
         "応募締切",
         "当選通知時期",
         "購入期限",
-        "受取方法"
+        "本人の応募資格・リクエスト状況"
       ],
-      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
       "asin": "B0GXCT83HB"
     },
     {
@@ -2563,7 +2563,7 @@
       "sourceName": "Amazon",
       "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット ツタージャ・ポカブ・ミジュマル",
       "sourceUrl": "https://www.amazon.co.jp/dp/B0GXCZ1VDC",
-      "fetchedAt": "2026-10-11T05:23:49.015Z",
+      "fetchedAt": "2026-10-14T03:45:54.399Z",
       "publishedDate": null,
       "browserCapture": true,
       "automatedDiscovery": true,
@@ -2573,11 +2573,11 @@
       "entryPeriod": null,
       "resultAnnouncement": null,
       "purchasePeriod": null,
-      "receivingMethod": "UNKNOWN",
-      "receivingLabel": "受取方法未確認",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
       "stores": [],
       "conditions": [
-        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+        "Amazon商品詳細の招待リクエスト操作を独立した2回のサーバーブラウザで確認"
       ],
       "handoverRestrictions": [],
       "prices": [],
@@ -2585,9 +2585,9 @@
         "応募締切",
         "当選通知時期",
         "購入期限",
-        "受取方法"
+        "本人の応募資格・リクエスト状況"
       ],
-      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
       "asin": "B0GXCZ1VDC"
     },
     {
@@ -2629,7 +2629,7 @@
       "sourceName": "Amazon",
       "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット キモリ・アチャモ・ミズゴロウ",
       "sourceUrl": "https://www.amazon.co.jp/dp/B0GXCX36HP",
-      "fetchedAt": "2026-10-11T05:24:55.697Z",
+      "fetchedAt": "2026-10-14T03:45:54.399Z",
       "publishedDate": null,
       "browserCapture": true,
       "automatedDiscovery": true,
@@ -2639,11 +2639,11 @@
       "entryPeriod": null,
       "resultAnnouncement": null,
       "purchasePeriod": null,
-      "receivingMethod": "UNKNOWN",
-      "receivingLabel": "受取方法未確認",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
       "stores": [],
       "conditions": [
-        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+        "Amazon商品詳細の招待リクエスト操作を独立した2回のサーバーブラウザで確認"
       ],
       "handoverRestrictions": [],
       "prices": [],
@@ -2651,9 +2651,9 @@
         "応募締切",
         "当選通知時期",
         "購入期限",
-        "受取方法"
+        "本人の応募資格・リクエスト状況"
       ],
-      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
       "asin": "B0GXCX36HP"
     },
     {
@@ -2662,7 +2662,7 @@
       "sourceName": "Amazon",
       "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット チコリータ・ヒノアラシ・ワニノコ",
       "sourceUrl": "https://www.amazon.co.jp/dp/B0GXCC7W7Q",
-      "fetchedAt": "2026-10-11T05:25:11.924Z",
+      "fetchedAt": "2026-10-14T03:45:54.399Z",
       "publishedDate": null,
       "browserCapture": true,
       "automatedDiscovery": true,
@@ -2672,11 +2672,11 @@
       "entryPeriod": null,
       "resultAnnouncement": null,
       "purchasePeriod": null,
-      "receivingMethod": "UNKNOWN",
-      "receivingLabel": "受取方法未確認",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
       "stores": [],
       "conditions": [
-        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+        "Amazon商品詳細の招待リクエスト操作を独立した2回のサーバーブラウザで確認"
       ],
       "handoverRestrictions": [],
       "prices": [],
@@ -2684,9 +2684,9 @@
         "応募締切",
         "当選通知時期",
         "購入期限",
-        "受取方法"
+        "本人の応募資格・リクエスト状況"
       ],
-      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
       "asin": "B0GXCC7W7Q"
     },
     {
@@ -2695,7 +2695,7 @@
       "sourceName": "Amazon",
       "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット フシギダネ・ヒトカゲ・ゼニガメ",
       "sourceUrl": "https://www.amazon.co.jp/dp/B0GXCYMRGL",
-      "fetchedAt": "2026-10-11T05:25:34.566Z",
+      "fetchedAt": "2026-10-14T03:45:54.399Z",
       "publishedDate": null,
       "browserCapture": true,
       "automatedDiscovery": true,
@@ -2705,11 +2705,11 @@
       "entryPeriod": null,
       "resultAnnouncement": null,
       "purchasePeriod": null,
-      "receivingMethod": "UNKNOWN",
-      "receivingLabel": "受取方法未確認",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
       "stores": [],
       "conditions": [
-        "Amazon商品詳細ページで「招待をリクエスト」をChrome実ブラウザで確認"
+        "Amazon商品詳細の招待リクエスト操作を独立した2回のサーバーブラウザで確認"
       ],
       "handoverRestrictions": [],
       "prices": [],
@@ -2717,9 +2717,9 @@
         "応募締切",
         "当選通知時期",
         "購入期限",
-        "受取方法"
+        "本人の応募資格・リクエスト状況"
       ],
-      "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
+      "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
       "asin": "B0GXCYMRGL"
     },
     {
@@ -4197,11 +4197,12 @@
     },
     "amazon": {
       "name": "Amazon.co.jp",
-      "fetchedAt": "2026-10-11T05:25:34.566Z",
-      "coverage": "CRAWL STORM Xで商品詳細ページをChrome実ブラウザ確認し、「招待をリクエスト」を確認できた案件のみ",
-      "verifiedCases": 11,
-      "verification": "Chrome実ブラウザの商品詳細確認",
-      "excluded": "検索結果ページ・通常商品・古い確認のみのASINは公開対象外"
+      "fetchedAt": "2026-10-14T03:45:54.399Z",
+      "coverage": "既存watchとX候補ASINを商品詳細で独立2回確認。一致したREQUESTABLEのみ更新",
+      "verifiedCases": 9,
+      "verification": "GitHub Actions Chromiumの商品詳細確認",
+      "excluded": "検索結果ページ・通常商品・古い確認のみのASINは公開対象外",
+      "lastRunNewAsins": 0
     },
     "geo": {
       "name": "GEO",
