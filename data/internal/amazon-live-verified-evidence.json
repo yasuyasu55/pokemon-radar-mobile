@@ -1,0 +1,617 @@
+{
+  "verifiedAt": "2026-10-14T03:52:55.948Z",
+  "workflowRuns": [
+    38507539840,
+    38508087911
+  ],
+  "artifactDigests": [
+    "27b11b72998788e44243ae14cbff1bed200ef08e088233ff907d310137713ea6",
+    "e210ee3293f2ddefcb84abf97fcab3e1d6607ff44c144b670bbfb45b70e7ef20"
+  ],
+  "results": [
+    {
+      "schemaVersion": 1,
+      "mode": "BROWSER_POC",
+      "pid": 3962,
+      "startedAt": "2026-10-14T03:43:00.027Z",
+      "queries": [
+        "ポケモンカード 抽選",
+        "ポケモンカード 招待",
+        "ポケモン 招待販売"
+      ],
+      "details": [
+        {
+          "asin": "B0GXCX46KQ",
+          "url": "https://www.amazon.co.jp/dp/B0GXCX46KQ",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット ナエトル・ヒコザル・ポッチャマ",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCSGX8Y",
+          "url": "https://www.amazon.co.jp/dp/B0GXCSGX8Y",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット ハリマロン・フォッコ・ケロマツ",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCPF84C",
+          "url": "https://www.amazon.co.jp/dp/B0GXCPF84C",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット モクロー・ニャビー・アシマリ",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCM4BCZ",
+          "url": "https://www.amazon.co.jp/dp/B0GXCM4BCZ",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0FLCWJ1VK",
+          "url": "https://www.amazon.co.jp/dp/B0FLCWJ1VK",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCT83HB",
+          "url": "https://www.amazon.co.jp/dp/B0GXCT83HB",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット ニャオハ・ホゲータ・クワッス",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCZ1VDC",
+          "url": "https://www.amazon.co.jp/dp/B0GXCZ1VDC",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット ツタージャ・ポカブ・ミジュマル",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCX36HP",
+          "url": "https://www.amazon.co.jp/dp/B0GXCX36HP",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット キモリ・アチャモ・ミズゴロウ",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCC7W7Q",
+          "url": "https://www.amazon.co.jp/dp/B0GXCC7W7Q",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット チコリータ・ヒノアラシ・ワニノコ",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCYMRGL",
+          "url": "https://www.amazon.co.jp/dp/B0GXCYMRGL",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット フシギダネ・ヒトカゲ・ゼニガメ",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCRBL5J",
+          "url": "https://www.amazon.co.jp/dp/B0GXCRBL5J",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GP928YDZ",
+          "url": "https://www.amazon.co.jp/dp/B0GP928YDZ",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0F18J2CJF",
+          "url": "https://www.amazon.co.jp/dp/B0F18J2CJF",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック メガブレイブ BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0F189YH8W",
+          "url": "https://www.amazon.co.jp/dp/B0F189YH8W",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック メガシンフォニア BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0F9KJGGZ5",
+          "url": "https://www.amazon.co.jp/dp/B0F9KJGGZ5",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック インフェルノX BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0FSJXSPPX",
+          "url": "https://www.amazon.co.jp/dp/B0FSJXSPPX",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GP9QHQ3Y",
+          "url": "https://www.amazon.co.jp/dp/B0GP9QHQ3Y",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック アビスアイ BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0G1XB2STM",
+          "url": "https://www.amazon.co.jp/dp/B0G1XB2STM",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック ニンジャスピナー BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        }
+      ],
+      "adoption": "NOT_ENABLED",
+      "finishedAt": "2026-10-14T03:45:54.399Z",
+      "verdict": "BROWSER_PATH_WORKS",
+      "stats": {
+        "searchPages": 7,
+        "uniqueAsins": 73,
+        "detailChecks": 40,
+        "invitationCandidates": 18
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "mode": "BROWSER_POC",
+      "pid": 3930,
+      "startedAt": "2026-10-14T03:49:52.764Z",
+      "queries": [
+        "ポケモンカード 抽選",
+        "ポケモンカード 招待",
+        "ポケモン 招待販売"
+      ],
+      "details": [
+        {
+          "asin": "B0GXCC7W7Q",
+          "url": "https://www.amazon.co.jp/dp/B0GXCC7W7Q",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット チコリータ・ヒノアラシ・ワニノコ",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCT83HB",
+          "url": "https://www.amazon.co.jp/dp/B0GXCT83HB",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット ニャオハ・ホゲータ・クワッス",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCX36HP",
+          "url": "https://www.amazon.co.jp/dp/B0GXCX36HP",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット キモリ・アチャモ・ミズゴロウ",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCYMRGL",
+          "url": "https://www.amazon.co.jp/dp/B0GXCYMRGL",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット フシギダネ・ヒトカゲ・ゼニガメ",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCZ1VDC",
+          "url": "https://www.amazon.co.jp/dp/B0GXCZ1VDC",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット ツタージャ・ポカブ・ミジュマル",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0FLCWJ1VK",
+          "url": "https://www.amazon.co.jp/dp/B0FLCWJ1VK",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCM4BCZ",
+          "url": "https://www.amazon.co.jp/dp/B0GXCM4BCZ",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCPF84C",
+          "url": "https://www.amazon.co.jp/dp/B0GXCPF84C",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット モクロー・ニャビー・アシマリ",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCSGX8Y",
+          "url": "https://www.amazon.co.jp/dp/B0GXCSGX8Y",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット ハリマロン・フォッコ・ケロマツ",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCX46KQ",
+          "url": "https://www.amazon.co.jp/dp/B0GXCX46KQ",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 30th CELEBRATION カードセット ナエトル・ヒコザル・ポッチャマ",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GXCRBL5J",
+          "url": "https://www.amazon.co.jp/dp/B0GXCRBL5J",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GP928YDZ",
+          "url": "https://www.amazon.co.jp/dp/B0GP928YDZ",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0F18J2CJF",
+          "url": "https://www.amazon.co.jp/dp/B0F18J2CJF",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック メガブレイブ BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0F189YH8W",
+          "url": "https://www.amazon.co.jp/dp/B0F189YH8W",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック メガシンフォニア BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0F9KJGGZ5",
+          "url": "https://www.amazon.co.jp/dp/B0F9KJGGZ5",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック インフェルノX BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0FSJXSPPX",
+          "url": "https://www.amazon.co.jp/dp/B0FSJXSPPX",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0GP9QHQ3Y",
+          "url": "https://www.amazon.co.jp/dp/B0GP9QHQ3Y",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック アビスアイ BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        },
+        {
+          "asin": "B0G1XB2STM",
+          "url": "https://www.amazon.co.jp/dp/B0G1XB2STM",
+          "status": 200,
+          "stage": "PRODUCT_PARSED",
+          "title": "ポケモンカードゲーム MEGA 拡張パック ニンジャスピナー BOX",
+          "candidate": true,
+          "checks": {
+            "asinMatched": true,
+            "amazonSeller": true,
+            "invitationNotice": true,
+            "requestButton": true
+          },
+          "reason": "Amazon販売欄で招待販売とリクエスト操作を確認"
+        }
+      ],
+      "adoption": "NOT_ENABLED",
+      "finishedAt": "2026-10-14T03:52:55.948Z",
+      "verdict": "BROWSER_PATH_WORKS",
+      "stats": {
+        "searchPages": 8,
+        "uniqueAsins": 73,
+        "detailChecks": 40,
+        "invitationCandidates": 18
+      }
+    }
+  ],
+  "verifiedAsins": [
+    "B0GXCC7W7Q",
+    "B0GXCT83HB",
+    "B0GXCX36HP",
+    "B0GXCYMRGL",
+    "B0GXCZ1VDC",
+    "B0FLCWJ1VK",
+    "B0GXCM4BCZ",
+    "B0GXCPF84C",
+    "B0GXCSGX8Y",
+    "B0GXCX46KQ",
+    "B0GXCRBL5J",
+    "B0GP928YDZ",
+    "B0F18J2CJF",
+    "B0F189YH8W",
+    "B0F9KJGGZ5",
+    "B0FSJXSPPX",
+    "B0GP9QHQ3Y",
+    "B0G1XB2STM"
+  ]
+}
