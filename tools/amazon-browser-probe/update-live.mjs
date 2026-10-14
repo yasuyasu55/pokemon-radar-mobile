@@ -93,6 +93,12 @@ if(process.argv[1] && path.resolve(process.argv[1])===here) {
     runOne(1);
     // Second independent process checks exactly the ASINs the first one inspected.
     const first=read(path.join(out,'1/result.json'));
+    if(first.stoppedOnAccessBlock){
+      const status={at:first.finishedAt,checked:first.details.length,verified:0,publishedNew:0,blocked:true,
+        status:'ACCESS_BLOCKED',secondPass:'NOT_ATTEMPTED_AFTER_ACCESS_BLOCK'};
+      fs.writeFileSync(path.join(out,'status.json'),JSON.stringify(status,null,2)+'\n');
+      console.log(JSON.stringify(status));process.exitCode=10;
+    }else{
     const targetsFile=path.join(out,'targets.json');
     fs.writeFileSync(targetsFile,JSON.stringify({targets:first.details.map(d=>d.asin)},null,2)+'\n');
     runOne(2,targetsFile);
@@ -111,5 +117,6 @@ if(process.argv[1] && path.resolve(process.argv[1])===here) {
     console.log(JSON.stringify(status));
     if(next===previous) process.exitCode=10;
     else {fs.writeFileSync(snapshot+'.tmp',JSON.stringify(next,null,2)+'\n');fs.renameSync(snapshot+'.tmp',snapshot);}
+    }
   } else throw new Error('Usage: update-live.mjs all output snapshot pool');
 }

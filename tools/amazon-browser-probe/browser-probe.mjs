@@ -16,6 +16,9 @@ const sha=s=>createHash('sha256').update(s).digest('hex');
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const amazonSearchUrl=(query,page)=>`https://www.amazon.co.jp/s?k=${encodeURIComponent(query)}&page=${page}`;
 const asinFromHref=href=>href?.match(/\/(?:dp|gp\/product)\/([A-Z0-9]{10})(?:[/?#]|$)/i)?.[1]?.toUpperCase()??null;
+export function isAccessBlocked({status,text='',challengeElement=false}){
+  return [403,429,503].includes(status)||challengeElement||/ロボットではありません|画像に表示されている文字|Enter the characters you see|captcha/i.test(text);
+}
 
 async function searchPage(page,query,pageNo){
   const url=amazonSearchUrl(query,pageNo);
@@ -26,7 +29,8 @@ async function searchPage(page,query,pageNo){
     const title=await page.title();
     const bodySample=(await page.locator('body').innerText({timeout:5000}).catch(()=>'' )).slice(0,1200);
     const status=response?.status()??null;
-    const blocked=status===403||status===429||status===503||/ロボットではありません|画像に表示されている文字|Enter the characters you see|captcha/i.test(title+'\n'+bodySample);
+    const challengeElement=await page.locator('#captchacharacters, form[action*="validateCaptcha"]').count()>0;
+    const blocked=isAccessBlocked({status,text:title+'\n'+bodySample,challengeElement});
     if(blocked)return {query,page:pageNo,url,status,stage:'BLOCKED',title,count:null,items:[]};
     if(status!==200)return {query,page:pageNo,url,status,stage:'FETCH_FAILED',title,count:null,items:[]};
     const items=await page.locator('[data-component-type="s-search-result"][data-asin]').evaluateAll(nodes=>nodes.map(n=>{
@@ -55,12 +59,13 @@ async function inspectProduct(context,candidate){
   try{
     const response=await page.goto(url,{waitUntil:'domcontentloaded',timeout:30000});
     await page.waitForTimeout(1200);
-    const title=await page.locator('span#productTitle').innerText({timeout:6000}).catch(()=>null);
     const bodySample=(await page.locator('body').innerText({timeout:5000}).catch(()=>'' )).slice(0,1200);
     const status=response?.status()??null;
-    const blocked=status===403||status===429||status===503||/ロボットではありません|画像に表示されている文字|Enter the characters you see|captcha/i.test((await page.title())+'\n'+bodySample);
+    const challengeElement=await page.locator('#captchacharacters, form[action*="validateCaptcha"]').count()>0;
+    const blocked=isAccessBlocked({status,text:(await page.title())+'\n'+bodySample,challengeElement});
     if(blocked)return {asin:candidate.asin,url,status,stage:'BLOCKED',candidate:false};
     if(status!==200)return {asin:candidate.asin,url,status,stage:'FETCH_FAILED',candidate:false};
+    const title=await page.locator('span#productTitle').innerText({timeout:6000}).catch(()=>null);
     if(!title)return {asin:candidate.asin,url,status:response?.status()??null,stage:'UNEXPECTED_RESPONSE',candidate:false,reason:'商品名を確認できません'};
     const normalized=title.trim().normalize('NFKC');
     if(!/ポケモンカード/.test(normalized)||/オリパ|中古|福袋/.test(normalized))return {asin:candidate.asin,url,status:response?.status()??null,stage:'PRODUCT_PARSED',title:normalized,candidate:false,reason:'対象商品名ではありません'};
@@ -103,10 +108,11 @@ export async function run(outDir,seedAsins=[],{fixedTargets=null}={}){
   try{
     const discovery=new Map((fixedTargets||seedAsins).filter(a=>/^[A-Z0-9]{10}$/.test(a)).map(asin=>[asin,{asin,title:null,queries:['watch-pool']}]));
     const page=await context.newPage();
-    for(const query of (fixedTargets?[]:QUERIES)){
+    searchLoop: for(const query of (fixedTargets?[]:QUERIES)){
       for(let p=1;p<=MAX_PAGES_PER_QUERY;p++){
         const row=await searchPage(page,query,p);
         result.searches.push(row);
+        if(row.stage==='BLOCKED'){result.stoppedOnAccessBlock=true;break searchLoop;}
         if(row.stage==='BLOCKED'||row.stage==='FETCH_FAILED')break;
         for(const item of row.items){
           const existing=discovery.get(item.asin);
@@ -121,10 +127,10 @@ export async function run(outDir,seedAsins=[],{fixedTargets=null}={}){
     }
     await page.close();
     result.discovered=[...discovery.values()];
-    for(const item of result.discovered.slice(0,MAX_DETAIL_CHECKS)){
+    for(const item of (result.stoppedOnAccessBlock?[]:result.discovered.slice(0,MAX_DETAIL_CHECKS))){
       const row=await inspectProduct(context,item);
       result.details.push(row);
-      if(row.stage==='BLOCKED')break;
+      if(row.stage==='BLOCKED'){result.stoppedOnAccessBlock=true;break;}
       await sleep(1000);
     }
     result.finishedAt=new Date().toISOString();

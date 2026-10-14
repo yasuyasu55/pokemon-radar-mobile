@@ -3,14 +3,8 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '43 */2 * * *'
-  push:
-    branches: [main]
-    paths:
-      - 'tools/x-social-discovery/**'
-      - 'tools/amazon-browser-probe/**'
-      - 'tests/x-collection.test.mjs'
-      - 'tests/amazon-live-update.test.mjs'
-      - '.github/workflows/x-amazon-live.yml'
+  # Production fetches run only on schedule or an explicit manual dispatch.
+  # Code pushes must not immediately retry sites that just issued an access challenge.
 permissions:
   contents: write
 concurrency:

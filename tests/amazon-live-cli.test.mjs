@@ -26,3 +26,16 @@ test('real CLI subprocess passes targets file to the second independent browser 
     assert.equal(JSON.parse(fs.readFileSync(snapshot,'utf8')).cases.length,2);
   }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
+test('production CLI never launches a second pass after the first pass hits an access block',()=>{
+  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'radar-block-'));
+  try{
+    const snapshot=path.join(dir,'snapshot.json'),pool=path.join(dir,'pool.json'),out=path.join(dir,'results');
+    const original=JSON.stringify({cases:[{id:'amazon:B0GP9QHQ3Y',asin:'B0GP9QHQ3Y'}],sources:{}});
+    fs.writeFileSync(snapshot,original);fs.writeFileSync(pool,JSON.stringify({items:[]}));
+    const r=spawnSync(process.execPath,[cli,'all',out,snapshot,pool],{encoding:'utf8',timeout:30000,env:{...process.env,NODE_OPTIONS:'--experimental-loader='+loader,RADAR_TEST_BLOCK:'1'}});
+    assert.equal(r.status,10,r.stderr);
+    assert.equal(fs.existsSync(path.join(out,'2')),false);
+    assert.equal(fs.readFileSync(snapshot,'utf8'),original);
+    assert.equal(JSON.parse(fs.readFileSync(path.join(out,'status.json'))).status,'ACCESS_BLOCKED');
+  }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
