@@ -1,10 +1,7 @@
 name: Amazon Chromium acquisition probe
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'tools/amazon-browser-probe/**'
-      - '.github/workflows/amazon-browser-probe.yml'
+  # Diagnostic-only probe: production acquisition is x-amazon-live.yml.
+  # Avoid duplicate Amazon requests and unrelated failure notifications on every code push.
   workflow_dispatch:
 permissions:
   contents: read
@@ -37,3 +34,4 @@ jobs:
             evidence/amazon-browser/SUMMARY.md
           if-no-files-found: warn
           retention-days: 7
+
