@@ -149,6 +149,17 @@ export function extractCase(html,url,fetchedAt){
   verification:'楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合'
  };
 }
+export function mergeOfficialCases(entryCases,detailCases){
+ const merged=new Map();
+ for(const item of [...entryCases,...detailCases]){
+  const key=item.title.normalize('NFKC').replace(/【[^】]*】|\s+/g,'').toLowerCase();
+  const current=merged.get(key);
+  // Product details carry that product's current schedule; an old entry page
+  // must not replace them merely because it was processed first.
+  if(!current || (/^rakutenbooks:\d+$/.test(item.id)&&!/^rakutenbooks:\d+$/.test(current.id)))merged.set(key,item);
+ }
+ return [...merged.values()].sort((a,b)=>a.id.localeCompare(b.id));
+}
 export async function collect(fetcher,extraUrls=[]){
  const ledger=[];
  async function raw(url){
@@ -183,12 +194,7 @@ export async function collect(fetcher,extraUrls=[]){
    try{parsed.push(extractCase(await allowed(c.url),c.url,new Date().toISOString()));}
    catch(e){rejected.push({id:c.id,url:c.url,reason:e.message});}
   }
-  const merged=new Map();
-  for(const item of [...entryCases,...parsed]){
-   const key=item.title.normalize('NFKC').replace(/【[^】]*】|\s+/g,'').toLowerCase();
-   if(!merged.has(key)||item.id.startsWith('rakutenbooks:jan:'))merged.set(key,item);
-  }
-  const cases=[...merged.values()].sort((a,b)=>a.id.localeCompare(b.id));
+  const cases=mergeOfficialCases(entryCases,parsed);
   if(!cases.length)throw new Error('楽天ブックス抽選案件を確定できません');
   return {ok:true,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),
    coverage:'楽天ブックス公式のポケモンカード抽選受付ページを直接案件化。受付ページの商品コード・抽選期間・当選連絡予定日を採用し、公式検索と商品詳細の抽選販売情報も補助的に統合',

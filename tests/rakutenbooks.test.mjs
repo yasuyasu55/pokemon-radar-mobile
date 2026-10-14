@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {discover,extractCase,extractEntryCases,compare,merge} from '../tools/rakutenbooks/collect.mjs';
+import {discover,extractCase,extractEntryCases,compare,merge,mergeOfficialCases} from '../tools/rakutenbooks/collect.mjs';
 import {entryState,matches} from '../model.mjs';
 
 const detail=(id='18595282',title='ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION')=>`<!doctype html><html><head><title>${title} - 楽天ブックス</title></head><body><h1>${title}</h1>
@@ -11,6 +11,12 @@ const detail=(id='18595282',title='ポケモンカードゲーム MEGA 拡張パ
 <p>※当落の結果は、販売開始日までにメールでご連絡します。</p>
 <h5>■抽選に関する注意事項</h5><p>エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。</p>
 <p>支払い方法、配送方法についてご確認ください。</p></body></html>`;
+
+test('older entry schedule does not hide the current product-detail lottery',()=>{
+ const old={id:'rakutenbooks:title:old',title:'ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex【10パック】',entryPeriod:{end:{iso:'2026-01-26T11:59:00+09:00'}}};
+ const fresh={id:'rakutenbooks:18343992',title:'ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex 【10パック】',entryPeriod:{end:{iso:'2026-10-18T23:59:00+09:00'}}};
+ assert.deepEqual(mergeOfficialCases([old],[fresh]),[fresh]);
+});
 
 test('discover accepts only canonical Rakuten Books product links and keeps stable ids',()=>{
  const h='<a href="/rb/18595282/?l-id=x">ポケモンカード 30th</a><a href="https://books.rakuten.co.jp/rb/18537075/">ポケモンカード アビスアイ</a><a href="https://evil.example/rb/1/">ポケモンカード</a><a href="/rb/9/">一般商品</a>';
