@@ -121,7 +121,8 @@ export function extractCase(html,url,fetchedAt){
  const rbId=new URL(url).pathname.match(/^\/rb\/(\d+)\/?$/)?.[1];
  if(!rbId)throw new Error('楽天ブックス商品URLではありません');
  const title=(titles.h1||titles.ogTitle||titles.title||'').replace(/\s*[-|｜].*楽天ブックス.*$/,'').trim();
- if(!/ポケモン/.test(title)||!/カード/.test(title))throw new Error('ポケモンカード商品ではありません');
+ const genre=/ポケモン.*カード/.test(title)?'pokemon-card':/ONE\s*PIECE.*カードゲーム/i.test(title)?'one-piece-card':/ドラゴンボール.*フュージョンワールド/.test(title)?'dragon-ball-fw':null;
+ if(!genre)throw new Error('対象TCG商品ではありません');
  if(!/【抽選商品について】|\[抽選商品について\]|抽選販売スケジュール/.test(text))throw new Error('抽選商品表記なし');
  const entry=requiredPeriod(text,'抽選受付期間\\s*[:：]?');
  const purchase=requiredPeriod(text,'当選者販売期間\\s*[:：]?');
@@ -134,7 +135,7 @@ export function extractCase(html,url,fetchedAt){
  if(!receivingLines.length)throw new Error('配送条件未確認');
  const conditions=text.split('\n').filter(l=>/エントリー|会員|お届け先|支払い方法|クーポン|キャンセル|返品|当選者/.test(l)&&l.length>=8&&l.length<=240).slice(0,12);
  return {
-  id:'rakutenbooks:'+rbId,sourceId:'rakutenbooks',title,sourceName:'楽天ブックス',sourceUrl:url,fetchedAt,publishedDate:null,
+  id:'rakutenbooks:'+rbId,sourceId:'rakutenbooks',genre,title,sourceName:'楽天ブックス',sourceUrl:url,fetchedAt,publishedDate:null,
   entryPeriod:entry,
   resultAnnouncement:{raw:resultLine,start:structuredClone(purchase.start),end:null,deadlineOnly:false,single:true,approximate:false,notAfter:true,status:'CONFIRMED',notes:['当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで']},
   purchasePeriod:purchase,

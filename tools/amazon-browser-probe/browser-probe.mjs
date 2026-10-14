@@ -68,15 +68,18 @@ async function inspectProduct(context,candidate){
     const root=page.locator('#hdp_buybox_desktop');
     if(await root.count()===0)return {asin:candidate.asin,url,status:response?.status()??null,stage:'PRODUCT_PARSED',title:normalized,candidate:false,reason:'招待販売欄を確認できません'};
     const rootText=await root.innerText().catch(()=>'');
+    const invitationPanelVisible=await root.isVisible().catch(()=>false);
+    const normalPurchaseVisible=await page.locator('#add-to-cart-button, #buy-now-button').evaluateAll(nodes=>nodes.some(n=>n.getClientRects().length>0)).catch(()=>false);
     const asinMatched=await root.locator(`[data-csa-c-asin="${candidate.asin}"]`).count()>0;
     const amazonSeller=/出荷元\s*\/\s*販売元\s*\nAmazon\.co\.jp(?:\n|$)/.test(rootText);
     const notice=root.locator('#hdp-detail-no-requested-id');
     const invitationNotice=await notice.count()>0 && /本商品は招待販売/.test(await notice.innerText().catch(()=>''));
     const input=root.locator('#hdp-invite-button input[name="submit.inviteButton"]');
     const requestButton=await input.count()>0 && await input.isVisible().catch(()=>false) && await input.isEnabled().catch(()=>false) && /招待をリクエスト/.test(await input.getAttribute('value').catch(()=>'')||'');
-    const candidateOk=asinMatched&&amazonSeller&&invitationNotice&&requestButton;
+    const candidateOk=invitationPanelVisible&&asinMatched&&amazonSeller&&invitationNotice&&requestButton;
     return {asin:candidate.asin,url,status:response?.status()??null,stage:'PRODUCT_PARSED',title:normalized,candidate:candidateOk,
-      checks:{asinMatched,amazonSeller,invitationNotice,requestButton},
+      checks:{asinMatched,amazonSeller,invitationNotice,requestButton,invitationPanelVisible},
+      offerPresentation:{normalPurchaseVisible,invitationPanelVisible,coexistingOffers:normalPurchaseVisible&&candidateOk},
       reason:candidateOk?'Amazon販売欄で招待販売とリクエスト操作を確認':'招待販売の確定条件が揃いません'};
   }catch(e){
     return {asin:candidate.asin,url,stage:'FETCH_FAILED',candidate:false,error:e.message};

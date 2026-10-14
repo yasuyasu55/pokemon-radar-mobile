@@ -190,7 +190,8 @@ function card(c,now) {
 function amazonCard(c,now){
  const record=personal.get(c.id),stale=now-Date.parse(c.fetchedAt)>86400000;
  const href=safeUrl(c.sourceUrl),auto=!!c.automatedDiscovery;
- const sourceLabel=auto?'Amazon · 招待販売（CRAWL STORM Xで確認）':'Amazon · 招待販売（PCで確認）';
+ const server=/GitHub Actions/.test(c.verification||'');
+ const sourceLabel=server?'Amazon · 招待販売（自動確認）':auto?'Amazon · 招待販売（Chromeで確認）':'Amazon · 招待販売（PCで確認）';
  const invitationState=c.invitationState||'REQUESTABLE';
  const invitationLabels={
   REQUESTABLE:'⚡ すぐ応募可能',
@@ -203,10 +204,10 @@ function amazonCard(c,now){
  const statusTone=invitationState==='REQUEST_SENT'?'':invitationState==='REQUESTABLE'?'amber':'gray';
  const sellerLabel=auto?'Amazon.co.jp（Chrome商品詳細で確認）':'Amazon.co.jp（PCで確認した時点）';
  const callout=auto?'CRAWL STORM Xが商品詳細ページで「招待をリクエスト」を確認しました。現在の受付状況はAmazonで最終確認してください。':'${esc(callout)}';
- const verifyText=auto?'CRAWL STORM XのChrome実ブラウザで商品詳細ページを確認した情報です。検索結果ページだけでは案件化していません。':'${esc(verifyText)}';
+ const verifyText=server?'サーバー側のブラウザで商品詳細を独立2回確認した情報です。定期的に再確認します。':auto?'Chromeの商品詳細を確認した情報です。':'本人がPCで保存した確認結果です。';
  const checkedLabel=auto?'Chrome確認':'PC確認';
  const observed=new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(c.fetchedAt));
- return `<article class="card" data-id="${esc(c.id)}"><div class="card-body"><p class="card-source">${esc(sourceLabel)}</p><div class="card-title">${shareControl(c)}<h3>${esc(c.title)}</h3><button type="button" class="favorite-button ${record.favorite?'selected':''}" data-personal="favorite" aria-pressed="${!!record.favorite}" aria-label="${record.favorite?'お気に入りを解除':'お気に入りに追加'}">${record.favorite?'★':'☆'}</button></div><div class="applied-control"><button type="button" data-personal="applied" class="applied-button ${record.applied?'selected':''}" aria-pressed="${!!record.applied}">${record.applied?'✓ 応募済み（タップで戻す）':'応募済みにする'}</button><span>${record.appliedAt?'記録：'+esc(time(record.appliedAt))+' JST':'未応募'}</span></div><div class="badges"><span class="badge ${statusTone}">${esc(statusLabel)}</span><span class="badge">配送・郵送</span></div><div class="deadline unknown"><small>応募締切</small><strong>未確認</strong><p class="remaining">締切までの残り時間は計算できません</p></div><dl>${row('Amazon状態',invitationLabel)}${row('応募方法','Amazonの招待リクエスト')}${row('販売元',sellerLabel)}${row('確認日時',observed+' JST')}${row('当選通知・購入期限','本人への案内を確認')}${row('受取方法','配送・郵送','Amazonの通常配送先へ発送')}</dl><div class="callout">保存時点の商品欄に招待リクエストの操作があった記録です。現在の受付状況と本人の応募可否はAmazonで確認してください。</div><details class="conditions"><summary>応募・購入の注意を見る</summary><p>この記録の保存では応募されません。Amazonで手続きした後に「応募済みにする」を押してください。リクエストの有効期間を応募締切とは扱いません。</p></details>${href?`<a class="card-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">Amazonで招待をリクエスト・確認 ↗</a>`:''}<details class="display-supplementary"><summary>確認方法</summary><p>本人がPCのChromeで開いた商品欄を確認して保存した情報です。GitHubからの自動取得ではありません。定期再確認は行いません。</p></details></div><div class="card-bottom">${esc(checkedLabel)}：${esc(observed)} JST</div></article>`;
+ return `<article class="card" data-id="${esc(c.id)}"><div class="card-body"><p class="card-source">${esc(sourceLabel)}</p><div class="card-title">${shareControl(c)}<h3>${esc(c.title)}</h3><button type="button" class="favorite-button ${record.favorite?'selected':''}" data-personal="favorite" aria-pressed="${!!record.favorite}" aria-label="${record.favorite?'お気に入りを解除':'お気に入りに追加'}">${record.favorite?'★':'☆'}</button></div><div class="applied-control"><button type="button" data-personal="applied" class="applied-button ${record.applied?'selected':''}" aria-pressed="${!!record.applied}">${record.applied?'✓ 応募済み（タップで戻す）':'応募済みにする'}</button><span>${record.appliedAt?'記録：'+esc(time(record.appliedAt))+' JST':'未応募'}</span></div><div class="badges"><span class="badge ${statusTone}">${esc(statusLabel)}</span><span class="badge">配送・郵送</span></div><div class="deadline unknown"><small>応募締切</small><strong>未確認</strong><p class="remaining">締切までの残り時間は計算できません</p></div><dl>${row('Amazon状態',invitationLabel)}${row('応募方法','Amazonの招待リクエスト')}${row('販売元',sellerLabel)}${row('確認日時',observed+' JST')}${row('当選通知・購入期限','本人への案内を確認')}${row('受取方法','配送・郵送','Amazonの通常配送先へ発送')}</dl><div class="callout">保存時点の商品欄に招待リクエストの操作があった記録です。通常購入ボタンが先に出る場合は、Amazon.co.jpが販売する招待欄を確認してください。第三者の通常販売価格で購入する必要はありません。</div><details class="conditions"><summary>応募・購入の注意を見る</summary><p>この記録の保存では応募されません。Amazonで手続きした後に「応募済みにする」を押してください。リクエストの有効期間を応募締切とは扱いません。</p></details>${href?`<a class="card-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">Amazonで招待をリクエスト・確認 ↗</a>`:''}<details class="display-supplementary"><summary>確認方法</summary><p>${esc(verifyText)}</p></details></div><div class="card-bottom">${esc(checkedLabel)}：${esc(observed)} JST</div></article>`;
 }
 function renderCards(container,cases,now,empty){
  const opened=[...container.querySelectorAll('article details[open]')].map(d=>[d.closest('[data-id]').dataset.id,[...d.closest('article').querySelectorAll('details')].indexOf(d)]);
@@ -265,3 +266,4 @@ await amazon.sync();
 setInterval(()=>{render();if(!document.hidden){personal.sync();amazon.sync();}},30000);
 setInterval(()=>{if(!document.hidden)refreshSnapshot();},300000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshSnapshot();personal.sync();amazon.sync();}});
+

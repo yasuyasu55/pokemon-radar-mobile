@@ -39,6 +39,13 @@ test('ordinary product and incomplete schedule are rejected',()=>{
  assert.throws(()=>extractCase(detail().replace('【抽選商品について】','通常販売').replace('抽選販売スケジュール','販売スケジュール'),'https://books.rakuten.co.jp/rb/18595282/','x'));
  assert.throws(()=>extractCase(detail().replace('2026/08/30(日) 23:59','締切未定'),'https://books.rakuten.co.jp/rb/18595282/','x'));
 });
+test('One Piece and Fusion World require the same official lottery evidence',()=>{
+ for(const [title,genre] of [['ONE PIECEカードゲーム 世界最強の戦士【OP-17】','one-piece-card'],['ドラゴンボールスーパーカードゲーム フュージョンワールド DUAL EVOLUTION [FB09]','dragon-ball-fw']]){
+  const html=detail('1',title);
+  assert.equal(extractCase(html,'https://books.rakuten.co.jp/rb/1/','x').genre,genre);
+  assert.throws(()=>extractCase(html.replace('【抽選商品について】','通常販売').replace('抽選販売スケジュール','販売スケジュール'),'https://books.rakuten.co.jp/rb/1/','x'));
+ }
+});
 function runs(){
  const cases=[extractCase(detail(),'https://books.rakuten.co.jp/rb/18595282/','a')];
  const a={ok:true,mode:'LIVE',pid:1,cases,ledger:[{requestedUrl:'https://books.rakuten.co.jp/rb/18595282/',status:200,sha256:'a'.repeat(64)}],finishedAt:'2026-10-11T00:00:00Z',coverage:'test',discovery:'OFFICIAL_LOTTERY_ENTRY'};
