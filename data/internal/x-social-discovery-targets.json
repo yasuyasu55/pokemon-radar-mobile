@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T22:54:36.406Z",
+  "generatedAt": "2026-10-14T03:39:36.293Z",
   "consumer": "CRAWL_STORM_X_SOCIAL",
   "policy": "candidate-only",
   "triggers": [
@@ -63,6 +63,30 @@
       "publishDirectly": false
     },
     {
+      "id": "x-account:lifeprep_list",
+      "type": "account",
+      "url": "https://x.com/lifeprep_list",
+      "handle": "lifeprep_list",
+      "priority": 95,
+      "genres": [
+        "pokemon-card"
+      ],
+      "trust": "candidate-only",
+      "publishDirectly": false
+    },
+    {
+      "id": "x-account:pokecasokuhou",
+      "type": "account",
+      "url": "https://x.com/pokecasokuhou",
+      "handle": "pokecasokuhou",
+      "priority": 95,
+      "genres": [
+        "pokemon-card"
+      ],
+      "trust": "candidate-only",
+      "publishDirectly": false
+    },
+    {
       "id": "x-search:one-piece-card",
       "type": "live-search",
       "url": "https://x.com/search?q=(%22ONE%20PIECE%E3%82%AB%E3%83%BC%E3%83%89%22%20OR%20%22%E3%83%AF%E3%83%B3%E3%83%94%E3%83%BC%E3%82%B9%E3%82%AB%E3%83%BC%E3%83%89%22)%20(%E6%8A%BD%E9%81%B8%20OR%20%E6%8B%9B%E5%BE%85%20OR%20%E5%86%8D%E8%B2%A9%20OR%20%E5%86%8D%E5%85%A5%E8%8D%B7%20OR%20%E8%B3%BC%E5%85%A5%E6%A8%A9)&src=typed_query&f=live",
@@ -96,6 +120,78 @@
         "gundam-card"
       ],
       "trust": "official-announcement",
+      "publishDirectly": false
+    },
+    {
+      "id": "x-account:kotatsudemikanm",
+      "type": "account",
+      "url": "https://x.com/kotatsudemikanm",
+      "handle": "kotatsudemikanm",
+      "priority": 85,
+      "genres": [
+        "pokemon-card"
+      ],
+      "trust": "candidate-only",
+      "publishDirectly": false
+    },
+    {
+      "id": "x-account:manimegame336",
+      "type": "account",
+      "url": "https://x.com/manimegame336",
+      "handle": "manimegame336",
+      "priority": 85,
+      "genres": [
+        "pokemon-card"
+      ],
+      "trust": "candidate-only",
+      "publishDirectly": false
+    },
+    {
+      "id": "x-account:medakadesu41",
+      "type": "account",
+      "url": "https://x.com/medakadesu41",
+      "handle": "medakadesu41",
+      "priority": 85,
+      "genres": [
+        "pokemon-card"
+      ],
+      "trust": "candidate-only",
+      "publishDirectly": false
+    },
+    {
+      "id": "x-account:mymyme0901",
+      "type": "account",
+      "url": "https://x.com/mymyme0901",
+      "handle": "mymyme0901",
+      "priority": 85,
+      "genres": [
+        "pokemon-card"
+      ],
+      "trust": "candidate-only",
+      "publishDirectly": false
+    },
+    {
+      "id": "x-account:pokecayoyaku",
+      "type": "account",
+      "url": "https://x.com/pokecayoyaku",
+      "handle": "pokecayoyaku",
+      "priority": 85,
+      "genres": [
+        "pokemon-card"
+      ],
+      "trust": "candidate-only",
+      "publishDirectly": false
+    },
+    {
+      "id": "x-account:pokegetinfomain",
+      "type": "account",
+      "url": "https://x.com/PokeGetInfoMain",
+      "handle": "PokeGetInfoMain",
+      "priority": 85,
+      "genres": [
+        "pokemon-card"
+      ],
+      "trust": "candidate-only",
       "publishDirectly": false
     },
     {
