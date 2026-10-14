@@ -1,6 +1,591 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T22:42:48.596Z",
+  "generatedAt": "2026-10-14T03:57:59.676Z",
   "consumer": "CRAWL_STORM_X",
-  "items": []
+  "items": [
+    {
+      "asin": "B000WD3XBI",
+      "url": "https://www.amazon.co.jp/dp/B000WD3XBI",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B06X9GVD7J",
+      "url": "https://www.amazon.co.jp/dp/B06X9GVD7J",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B07QYDGL9S",
+      "url": "https://www.amazon.co.jp/dp/B07QYDGL9S",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B07YCTZ2C7",
+      "url": "https://www.amazon.co.jp/dp/B07YCTZ2C7",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B09G9Y7WH6",
+      "url": "https://www.amazon.co.jp/dp/B09G9Y7WH6",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B09G9YFHS7",
+      "url": "https://www.amazon.co.jp/dp/B09G9YFHS7",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B09MMKJD1R",
+      "url": "https://www.amazon.co.jp/dp/B09MMKJD1R",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B09RK9TN9B",
+      "url": "https://www.amazon.co.jp/dp/B09RK9TN9B",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B09RKBFNHJ",
+      "url": "https://www.amazon.co.jp/dp/B09RKBFNHJ",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B09S3ZC9QH",
+      "url": "https://www.amazon.co.jp/dp/B09S3ZC9QH",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0B1HWM5LW",
+      "url": "https://www.amazon.co.jp/dp/B0B1HWM5LW",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0B6H9PTBW",
+      "url": "https://www.amazon.co.jp/dp/B0B6H9PTBW",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0B6TP3C8W",
+      "url": "https://www.amazon.co.jp/dp/B0B6TP3C8W",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0BKGX74WP",
+      "url": "https://www.amazon.co.jp/dp/B0BKGX74WP",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0BNKBX3CB",
+      "url": "https://www.amazon.co.jp/dp/B0BNKBX3CB",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0BNZWSBH6",
+      "url": "https://www.amazon.co.jp/dp/B0BNZWSBH6",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0BNZXM7CD",
+      "url": "https://www.amazon.co.jp/dp/B0BNZXM7CD",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0BNZYL56S",
+      "url": "https://www.amazon.co.jp/dp/B0BNZYL56S",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0BPRZD5Z7",
+      "url": "https://www.amazon.co.jp/dp/B0BPRZD5Z7",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0BSKWLK14",
+      "url": "https://www.amazon.co.jp/dp/B0BSKWLK14",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0BT15FD3J",
+      "url": "https://www.amazon.co.jp/dp/B0BT15FD3J",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0BYCBZZZP",
+      "url": "https://www.amazon.co.jp/dp/B0BYCBZZZP",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0BYNQFQC5",
+      "url": "https://www.amazon.co.jp/dp/B0BYNQFQC5",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0BZG3SP41",
+      "url": "https://www.amazon.co.jp/dp/B0BZG3SP41",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0C26NJ9DW",
+      "url": "https://www.amazon.co.jp/dp/B0C26NJ9DW",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0C3GCHDTH",
+      "url": "https://www.amazon.co.jp/dp/B0C3GCHDTH",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0C6PKQPVM",
+      "url": "https://www.amazon.co.jp/dp/B0C6PKQPVM",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0C6RF8X33",
+      "url": "https://www.amazon.co.jp/dp/B0C6RF8X33",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0C8TWNZQN",
+      "url": "https://www.amazon.co.jp/dp/B0C8TWNZQN",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0CF1MDBS5",
+      "url": "https://www.amazon.co.jp/dp/B0CF1MDBS5",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0CKWR8CWR",
+      "url": "https://www.amazon.co.jp/dp/B0CKWR8CWR",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0CMZQYKF6",
+      "url": "https://www.amazon.co.jp/dp/B0CMZQYKF6",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0CT4HR8F9",
+      "url": "https://www.amazon.co.jp/dp/B0CT4HR8F9",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0CXCJFGWQ",
+      "url": "https://www.amazon.co.jp/dp/B0CXCJFGWQ",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0D2WX4CYJ",
+      "url": "https://www.amazon.co.jp/dp/B0D2WX4CYJ",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0D86FVG5R",
+      "url": "https://www.amazon.co.jp/dp/B0D86FVG5R",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0DB56CSM6",
+      "url": "https://www.amazon.co.jp/dp/B0DB56CSM6",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0DB7KGQ22",
+      "url": "https://www.amazon.co.jp/dp/B0DB7KGQ22",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0DB7VC4K5",
+      "url": "https://www.amazon.co.jp/dp/B0DB7VC4K5",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0DB7XZDL7",
+      "url": "https://www.amazon.co.jp/dp/B0DB7XZDL7",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0DG6PSWN1",
+      "url": "https://www.amazon.co.jp/dp/B0DG6PSWN1",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0DKHHYTGJ",
+      "url": "https://www.amazon.co.jp/dp/B0DKHHYTGJ",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0DP4586RV",
+      "url": "https://www.amazon.co.jp/dp/B0DP4586RV",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0DP481Y24",
+      "url": "https://www.amazon.co.jp/dp/B0DP481Y24",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0DWV2N6JD",
+      "url": "https://www.amazon.co.jp/dp/B0DWV2N6JD",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0F189YH8W",
+      "url": "https://www.amazon.co.jp/dp/B0F189YH8W",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0F18B4CVX",
+      "url": "https://www.amazon.co.jp/dp/B0F18B4CVX",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0F18J2CJF",
+      "url": "https://www.amazon.co.jp/dp/B0F18J2CJF",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0F9KJGGZ5",
+      "url": "https://www.amazon.co.jp/dp/B0F9KJGGZ5",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0FG1WT6DV",
+      "url": "https://www.amazon.co.jp/dp/B0FG1WT6DV",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0FH6Q2873",
+      "url": "https://www.amazon.co.jp/dp/B0FH6Q2873",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0FLCWJ1VK",
+      "url": "https://www.amazon.co.jp/dp/B0FLCWJ1VK",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0FSJXSPPX",
+      "url": "https://www.amazon.co.jp/dp/B0FSJXSPPX",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0FSKBY89D",
+      "url": "https://www.amazon.co.jp/dp/B0FSKBY89D",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0G1XB2STM",
+      "url": "https://www.amazon.co.jp/dp/B0G1XB2STM",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0G2FVLXVL",
+      "url": "https://www.amazon.co.jp/dp/B0G2FVLXVL",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0G3XHTC4T",
+      "url": "https://www.amazon.co.jp/dp/B0G3XHTC4T",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0GP928YDZ",
+      "url": "https://www.amazon.co.jp/dp/B0GP928YDZ",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0GP9QHQ3Y",
+      "url": "https://www.amazon.co.jp/dp/B0GP9QHQ3Y",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0GXCC7W7Q",
+      "url": "https://www.amazon.co.jp/dp/B0GXCC7W7Q",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0GXCM4BCZ",
+      "url": "https://www.amazon.co.jp/dp/B0GXCM4BCZ",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0GXCPF84C",
+      "url": "https://www.amazon.co.jp/dp/B0GXCPF84C",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0GXCRBL5J",
+      "url": "https://www.amazon.co.jp/dp/B0GXCRBL5J",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0GXCSGX8Y",
+      "url": "https://www.amazon.co.jp/dp/B0GXCSGX8Y",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0GXCT83HB",
+      "url": "https://www.amazon.co.jp/dp/B0GXCT83HB",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0GXCTRZ8L",
+      "url": "https://www.amazon.co.jp/dp/B0GXCTRZ8L",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0GXCX36HP",
+      "url": "https://www.amazon.co.jp/dp/B0GXCX36HP",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0GXCX46KQ",
+      "url": "https://www.amazon.co.jp/dp/B0GXCX46KQ",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0GXCYMRGL",
+      "url": "https://www.amazon.co.jp/dp/B0GXCYMRGL",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0GXCZ1VDC",
+      "url": "https://www.amazon.co.jp/dp/B0GXCZ1VDC",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0H8SV3WJ8",
+      "url": "https://www.amazon.co.jp/dp/B0H8SV3WJ8",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-10-14T03:52:55.948Z"
+    },
+    {
+      "asin": "B0HG8LFK7Y",
+      "url": "https://www.amazon.co.jp/dp/B0HG8LFK7Y",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
+      "asin": "B0HKKXDDBY",
+      "url": "https://www.amazon.co.jp/dp/B0HKKXDDBY",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    }
+  ]
 }

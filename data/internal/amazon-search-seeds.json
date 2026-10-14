@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T22:42:48.590Z",
+  "generatedAt": "2026-10-14T03:57:59.669Z",
   "recentClosedDays": 14,
   "seeds": [
     {
@@ -292,9 +292,11 @@
       "query": "MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
       "kind": "case-derived",
       "caseIds": [
+        "rakutenbooks:18595283",
         "amazon:B0GXCM4BCZ"
       ],
       "sourceIds": [
+        "rakutenbooks",
         "official-amazon-jp"
       ],
       "priority": 100
@@ -304,10 +306,48 @@
       "query": "MEGA 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー 招待",
       "kind": "case-derived",
       "caseIds": [
+        "rakutenbooks:18595283",
         "amazon:B0GXCM4BCZ"
       ],
       "sourceIds": [
+        "rakutenbooks",
         "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:7078f06d358c1557",
+      "query": "MEGA スタートデッキ100 バトルコレクション 5個セット",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18548589"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:9add30a34df49c2d",
+      "query": "MEGA スタートデッキ100 バトルコレクション 5個セット 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18548589"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:133bef5b1a90e0b9",
+      "query": "MEGA ハイクラスパック MEGAドリームex",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18343992"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
       ],
       "priority": 100
     },
@@ -336,6 +376,18 @@
       "priority": 100
     },
     {
+      "id": "seed:e5abbaed9d1df2a7",
+      "query": "MEGA ハイクラスパック MEGAドリームex 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18343992"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
       "id": "seed:b9606a2858cc943a",
       "query": "MEGA 拡張パック 30th CELEBRATION",
       "kind": "case-derived",
@@ -344,6 +396,30 @@
       ],
       "sourceIds": [
         "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:d1b63a4c22be3a6e",
+      "query": "MEGA 拡張パック 30th CELEBRATION BOX",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCRBL5J"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:b420a0f4aad9411c",
+      "query": "MEGA 拡張パック 30th CELEBRATION BOX 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GXCRBL5J"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
       ],
       "priority": 100
     },
@@ -384,6 +460,54 @@
       "priority": 100
     },
     {
+      "id": "seed:61b547de1dd56c83",
+      "query": "MEGA 拡張パック アビスアイ",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18537075"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:931dcdbfef168934",
+      "query": "MEGA 拡張パック アビスアイ BOX",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GP9QHQ3Y"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:90d7cd6ba790d9f1",
+      "query": "MEGA 拡張パック アビスアイ BOX 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GP9QHQ3Y"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:9309a77e2c575088",
+      "query": "MEGA 拡張パック アビスアイ 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18537075"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
       "id": "seed:b1a06a5c45f06e42",
       "query": "MEGA 拡張パック インフェルノX",
       "kind": "case-derived",
@@ -392,6 +516,30 @@
       ],
       "sourceIds": [
         "pokemoncenter"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:8fd4608c7a10f5f9",
+      "query": "MEGA 拡張パック インフェルノX BOX",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0F9KJGGZ5"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:b15335364fb362b9",
+      "query": "MEGA 拡張パック インフェルノX BOX 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0F9KJGGZ5"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
       ],
       "priority": 100
     },
@@ -412,10 +560,36 @@
       "query": "MEGA 拡張パック ストームエメラルダ",
       "kind": "case-derived",
       "caseIds": [
-        "pokemoncenter:20260929:%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0%20MEGA%20%E6%8B%A1%E5%BC%B5%E3%83%91%E3%83%83%E3%82%AF%E3%80%8C%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A0%E3%82%A8%E3%83%A1%E3%83%A9%E3%83%AB%E3%83%80%E3%80%8D"
+        "pokemoncenter:20260929:%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0%20MEGA%20%E6%8B%A1%E5%BC%B5%E3%83%91%E3%83%83%E3%82%AF%E3%80%8C%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A0%E3%82%A8%E3%83%A1%E3%83%A9%E3%83%AB%E3%83%80%E3%80%8D",
+        "rakutenbooks:18537078"
       ],
       "sourceIds": [
-        "pokemoncenter"
+        "pokemoncenter",
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:c77d7999a3727582",
+      "query": "MEGA 拡張パック ストームエメラルダ BOX",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GP928YDZ"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:47a84a1536608efb",
+      "query": "MEGA 拡張パック ストームエメラルダ BOX 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0GP928YDZ"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
       ],
       "priority": 100
     },
@@ -424,10 +598,156 @@
       "query": "MEGA 拡張パック ストームエメラルダ 招待",
       "kind": "case-derived",
       "caseIds": [
-        "pokemoncenter:20260929:%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0%20MEGA%20%E6%8B%A1%E5%BC%B5%E3%83%91%E3%83%83%E3%82%AF%E3%80%8C%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A0%E3%82%A8%E3%83%A1%E3%83%A9%E3%83%AB%E3%83%80%E3%80%8D"
+        "pokemoncenter:20260929:%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0%20MEGA%20%E6%8B%A1%E5%BC%B5%E3%83%91%E3%83%83%E3%82%AF%E3%80%8C%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A0%E3%82%A8%E3%83%A1%E3%83%A9%E3%83%AB%E3%83%80%E3%80%8D",
+        "rakutenbooks:18537078"
       ],
       "sourceIds": [
-        "pokemoncenter"
+        "pokemoncenter",
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:ef0245e2e65a63fa",
+      "query": "MEGA 拡張パック ニンジャスピナー BOX",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0G1XB2STM"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:1fd1b6fc0ca2662e",
+      "query": "MEGA 拡張パック ニンジャスピナー BOX 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0G1XB2STM"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:b9435bffcbcca682",
+      "query": "MEGA 拡張パック ムニキスゼロ BOX",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0FSJXSPPX"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:5994bd1dbbe9acbc",
+      "query": "MEGA 拡張パック ムニキスゼロ BOX 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0FSJXSPPX"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:28fd0c1a62bc6a21",
+      "query": "MEGA 拡張パック メガシンフォニア",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18182238"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:97fdf1cb3c770dcd",
+      "query": "MEGA 拡張パック メガシンフォニア BOX",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0F189YH8W"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:4e59b74064e64467",
+      "query": "MEGA 拡張パック メガシンフォニア BOX 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0F189YH8W"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:63c0d52963833f9e",
+      "query": "MEGA 拡張パック メガシンフォニア 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18182238"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:94de930454486b7d",
+      "query": "MEGA 拡張パック メガブレイブ",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18182237"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:cfca29ea9ac6ef23",
+      "query": "MEGA 拡張パック メガブレイブ BOX",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0F18J2CJF"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:186d3ce34dc4eb59",
+      "query": "MEGA 拡張パック メガブレイブ BOX 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "amazon:B0F18J2CJF"
+      ],
+      "sourceIds": [
+        "official-amazon-jp"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "seed:68fcddbfd82f5525",
+      "query": "MEGA 拡張パック メガブレイブ 招待",
+      "kind": "case-derived",
+      "caseIds": [
+        "rakutenbooks:18182237"
+      ],
+      "sourceIds": [
+        "rakutenbooks"
       ],
       "priority": 100
     },
