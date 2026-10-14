@@ -1,0 +1,29 @@
+name: Diagnose two Amazon offer layouts
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['tools/amazon-offer-check/**', '.github/workflows/amazon-offer-check.yml']
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Read offers without clicking
+        run: node tools/amazon-offer-check/check.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: two-amazon-offer-layouts
+          path: amazon-offer-check.json
+          retention-days: 7
