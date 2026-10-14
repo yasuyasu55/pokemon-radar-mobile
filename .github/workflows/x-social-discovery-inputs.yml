@@ -9,6 +9,7 @@ on:
       - 'data/internal/x-social-discovery-config.json'
       - 'tools/x-social-discovery/**'
       - 'tests/x-social-discovery.test.mjs'
+      - 'tests/x-links.test.mjs'
       - '.github/workflows/x-social-discovery-inputs.yml'
 
 permissions:
@@ -30,7 +31,7 @@ jobs:
         with:
           node-version: '22'
       - name: Test X social discovery logic
-        run: node --test tests/x-social-discovery.test.mjs
+        run: node --test tests/x-social-discovery.test.mjs tests/x-links.test.mjs
       - name: Build CRAWL STORM X social targets
         run: node tools/x-social-discovery/build-targets.mjs data/internal/x-social-discovery-config.json data/internal/x-social-discovery-targets.json
       - name: Commit generated target list

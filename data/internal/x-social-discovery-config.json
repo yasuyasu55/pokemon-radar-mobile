@@ -8,7 +8,9 @@
       "url": "https://x.com/pokecamatomeru",
       "type": "aggregator",
       "priority": 100,
-      "genres": ["pokemon-card"],
+      "genres": [
+        "pokemon-card"
+      ],
       "enabled": true,
       "trust": "candidate-only",
       "reason": "Amazon招待ASIN・抽選・再販情報の候補発見源"
@@ -18,7 +20,9 @@
       "url": "https://x.com/DisneyLOR_JP",
       "type": "official",
       "priority": 85,
-      "genres": ["disney-lorcana"],
+      "genres": [
+        "disney-lorcana"
+      ],
       "enabled": true,
       "trust": "official-announcement"
     },
@@ -27,7 +31,9 @@
       "url": "https://x.com/UNION_ARENA_TCG",
       "type": "official",
       "priority": 80,
-      "genres": ["union-arena"],
+      "genres": [
+        "union-arena"
+      ],
       "enabled": true,
       "trust": "official-announcement"
     },
@@ -36,7 +42,9 @@
       "url": "https://x.com/GUNDAM_GCG_JP",
       "type": "official",
       "priority": 85,
-      "genres": ["gundam-card"],
+      "genres": [
+        "gundam-card"
+      ],
       "enabled": true,
       "trust": "official-announcement"
     },
@@ -45,9 +53,154 @@
       "url": "https://x.com/ONEPIECEtcgSHOP",
       "type": "official-shop",
       "priority": 80,
-      "genres": ["one-piece-card"],
+      "genres": [
+        "one-piece-card"
+      ],
       "enabled": true,
       "trust": "official-shop-announcement"
+    },
+    {
+      "handle": "pokecasokuhou",
+      "url": "https://x.com/pokecasokuhou",
+      "type": "aggregator",
+      "priority": 95,
+      "genres": [
+        "pokemon-card"
+      ],
+      "enabled": true,
+      "trust": "candidate-only",
+      "verificationStatus": "user-supplied-trial",
+      "reason": "提供調査に基づく試験対象。先行発見実績は未検証"
+    },
+    {
+      "handle": "lifeprep_list",
+      "url": "https://x.com/lifeprep_list",
+      "type": "aggregator",
+      "priority": 95,
+      "genres": [
+        "pokemon-card"
+      ],
+      "enabled": true,
+      "trust": "candidate-only",
+      "verificationStatus": "user-supplied-trial",
+      "reason": "提供調査に基づく試験対象。先行発見実績は未検証"
+    },
+    {
+      "handle": "kotatsudemikanm",
+      "url": "https://x.com/kotatsudemikanm",
+      "type": "aggregator",
+      "priority": 90,
+      "genres": [
+        "pokemon-card"
+      ],
+      "enabled": true,
+      "trust": "candidate-only",
+      "verificationStatus": "user-supplied-trial",
+      "reason": "提供調査に基づく試験対象。先行発見実績は未検証"
+    },
+    {
+      "handle": "mymyme0901",
+      "url": "https://x.com/mymyme0901",
+      "type": "aggregator",
+      "priority": 90,
+      "genres": [
+        "pokemon-card"
+      ],
+      "enabled": true,
+      "trust": "candidate-only",
+      "verificationStatus": "user-supplied-trial",
+      "reason": "提供調査に基づく試験対象。先行発見実績は未検証"
+    },
+    {
+      "handle": "manimegame336",
+      "url": "https://x.com/manimegame336",
+      "type": "aggregator",
+      "priority": 85,
+      "genres": [
+        "pokemon-card"
+      ],
+      "enabled": true,
+      "trust": "candidate-only",
+      "verificationStatus": "user-supplied-trial",
+      "reason": "提供調査に基づく試験対象。先行発見実績は未検証"
+    },
+    {
+      "handle": "medakadesu41",
+      "url": "https://x.com/medakadesu41",
+      "type": "aggregator",
+      "priority": 85,
+      "genres": [
+        "pokemon-card"
+      ],
+      "enabled": true,
+      "trust": "candidate-only",
+      "verificationStatus": "user-supplied-trial",
+      "reason": "提供調査に基づく試験対象。先行発見実績は未検証"
+    },
+    {
+      "handle": "pokecayoyaku",
+      "url": "https://x.com/pokecayoyaku",
+      "type": "aggregator",
+      "priority": 80,
+      "genres": [
+        "pokemon-card"
+      ],
+      "enabled": true,
+      "trust": "candidate-only",
+      "verificationStatus": "user-supplied-trial",
+      "reason": "提供調査に基づく試験対象。先行発見実績は未検証"
+    },
+    {
+      "handle": "pokeca_joho",
+      "url": "https://x.com/pokeca_joho",
+      "type": "aggregator",
+      "priority": 60,
+      "genres": [
+        "pokemon-card"
+      ],
+      "enabled": false,
+      "trust": "candidate-only",
+      "verificationStatus": "pending",
+      "reason": "投稿URL確認後に有効化する追加候補"
+    },
+    {
+      "handle": "origeto_jp",
+      "url": "https://x.com/origeto_jp",
+      "type": "aggregator",
+      "priority": 60,
+      "genres": [
+        "pokemon-card"
+      ],
+      "enabled": false,
+      "trust": "candidate-only",
+      "verificationStatus": "pending",
+      "reason": "投稿URL確認後に有効化する追加候補"
+    },
+    {
+      "handle": "Sifu_pokePress",
+      "url": "https://x.com/Sifu_pokePress",
+      "type": "aggregator",
+      "priority": 60,
+      "genres": [
+        "pokemon-card"
+      ],
+      "enabled": false,
+      "trust": "candidate-only",
+      "verificationStatus": "pending",
+      "reason": "投稿URL確認後に有効化する追加候補"
+    },
+    {
+      "handle": "cardchusen_com",
+      "url": "https://x.com/cardchusen_com",
+      "type": "aggregator",
+      "priority": 60,
+      "genres": [
+        "pokemon-card"
+      ],
+      "enabled": false,
+      "trust": "candidate-only",
+      "verificationStatus": "pending",
+      "reason": "投稿URL確認後に有効化する追加候補"
     }
   ],
   "genres": [
@@ -55,42 +208,61 @@
       "id": "pokemon-card",
       "label": "ポケモンカード",
       "priority": 100,
-      "aliases": ["ポケモンカード", "ポケカ"],
+      "aliases": [
+        "ポケモンカード",
+        "ポケカ"
+      ],
       "onlinePriority": true
     },
     {
       "id": "one-piece-card",
       "label": "ONE PIECEカード",
       "priority": 90,
-      "aliases": ["ONE PIECEカード", "ワンピースカード"],
+      "aliases": [
+        "ONE PIECEカード",
+        "ワンピースカード"
+      ],
       "onlinePriority": true
     },
     {
       "id": "gundam-card",
       "label": "ガンダムカードゲーム",
       "priority": 85,
-      "aliases": ["ガンダムカードゲーム", "ガンダムカード"],
+      "aliases": [
+        "ガンダムカードゲーム",
+        "ガンダムカード"
+      ],
       "onlinePriority": true
     },
     {
       "id": "disney-lorcana",
       "label": "ディズニー・ロルカナ",
       "priority": 80,
-      "aliases": ["ディズニーロルカナ", "ロルカナ"],
+      "aliases": [
+        "ディズニーロルカナ",
+        "ロルカナ"
+      ],
       "onlinePriority": true
     },
     {
       "id": "dragon-ball-fw",
       "label": "ドラゴンボールFW",
       "priority": 75,
-      "aliases": ["フュージョンワールド", "ドラゴンボールカード"],
+      "aliases": [
+        "フュージョンワールド",
+        "ドラゴンボールカード"
+      ],
       "onlinePriority": true
     },
     {
       "id": "union-arena",
       "label": "UNION ARENA",
       "priority": 70,
-      "aliases": ["UNION ARENA", "ユニオンアリーナ", "ユニアリ"],
+      "aliases": [
+        "UNION ARENA",
+        "ユニオンアリーナ",
+        "ユニアリ"
+      ],
       "onlinePriority": true
     }
   ],
