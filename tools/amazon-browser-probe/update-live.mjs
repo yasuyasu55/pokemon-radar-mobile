@@ -15,6 +15,33 @@ export function saveDiscoveryPool(previous,result) {
   }
   return next;
 }
+// Target order: still-unconfirmed candidates first, then earlier candidates, then least recently checked; published ASINs last.
+export function orderTargets(items,published=[]) {
+  const rank=x=>x.unconfirmed?0:x.detailCandidate===true?1:2;
+  const list=items.filter(x=>x.state!=='retired').sort((a,b)=>rank(a)-rank(b) || String(a.lastCheckedAt || '').localeCompare(String(b.lastCheckedAt || ''))).map(x=>x.asin);
+  return [...new Set([...list,...published])];
+}
+// Both independent runs must have inspected the same ASIN set.
+export function targetConsistency(a,b) {
+  const sa=new Set(a.details.map(d=>d.asin)),sb=new Set(b.details.map(d=>d.asin));
+  const onlyRun1=[...sa].filter(x=>!sb.has(x)),onlyRun2=[...sb].filter(x=>!sa.has(x));
+  return {run1:sa.size,run2:sb.size,onlyRun1,onlyRun2,consistent:!onlyRun1.length && !onlyRun2.length};
+}
+// A candidate seen by at least one run but not confirmed by both stays at the front of the next run; cleared once confirmed or both runs reject it.
+export function markUnconfirmed(pool,a,b,at) {
+  const verified=new Set(verifiedRows(a,b).map(r=>r.asin));
+  const items=pool.items.map(item=>{
+    const x=a.details.find(d=>d.asin===item.asin),y=b.details.find(d=>d.asin===item.asin);
+    if(!x && !y) return item;
+    const seenCandidate=x?.candidate===true || y?.candidate===true;
+    const rejected=r=>r?.stage==='PRODUCT_PARSED' && r.status===200 && r.candidate===false;
+    if(verified.has(item.asin) || (rejected(x) && rejected(y))) {const {unconfirmed,...rest}=item;return rest;}
+    if(!seenCandidate && !item.unconfirmed) return item;
+    const reason=x?.candidate===true && y?.candidate===true?'タイトル不一致等で2回の結果が一致しない':y===undefined?'2回目で確認対象に入らなかった':y.candidate===true?'1回目では候補にならなかった':'2回目で候補にならなかった（'+(y.stage||'不明')+'）';
+    return {...item,unconfirmed:{since:item.unconfirmed?.since||at,lastReason:reason,lastAt:at,count:(item.unconfirmed?.count||0)+1}};
+  });
+  return {...pool,items};
+}
 export function verifiedRows(a,b) {
   if(a.mode!=='BROWSER_POC' || b.mode!=='BROWSER_POC' || !a.pid || !b.pid || a.pid===b.pid) throw new Error('Independent live browser results required');
   return b.details.filter(y=>{
@@ -22,7 +49,7 @@ export function verifiedRows(a,b) {
     return x?.candidate===true && y.candidate===true && x.title===y.title &&
       [x,y].every(r=>r.stage==='PRODUCT_PARSED' && r.status===200 && /^[A-Z0-9]{10}$/.test(r.asin) &&
         r.url===`https://www.amazon.co.jp/dp/${r.asin}` && /ポケモンカード/.test(r.title) &&
-        ['asinMatched','amazonSeller','invitationNotice','requestButton'].every(k=>r.checks?.[k]===true));
+        ['asinMatched','amazonSeller','invitationNotice','requestButton','invitationPanelVisible'].every(k=>r.checks?.[k]===true));
   });
 }
 export function adoptAmazon(previous,a,b) {
@@ -47,25 +74,39 @@ if(process.argv[1] && path.resolve(process.argv[1])===here) {
   const [action,out,snapshot='data/snapshot.json',pool='data/internal/amazon-asin-pool.json']=process.argv.slice(2);
   const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
   if(action==='one') {
+    const fixedFile=process.argv[6];
     const prior=read(snapshot),items=fs.existsSync(pool)?read(pool).items:[];
     const published=prior.cases.filter(c=>c.id.startsWith('amazon:')).map(c=>c.asin || c.id.split(':')[1]);
-    const candidates=items.filter(x=>x.state!=='retired').sort((a,b)=>Number(b.detailCandidate===true)-Number(a.detailCandidate===true) || String(a.lastCheckedAt || '').localeCompare(String(b.lastCheckedAt || ''))).map(x=>x.asin);
-    await run(out,[...new Set([...candidates,...published])]);
+    const fixed=fixedFile?read(fixedFile).targets:null;
+    await run(out,fixed || orderTargets(items,published),{fixedTargets:fixed});
     const result=read(path.join(out,'result.json'));
     const nextPool=saveDiscoveryPool(fs.existsSync(pool)?read(pool):{items:[]},result);
     fs.mkdirSync(path.dirname(pool),{recursive:true});
     fs.writeFileSync(pool+'.tmp',JSON.stringify(nextPool,null,2)+'\n');fs.renameSync(pool+'.tmp',pool);
   } else if(action==='all') {
     fs.mkdirSync(out,{recursive:true});
-    for(const n of [1,2]) {
-      const r=spawnSync(process.execPath,[here,'one',path.join(out,String(n)),snapshot,pool],{stdio:'inherit',timeout:8*60*1000});
+    const runOne=(n,fixedFile)=>{
+      const args=[here,'one',path.join(out,String(n)),snapshot,pool,...(fixedFile?[fixedFile]:[])];
+      const r=spawnSync(process.execPath,args,{stdio:'inherit',timeout:8*60*1000});
       if(r.status!==0) throw new Error('Browser check failed');
-    }
+    };
+    runOne(1);
+    // Second independent process checks exactly the ASINs the first one inspected.
+    const first=read(path.join(out,'1/result.json'));
+    const targetsFile=path.join(out,'targets.json');
+    fs.writeFileSync(targetsFile,JSON.stringify({targets:first.details.map(d=>d.asin)},null,2)+'\n');
+    runOne(2,targetsFile);
     const a=read(path.join(out,'1/result.json')),b=read(path.join(out,'2/result.json'));
     const previous=read(snapshot),next=adoptAmazon(previous,a,b);
-    const status={at:b.finishedAt,checked:b.details.length,verified:verifiedRows(a,b).length,
+    const targets=targetConsistency(a,b);
+    const marked=markUnconfirmed(read(pool),a,b,b.finishedAt);
+    fs.writeFileSync(pool+'.tmp',JSON.stringify(marked,null,2)+'\n');fs.renameSync(pool+'.tmp',pool);
+    const status={at:b.finishedAt,checked:b.details.length,verified:verifiedRows(a,b).length,targets,
+      unconfirmedCarriedOver:marked.items.filter(x=>x.unconfirmed).length,
       publishedNew:next===previous?0:next.sources.amazon.lastRunNewAsins,
-      blocked:b.details.some(d=>d.stage==='BLOCKED'),status:next===previous?'NO_VERIFIED_UPDATE':'VERIFIED_UPDATE'};
+      blocked:[a,b].some(r=>[...r.searches,...r.details].some(d=>d.stage==='BLOCKED')),
+      unconfirmedThisRun:new Set([...a.details,...b.details].map(d=>d.asin)).size-verifiedRows(a,b).length,
+      status:next===previous?'NO_VERIFIED_UPDATE':'VERIFIED_UPDATE'};
     fs.writeFileSync(path.join(out,'status.json'),JSON.stringify(status,null,2)+'\n');
     console.log(JSON.stringify(status));
     if(next===previous) process.exitCode=10;

@@ -17,7 +17,65 @@ concurrency:
   group: otakara-publish
   cancel-in-progress: false
 jobs:
-  collect:
+  x:
+    # X acquisition. Its result and failure signal are independent of Amazon verification.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify candidate and publication rules
+        run: node --test tests/*.test.mjs
+      - name: Acquire X posts and persist candidate inputs
+        id: x
+        run: |
+          set +e
+          node tools/x-social-discovery/collect-posts.mjs data/internal
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Preserve X evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: x-evidence
+          path: data/internal/x-collection-status.json
+          retention-days: 7
+      - name: Commit X status and candidate pool
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for f in data/internal/x-collection-state.json data/internal/x-collection-status.json data/internal/x-candidates.json data/internal/amazon-asin-pool.json; do
+            if test -f "$f"; then git add "$f"; fi
+          done
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Update X acquisition status and candidate pool'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: X result (separate from Amazon)
+        run: |
+          code='${{ steps.x.outputs.code }}'
+          {
+            echo '### X acquisition (candidates only; Amazon is a separate job)'
+            test -f data/internal/x-collection-status.json && cat data/internal/x-collection-status.json
+          } >> "$GITHUB_STEP_SUMMARY"
+          if test "$code" = "0"; then exit 0; fi
+          if test "$code" = "11"; then
+            echo '::warning title=X acquisition is NOT RUNNING::X_BEARER_TOKEN is not set. No X monitoring coverage exists. This is not an Amazon result.'
+            echo '> **X acquisition is NOT RUNNING (X_BEARER_TOKEN unset).** Not a partial success.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          echo '::error title=X acquisition incomplete::X API is configured but acquisition failed or was partial. Amazon verification is reported by its own job.'
+          exit 10
+  amazon:
+    # Runs even when the X job failed or X is not running; reads the candidate pool the X job committed.
+    needs: x
+    if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -33,51 +91,41 @@ jobs:
         run: |
           npm install --no-save --package-lock=false playwright@1.55.0
           npx playwright install --with-deps chromium
-      - name: Acquire X posts and persist candidate inputs
-        id: x
-        continue-on-error: true
-        env:
-          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
-        run: node tools/x-social-discovery/collect-posts.mjs data/internal
-      - name: Verify Amazon product details independently twice
+      - name: Verify Amazon product details independently twice (same target set)
         id: amazon
         continue-on-error: true
         run: node tools/amazon-browser-probe/update-live.mjs all "$RUNNER_TEMP/amazon-live" data/snapshot.json data/internal/amazon-asin-pool.json
-      - name: Preserve structured acquisition evidence
+      - name: Preserve Amazon evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: x-amazon-live-evidence
+          name: amazon-live-evidence
           path: |
-            data/internal/x-collection-status.json
             ${{ runner.temp }}/amazon-live/**/result.json
             ${{ runner.temp }}/amazon-live/status.json
+            ${{ runner.temp }}/amazon-live/targets.json
           retention-days: 7
-      - name: Commit status, candidate pool and verified publication changes
-        if: always() && steps.x.outcome != 'skipped'
+      - name: Commit verified Amazon changes and carried-over candidates
+        if: always()
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          for f in data/internal/x-collection-state.json data/internal/x-collection-status.json data/internal/x-candidates.json data/internal/amazon-asin-pool.json data/snapshot.json; do
+          for f in data/internal/amazon-asin-pool.json data/snapshot.json; do
             if test -f "$f"; then git add "$f"; fi
           done
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Update X acquisition status and verified Amazon invitations'
+          git commit -m 'Update verified Amazon invitations'
           git pull --rebase origin main
           git push origin HEAD:main
-      - name: Acquisition summary
+      - name: Amazon result (separate from X)
         if: always()
         run: |
-          if test -f data/internal/x-collection-status.json; then
-            echo '### X acquisition (candidates only)' >> "$GITHUB_STEP_SUMMARY"
-            cat data/internal/x-collection-status.json >> "$GITHUB_STEP_SUMMARY"
-          fi
           if test -f "$RUNNER_TEMP/amazon-live/status.json"; then
-            echo '### Amazon independent detail verification' >> "$GITHUB_STEP_SUMMARY"
+            echo '### Amazon independent detail verification (X is a separate job)' >> "$GITHUB_STEP_SUMMARY"
             cat "$RUNNER_TEMP/amazon-live/status.json" >> "$GITHUB_STEP_SUMMARY"
           fi
-      - name: Mark incomplete acquisition explicitly
-        if: steps.x.outcome == 'failure' || steps.amazon.outcome == 'failure'
+      - name: Mark incomplete Amazon verification explicitly
+        if: steps.amazon.outcome == 'failure'
         run: |
-          echo 'Acquisition is incomplete. Retained data is not evidence of successful monitoring.'
+          echo '::error title=Amazon verification incomplete::Retained data is not evidence of successful monitoring. X is reported by its own job.'
           exit 10

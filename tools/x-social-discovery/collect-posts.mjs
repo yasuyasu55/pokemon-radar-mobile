@@ -52,6 +52,19 @@ export async function collectAccount(handle, old = {}, request, processPosts, {m
   return {state:{...state,pending},posts,outcome:'partial'};
 }
 
+// X acquisition state, kept apart from Amazon verification. No token means X is NOT RUNNING (never "partial").
+export function summarizeAcquisition({tokenSet, accounts, handles=HANDLES}) {
+  const apiOk = x => ['ok','ok-zero-posts'].includes(x.outcome);
+  if(!tokenSet) {
+    const usable = accounts.filter(x=>x.outcome==='public-sample').length;
+    return {auth:'UNSET', collection:'NOT_RUNNING', status:'NOT_RUNNING_AUTH_UNSET',
+      notice:'X_BEARER_TOKEN is not set. X API acquisition is not running, so no X monitoring coverage exists.',
+      publicFallback:{role:'supplementary visible-sample attempt only; not monitoring', attempted:accounts.length, usable, failed:accounts.length-usable}};
+  }
+  const complete = accounts.length===handles.length && accounts.every(apiOk);
+  return {auth:'SET', collection:'RUNNING_API', status: complete ? 'OK' : 'PARTIAL_OR_FAILED',
+    summary:{ok:accounts.filter(apiOk).length, failed:accounts.filter(x=>!apiOk(x)).length, total:handles.length}};
+}
 function atomic(file, value) { fs.mkdirSync(path.dirname(file),{recursive:true}); fs.writeFileSync(file+'.tmp',JSON.stringify(value,null,2)+'\n');fs.renameSync(file+'.tmp',file); }
 const read = (p, fallback) => fs.existsSync(p) ? JSON.parse(fs.readFileSync(p,'utf8')) : fallback;
 export async function run(directory, {token=process.env.X_BEARER_TOKEN}={}) {
@@ -59,6 +72,7 @@ export async function run(directory, {token=process.env.X_BEARER_TOKEN}={}) {
   const state=read(stateFile,{schemaVersion:1,accounts:{}});
   const retained=read(candidateFile,{amazon:[],official:[],review:[]});
   const report={checkedAt:new Date().toISOString(),method:'official-api',accounts:[],publication:'candidate-only'};
+  report.apiConfigured=Boolean(token);
   const request=async route=>{
     const r=await fetch('https://api.x.com'+route,{headers:{Authorization:'Bearer '+token},redirect:'error',signal:AbortSignal.timeout(15000)});
     if(!r.ok){await r.body?.cancel(); const e=new Error('X API HTTP '+r.status);e.status=r.status;throw e;}
@@ -85,10 +99,9 @@ export async function run(directory, {token=process.env.X_BEARER_TOKEN}={}) {
     atomic(candidateFile,{schemaVersion:1,policy:'candidate-only',...retained});
   };
   if(!token) {
-    report.method='public-browser';report.apiConfigured=false;
-    const {collectPublicPosts}=await import('./public-posts.mjs');
-    const result=await collectPublicPosts(HANDLES);
-    await processPosts(result.posts);report.accounts=result.accounts;
+    report.method='none';report.apiConfigured=false;
+    // Do not repeatedly hit denied public profiles on the scheduled production path.
+    // Public samples can be studied separately; they are not monitoring coverage.
   } else for(const handle of HANDLES) {
     try {
       const result=await collectAccount(handle,state.accounts[handle],request,processPosts);
@@ -97,7 +110,7 @@ export async function run(directory, {token=process.env.X_BEARER_TOKEN}={}) {
       if(result.status===429 || result.status===401) break;
     } catch(e) {report.accounts.push({handle,outcome:'failed',status:e.status || null});if([401,429].includes(e.status))break;}
   }
-  report.status=report.accounts.length===HANDLES.length && report.accounts.every(x=>['ok','ok-zero-posts'].includes(x.outcome))?'OK':report.accounts.some(x=>x.outcome==='public-sample')?'PUBLIC_SAMPLE_PARTIAL':'PARTIAL_OR_FAILED';
+  Object.assign(report,summarizeAcquisition({tokenSet:Boolean(token),accounts:report.accounts}));
   report.amazonCandidates=retained.amazon.length;report.officialCandidates=retained.official.length;
   atomic(path.join(directory,'x-collection-status.json'),report);
   // Discovery input only; never write public snapshot from X text.
@@ -105,6 +118,8 @@ export async function run(directory, {token=process.env.X_BEARER_TOKEN}={}) {
   const pool=mergeDiscoveredAsins(read(poolFile,{items:[]}),retained.amazon.map(c=>({asin:c.asin,query:'x-social'})));
   for(const item of pool.items) if(!item.source || item.queries?.includes('x-social')) item.discoverySources=[...new Set([...(item.discoverySources||[]),'x-social'])];
   atomic(poolFile,pool);
-  console.log(JSON.stringify(report));return report.status==='OK'?0:10;
+  console.log(JSON.stringify(report));
+  // 0 = API run complete, 11 = X not running (auth unset), 10 = API run incomplete.
+  return report.status==='OK'?0:report.status==='NOT_RUNNING_AUTH_UNSET'?11:10;
 }
 if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) process.exitCode=await run(process.argv[2] || 'data/internal');

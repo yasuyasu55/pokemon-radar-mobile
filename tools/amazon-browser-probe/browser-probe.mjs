@@ -88,7 +88,8 @@ async function inspectProduct(context,candidate){
   }
 }
 
-export async function run(outDir,seedAsins=[]){
+// fixedTargets: check exactly these ASINs (no search), so a second independent run covers the same set as the first.
+export async function run(outDir,seedAsins=[],{fixedTargets=null}={}){
   const {chromium}=await import('playwright');
   fs.mkdirSync(outDir,{recursive:true});
   const browser=await chromium.launch({headless:true});
@@ -98,11 +99,11 @@ export async function run(outDir,seedAsins=[]){
     viewport:{width:1365,height:900},
     userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36'
   });
-  const result={schemaVersion:1,mode:'BROWSER_POC',pid:process.pid,startedAt:new Date().toISOString(),queries:QUERIES,searches:[],discovered:[],details:[],adoption:'NOT_ENABLED'};
+  const result={schemaVersion:1,mode:'BROWSER_POC',pid:process.pid,startedAt:new Date().toISOString(),queries:fixedTargets?[]:QUERIES,fixedTargets:Boolean(fixedTargets),searches:[],discovered:[],details:[],adoption:'NOT_ENABLED'};
   try{
-    const discovery=new Map(seedAsins.filter(a=>/^[A-Z0-9]{10}$/.test(a)).map(asin=>[asin,{asin,title:null,queries:['watch-pool']}]));
+    const discovery=new Map((fixedTargets||seedAsins).filter(a=>/^[A-Z0-9]{10}$/.test(a)).map(asin=>[asin,{asin,title:null,queries:['watch-pool']}]));
     const page=await context.newPage();
-    for(const query of QUERIES){
+    for(const query of (fixedTargets?[]:QUERIES)){
       for(let p=1;p<=MAX_PAGES_PER_QUERY;p++){
         const row=await searchPage(page,query,p);
         result.searches.push(row);
@@ -127,7 +128,7 @@ export async function run(outDir,seedAsins=[]){
       await sleep(1000);
     }
     result.finishedAt=new Date().toISOString();
-    const searchOk=seedAsins.length>0 || result.searches.some(x=>x.stage==='SEARCH_PARSED'&&x.count>0);
+    const searchOk=(fixedTargets||seedAsins).length>0 || result.searches.some(x=>x.stage==='SEARCH_PARSED'&&x.count>0);
     const detailOk=result.details.some(x=>x.stage==='PRODUCT_PARSED');
     result.verdict=searchOk&&detailOk?'BROWSER_PATH_WORKS':result.searches.some(x=>x.stage==='BLOCKED')||result.details.some(x=>x.stage==='BLOCKED')?'BLOCKED':'NOT_VERIFIED';
     result.stats={searchPages:result.searches.length,uniqueAsins:result.discovered.length,detailChecks:result.details.length,invitationCandidates:result.details.filter(x=>x.candidate).length};
