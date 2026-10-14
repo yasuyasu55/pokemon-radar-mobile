@@ -1,4 +1,4 @@
-// Test-only browser substitution. Never invoked by production workflows.
+// Test-only browser substitution. Outside fixtures/ to avoid triggering unrelated collectors.
 export async function load(url,context,nextLoad){
   if(url.endsWith('/tools/amazon-browser-probe/browser-probe.mjs')) return {format:'module',shortCircuit:true,source:`
     import fs from 'node:fs';

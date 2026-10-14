@@ -6,7 +6,7 @@ import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 const cli=fileURLToPath(new URL('../tools/amazon-browser-probe/update-live.mjs',import.meta.url));
-const loader=new URL('./fixtures/amazon-probe-loader.mjs',import.meta.url).href;
+const loader=new URL('./helpers/amazon-probe-loader.mjs',import.meta.url).href;
 test('real CLI subprocess passes targets file to the second independent browser process',()=>{
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'radar-cli-'));
   try{
