@@ -7,16 +7,24 @@ on:
 permissions:
   contents: read
 jobs:
-  test:
+  windows-powershell:
     runs-on: windows-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        shell: [powershell, pwsh]
     steps:
       - uses: actions/checkout@v4
       - name: Parse and test using fake registrations
-        shell: ${{ matrix.shell }}
+        shell: powershell
+        run: |
+          $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $PWD 'tools/windows-autostart/disable-pokemon-radar-autostart.ps1'), [ref]$null, [ref]$errors) | Out-Null
+          if ($errors.Count -gt 0) { $errors | Format-List; exit 1 }
+          & ./tools/windows-autostart/test-autostart-tool.ps1
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+  powershell-core:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse and test using fake registrations
+        shell: pwsh
         run: |
           $errors = $null
           [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $PWD 'tools/windows-autostart/disable-pokemon-radar-autostart.ps1'), [ref]$null, [ref]$errors) | Out-Null
