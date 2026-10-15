@@ -11,9 +11,12 @@ for(const n of [1,2]){
  const r=JSON.parse(fs.readFileSync(file,'utf8'));
  console.log(`\n## 取得${n}\n工程: ${r.verdict} / 抽出: ${r.extractionVerdict?.level} / 候補: ${r.counts?.candidates??'判定不能'}`);
  console.log(`一覧の除外: ${r.list?.excluded?.length??'未確認'} / 上限による未確認: ${r.list?.skippedByDetailCap?.length??'未確認'}`);
+ for(const e of (r.list?.excluded??[]).slice(0,40)) console.log(`- 除外: ${e.title} / 理由: ${e.reason} / ${e.url}`);
+ if(r.verdict==='NO_CANDIDATE_IN_LIST') console.log('確認範囲は一覧1ページのみ。店舗全体で募集なしとは断定せず、既存案件を保持します。');
  for(const e of r.ledger??[]) console.log(`- ${e.stage}: HTTP ${e.status??'失敗'} / ${e.bytes??0} bytes / SHA-256 ${e.sha256??'なし'}`);
  for(const e of r.failures??[]) console.log(`- 失敗段階: ${e.stage} / ${e.errorKind??'不明'}`);
 }
 const cp=path.join(base,dir,'compare.json');
 if(fs.existsSync(cp))console.log(`\n2回の比較: ${JSON.parse(fs.readFileSync(cp,'utf8')).overall}`);
 console.log('\n検証・公開に失敗した場合は前回の公開データを維持します。生HTML・Cookie・通信ヘッダを公開成果物へ保存しません。');
+

@@ -45,10 +45,14 @@ jobs:
         run: |
           node tools/mobile/run-summary.mjs "$RUNNER_TEMP/otakara" | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Validate and merge snapshot
+        id: adopt
         run: |
           RESULT_DIR=$(find "$RUNNER_TEMP/otakara" -mindepth 1 -maxdepth 1 -type d -name 'otakara-*' | head -n 1)
-          node tools/mobile/update-snapshot.mjs "$RESULT_DIR" data/snapshot.json
+          node tools/mobile/update-snapshot.mjs "$RESULT_DIR" data/snapshot.json "$RUNNER_TEMP/otakara-update.json"
+          node -e 'const fs=require("node:fs"); const r=JSON.parse(fs.readFileSync(process.argv[1])); console.log("changed="+r.changed);' "$RUNNER_TEMP/otakara-update.json" >> "$GITHUB_OUTPUT"
+          cat "$RUNNER_TEMP/otakara-update.json" >> "$GITHUB_STEP_SUMMARY"
       - name: Commit only the validated snapshot
+        if: steps.adopt.outputs.changed == 'true'
         id: commit
         env:
           GH_TOKEN: ${{ github.token }}
@@ -62,7 +66,9 @@ jobs:
           AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
           git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $AUTH" push origin HEAD:main
       - name: Confirm Pages deployment and public snapshot
+        if: steps.adopt.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           PUBLISHED_SHA: ${{ steps.commit.outputs.sha }}
         run: node tools/mobile/wait-publication.mjs "$PUBLISHED_SHA" data/snapshot.json | tee -a "$GITHUB_STEP_SUMMARY"
+
