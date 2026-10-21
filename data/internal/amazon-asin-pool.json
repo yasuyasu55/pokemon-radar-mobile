@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-21T00:52:36.639Z",
+  "updatedAt": "2026-10-21T00:56:10.435Z",
   "items": [
     {
       "asin": "B000WD3XBI",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T20:26:21.994Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "100 Assorted Pokemon Trading Cards with Bonus 6 Free Holo Foils",
       "productKey": null,
       "queries": [
@@ -23,8 +23,8 @@
       "asin": "B06X9GVD7J",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカード50枚詰め合わせ(重複なし)。",
       "productKey": null,
@@ -40,9 +40,9 @@
       "asin": "B07QYDGL9S",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモン TCG 各シリーズからランダムカード 各ロットに100枚 + 無料ホイルカード7枚",
       "productKey": null,
       "queries": [
@@ -57,9 +57,9 @@
       "asin": "B07YCTZ2C7",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモン 限定版 TCG ランダムカード 各シリーズからのランダムカード 各ロットに100枚のカード",
       "productKey": null,
       "queries": [
@@ -70,19 +70,34 @@
       "detailCandidate": false
     },
     {
+      "asin": "B08DR62LY6",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "ポケモンカードゲーム ソード＆シールド ハイクラスパック シャイニースターV BOX",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
+      ],
+      "source": "amazon-search"
+    },
+    {
       "asin": "B09G9Y7WH6",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム ソード＆シールド スタートデッキ100",
       "productKey": null,
       "queries": [
         "ポケモンカード 抽選",
         "watch-pool",
         "watch-pool / ポケモンカード 抽選",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": false
@@ -91,9 +106,9 @@
       "asin": "B09G9YFHS7",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム ソード＆シールド ハイクラスパック VMAXクライマックス BOX",
       "productKey": null,
       "queries": [
@@ -105,12 +120,26 @@
       "detailCandidate": false
     },
     {
+      "asin": "B09KTYDK1S",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "ポケモンカードゲーム ソード＆シールド 拡張パック スターバース (BOX)",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選"
+      ],
+      "source": "amazon-search"
+    },
+    {
       "asin": "B09MMKJD1R",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモン シングルカード BLASTOISE Celebrations CLASSIC COLLECTION",
       "productKey": null,
       "queries": [
@@ -125,9 +154,9 @@
       "asin": "B09RK9TN9B",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム ソード＆シールド Pokémon GO カードファイルセット",
       "productKey": null,
       "queries": [
@@ -142,9 +171,9 @@
       "asin": "B09RKBFNHJ",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム ソード＆シールド Pokémon GO スペシャルセット",
       "productKey": null,
       "queries": [
@@ -159,9 +188,9 @@
       "asin": "B09S3ZC9QH",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "Pokemon TCG #80906 Battle Academy 2022 Deck Set - (3 Decks) 180 Total Cards",
       "productKey": null,
       "queries": [
@@ -176,8 +205,8 @@
       "asin": "B0B1HVCYHG",
       "state": "new",
       "firstSeenAt": "2026-10-14T20:22:41.992Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム ソード＆シールド 拡張パック ロストアビス BOX",
       "productKey": null,
@@ -192,8 +221,8 @@
       "asin": "B0B1HWM5LW",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム ソード＆シールド 強化拡張パック 白熱のアルカナ BOX",
       "productKey": null,
@@ -201,7 +230,8 @@
         "ポケモンカード 抽選 / ポケモンカード 招待",
         "watch-pool",
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": false
@@ -210,8 +240,8 @@
       "asin": "B0B6H9PTBW",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム ソード＆シールド ハイクラスパック VSTARユニバース BOX",
       "productKey": null,
@@ -227,8 +257,8 @@
       "asin": "B0B6TP3C8W",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ロストアビスブースターパックS11 - 日本語ポケモンTCG",
       "productKey": null,
@@ -243,8 +273,8 @@
       "asin": "B0BKGX74WP",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモントレーディングカードゲーム ランダム封入 ブースターパック3個 100%正規品",
       "productKey": null,
@@ -260,8 +290,8 @@
       "asin": "B0BNKBX3CB",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム スカーレット&バイオレット 拡張パック スカーレットex BOX",
       "productKey": null,
@@ -275,11 +305,25 @@
       "detailCandidate": false
     },
     {
+      "asin": "B0BNKCYCR8",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "ポケモンカードゲーム スカーレット&バイオレット 拡張パック バイオレットex BOX",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
+      ],
+      "source": "amazon-search"
+    },
+    {
       "asin": "B0BNZWSBH6",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット 拡張パック スノーハザード BOX",
       "productKey": null,
@@ -287,7 +331,8 @@
         "ポケモンカード 抽選 / ポケモンカード 招待",
         "watch-pool",
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": false
@@ -296,15 +341,16 @@
       "asin": "B0BNZXM7CD",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット exスペシャルセット",
       "productKey": null,
       "queries": [
         "ポケモンカード 招待 / ポケモン 招待販売",
         "watch-pool",
-        "watch-pool / ポケモンカード 招待 / ポケモン 招待販売"
+        "watch-pool / ポケモンカード 招待 / ポケモン 招待販売",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待"
       ],
       "source": "amazon-search",
       "detailCandidate": false
@@ -313,9 +359,9 @@
       "asin": "B0BNZYL56S",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T20:26:21.994Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット 拡張パック クレイバースト BOX",
       "productKey": null,
       "queries": [
@@ -330,9 +376,9 @@
       "asin": "B0BPRZD5Z7",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T20:26:21.994Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム アクリルダメカン ver2",
       "productKey": null,
       "queries": [
@@ -347,9 +393,9 @@
       "asin": "B0BSKWLK14",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T20:26:21.994Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム デッキケース ピカチュウ大集合",
       "productKey": null,
       "queries": [
@@ -364,8 +410,8 @@
       "asin": "B0BT15FD3J",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "ポケモンカードゲーム スカーレット&バイオレット 強化拡張パック 「ポケモンカード151」 BOX",
       "productKey": null,
@@ -373,7 +419,8 @@
         "ポケモンカード 抽選 / ポケモンカード 招待",
         "watch-pool",
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": false
@@ -382,8 +429,8 @@
       "asin": "B0BYCBZZZP",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット デッキビルドBOX 黒炎の支配者",
       "productKey": null,
@@ -400,15 +447,16 @@
       "asin": "B0BYNQFQC5",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "ポケモンカードゲーム 日本語 ハイクラス VSTAR Universe S12a ブースターパック (1パックに10枚入り)",
       "productKey": null,
       "queries": [
         "ポケモンカード 招待",
         "watch-pool",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待"
       ],
       "source": "amazon-search",
       "detailCandidate": false
@@ -417,8 +465,8 @@
       "asin": "B0BZG3SP41",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "ポケモンTCG:カード250枚(レア10枚+ホイル5枚)ランダムカードロット",
       "productKey": null,
@@ -434,8 +482,8 @@
       "asin": "B0C16H3DGV",
       "state": "new",
       "firstSeenAt": "2026-10-14T09:49:40.835Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "Pokemon Booster Pack - Scarlet & Violet SV1 Base Set - 10 Card Pack - Pack Art Varys",
       "productKey": null,
@@ -451,9 +499,9 @@
       "asin": "B0C26NJ9DW",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "POKEMON TCG: Scarlet & Violet Sleeved Booster Packs - 8 Packs (80 Cards)",
       "productKey": null,
       "queries": [
@@ -468,9 +516,9 @@
       "asin": "B0C3GCHDTH",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム スカーレット&バイオレット 強化拡張パック レイジングサーフ BOX",
       "productKey": null,
       "queries": [
@@ -486,16 +534,17 @@
       "asin": "B0C6PKQPVM",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット 拡張パック 古代の咆哮 BOX",
       "productKey": null,
       "queries": [
         "ポケモンカード 招待",
         "watch-pool",
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": false
@@ -504,9 +553,9 @@
       "asin": "B0C6RF8X33",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカード - 50枚のカード詰め合わせロット 保証Vポケモン付き",
       "productKey": null,
       "queries": [
@@ -521,9 +570,9 @@
       "asin": "B0C8TWNZQN",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム (1パック) 日本語151 SV2a ブースターパック (1パック7枚入り)",
       "productKey": null,
       "queries": [
@@ -539,9 +588,9 @@
       "asin": "B0CF1MDBS5",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム スカーレット&バイオレット ハイクラスパック シャイニートレジャーex BOX",
       "productKey": null,
       "queries": [
@@ -557,9 +606,9 @@
       "asin": "B0CKWR8CWR",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:56:11.158Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモン エリカの招待状 203/165 ポケモン151 スペシャルイラストレア シングルカード",
       "productKey": null,
       "queries": [
@@ -574,14 +623,15 @@
       "asin": "B0CMZQ7ZVN",
       "state": "new",
       "firstSeenAt": "2026-10-14T20:22:41.992Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット スターターデッキ＆ビルドセット 古代のコライドンex",
       "productKey": null,
       "queries": [
         "ポケモンカード 招待",
-        "watch-pool"
+        "watch-pool",
+        "watch-pool / ポケモンカード 抽選"
       ],
       "source": "amazon-search",
       "detailCandidate": false
@@ -590,8 +640,8 @@
       "asin": "B0CMZQYKF6",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "ポケモンカードゲーム スカーレット&バイオレット 強化拡張パック クリムゾンヘイズ BOX",
       "productKey": null,
@@ -605,11 +655,39 @@
       "detailCandidate": false
     },
     {
+      "asin": "B0CMZT5PV4",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "ポケモンカードゲーム スカーレット&バイオレット スターターデッキ＆ビルドセット 未来のミライドンex",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選 / ポケモン 招待販売"
+      ],
+      "source": "amazon-search"
+    },
+    {
+      "asin": "B0CP8ZMSNZ",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "【パック単品】ポケモンカードゲーム スカーレット&バイオレット ハイクラスパック シャイニートレジャーex",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選"
+      ],
+      "source": "amazon-search"
+    },
+    {
       "asin": "B0CT4HR8F9",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "ポケモンカードゲーム スカーレット&バイオレット 強化拡張パック ナイトワンダラー BOX",
       "productKey": null,
@@ -626,8 +704,8 @@
       "asin": "B0CXCJFGWQ",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット デッキビルドBOX ステラミラクル",
       "productKey": null,
@@ -635,7 +713,8 @@
         "ポケモンカード 抽選",
         "watch-pool",
         "watch-pool / ポケモンカード 抽選",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": false
@@ -644,8 +723,8 @@
       "asin": "B0D2WWQGSW",
       "state": "new",
       "firstSeenAt": "2026-10-14T09:49:40.835Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット スタートデッキGenerations ゼルネアスex・オンバーンex",
       "productKey": null,
@@ -660,8 +739,8 @@
       "asin": "B0D2WX4CYJ",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット 拡張パック 超電ブレイカー BOX",
       "productKey": null,
@@ -678,8 +757,8 @@
       "asin": "B0D86FVG5R",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム スカーレット&バイオレット ハイクラスパック テラスタルフェスex BOX",
       "productKey": null,
@@ -695,8 +774,8 @@
       "asin": "B0DB56CSM6",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット スターターセットex マリィのモルペコ＆オーロンゲex",
       "productKey": null,
@@ -704,7 +783,8 @@
         "ポケモンカード 抽選",
         "watch-pool",
         "watch-pool / ポケモンカード 抽選",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": false
@@ -713,8 +793,8 @@
       "asin": "B0DB7KGQ22",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット コレクションファイルセット N",
       "productKey": null,
@@ -730,8 +810,8 @@
       "asin": "B0DB7VC4K5",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット コレクションファイルセット リーリエ",
       "productKey": null,
@@ -748,8 +828,8 @@
       "asin": "B0DB7XZDL7",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム スカーレット&バイオレット デッキビルドBOX バトルパートナーズ",
       "productKey": null,
@@ -757,7 +837,8 @@
         "ポケモンカード 抽選",
         "watch-pool",
         "watch-pool / ポケモンカード 抽選",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": false
@@ -766,8 +847,8 @@
       "asin": "B0DG6PSWN1",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "ポケモンTCG:トリックオアトレードブースターバンドル(2024)-35パック",
       "productKey": null,
@@ -781,11 +862,25 @@
       "detailCandidate": false
     },
     {
+      "asin": "B0DKHFYGQM",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "ポケモンカードゲーム スカーレット&バイオレット 強化拡張パック 熱風のアリーナ BOX",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
+      ],
+      "source": "amazon-search"
+    },
+    {
       "asin": "B0DKHHYTGJ",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット 拡張パック ロケット団の栄光 BOX",
       "productKey": null,
@@ -793,7 +888,8 @@
         "ポケモンカード 抽選 / ポケモンカード 招待",
         "watch-pool",
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": false
@@ -802,8 +898,8 @@
       "asin": "B0DP4586RV",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット 拡張パック ブラックボルト BOX",
       "productKey": null,
@@ -820,8 +916,8 @@
       "asin": "B0DP481Y24",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム スカーレット＆バイオレット 拡張パック ホワイトフレア BOX",
       "productKey": null,
@@ -838,8 +934,8 @@
       "asin": "B0DWV2N6JD",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "American Greetings Corp. ヴィンテージポケモンパーティー招待状、8カウント、ピカチュウデザイン、バースデーカード",
       "productKey": null,
@@ -852,12 +948,26 @@
       "detailCandidate": false
     },
     {
+      "asin": "B0F183KY8J",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "ポケモンカードゲーム MEGA スターターセットMEGA メガゲンガーex",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選 / ポケモン 招待販売"
+      ],
+      "source": "amazon-search"
+    },
+    {
       "asin": "B0F189YH8W",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T20:22:41.947Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム MEGA 拡張パック メガシンフォニア BOX",
       "productKey": null,
       "queries": [
@@ -867,20 +977,20 @@
         "watch-pool / ポケモンカード 招待"
       ],
       "source": "amazon-search",
-      "detailCandidate": true,
+      "detailCandidate": false,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で候補にならなかった（BLOCKED）",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0F18B4CVX",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム MEGA プレミアムトレーナーボックス MEGA",
       "productKey": null,
@@ -896,55 +1006,57 @@
       "asin": "B0F18J2CJF",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T20:22:41.947Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム MEGA 拡張パック メガブレイブ BOX",
       "productKey": null,
       "queries": [
         "ポケモンカード 抽選 / ポケモンカード 招待",
         "watch-pool",
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0F9KJGGZ5",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T20:22:41.947Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム MEGA 拡張パック インフェルノX BOX",
       "productKey": null,
       "queries": [
         "ポケモンカード 抽選",
         "watch-pool",
-        "watch-pool / ポケモンカード 抽選"
+        "watch-pool / ポケモンカード 抽選",
+        "watch-pool / ポケモンカード 抽選 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0FG1WT6DV",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "American Greetings Corp. ヴィンテージ ポケモン パーティー招待状 16枚 ピカチュウデザイン バースデーカード",
       "productKey": null,
@@ -960,8 +1072,8 @@
       "asin": "B0FH6Q2873",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "ポケモントレーディングカードゲーム TCG 25枚パック ランダムに挿入されたウルトラレアのホイル1枚付き",
       "productKey": null,
@@ -976,31 +1088,32 @@
       "asin": "B0FLCWJ1VK",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:49:52.474Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T20:22:41.947Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": null,
       "productKey": null,
       "queries": [
         "watch-pool",
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0FLD7HMRP",
       "state": "new",
       "firstSeenAt": "2026-10-14T09:49:40.835Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "ポケモンカードゲーム MEGA スタートデッキ100 バトルコレクション",
       "productKey": null,
@@ -1015,79 +1128,111 @@
       "asin": "B0FSJXSPPX",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ BOX",
       "productKey": null,
       "queries": [
         "ポケモンカード 抽選",
         "watch-pool",
         "watch-pool / ポケモンカード 抽選",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0FSKBY89D",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンカードゲーム MEGA スペシャルカードセット メガエルレイドex",
       "productKey": null,
       "queries": [
         "ポケモンカード 抽選",
         "watch-pool",
-        "watch-pool / ポケモンカード 抽選"
+        "watch-pool / ポケモンカード 抽選",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": false
     },
     {
+      "asin": "B0FWB6WJN8",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "海外ポケモンセンター:ポケットモンスター TCG: エーフィ＆ブラッキー プレミアムカードスリーブ(65枚)",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選"
+      ],
+      "source": "amazon-search"
+    },
+    {
+      "asin": "B0FXN8JVMB",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "インフェルノXメガポケモンブースターパック",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選"
+      ],
+      "source": "amazon-search"
+    },
+    {
       "asin": "B0G1XB2STM",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム MEGA 拡張パック ニンジャスピナー BOX",
       "productKey": null,
       "queries": [
         "ポケモンカード 抽選",
         "watch-pool",
-        "watch-pool / ポケモンカード 抽選"
+        "watch-pool / ポケモンカード 抽選",
+        "watch-pool / ポケモンカード 抽選 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0G2FVLXVL",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンTCG:ポケモンデー2026コレクション",
       "productKey": null,
       "queries": [
         "ポケモンカード 抽選",
         "watch-pool",
-        "watch-pool / ポケモンカード 抽選"
+        "watch-pool / ポケモンカード 抽選",
+        "watch-pool / ポケモンカード 抽選 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": false
@@ -1096,9 +1241,9 @@
       "asin": "B0G3XHTC4T",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:34:18.839Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモン:2026年ポケモンデーコレクション(ホログラフィックプロモカード1枚、コイン1枚、ブースターパック3枚)",
       "productKey": null,
       "queries": [
@@ -1110,60 +1255,104 @@
       "detailCandidate": false
     },
     {
+      "asin": "B0G3XL9P92",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "ポケモンTCG:ポケモンデー2026コレクション(フォイルプロモーションカード1枚、コイン1枚、ブースターパック3枚)",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選 / ポケモン 招待販売"
+      ],
+      "source": "amazon-search"
+    },
+    {
+      "asin": "B0GMDBQ934",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "ポケモン メガドリーム - 日本語版ブースターパックロット - x3",
+      "productKey": null,
+      "queries": [
+        "ポケモン 招待販売"
+      ],
+      "source": "amazon-search"
+    },
+    {
       "asin": "B0GP928YDZ",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ BOX",
       "productKey": null,
       "queries": [
         "ポケモンカード 抽選 / ポケモンカード 招待",
         "watch-pool",
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0GP9QHQ3Y",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム MEGA 拡張パック アビスアイ BOX",
       "productKey": null,
       "queries": [
         "ポケモンカード 抽選 / ポケモンカード 招待",
         "watch-pool",
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
-      "detailCandidate": true,
+      "detailCandidate": false,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
+    },
+    {
+      "asin": "B0GR6Q72ND",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "ポケモンTCG メガエボリューション カオスライジングブースターセット 6個入り",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選 / ポケモン 招待販売"
+      ],
+      "source": "amazon-search"
     },
     {
       "asin": "B0GXCC7W7Q",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:49:52.474Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": null,
       "productKey": null,
       "queries": [
@@ -1175,18 +1364,18 @@
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0GXCM4BCZ",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:49:52.474Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": null,
       "productKey": null,
       "queries": [
@@ -1198,41 +1387,42 @@
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0GXCPF84C",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:49:52.474Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": null,
       "productKey": null,
       "queries": [
         "watch-pool",
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0GXCRBL5J",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION BOX",
       "productKey": null,
       "queries": [
@@ -1245,18 +1435,18 @@
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0GXCSGX8Y",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:49:52.474Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": null,
       "productKey": null,
       "queries": [
@@ -1268,78 +1458,87 @@
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0GXCT83HB",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:49:52.474Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": null,
       "productKey": null,
       "queries": [
         "watch-pool",
-        "watch-pool / ポケモンカード 招待 / ポケモン 招待販売"
+        "watch-pool / ポケモンカード 招待 / ポケモン 招待販売",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0GXCTRZ8L",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:49:52.474Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:34:18.839Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": null,
       "productKey": null,
       "queries": [
-        "watch-pool"
+        "watch-pool",
+        "watch-pool / ポケモンカード 抽選 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
-      "detailCandidate": false
+      "detailCandidate": true,
+      "unconfirmed": {
+        "since": "2026-10-21T00:56:10.395Z",
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 1
+      }
     },
     {
       "asin": "B0GXCX36HP",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:49:52.474Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": null,
       "productKey": null,
       "queries": [
         "watch-pool",
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待",
-        "watch-pool / ポケモンカード 招待"
+        "watch-pool / ポケモンカード 招待",
+        "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売"
       ],
       "source": "amazon-search",
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T20:26:21.994Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 2
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 3
       }
     },
     {
       "asin": "B0GXCX46KQ",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:49:52.474Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": null,
       "productKey": null,
       "queries": [
@@ -1351,18 +1550,18 @@
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T23:34:15.863Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 1
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 2
       }
     },
     {
       "asin": "B0GXCYMRGL",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:49:52.474Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": null,
       "productKey": null,
       "queries": [
@@ -1374,18 +1573,18 @@
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T23:34:15.863Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 1
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 2
       }
     },
     {
       "asin": "B0GXCZ1VDC",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:49:52.474Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": null,
       "productKey": null,
       "queries": [
@@ -1397,17 +1596,31 @@
       "detailCandidate": true,
       "unconfirmed": {
         "since": "2026-10-14T23:34:15.863Z",
-        "lastReason": "2回目で候補にならなかった（UNEXPECTED_RESPONSE）",
-        "lastAt": "2026-10-14T23:34:15.863Z",
-        "count": 1
+        "lastReason": "2回目で確認対象に入らなかった",
+        "lastAt": "2026-10-21T00:56:10.395Z",
+        "count": 2
       }
+    },
+    {
+      "asin": "B0H2C6NJVJ",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "ポケモン トレーディングカードゲーム | 30周年記念オリジナルパートナー Vol. 1（中国版）| カードセット",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選"
+      ],
+      "source": "amazon-search"
     },
     {
       "asin": "B0H7817G9M",
       "state": "new",
       "firstSeenAt": "2026-10-14T20:22:41.992Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンTCG:30TH お祝い シルベオンEX BOX",
       "productKey": null,
@@ -1419,12 +1632,26 @@
       "detailCandidate": false
     },
     {
+      "asin": "B0H783FY5Z",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "ポケモン トレーディングカードゲーム 30周年記念ブースターバンドル",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選"
+      ],
+      "source": "amazon-search"
+    },
+    {
       "asin": "B0H8SV3WJ8",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
-      "lastCheckedAt": "2026-10-14T15:34:18.839Z",
+      "lastSeenAt": "2026-10-21T00:56:10.435Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:10.435Z",
+      "lastCheckedAt": "2026-10-21T00:56:08.520Z",
       "title": "ポケモンTCG:第30回セレブレーションエリートトレーナーボックス(フルアートプロモーションカード1枚、ブースターパック9枚&プレミアムアクセサリー)",
       "productKey": null,
       "queries": [
@@ -1436,11 +1663,39 @@
       "detailCandidate": false
     },
     {
+      "asin": "B0H8T1JGDG",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "ポケモンTCG:30th Celebrationポスターコレクション(プロモーションカード3枚、ポスター1枚、ブースター3枚)",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選"
+      ],
+      "source": "amazon-search"
+    },
+    {
+      "asin": "B0HG2Y1198",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "ポケモンディスプレイブースターボックス M6 ストームエメラルダ JAP",
+      "productKey": null,
+      "queries": [
+        "ポケモンカード 抽選"
+      ],
+      "source": "amazon-search"
+    },
+    {
       "asin": "B0HG8LFK7Y",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "タカラトミー(TAKARA TOMY) ポケットモンスター ポケモン30周年記念 モンコレ伝説セット アローラ地方",
       "productKey": null,
@@ -1452,11 +1707,25 @@
       "detailCandidate": false
     },
     {
+      "asin": "B0HG8XD6DB",
+      "state": "new",
+      "firstSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
+      "lastCheckedAt": null,
+      "title": "タカラトミー(TAKARA TOMY) ポケットモンスター ポケモン30周年記念 モンコレ進化セット カントー地方",
+      "productKey": null,
+      "queries": [
+        "ポケモン 招待販売"
+      ],
+      "source": "amazon-search"
+    },
+    {
       "asin": "B0HGNHT76M",
       "state": "new",
       "firstSeenAt": "2026-10-14T20:22:41.992Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T23:28:42.018Z",
       "title": "ポケモンTCG:第30回祝賀グレニンジャex BOX",
       "productKey": null,
@@ -1471,8 +1740,8 @@
       "asin": "B0HKKXDDBY",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-10-20T21:51:04.240Z",
-      "lastDiscoveryAt": "2026-10-20T21:51:04.240Z",
+      "lastSeenAt": "2026-10-21T00:56:08.559Z",
+      "lastDiscoveryAt": "2026-10-21T00:56:08.559Z",
       "lastCheckedAt": "2026-10-14T20:26:21.994Z",
       "title": "PACKPULLS ポケモンミステリーカードパック - すべてのパックにサプライズ!",
       "productKey": null,
