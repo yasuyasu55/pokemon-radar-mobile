@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T11:59:13.264Z",
+  "generatedAt": "2026-10-23T17:23:30.834Z",
   "consumer": "CRAWL_STORM_X_SOCIAL",
   "policy": "candidate-only",
   "triggers": [
