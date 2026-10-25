@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T11:22:54.465Z",
+  "generatedAt": "2026-10-25T16:13:55.094Z",
   "recentClosedDays": 14,
   "seeds": [
     {
@@ -49,26 +49,6 @@
       "sourceIds": [
         "rakutenbooks"
       ],
-      "priority": 100
-    },
-    {
-      "id": "seed:7bd04d59de1e8e7d",
-      "query": "MEGA 30th CELEBRATION カードセット 9種セット",
-      "kind": "case-derived",
-      "caseIds": [
-        "otakarasouko:103171570"
-      ],
-      "sourceIds": [],
-      "priority": 100
-    },
-    {
-      "id": "seed:5e157629f8d21d5d",
-      "query": "MEGA 30th CELEBRATION カードセット 9種セット 招待",
-      "kind": "case-derived",
-      "caseIds": [
-        "otakarasouko:103171570"
-      ],
-      "sourceIds": [],
       "priority": 100
     },
     {
