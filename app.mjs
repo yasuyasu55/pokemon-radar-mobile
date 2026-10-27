@@ -256,7 +256,11 @@ async function refreshSnapshot(){
   const r=await fetch('./data/snapshot.json',{cache:'no-store'});if(!r.ok)throw new Error('snapshot unavailable');
   const next=await r.json();if(next.schemaVersion!==1||!Array.isArray(next.cases))throw new Error('invalid snapshot');
   const changed=JSON.stringify(next)!==JSON.stringify(snapshot);snapshot=next;newCases.update(next.cases);
-  $('data-notice').textContent=`最終取得：${new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(snapshot.fetchedAt))} JST · ${snapshot.updateMode}。${snapshot.sources?.cardlabo?" カードラボは公式一覧の最新3記事のみ。取得："+time(snapshot.sources.cardlabo.fetchedAt)+" JST（初回検証反映・定期取得は未設定）。":""}${snapshot.sources?.pokemoncenter?' ポケモンセンターは最新1記事の日程画像を照合（定期取得は未設定）。':''}${snapshot.sources?.rakutenbooks?' 楽天ブックスは公式商品詳細の抽選日程を独立2回照合（今回検証反映・定期取得は未設定）。':''}受付状態は現在日時で表示します。最新情報は公式案内をご確認ください。`;
+  $('data-notice').textContent='情報源ごとの最終反映日時を下に表示しています。画面の読み込み成功や再取得は、新規案件の追加を意味しません。';
+  const formatAt=iso=>{const d=new Date(iso);return Number.isFinite(d.getTime())?new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(d)+' JST':'未記録';};
+  const sourceRows=Object.values(snapshot.sources??{}).map(s=>'<tr><th scope="row">'+esc(s.name??'情報源')+'</th><td>'+esc(formatAt(s.fetchedAt))+'</td></tr>').join('');
+  $('source-updates').innerHTML='<table><thead><tr><th>情報源</th><th>データの最終反映</th></tr></thead><tbody>'+sourceRows+'</tbody></table>';
+
   if(changed)render();
  }catch{
   if(snapshot){$('data-notice').textContent='最新データを読み込めなかったため、表示中の情報を保持しています。各案件の取得日時をご確認ください。';}
