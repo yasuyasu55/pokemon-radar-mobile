@@ -1,3 +1,4 @@
+import {NewCaseTracker} from './new-cases.mjs?v=1';
 import {PersonalStore,personalMatches,favoriteCases} from './personal.mjs?v=0113';
 import {AmazonPersonal,readCaptureHash} from './amazon-personal.mjs?v=0114';
 import {entryState,matches,safeUrl,deadlineDisplay} from './model.mjs?v=0112';
@@ -12,6 +13,9 @@ const shareSelected=new Set();
 let currentCasesById=new Map();
 const cloud=document.documentElement.dataset.cloudSync==='true';
 let storage;try{storage=localStorage;}catch{}
+const newCases=new NewCaseTracker(storage);
+$('ack-new').onclick=()=>{newCases.acknowledge();render();};
+$('new-only').onchange=render;
 const personal=new PersonalStore({cloud,storage,onChange:()=>{updatePersonalStatus();render();}});
 const amazon=new AmazonPersonal({cloud,onChange:message=>{$('amazon-share-status').textContent=message||'PCの確認結果を共有しています';render();}});
 if(cloud){
@@ -213,7 +217,7 @@ function renderCards(container,cases,now,empty){
  const opened=[...container.querySelectorAll('article details[open]')].map(d=>[d.closest('[data-id]').dataset.id,[...d.closest('article').querySelectorAll('details')].indexOf(d)]);
  const rendered=[];const failed=[];
  for(const c of cases){
-  try{rendered.push(card(c,now));}
+  try{rendered.push(card(c,now).replace('<h3>','<h3>'+(newCases.has(c.id)?'<span class="badge">NEW・前回確認後に追加</span> ':'')));}
   catch(e){failed.push(c?.id??'unknown');console.error('POKEMON RADAR card render failed',c?.id,e);}
  }
  container.innerHTML=rendered.length?rendered.join('')+(failed.length?'<div class="empty"><strong>'+failed.length+'件は表示情報不足で保留しました</strong><p>他の案件は通常どおり表示しています。</p></div>':''):(cases.length?'<div class="empty"><strong>案件データの表示に失敗しました</strong><p>データ自体は取得済みです。再読み込みしてください。</p></div>':empty);
@@ -226,6 +230,9 @@ function render(){
   currentCasesById=new Map(allCases.map(c=>[c.id,c]));
   for(const id of [...shareSelected])if(!currentCasesById.has(id))shareSelected.delete(id);
   updateSharePanel();
+  const newCount=(snapshot?.cases??[]).filter(c=>newCases.has(c.id)&&entryState(c,now)!=='closed').length;
+  $('new-count').textContent=String(newCount);
+  $('new-help').textContent=newCases.available?'この端末で初回表示した案件を基準に、その後初めて掲載された案件。再取得では増えません。締切済みは件数から除外します。':'端末に記録を保存できません。再起動後の新規判定は保持できません。';
   $('open-count').textContent=snapshot?snapshot.cases.filter(c=>['open','soon'].includes(entryState(c,now))).length:'未確認';
   $('soon-count').textContent=snapshot?snapshot.cases.filter(c=>entryState(c,now)==='soon').length:'未確認';
   const sources=[...new Set((snapshot?.cases??[]).map(c=>c.sourceId||'otakara'))];
@@ -236,7 +243,7 @@ function render(){
   renderCards($('favorite-cases'),favorites,now,'<div class="empty"><strong>お気に入りはまだありません</strong><p>案件の☆を押すと、ここにまとめて表示されます。</p></div>');
   const pf={unapplied:$('unapplied-only').checked};
   const amazonOnly=$('amazon-only').checked;
-  const visible=allCases.filter(c=>(!amazonOnly||c.sourceId==='official-amazon-jp')&&matches(c,filters,now)&&personalMatches(personal.get(c.id),pf));
+  const visible=allCases.filter(c=>(!$('new-only').checked||newCases.has(c.id))&&(!amazonOnly||c.sourceId==='official-amazon-jp')&&matches(c,filters,now)&&personalMatches(personal.get(c.id),pf));
   $('count').textContent=`${visible.length}件 / 全${allCases.length}件`;
   $('filter-description').textContent=`表示条件：${filters.phases.length?filters.phases.map(x=>phaseLabels[x]).join('・'):'受付状態すべて'}（締切済み除外） ＞ ${filters.receiving.length?filters.receiving.map(x=>receivingLabels[x]).join('・'):'受取方法すべて'}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}${amazonOnly?' ＞ Amazon招待だけ':''}${pf.favorite?' ＞ お気に入り':''}${pf.unapplied?' ＞ 未応募':''}`;
   renderCards($('cases'),visible,now,'<div class="empty"><strong>この条件に合う案件はありません</strong><p>読み込めた公式抽選案内と、個人用画面で保存したAmazonの確認結果が対象です。他の店舗に抽選がないことを意味しません。</p></div>');
@@ -248,7 +255,7 @@ async function refreshSnapshot(){
  try {
   const r=await fetch('./data/snapshot.json',{cache:'no-store'});if(!r.ok)throw new Error('snapshot unavailable');
   const next=await r.json();if(next.schemaVersion!==1||!Array.isArray(next.cases))throw new Error('invalid snapshot');
-  const changed=JSON.stringify(next)!==JSON.stringify(snapshot);snapshot=next;
+  const changed=JSON.stringify(next)!==JSON.stringify(snapshot);snapshot=next;newCases.update(next.cases);
   $('data-notice').textContent=`最終取得：${new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(snapshot.fetchedAt))} JST · ${snapshot.updateMode}。${snapshot.sources?.cardlabo?" カードラボは公式一覧の最新3記事のみ。取得："+time(snapshot.sources.cardlabo.fetchedAt)+" JST（初回検証反映・定期取得は未設定）。":""}${snapshot.sources?.pokemoncenter?' ポケモンセンターは最新1記事の日程画像を照合（定期取得は未設定）。':''}${snapshot.sources?.rakutenbooks?' 楽天ブックスは公式商品詳細の抽選日程を独立2回照合（今回検証反映・定期取得は未設定）。':''}受付状態は現在日時で表示します。最新情報は公式案内をご確認ください。`;
   if(changed)render();
  }catch{
