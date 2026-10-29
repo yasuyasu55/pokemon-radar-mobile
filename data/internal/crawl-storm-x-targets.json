@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T05:44:07.705Z",
+  "generatedAt": "2026-10-29T12:56:50.020Z",
   "consumer": "CRAWL_STORM_X",
   "items": [
     {
@@ -41,6 +41,14 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
+    },
+    {
+      "asin": "B096YK6MH8",
+      "url": "https://www.amazon.co.jp/dp/B096YK6MH8",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
       "lastCheckedAt": null
     },
     {
@@ -65,7 +73,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B09MMKJD1R",
@@ -140,6 +148,14 @@
       "lastCheckedAt": "2026-10-14T23:28:42.018Z"
     },
     {
+      "asin": "B0BNKBBYK1",
+      "url": "https://www.amazon.co.jp/dp/B0BNKBBYK1",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
+    },
+    {
       "asin": "B0BNKBX3CB",
       "url": "https://www.amazon.co.jp/dp/B0BNKBX3CB",
       "priority": 90,
@@ -153,7 +169,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0BNZWSBH6",
@@ -201,7 +217,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T20:26:21.994Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0BYCBZZZP",
@@ -209,7 +225,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T20:26:21.994Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0BYNQFQC5",
@@ -217,7 +233,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T20:26:21.994Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0BZG3SP41",
@@ -225,7 +241,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T20:26:21.994Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0C16H3DGV",
@@ -313,7 +329,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0CP8ZMSNZ",
@@ -321,7 +337,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0CT4HR8F9",
@@ -409,7 +425,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0DKHHYTGJ",
@@ -449,7 +465,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0F189YH8W",
@@ -457,7 +473,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0F18B4CVX",
@@ -473,7 +489,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0F9KJGGZ5",
@@ -481,7 +497,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0FG1WT6DV",
@@ -505,7 +521,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0FLD7HMRP",
@@ -521,7 +537,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0FSKBY89D",
@@ -537,7 +553,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0FXN8JVMB",
@@ -545,7 +561,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0G1XB2STM",
@@ -553,7 +569,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0G2FVLXVL",
@@ -577,7 +593,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GMDBQ934",
@@ -585,7 +601,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GP928YDZ",
@@ -593,7 +609,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GP9QHQ3Y",
@@ -601,7 +617,15 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
+    },
+    {
+      "asin": "B0GP9QQ1JG",
+      "url": "https://www.amazon.co.jp/dp/B0GP9QQ1JG",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": null
     },
     {
       "asin": "B0GR6Q72ND",
@@ -609,7 +633,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GXCC7W7Q",
@@ -617,7 +641,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GXCM4BCZ",
@@ -625,7 +649,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GXCPF84C",
@@ -633,7 +657,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GXCRBL5J",
@@ -641,7 +665,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GXCSGX8Y",
@@ -649,7 +673,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GXCT83HB",
@@ -657,7 +681,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GXCTRZ8L",
@@ -665,7 +689,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GXCX36HP",
@@ -673,7 +697,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GXCX46KQ",
@@ -681,7 +705,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GXCYMRGL",
@@ -689,7 +713,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0GXCZ1VDC",
@@ -697,7 +721,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0H2C6NJVJ",
@@ -705,7 +729,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0H7817G9M",
@@ -721,7 +745,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0H8SV3WJ8",
@@ -737,7 +761,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0HG2Y1198",
@@ -745,7 +769,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0HG8LFK7Y",
@@ -761,7 +785,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": null
+      "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
       "asin": "B0HGNHT76M",
