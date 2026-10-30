@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "appVersion": "0.1.12",
   "sourceId": "otakarasouko-group",
-  "evidenceRunId": "38102956798",
-  "fetchedAt": "2026-10-11T05:25:34.566Z",
-  "updateMode": "各情報源を定期更新。AmazonはCRAWL STORM XのChrome実ブラウザ確認で招待受付中を反映",
+  "evidenceRunId": "40989009664",
+  "fetchedAt": "2026-10-30T01:59:48.756Z",
+  "updateMode": "毎日7:17ごろ（日本時間）に自動更新・検証失敗時は前回データを保持",
   "liveRunsVerified": 2,
   "fetchEvidence": [
     {
-      "startedAt": "2026-10-11T01:46:41.328Z",
-      "finishedAt": "2026-10-11T01:46:50.597Z",
+      "startedAt": "2026-10-30T01:59:14.548Z",
+      "finishedAt": "2026-10-30T01:59:21.590Z",
       "requests": [
         {
           "stage": "robots",
@@ -25,33 +25,24 @@
           "url": "https://www.otakarasouko.com/new_information/",
           "finalUrl": "https://www.otakarasouko.com/new_information/",
           "status": 200,
-          "bytes": 79312,
-          "sha256": "868202ae0accd92c9a9ef818e0c07b2821f85419ab7be51748de729384ec6742",
+          "bytes": 79557,
+          "sha256": "614a3b2d1ed4628935e3677a9b1823f712c6d025c39ab56d772f516cadf41aa5",
           "contentType": "text/html; charset=UTF-8"
         },
         {
           "stage": "detail",
-          "url": "https://www.otakarasouko.com/information/103177275/",
-          "finalUrl": "https://www.otakarasouko.com/information/103177275/",
+          "url": "https://www.otakarasouko.com/information/106230535/",
+          "finalUrl": "https://www.otakarasouko.com/information/106230535/",
           "status": 200,
-          "bytes": 99049,
-          "sha256": "a8bf58f218d8662e1342cbbf625a7fec21d14f8342df6c95c958b9cd50913b91",
-          "contentType": "text/html; charset=UTF-8"
-        },
-        {
-          "stage": "detail",
-          "url": "https://www.otakarasouko.com/information/103171570/",
-          "finalUrl": "https://www.otakarasouko.com/information/103171570/",
-          "status": 200,
-          "bytes": 98057,
-          "sha256": "562cf78832a8a8385b0d35c72e5e8bd4e886cbc70cd0ec3b137c21b40ae04178",
+          "bytes": 99567,
+          "sha256": "3a14cd449d8a13e88407a43bb14007dc3950933bda1f9ebd0552322b89d6219e",
           "contentType": "text/html; charset=UTF-8"
         }
       ]
     },
     {
-      "startedAt": "2026-10-11T01:47:10.670Z",
-      "finishedAt": "2026-10-11T01:47:19.393Z",
+      "startedAt": "2026-10-30T01:59:41.690Z",
+      "finishedAt": "2026-10-30T01:59:48.756Z",
       "requests": [
         {
           "stage": "robots",
@@ -67,32 +58,378 @@
           "url": "https://www.otakarasouko.com/new_information/",
           "finalUrl": "https://www.otakarasouko.com/new_information/",
           "status": 200,
-          "bytes": 79312,
-          "sha256": "868202ae0accd92c9a9ef818e0c07b2821f85419ab7be51748de729384ec6742",
+          "bytes": 79557,
+          "sha256": "614a3b2d1ed4628935e3677a9b1823f712c6d025c39ab56d772f516cadf41aa5",
           "contentType": "text/html; charset=UTF-8"
         },
         {
           "stage": "detail",
-          "url": "https://www.otakarasouko.com/information/103177275/",
-          "finalUrl": "https://www.otakarasouko.com/information/103177275/",
+          "url": "https://www.otakarasouko.com/information/106230535/",
+          "finalUrl": "https://www.otakarasouko.com/information/106230535/",
           "status": 200,
-          "bytes": 99049,
-          "sha256": "a8bf58f218d8662e1342cbbf625a7fec21d14f8342df6c95c958b9cd50913b91",
-          "contentType": "text/html; charset=UTF-8"
-        },
-        {
-          "stage": "detail",
-          "url": "https://www.otakarasouko.com/information/103171570/",
-          "finalUrl": "https://www.otakarasouko.com/information/103171570/",
-          "status": 200,
-          "bytes": 98057,
-          "sha256": "562cf78832a8a8385b0d35c72e5e8bd4e886cbc70cd0ec3b137c21b40ae04178",
+          "bytes": 99567,
+          "sha256": "3a14cd449d8a13e88407a43bb14007dc3950933bda1f9ebd0552322b89d6219e",
           "contentType": "text/html; charset=UTF-8"
         }
       ]
     }
   ],
   "cases": [
+    {
+      "id": "otakarasouko:106230535",
+      "title": "【再版/アプリ会員様限定】ポケモンカードゲーム 2種 抽選販売に関して",
+      "sourceName": "お宝創庫グループ",
+      "sourceUrl": "https://www.otakarasouko.com/information/106230535/",
+      "fetchedAt": "2026-10-30T01:59:47.580Z",
+      "publishedDate": "2026-10-29",
+      "entryPeriod": {
+        "start": {
+          "raw": "2026年10月29日(木) ひる12時",
+          "iso": "2026-10-29T12:00:00+09:00",
+          "date": "2026-10-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026年11月01日(日) 23時45分",
+          "iso": "2026-11-01T23:45:00+09:00",
+          "date": "2026-11-01",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "single": false,
+        "approximate": false
+      },
+      "resultAnnouncement": {
+        "start": {
+          "raw": "2026年11月04日(水)",
+          "iso": null,
+          "date": "2026-11-04",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "水",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": true
+      },
+      "purchasePeriod": {
+        "start": {
+          "raw": "2026年11月05日(木)",
+          "iso": null,
+          "date": "2026-11-05",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026年11月08日(日)",
+          "iso": null,
+          "date": "2026-11-08",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "single": false,
+        "approximate": false,
+        "timeQualifier": "受取店舗の営業時間内"
+      },
+      "applicationMethod": "公式アプリ",
+      "webApplicationUrl": null,
+      "webApplicationLabel": "なし(アプリ内応募)",
+      "receivingMethod": "STORE_ONLY",
+      "receivingLabel": "店頭受取のみ(郵送・配送なし)",
+      "stores": [
+        {
+          "brand": "お宝創庫",
+          "name": "東海富木島店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "共和店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "鳴海店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "豊田店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "中川店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "西尾店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "知立店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "名古屋みなと店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "中村店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "刈谷店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "お宝創庫",
+          "name": "安城店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "上新庄店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "長居店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "茨木店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "小路店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "蒲生店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "深草店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "三宮店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "西宮店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "正木店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "おじゃま館",
+          "name": "イオンモール東員店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "メディオ!",
+          "name": "西市店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "メディオ!",
+          "name": "倉敷沖新店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "メディオ!",
+          "name": "十日市店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "ららぽーと安城店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "大須店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "半田店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "日本橋オタロード店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "なんば店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "三宮店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "堀田店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "安城店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "大阪日本橋本店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "イオンタウン刈谷店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "イオンタウン四日市泊店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "名駅店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "西尾シャオ店",
+          "address": null,
+          "prefecture": null
+        },
+        {
+          "brand": "プレイズ",
+          "name": "京都駅前店",
+          "address": null,
+          "prefecture": null
+        }
+      ],
+      "storeSelectionNote": "2 抽選応募時に選択いただいた店舗へ、当選者購入期間内にご来店ください。",
+      "conditions": [
+        "ご本人確認を行う都合、情報に不備がございますと抽選から漏れてしまう場合がございます",
+        "「お名前」「住所」「電話番号」「生年月日」が正しく入力されていることをアプリのマイページからご確認ください",
+        "再版/アプリ会員様限定!!",
+        "■お宝創庫グループ アプリ会員様",
+        "2026/6/1 以前のアプリ会員様はパスワード再設定をお済ませください!",
+        "■2025年10月28日〜2026年10月28日の期間中、お宝創庫グループ店舗にて会員証をご提示のうえ「お買い物」または「買取」のご利用履歴があるお客様",
+        "1 当選されたアプリ会員証と、アプリに登録されている内容と同一の顔写真入りのご本人様確認書類(運転免許証・マイナンバーカードなど)をご用意ください。※有効期限内のものに限ります。"
+      ],
+      "handoverRestrictions": [
+        "・当選したご本人様のみが購入可能です。他の方への譲渡、代理購入は出来ません。",
+        "・アプリのインストールされた携帯端末を必ずご持参ください。スクリーンショット画像でのご提示はお受けできません。"
+      ],
+      "prices": [
+        {
+          "label": "1ボックス(30パック入り) 販売価格6,000円(税込)",
+          "amountYen": 6000
+        },
+        {
+          "label": "1ボックス(20パック入り) 販売価格7,200円(税込)",
+          "amountYen": 7200
+        }
+      ],
+      "unknowns": [
+        "店舗の所在地・営業時間",
+        "あなたの会員資格・利用履歴",
+        "応募時に選択した受取店舗",
+        "1人あたりの応募上限"
+      ],
+      "evidence": {
+        "entry": "【抽選受付期間】\n2026年10月29日(木) ひる12時 ~ 2026年11月01日(日) 23時45分",
+        "result": "【当選通知】\n当選された方には、2026年11月04日(水)頃に",
+        "purchase": "【当選者購入期間】\n2026年11月05日(木) ~ 2026年11月08日(日)\n受取店舗の営業時間内",
+        "receiving": [
+          "下記の抽選受付対象店舗でのみ、ご応募/受取(ご購入)が可能です。",
+          "・いかなる場合においても郵送対応等は受付致しかねます。指定店舗にて直接ご購入ください。"
+        ]
+      },
+      "verification": "独立2回の実取得・必須項目の抽出を照合済み"
+    },
     {
       "id": "otakarasouko:103177275",
       "title": "【再版/アプリ会員様限定】ポケモンカードゲーム 2種 抽選販売に関して",
@@ -446,7 +783,8 @@
           "・いかなる場合においても郵送対応等は受付致しかねます。指定店舗にて直接ご購入ください。"
         ]
       },
-      "verification": "独立2回の実取得・必須項目の抽出を照合済み"
+      "verification": "独立2回の実取得・必須項目の抽出を照合済み",
+      "retainedFromPrevious": true
     },
     {
       "id": "otakarasouko:103171570",
@@ -797,7 +1135,8 @@
           "・いかなる場合においても郵送対応等は受付致しかねます。指定店舗にて直接ご購入ください。"
         ]
       },
-      "verification": "独立2回の実取得・必須項目の抽出を照合済み"
+      "verification": "独立2回の実取得・必須項目の抽出を照合済み",
+      "retainedFromPrevious": true
     },
     {
       "id": "cardlabo:/shop/kyoto/blog/619602/",
@@ -1613,7 +1952,8 @@
         "受取方法"
       ],
       "verification": "CRAWL STORM XのChrome実ブラウザでAmazon商品詳細ページを確認",
-      "asin": "B0GXCTRZ8L"
+      "asin": "B0GXCTRZ8L",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0GXCX46KQ",
@@ -1646,7 +1986,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0GXCX46KQ"
+      "asin": "B0GXCX46KQ",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0GXCSGX8Y",
@@ -1679,7 +2020,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0GXCSGX8Y"
+      "asin": "B0GXCSGX8Y",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0GXCPF84C",
@@ -1712,7 +2054,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0GXCPF84C"
+      "asin": "B0GXCPF84C",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0GXCM4BCZ",
@@ -1745,7 +2088,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0GXCM4BCZ"
+      "asin": "B0GXCM4BCZ",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0FLCWJ1VK",
@@ -1778,7 +2122,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0FLCWJ1VK"
+      "asin": "B0FLCWJ1VK",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0GXCT83HB",
@@ -1811,7 +2156,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0GXCT83HB"
+      "asin": "B0GXCT83HB",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0GXCZ1VDC",
@@ -1844,7 +2190,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0GXCZ1VDC"
+      "asin": "B0GXCZ1VDC",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0GXCX36HP",
@@ -1877,7 +2224,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0GXCX36HP"
+      "asin": "B0GXCX36HP",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0GXCC7W7Q",
@@ -1910,7 +2258,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0GXCC7W7Q"
+      "asin": "B0GXCC7W7Q",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0GXCYMRGL",
@@ -1943,7 +2292,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0GXCYMRGL"
+      "asin": "B0GXCYMRGL",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0GXCRBL5J",
@@ -1976,7 +2326,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0GXCRBL5J"
+      "asin": "B0GXCRBL5J",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0GP928YDZ",
@@ -2009,7 +2360,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0GP928YDZ"
+      "asin": "B0GP928YDZ",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0F18J2CJF",
@@ -2042,7 +2394,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0F18J2CJF"
+      "asin": "B0F18J2CJF",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0F189YH8W",
@@ -2075,7 +2428,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0F189YH8W"
+      "asin": "B0F189YH8W",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0F9KJGGZ5",
@@ -2108,7 +2462,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0F9KJGGZ5"
+      "asin": "B0F9KJGGZ5",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0FSJXSPPX",
@@ -2141,7 +2496,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0FSJXSPPX"
+      "asin": "B0FSJXSPPX",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0GP9QHQ3Y",
@@ -2174,7 +2530,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0GP9QHQ3Y"
+      "asin": "B0GP9QHQ3Y",
+      "retainedFromPrevious": true
     },
     {
       "id": "amazon:B0G1XB2STM",
@@ -2207,7 +2564,8 @@
         "本人の応募資格・リクエスト状況"
       ],
       "verification": "GitHub Actions Chromiumで商品詳細を独立2回確認",
-      "asin": "B0G1XB2STM"
+      "asin": "B0G1XB2STM",
+      "retainedFromPrevious": true
     },
     {
       "id": "geo:783",
@@ -2322,7 +2680,8 @@
         "result": "・今後の当選連絡はメールのみでご案内いたします。 迷惑メール対策などでドメイン指定を行っている場合、メールが受信できない場合がありますので「@geo-reply.com」「@geonet.jp」を受信設定してください。 応募期間は「9/28(月) 11:00 ~ 10/1(木) 17:59」までとなり、お1人様1点1回限りの応募が可能です。 ご応募は、以下のリンクへアクセスをお願いいたします。 ゲオ抽選販売専用サイトはこちら ※ゲオ抽選販売専用サイトのログインに関するお問合せは、こちらのページをご確認ください。 ※ゲオアプリからご確認いただく場合は、ホーム画面右上のベルマークをタップしご確認ください ※9月28日(月)11:00以前に上記リンクへアクセスしても抽選応募は行えません。",
         "purchase": null
       },
-      "verification": "GEO公式ニュース一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "GEO公式ニュース一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "geo:785",
@@ -2437,7 +2796,8 @@
         "result": "・今後の当選連絡はメールのみでご案内いたします。 迷惑メール対策などでドメイン指定を行っている場合、メールが受信できない場合がありますので「@geo-reply.com」「@geonet.jp」を受信設定してください。 応募期間は「9/28(月) 11:00 ~ 10/1(木) 17:59」までとなり、お1人様1点1回限りの応募が可能です。 ご応募は、以下のリンクへアクセスをお願いいたします。 ゲオ抽選販売専用サイトはこちら ※ゲオ抽選販売専用サイトのログインに関するお問合せは、こちらのページをご確認ください。 ※ゲオアプリからご確認いただく場合は、ホーム画面右上のベルマークをタップしご確認ください ※9月28日(月)11:00以前に上記リンクへアクセスしても抽選応募は行えません。",
         "purchase": null
       },
-      "verification": "GEO公式ニュース一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "GEO公式ニュース一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18343992",
@@ -3323,7 +3683,8 @@
         "result": "当選発表 2026年10月9日(金) 18時以降順次 ご本人様確認について お申込みいただき当選されたご本人様以外の販売はいたしかねます。 また、商品受け取りの際、全てのお客様に店頭にてご登録いただいた顔写真付きのご本人確認書類をご提示いただきます。 ご本人様確認は、お申し込み時に入力いただいている情報とご本人様確認書類に基づき確認いたします。 一致しない場合ならびに不備があった場合は購入をお断りさせていただきます。 【ご本人様確認書類として認められるもの】​ (1)パスポート+ 住所確認書類 (2)運転免許証​(マイナ運転免許証は不可)​",
         "purchase": "商品受取り日程 2026年10月16日(金)~2026年10月25日(日) ※お受け取り時間は、10時~22時30分 ※おひとり様、それぞれ1日程までのお申込みとなります。 お申込み 応募受付期間 2026年9月25日(金) 10:00 ~ 2026年9月27日(日) 23:59 申込みはこちら 当選発表 2026年10月9日(金) 18時以降順次"
       },
-      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "shibuya-tsutaya:2596",
@@ -3470,7 +3831,8 @@
         "result": "当選発表 2026年9月8日(火) 18時以降順次 ご本人様確認について お申込みいただき当選されたご本人様以外の販売はいたしかねます。 また、商品受け取りの際、全てのお客様に店頭にてご登録いただいた顔写真付きのご本人確認書類をご提示いただきます。 ご本人様確認は、お申し込み時に入力いただいている情報とご本人様確認書類に基づき確認いたします。 一致しない場合ならびに不備があった場合は購入をお断りさせていただきます。 【ご本人様確認書類として認められるもの】​ (1)パスポート+ 住所確認書類 (2)運転免許証​(マイナ運転免許証は不可)​",
         "purchase": "商品受取り日程 2026年9月16日(水)~2026年9月23日(水) ※お受け取り時間は、10時~22時30分 ※おひとり様、それぞれ1日程までのお申込みとなります。 お申込み 応募受付期間 2026年8月28日(金)10:00~2026年8月30日(日)23:59 申込みはこちら 当選発表 2026年9月8日(火) 18時以降順次"
       },
-      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "shibuya-tsutaya:2356",
@@ -3617,7 +3979,8 @@
         "result": "当選発表 2026年7月24日(金) 18時以降順次 ご本人様確認について お申込みいただき当選されたご本人様以外の販売はいたしかねます。 また、商品受け取りの際、全てのお客様に店頭にてご登録いただいた顔写真付きのご本人確認書類をご提示いただきます。 ご本人様確認は、お申し込み時に入力いただいている情報とご本人様確認書類に基づき確認いたします。 一致しない場合ならびに不備があった場合は購入をお断りさせていただきます。 【ご本人様確認書類として認められるもの】​ (1)パスポート+ 住所確認書類 (2)運転免許証​(マイナ運転免許証は不可)​",
         "purchase": "商品受取り日程 2026年7月31日(金)~2026年8月2日(日) ※お受け取り時間は、10時~22時30分 ※おひとり様、それぞれ1日程までのお申込みとなります。 お申込み 応募受付期間 2026年7月10日(金)10:00~2026年7月12日(日)23:59 ▼お申し込みはこちら▼ 拡張パック ストームエメラルダ スターターセットex イーブイex"
       },
-      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "shibuya-tsutaya:2085",
@@ -3763,7 +4126,8 @@
         "result": "当選発表 2026年5月15日(金) 18時以降順次 ご本人様確認について お申込みいただき当選されたご本人様以外の販売はいたしかねます。 また、商品受け取りの際、全てのお客様に店頭にてご登録いただいた顔写真付きのご本人確認書類をご提示いただきます。 ご本人様確認は、お申し込み時に入力いただいている情報とご本人様確認書類に基づき確認いたします。 一致しない場合ならびに不備があった場合は購入をお断りさせていただきます。 【ご本人様確認書類として認められるもの】​ (1)パスポート+ 住所確認書類 (2)運転免許証​",
         "purchase": "商品受取り日程 2026年5月22日(金)~2026年5月24日(日) 2026年5月29日(金)~2026年5月31日(日) ※お受け取り時間は、10時~22時30分 ※おひとり様、1日程までのお申込みとなります。 お申込み 応募受付期間 2026年5月1日(金)10:00~2026年5月3日(日)23:59 申込みはこちら 当選発表"
       },
-      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "shibuya-tsutaya:1883",
@@ -3908,7 +4272,8 @@
         "result": "当選発表 2026年3月5日(木) 18時以降順次 ご本人様確認について お申込みいただき当選されたご本人様以外の販売はいたしかねます。 また、商品受け取りの際、全てのお客様に店頭にてご登録いただいた顔写真付きのご本人確認書類をご提示いただきます。 ご本人様確認は、お申し込み時に入力いただいている情報とご本人様確認書類に基づき確認いたします。 一致しない場合ならびに不備があった場合は購入をお断りさせていただきます。 【ご本人様確認書類として認められるもの】​ (1)パスポート+ 住所確認書類 (2)運転免許証​",
         "purchase": "商品受取り日程 2026年3月13日(金)~2026年3月15日(日) 2026年3月20日(金)~2026年3月22日(日) ※お受け取り時間は、10時~22時30分 ※おひとり様、1日程までのお申込みとなります。 お申込み 応募受付期間 2026年2月20日(金)10:00~2026年2月22日(日)23:59 申込みはこちら 当選発表"
       },
-      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18182237",
@@ -4054,7 +4419,8 @@
           "発送予定: 2026年10月下旬発送"
         ]
       },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18182238",
@@ -4200,7 +4566,8 @@
           "発送予定: 2026年10月下旬発送"
         ]
       },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18537078",
@@ -4347,7 +4714,8 @@
           "発送予定: 2026年10月下旬発送"
         ]
       },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18595282",
@@ -4494,7 +4862,8 @@
           "発送予定: 2026年10月下旬発送"
         ]
       },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18595457",
@@ -4641,7 +5010,8 @@
           "発送予定: 2026年10月下旬発送"
         ]
       },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18669675",
@@ -4788,7 +5158,8 @@
           "発送予定: 2026年10月下旬発送"
         ]
       },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18771764",
@@ -4934,7 +5305,8 @@
           "発送予定: 2026年10月下旬発送"
         ]
       },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:title:5f71ed9314e62cde",
@@ -5031,7 +5403,8 @@
         "shipping": "当選者のみにご案内いたします。",
         "productTitle": "ポケモンカードゲーム MEGA スタートデッキ100 バトルコレクション 10個セット"
       },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合"
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:title:6bdd5960809a3b57",
@@ -5128,7 +5501,8 @@
         "shipping": "当選者のみにご案内いたします。",
         "productTitle": "ポケモンカードゲーム MEGA 拡張パック インフェルノX【30パック】"
       },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合"
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:title:add75e344a1811aa",
@@ -5225,7 +5599,8 @@
         "shipping": "当選者のみにご案内いたします。",
         "productTitle": "ポケモンカードゲーム MEGA スペシャルカードセット メガエルレイドex"
       },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合"
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:title:d5fb54605dab01f1",
@@ -5322,7 +5697,8 @@
         "shipping": "当選者のみにご案内いたします。",
         "productTitle": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex【10パック】"
       },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合"
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:title:ffb58507c878c43a",
@@ -5419,7 +5795,8 @@
         "shipping": "当選者のみにご案内いたします。",
         "productTitle": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ【30パック】"
       },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合"
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
+      "retainedFromPrevious": true
     }
   ],
   "sources": {
@@ -6222,5 +6599,5 @@
       ]
     }
   },
-  "retainedCount": 7
+  "retainedCount": 50
 }
