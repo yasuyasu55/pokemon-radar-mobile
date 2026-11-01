@@ -3686,1382 +3686,6 @@
       "retainedFromPrevious": true
     },
     {
-      "id": "rakutenbooks:18182237",
-      "sourceId": "rakutenbooks",
-      "genre": "pokemon-card",
-      "title": "ポケモンカードゲーム MEGA 拡張パック メガブレイブ 【30パック】",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/rb/18182237/",
-      "fetchedAt": "2026-10-31T22:25:48.303Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
-        "start": {
-          "raw": "2026/10/14(水) 10:00",
-          "iso": "2026-10-14T10:00:00+09:00",
-          "date": "2026-10-14",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "水",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/10/18(日) 23:59",
-          "iso": "2026-10-18T23:59:00+09:00",
-          "date": "2026-10-18",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "start": {
-          "raw": "2026/10/29(木) 10:00",
-          "iso": "2026-10-29T10:00:00+09:00",
-          "date": "2026-10-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": false,
-        "notAfter": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
-        ]
-      },
-      "purchasePeriod": {
-        "found": true,
-        "raw": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "start": {
-          "raw": "2026/10/29(木) 10:00",
-          "iso": "2026-10-29T10:00:00+09:00",
-          "date": "2026-10-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/11/03(火) 23:59",
-          "iso": "2026-11-03T23:59:00+09:00",
-          "date": "2026-11-03",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "火",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "shippingPeriod": {
-        "raw": "2026年10月下旬発送",
-        "start": null,
-        "end": null,
-        "approximate": true,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "発送予定の原文を保持。日付範囲は推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックスで抽選エントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18182237/",
-      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
-      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
-      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)",
-        "※ご注文後に商品のキャンセルはできません。",
-        "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "お届け先について",
-        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-        "支払い方法、配送方法について",
-        "当選時の支払い方法はクレジットカード決済のみとなります。",
-        "以下の支払い方法、配送方法はご利用いただけません。",
-        "・支払い方法:代金引換",
-        "こちらは当選者向けに販売している商品です。当選者は注文前にページ下の内容紹介を必ずご確認ください。"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当落メールの正確な送信時刻"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
-        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "purchase": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "receiving": [
-          "発送予定日:2026年10月下旬発送",
-          "お届け先について",
-          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-          "支払い方法、配送方法について",
-          "当選時の配送方法は宅配・ポスト投函のみとなります。",
-          "以下の支払い方法、配送方法はご利用いただけません。",
-          "・配送方法:コンビニ店頭受取、郵便局受取",
-          "発送予定: 2026年10月下旬発送"
-        ]
-      },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "retainedFromPrevious": true
-    },
-    {
-      "id": "rakutenbooks:18182238",
-      "sourceId": "rakutenbooks",
-      "genre": "pokemon-card",
-      "title": "ポケモンカードゲーム MEGA 拡張パック メガシンフォニア 【30パック】",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/rb/18182238/",
-      "fetchedAt": "2026-10-31T22:25:48.175Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
-        "start": {
-          "raw": "2026/10/14(水) 10:00",
-          "iso": "2026-10-14T10:00:00+09:00",
-          "date": "2026-10-14",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "水",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/10/18(日) 23:59",
-          "iso": "2026-10-18T23:59:00+09:00",
-          "date": "2026-10-18",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "start": {
-          "raw": "2026/10/29(木) 10:00",
-          "iso": "2026-10-29T10:00:00+09:00",
-          "date": "2026-10-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": false,
-        "notAfter": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
-        ]
-      },
-      "purchasePeriod": {
-        "found": true,
-        "raw": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "start": {
-          "raw": "2026/10/29(木) 10:00",
-          "iso": "2026-10-29T10:00:00+09:00",
-          "date": "2026-10-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/11/03(火) 23:59",
-          "iso": "2026-11-03T23:59:00+09:00",
-          "date": "2026-11-03",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "火",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "shippingPeriod": {
-        "raw": "2026年10月下旬発送",
-        "start": null,
-        "end": null,
-        "approximate": true,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "発送予定の原文を保持。日付範囲は推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックスで抽選エントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18182238/",
-      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
-      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
-      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)",
-        "※ご注文後に商品のキャンセルはできません。",
-        "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "お届け先について",
-        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-        "支払い方法、配送方法について",
-        "当選時の支払い方法はクレジットカード決済のみとなります。",
-        "以下の支払い方法、配送方法はご利用いただけません。",
-        "・支払い方法:代金引換",
-        "こちらは当選者向けに販売している商品です。当選者は注文前にページ下の内容紹介を必ずご確認ください。"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当落メールの正確な送信時刻"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
-        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "purchase": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "receiving": [
-          "発送予定日:2026年10月下旬発送",
-          "お届け先について",
-          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-          "支払い方法、配送方法について",
-          "当選時の配送方法は宅配・ポスト投函のみとなります。",
-          "以下の支払い方法、配送方法はご利用いただけません。",
-          "・配送方法:コンビニ店頭受取、郵便局受取",
-          "発送予定: 2026年10月下旬発送"
-        ]
-      },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "retainedFromPrevious": true
-    },
-    {
-      "id": "rakutenbooks:18537078",
-      "sourceId": "rakutenbooks",
-      "genre": "pokemon-card",
-      "title": "ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/rb/18537078/",
-      "fetchedAt": "2026-10-31T22:25:49.026Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
-        "start": {
-          "raw": "2026/10/14(水) 10:00",
-          "iso": "2026-10-14T10:00:00+09:00",
-          "date": "2026-10-14",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "水",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/10/18(日) 23:59",
-          "iso": "2026-10-18T23:59:00+09:00",
-          "date": "2026-10-18",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "start": {
-          "raw": "2026/10/29(木) 10:00",
-          "iso": "2026-10-29T10:00:00+09:00",
-          "date": "2026-10-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": false,
-        "notAfter": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
-        ]
-      },
-      "purchasePeriod": {
-        "found": true,
-        "raw": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "start": {
-          "raw": "2026/10/29(木) 10:00",
-          "iso": "2026-10-29T10:00:00+09:00",
-          "date": "2026-10-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/11/03(火) 23:59",
-          "iso": "2026-11-03T23:59:00+09:00",
-          "date": "2026-11-03",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "火",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "shippingPeriod": {
-        "raw": "2026年10月下旬発送",
-        "start": null,
-        "end": null,
-        "approximate": true,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "発送予定の原文を保持。日付範囲は推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックスで抽選エントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18537078/",
-      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
-      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
-      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)",
-        "※ご注文後に商品のキャンセルはできません。",
-        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
-        "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "お届け先について",
-        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-        "支払い方法、配送方法について",
-        "当選時の支払い方法はクレジットカード決済のみとなります。",
-        "以下の支払い方法、配送方法はご利用いただけません。",
-        "・支払い方法:代金引換",
-        "こちらは当選者向けに販売している商品です。当選者は注文前にページ下の内容紹介を必ずご確認ください。"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当落メールの正確な送信時刻"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
-        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "purchase": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "receiving": [
-          "発送予定日:2026年10月下旬発送",
-          "お届け先について",
-          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-          "支払い方法、配送方法について",
-          "当選時の配送方法は宅配・ポスト投函のみとなります。",
-          "以下の支払い方法、配送方法はご利用いただけません。",
-          "・配送方法:コンビニ店頭受取、郵便局受取",
-          "発送予定: 2026年10月下旬発送"
-        ]
-      },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "retainedFromPrevious": true
-    },
-    {
-      "id": "rakutenbooks:18595282",
-      "sourceId": "rakutenbooks",
-      "genre": "pokemon-card",
-      "title": "ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/rb/18595282/",
-      "fetchedAt": "2026-10-31T22:25:49.360Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
-        "start": {
-          "raw": "2026/10/14(水) 10:00",
-          "iso": "2026-10-14T10:00:00+09:00",
-          "date": "2026-10-14",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "水",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/10/18(日) 23:59",
-          "iso": "2026-10-18T23:59:00+09:00",
-          "date": "2026-10-18",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "start": {
-          "raw": "2026/10/29(木) 10:00",
-          "iso": "2026-10-29T10:00:00+09:00",
-          "date": "2026-10-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": false,
-        "notAfter": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
-        ]
-      },
-      "purchasePeriod": {
-        "found": true,
-        "raw": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "start": {
-          "raw": "2026/10/29(木) 10:00",
-          "iso": "2026-10-29T10:00:00+09:00",
-          "date": "2026-10-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/11/03(火) 23:59",
-          "iso": "2026-11-03T23:59:00+09:00",
-          "date": "2026-11-03",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "火",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "shippingPeriod": {
-        "raw": "2026年10月下旬発送",
-        "start": null,
-        "end": null,
-        "approximate": true,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "発送予定の原文を保持。日付範囲は推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックスで抽選エントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18595282/",
-      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
-      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
-      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)",
-        "※ご注文後に商品のキャンセルはできません。",
-        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
-        "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "お届け先について",
-        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-        "支払い方法、配送方法について",
-        "当選時の支払い方法はクレジットカード決済のみとなります。",
-        "以下の支払い方法、配送方法はご利用いただけません。",
-        "・支払い方法:代金引換",
-        "こちらは当選者向けに販売している商品です。当選者は注文前にページ下の内容紹介を必ずご確認ください。"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当落メールの正確な送信時刻"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
-        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "purchase": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "receiving": [
-          "発送予定日:2026年10月下旬発送",
-          "お届け先について",
-          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-          "支払い方法、配送方法について",
-          "当選時の配送方法は宅配・ポスト投函のみとなります。",
-          "以下の支払い方法、配送方法はご利用いただけません。",
-          "・配送方法:コンビニ店頭受取、郵便局受取",
-          "発送予定: 2026年10月下旬発送"
-        ]
-      },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "retainedFromPrevious": true
-    },
-    {
-      "id": "rakutenbooks:18595457",
-      "sourceId": "rakutenbooks",
-      "genre": "pokemon-card",
-      "title": "【セット商品】ポケモンカードゲーム MEGA 30th CELEBRATION カードセット 9種",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/rb/18595457/",
-      "fetchedAt": "2026-10-31T22:25:49.201Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
-        "start": {
-          "raw": "2026/10/14(水) 10:00",
-          "iso": "2026-10-14T10:00:00+09:00",
-          "date": "2026-10-14",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "水",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/10/18(日) 23:59",
-          "iso": "2026-10-18T23:59:00+09:00",
-          "date": "2026-10-18",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "start": {
-          "raw": "2026/10/29(木) 10:00",
-          "iso": "2026-10-29T10:00:00+09:00",
-          "date": "2026-10-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": false,
-        "notAfter": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
-        ]
-      },
-      "purchasePeriod": {
-        "found": true,
-        "raw": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "start": {
-          "raw": "2026/10/29(木) 10:00",
-          "iso": "2026-10-29T10:00:00+09:00",
-          "date": "2026-10-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/11/03(火) 23:59",
-          "iso": "2026-11-03T23:59:00+09:00",
-          "date": "2026-11-03",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "火",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "shippingPeriod": {
-        "raw": "2026年10月下旬発送",
-        "start": null,
-        "end": null,
-        "approximate": true,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "発送予定の原文を保持。日付範囲は推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックスで抽選エントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18595457/",
-      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
-      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
-      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)",
-        "※ご注文後に商品のキャンセルはできません。",
-        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
-        "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "お届け先について",
-        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-        "支払い方法、配送方法について",
-        "当選時の支払い方法はクレジットカード決済のみとなります。",
-        "以下の支払い方法、配送方法はご利用いただけません。",
-        "・支払い方法:代金引換",
-        "こちらは当選者向けに販売している商品です。当選者は注文前にページ下の内容紹介を必ずご確認ください。"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当落メールの正確な送信時刻"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
-        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "purchase": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "receiving": [
-          "発送予定日:2026年10月下旬発送",
-          "お届け先について",
-          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-          "支払い方法、配送方法について",
-          "当選時の配送方法は宅配・ポスト投函のみとなります。",
-          "以下の支払い方法、配送方法はご利用いただけません。",
-          "・配送方法:コンビニ店頭受取、郵便局受取",
-          "発送予定: 2026年10月下旬発送"
-        ]
-      },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "retainedFromPrevious": true
-    },
-    {
-      "id": "rakutenbooks:18669675",
-      "sourceId": "rakutenbooks",
-      "genre": "one-piece-card",
-      "title": "ONE PIECEカードゲーム ブースターパック 世界最強の戦士【OP-17】",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/rb/18669675/",
-      "fetchedAt": "2026-10-31T22:25:48.083Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
-        "start": {
-          "raw": "2026/10/14(水) 10:00",
-          "iso": "2026-10-14T10:00:00+09:00",
-          "date": "2026-10-14",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "水",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/10/18(日) 23:59",
-          "iso": "2026-10-18T23:59:00+09:00",
-          "date": "2026-10-18",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "start": {
-          "raw": "2026/10/29(木) 10:00",
-          "iso": "2026-10-29T10:00:00+09:00",
-          "date": "2026-10-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": false,
-        "notAfter": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
-        ]
-      },
-      "purchasePeriod": {
-        "found": true,
-        "raw": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "start": {
-          "raw": "2026/10/29(木) 10:00",
-          "iso": "2026-10-29T10:00:00+09:00",
-          "date": "2026-10-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/11/03(火) 23:59",
-          "iso": "2026-11-03T23:59:00+09:00",
-          "date": "2026-11-03",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "火",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "shippingPeriod": {
-        "raw": "2026年10月下旬発送",
-        "start": null,
-        "end": null,
-        "approximate": true,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "発送予定の原文を保持。日付範囲は推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックスで抽選エントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18669675/",
-      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
-      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
-      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)",
-        "※ご注文後に商品のキャンセルはできません。",
-        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
-        "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "お届け先について",
-        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-        "支払い方法、配送方法について",
-        "当選時の支払い方法はクレジットカード決済のみとなります。",
-        "以下の支払い方法、配送方法はご利用いただけません。",
-        "・支払い方法:代金引換",
-        "こちらは当選者向けに販売している商品です。当選者は注文前にページ下の内容紹介を必ずご確認ください。"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当落メールの正確な送信時刻"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
-        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "purchase": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
-        "receiving": [
-          "発送予定日:2026年10月下旬発送",
-          "お届け先について",
-          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-          "支払い方法、配送方法について",
-          "当選時の配送方法は宅配・ポスト投函のみとなります。",
-          "以下の支払い方法、配送方法はご利用いただけません。",
-          "・配送方法:コンビニ店頭受取、郵便局受取",
-          "発送予定: 2026年10月下旬発送"
-        ]
-      },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "retainedFromPrevious": true
-    },
-    {
-      "id": "rakutenbooks:title:5f71ed9314e62cde",
-      "sourceId": "rakutenbooks",
-      "title": "ポケモンカードゲーム MEGA スタートデッキ100 バトルコレクション 10個セット",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-10-31T22:25:47.139Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "start": {
-          "raw": "2026/1/23(金) 10:00",
-          "iso": "2026-01-23T10:00:00+09:00",
-          "date": "2026-01-23",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/1/26(月) 11:59",
-          "iso": "2026-01-26T11:59:00+09:00",
-          "date": "2026-01-26",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "月",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "start": {
-          "raw": "2026/2/6(金)",
-          "iso": null,
-          "date": "2026-02-06",
-          "timeUnconfirmed": true,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
-        ]
-      },
-      "purchasePeriod": null,
-      "shippingPeriod": {
-        "raw": "当選者のみにご案内いたします。",
-        "start": null,
-        "end": null,
-        "approximate": false,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "当選者への案内のみ。発送日を推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
-      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
-      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当選メールの正確な送信時刻",
-        "商品発送の具体的な日付"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "shipping": "当選者のみにご案内いたします。",
-        "productTitle": "ポケモンカードゲーム MEGA スタートデッキ100 バトルコレクション 10個セット"
-      },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "retainedFromPrevious": true
-    },
-    {
-      "id": "rakutenbooks:title:6bdd5960809a3b57",
-      "sourceId": "rakutenbooks",
-      "title": "ポケモンカードゲーム MEGA 拡張パック インフェルノX【30パック】",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-10-31T22:25:47.139Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "start": {
-          "raw": "2026/1/23(金) 10:00",
-          "iso": "2026-01-23T10:00:00+09:00",
-          "date": "2026-01-23",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/1/26(月) 11:59",
-          "iso": "2026-01-26T11:59:00+09:00",
-          "date": "2026-01-26",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "月",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "start": {
-          "raw": "2026/2/6(金)",
-          "iso": null,
-          "date": "2026-02-06",
-          "timeUnconfirmed": true,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
-        ]
-      },
-      "purchasePeriod": null,
-      "shippingPeriod": {
-        "raw": "当選者のみにご案内いたします。",
-        "start": null,
-        "end": null,
-        "approximate": false,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "当選者への案内のみ。発送日を推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
-      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
-      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当選メールの正確な送信時刻",
-        "商品発送の具体的な日付"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "shipping": "当選者のみにご案内いたします。",
-        "productTitle": "ポケモンカードゲーム MEGA 拡張パック インフェルノX【30パック】"
-      },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "retainedFromPrevious": true
-    },
-    {
-      "id": "rakutenbooks:title:add75e344a1811aa",
-      "sourceId": "rakutenbooks",
-      "title": "ポケモンカードゲーム MEGA スペシャルカードセット メガエルレイドex",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-10-31T22:25:47.139Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "start": {
-          "raw": "2026/1/23(金) 10:00",
-          "iso": "2026-01-23T10:00:00+09:00",
-          "date": "2026-01-23",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/1/26(月) 11:59",
-          "iso": "2026-01-26T11:59:00+09:00",
-          "date": "2026-01-26",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "月",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "start": {
-          "raw": "2026/2/6(金)",
-          "iso": null,
-          "date": "2026-02-06",
-          "timeUnconfirmed": true,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
-        ]
-      },
-      "purchasePeriod": null,
-      "shippingPeriod": {
-        "raw": "当選者のみにご案内いたします。",
-        "start": null,
-        "end": null,
-        "approximate": false,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "当選者への案内のみ。発送日を推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
-      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
-      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当選メールの正確な送信時刻",
-        "商品発送の具体的な日付"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "shipping": "当選者のみにご案内いたします。",
-        "productTitle": "ポケモンカードゲーム MEGA スペシャルカードセット メガエルレイドex"
-      },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "retainedFromPrevious": true
-    },
-    {
-      "id": "rakutenbooks:title:d5fb54605dab01f1",
-      "sourceId": "rakutenbooks",
-      "title": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex【10パック】",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-10-31T22:25:47.139Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "start": {
-          "raw": "2026/1/23(金) 10:00",
-          "iso": "2026-01-23T10:00:00+09:00",
-          "date": "2026-01-23",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/1/26(月) 11:59",
-          "iso": "2026-01-26T11:59:00+09:00",
-          "date": "2026-01-26",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "月",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "start": {
-          "raw": "2026/2/6(金)",
-          "iso": null,
-          "date": "2026-02-06",
-          "timeUnconfirmed": true,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
-        ]
-      },
-      "purchasePeriod": null,
-      "shippingPeriod": {
-        "raw": "当選者のみにご案内いたします。",
-        "start": null,
-        "end": null,
-        "approximate": false,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "当選者への案内のみ。発送日を推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
-      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
-      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当選メールの正確な送信時刻",
-        "商品発送の具体的な日付"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "shipping": "当選者のみにご案内いたします。",
-        "productTitle": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex【10パック】"
-      },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "retainedFromPrevious": true
-    },
-    {
-      "id": "rakutenbooks:title:ffb58507c878c43a",
-      "sourceId": "rakutenbooks",
-      "title": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ【30パック】",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-10-31T22:25:47.139Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "start": {
-          "raw": "2026/1/23(金) 10:00",
-          "iso": "2026-01-23T10:00:00+09:00",
-          "date": "2026-01-23",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/1/26(月) 11:59",
-          "iso": "2026-01-26T11:59:00+09:00",
-          "date": "2026-01-26",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "月",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "start": {
-          "raw": "2026/2/6(金)",
-          "iso": null,
-          "date": "2026-02-06",
-          "timeUnconfirmed": true,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
-        ]
-      },
-      "purchasePeriod": null,
-      "shippingPeriod": {
-        "raw": "当選者のみにご案内いたします。",
-        "start": null,
-        "end": null,
-        "approximate": false,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "当選者への案内のみ。発送日を推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
-      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
-      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当選メールの正確な送信時刻",
-        "商品発送の具体的な日付"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "shipping": "当選者のみにご案内いたします。",
-        "productTitle": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ【30パック】"
-      },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "retainedFromPrevious": true
-    },
-    {
       "id": "geo:787",
       "sourceId": "geo",
       "title": "11月13日(金)発売『ポケモンカードゲーム MEGA スペシャルデッキセット MEGA 「メガオーダイル・メガカイリュー・メガゲンガー」』抽選販売受付のお知らせ",
@@ -5904,6 +4528,1371 @@
         "purchase": "商品受取り日程 2026年3月13日(金)~2026年3月15日(日) 2026年3月20日(金)~2026年3月22日(日) ※お受け取り時間は、10時~22時30分 ※おひとり様、1日程までのお申込みとなります。 お申込み 応募受付期間 2026年2月20日(金)10:00~2026年2月22日(日)23:59 申込みはこちら 当選発表"
       },
       "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+    },
+    {
+      "id": "rakutenbooks:18182237",
+      "sourceId": "rakutenbooks",
+      "genre": "pokemon-card",
+      "title": "ポケモンカードゲーム MEGA 拡張パック メガブレイブ 【30パック】",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/rb/18182237/",
+      "fetchedAt": "2026-11-01T02:07:41.535Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
+        "start": {
+          "raw": "2026/10/14(水) 10:00",
+          "iso": "2026-10-14T10:00:00+09:00",
+          "date": "2026-10-14",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "水",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/10/18(日) 23:59",
+          "iso": "2026-10-18T23:59:00+09:00",
+          "date": "2026-10-18",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "start": {
+          "raw": "2026/10/29(木) 10:00",
+          "iso": "2026-10-29T10:00:00+09:00",
+          "date": "2026-10-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": false,
+        "notAfter": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
+        ]
+      },
+      "purchasePeriod": {
+        "found": true,
+        "raw": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "start": {
+          "raw": "2026/10/29(木) 10:00",
+          "iso": "2026-10-29T10:00:00+09:00",
+          "date": "2026-10-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/11/03(火) 23:59",
+          "iso": "2026-11-03T23:59:00+09:00",
+          "date": "2026-11-03",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "火",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "shippingPeriod": {
+        "raw": "2026年10月下旬発送",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "発送予定の原文を保持。日付範囲は推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックスで抽選エントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18182237/",
+      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
+      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
+      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)",
+        "※ご注文後に商品のキャンセルはできません。",
+        "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "お届け先について",
+        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+        "支払い方法、配送方法について",
+        "当選時の支払い方法はクレジットカード決済のみとなります。",
+        "以下の支払い方法、配送方法はご利用いただけません。",
+        "・支払い方法:代金引換",
+        "こちらは当選者向けに販売している商品です。当選者は注文前にページ下の内容紹介を必ずご確認ください。"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当落メールの正確な送信時刻"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
+        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "purchase": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "receiving": [
+          "発送予定日:2026年10月下旬発送",
+          "お届け先について",
+          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+          "支払い方法、配送方法について",
+          "当選時の配送方法は宅配・ポスト投函のみとなります。",
+          "以下の支払い方法、配送方法はご利用いただけません。",
+          "・配送方法:コンビニ店頭受取、郵便局受取",
+          "発送予定: 2026年10月下旬発送"
+        ]
+      },
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+    },
+    {
+      "id": "rakutenbooks:18182238",
+      "sourceId": "rakutenbooks",
+      "genre": "pokemon-card",
+      "title": "ポケモンカードゲーム MEGA 拡張パック メガシンフォニア 【30パック】",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/rb/18182238/",
+      "fetchedAt": "2026-11-01T02:07:41.110Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
+        "start": {
+          "raw": "2026/10/14(水) 10:00",
+          "iso": "2026-10-14T10:00:00+09:00",
+          "date": "2026-10-14",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "水",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/10/18(日) 23:59",
+          "iso": "2026-10-18T23:59:00+09:00",
+          "date": "2026-10-18",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "start": {
+          "raw": "2026/10/29(木) 10:00",
+          "iso": "2026-10-29T10:00:00+09:00",
+          "date": "2026-10-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": false,
+        "notAfter": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
+        ]
+      },
+      "purchasePeriod": {
+        "found": true,
+        "raw": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "start": {
+          "raw": "2026/10/29(木) 10:00",
+          "iso": "2026-10-29T10:00:00+09:00",
+          "date": "2026-10-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/11/03(火) 23:59",
+          "iso": "2026-11-03T23:59:00+09:00",
+          "date": "2026-11-03",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "火",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "shippingPeriod": {
+        "raw": "2026年10月下旬発送",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "発送予定の原文を保持。日付範囲は推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックスで抽選エントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18182238/",
+      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
+      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
+      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)",
+        "※ご注文後に商品のキャンセルはできません。",
+        "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "お届け先について",
+        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+        "支払い方法、配送方法について",
+        "当選時の支払い方法はクレジットカード決済のみとなります。",
+        "以下の支払い方法、配送方法はご利用いただけません。",
+        "・支払い方法:代金引換",
+        "こちらは当選者向けに販売している商品です。当選者は注文前にページ下の内容紹介を必ずご確認ください。"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当落メールの正確な送信時刻"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
+        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "purchase": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "receiving": [
+          "発送予定日:2026年10月下旬発送",
+          "お届け先について",
+          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+          "支払い方法、配送方法について",
+          "当選時の配送方法は宅配・ポスト投函のみとなります。",
+          "以下の支払い方法、配送方法はご利用いただけません。",
+          "・配送方法:コンビニ店頭受取、郵便局受取",
+          "発送予定: 2026年10月下旬発送"
+        ]
+      },
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+    },
+    {
+      "id": "rakutenbooks:18537078",
+      "sourceId": "rakutenbooks",
+      "genre": "pokemon-card",
+      "title": "ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/rb/18537078/",
+      "fetchedAt": "2026-11-01T02:07:42.507Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
+        "start": {
+          "raw": "2026/10/14(水) 10:00",
+          "iso": "2026-10-14T10:00:00+09:00",
+          "date": "2026-10-14",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "水",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/10/18(日) 23:59",
+          "iso": "2026-10-18T23:59:00+09:00",
+          "date": "2026-10-18",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "start": {
+          "raw": "2026/10/29(木) 10:00",
+          "iso": "2026-10-29T10:00:00+09:00",
+          "date": "2026-10-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": false,
+        "notAfter": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
+        ]
+      },
+      "purchasePeriod": {
+        "found": true,
+        "raw": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "start": {
+          "raw": "2026/10/29(木) 10:00",
+          "iso": "2026-10-29T10:00:00+09:00",
+          "date": "2026-10-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/11/03(火) 23:59",
+          "iso": "2026-11-03T23:59:00+09:00",
+          "date": "2026-11-03",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "火",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "shippingPeriod": {
+        "raw": "2026年10月下旬発送",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "発送予定の原文を保持。日付範囲は推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックスで抽選エントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18537078/",
+      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
+      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
+      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)",
+        "※ご注文後に商品のキャンセルはできません。",
+        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
+        "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "お届け先について",
+        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+        "支払い方法、配送方法について",
+        "当選時の支払い方法はクレジットカード決済のみとなります。",
+        "以下の支払い方法、配送方法はご利用いただけません。",
+        "・支払い方法:代金引換",
+        "こちらは当選者向けに販売している商品です。当選者は注文前にページ下の内容紹介を必ずご確認ください。"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当落メールの正確な送信時刻"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
+        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "purchase": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "receiving": [
+          "発送予定日:2026年10月下旬発送",
+          "お届け先について",
+          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+          "支払い方法、配送方法について",
+          "当選時の配送方法は宅配・ポスト投函のみとなります。",
+          "以下の支払い方法、配送方法はご利用いただけません。",
+          "・配送方法:コンビニ店頭受取、郵便局受取",
+          "発送予定: 2026年10月下旬発送"
+        ]
+      },
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+    },
+    {
+      "id": "rakutenbooks:18595282",
+      "sourceId": "rakutenbooks",
+      "genre": "pokemon-card",
+      "title": "ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/rb/18595282/",
+      "fetchedAt": "2026-11-01T02:07:43.212Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
+        "start": {
+          "raw": "2026/10/14(水) 10:00",
+          "iso": "2026-10-14T10:00:00+09:00",
+          "date": "2026-10-14",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "水",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/10/18(日) 23:59",
+          "iso": "2026-10-18T23:59:00+09:00",
+          "date": "2026-10-18",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "start": {
+          "raw": "2026/10/29(木) 10:00",
+          "iso": "2026-10-29T10:00:00+09:00",
+          "date": "2026-10-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": false,
+        "notAfter": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
+        ]
+      },
+      "purchasePeriod": {
+        "found": true,
+        "raw": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "start": {
+          "raw": "2026/10/29(木) 10:00",
+          "iso": "2026-10-29T10:00:00+09:00",
+          "date": "2026-10-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/11/03(火) 23:59",
+          "iso": "2026-11-03T23:59:00+09:00",
+          "date": "2026-11-03",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "火",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "shippingPeriod": {
+        "raw": "2026年10月下旬発送",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "発送予定の原文を保持。日付範囲は推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックスで抽選エントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18595282/",
+      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
+      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
+      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)",
+        "※ご注文後に商品のキャンセルはできません。",
+        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
+        "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "お届け先について",
+        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+        "支払い方法、配送方法について",
+        "当選時の支払い方法はクレジットカード決済のみとなります。",
+        "以下の支払い方法、配送方法はご利用いただけません。",
+        "・支払い方法:代金引換",
+        "こちらは当選者向けに販売している商品です。当選者は注文前にページ下の内容紹介を必ずご確認ください。"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当落メールの正確な送信時刻"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
+        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "purchase": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "receiving": [
+          "発送予定日:2026年10月下旬発送",
+          "お届け先について",
+          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+          "支払い方法、配送方法について",
+          "当選時の配送方法は宅配・ポスト投函のみとなります。",
+          "以下の支払い方法、配送方法はご利用いただけません。",
+          "・配送方法:コンビニ店頭受取、郵便局受取",
+          "発送予定: 2026年10月下旬発送"
+        ]
+      },
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+    },
+    {
+      "id": "rakutenbooks:18595457",
+      "sourceId": "rakutenbooks",
+      "genre": "pokemon-card",
+      "title": "【セット商品】ポケモンカードゲーム MEGA 30th CELEBRATION カードセット 9種",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/rb/18595457/",
+      "fetchedAt": "2026-11-01T02:07:43.034Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
+        "start": {
+          "raw": "2026/10/14(水) 10:00",
+          "iso": "2026-10-14T10:00:00+09:00",
+          "date": "2026-10-14",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "水",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/10/18(日) 23:59",
+          "iso": "2026-10-18T23:59:00+09:00",
+          "date": "2026-10-18",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "start": {
+          "raw": "2026/10/29(木) 10:00",
+          "iso": "2026-10-29T10:00:00+09:00",
+          "date": "2026-10-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": false,
+        "notAfter": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
+        ]
+      },
+      "purchasePeriod": {
+        "found": true,
+        "raw": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "start": {
+          "raw": "2026/10/29(木) 10:00",
+          "iso": "2026-10-29T10:00:00+09:00",
+          "date": "2026-10-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/11/03(火) 23:59",
+          "iso": "2026-11-03T23:59:00+09:00",
+          "date": "2026-11-03",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "火",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "shippingPeriod": {
+        "raw": "2026年10月下旬発送",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "発送予定の原文を保持。日付範囲は推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックスで抽選エントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18595457/",
+      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
+      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
+      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)",
+        "※ご注文後に商品のキャンセルはできません。",
+        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
+        "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "お届け先について",
+        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+        "支払い方法、配送方法について",
+        "当選時の支払い方法はクレジットカード決済のみとなります。",
+        "以下の支払い方法、配送方法はご利用いただけません。",
+        "・支払い方法:代金引換",
+        "こちらは当選者向けに販売している商品です。当選者は注文前にページ下の内容紹介を必ずご確認ください。"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当落メールの正確な送信時刻"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
+        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "purchase": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "receiving": [
+          "発送予定日:2026年10月下旬発送",
+          "お届け先について",
+          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+          "支払い方法、配送方法について",
+          "当選時の配送方法は宅配・ポスト投函のみとなります。",
+          "以下の支払い方法、配送方法はご利用いただけません。",
+          "・配送方法:コンビニ店頭受取、郵便局受取",
+          "発送予定: 2026年10月下旬発送"
+        ]
+      },
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+    },
+    {
+      "id": "rakutenbooks:18669675",
+      "sourceId": "rakutenbooks",
+      "genre": "one-piece-card",
+      "title": "ONE PIECEカードゲーム ブースターパック 世界最強の戦士【OP-17】",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/rb/18669675/",
+      "fetchedAt": "2026-11-01T02:07:41.012Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
+        "start": {
+          "raw": "2026/10/14(水) 10:00",
+          "iso": "2026-10-14T10:00:00+09:00",
+          "date": "2026-10-14",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "水",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/10/18(日) 23:59",
+          "iso": "2026-10-18T23:59:00+09:00",
+          "date": "2026-10-18",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "start": {
+          "raw": "2026/10/29(木) 10:00",
+          "iso": "2026-10-29T10:00:00+09:00",
+          "date": "2026-10-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": false,
+        "notAfter": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
+        ]
+      },
+      "purchasePeriod": {
+        "found": true,
+        "raw": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "start": {
+          "raw": "2026/10/29(木) 10:00",
+          "iso": "2026-10-29T10:00:00+09:00",
+          "date": "2026-10-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/11/03(火) 23:59",
+          "iso": "2026-11-03T23:59:00+09:00",
+          "date": "2026-11-03",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "火",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "shippingPeriod": {
+        "raw": "2026年10月下旬発送",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "発送予定の原文を保持。日付範囲は推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックスで抽選エントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18669675/",
+      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
+      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
+      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)",
+        "※ご注文後に商品のキャンセルはできません。",
+        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
+        "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "お届け先について",
+        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+        "支払い方法、配送方法について",
+        "当選時の支払い方法はクレジットカード決済のみとなります。",
+        "以下の支払い方法、配送方法はご利用いただけません。",
+        "・支払い方法:代金引換",
+        "こちらは当選者向けに販売している商品です。当選者は注文前にページ下の内容紹介を必ずご確認ください。"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当落メールの正確な送信時刻"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間:2026/10/14(水) 10:00 〜 2026/10/18(日) 23:59",
+        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "purchase": "当選者販売期間:2026/10/29(木) 10:00 〜 2026/11/03(火) 23:59",
+        "receiving": [
+          "発送予定日:2026年10月下旬発送",
+          "お届け先について",
+          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+          "支払い方法、配送方法について",
+          "当選時の配送方法は宅配・ポスト投函のみとなります。",
+          "以下の支払い方法、配送方法はご利用いただけません。",
+          "・配送方法:コンビニ店頭受取、郵便局受取",
+          "発送予定: 2026年10月下旬発送"
+        ]
+      },
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合"
+    },
+    {
+      "id": "rakutenbooks:title:5f71ed9314e62cde",
+      "sourceId": "rakutenbooks",
+      "title": "ポケモンカードゲーム MEGA スタートデッキ100 バトルコレクション 10個セット",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "fetchedAt": "2026-11-01T02:07:40.103Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "start": {
+          "raw": "2026/1/23(金) 10:00",
+          "iso": "2026-01-23T10:00:00+09:00",
+          "date": "2026-01-23",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/1/26(月) 11:59",
+          "iso": "2026-01-26T11:59:00+09:00",
+          "date": "2026-01-26",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "start": {
+          "raw": "2026/2/6(金)",
+          "iso": null,
+          "date": "2026-02-06",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
+        ]
+      },
+      "purchasePeriod": null,
+      "shippingPeriod": {
+        "raw": "当選者のみにご案内いたします。",
+        "start": null,
+        "end": null,
+        "approximate": false,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "当選者への案内のみ。発送日を推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
+      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
+      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当選メールの正確な送信時刻",
+        "商品発送の具体的な日付"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "shipping": "当選者のみにご案内いたします。",
+        "productTitle": "ポケモンカードゲーム MEGA スタートデッキ100 バトルコレクション 10個セット"
+      },
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合"
+    },
+    {
+      "id": "rakutenbooks:title:6bdd5960809a3b57",
+      "sourceId": "rakutenbooks",
+      "title": "ポケモンカードゲーム MEGA 拡張パック インフェルノX【30パック】",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "fetchedAt": "2026-11-01T02:07:40.103Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "start": {
+          "raw": "2026/1/23(金) 10:00",
+          "iso": "2026-01-23T10:00:00+09:00",
+          "date": "2026-01-23",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/1/26(月) 11:59",
+          "iso": "2026-01-26T11:59:00+09:00",
+          "date": "2026-01-26",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "start": {
+          "raw": "2026/2/6(金)",
+          "iso": null,
+          "date": "2026-02-06",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
+        ]
+      },
+      "purchasePeriod": null,
+      "shippingPeriod": {
+        "raw": "当選者のみにご案内いたします。",
+        "start": null,
+        "end": null,
+        "approximate": false,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "当選者への案内のみ。発送日を推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
+      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
+      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当選メールの正確な送信時刻",
+        "商品発送の具体的な日付"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "shipping": "当選者のみにご案内いたします。",
+        "productTitle": "ポケモンカードゲーム MEGA 拡張パック インフェルノX【30パック】"
+      },
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合"
+    },
+    {
+      "id": "rakutenbooks:title:add75e344a1811aa",
+      "sourceId": "rakutenbooks",
+      "title": "ポケモンカードゲーム MEGA スペシャルカードセット メガエルレイドex",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "fetchedAt": "2026-11-01T02:07:40.103Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "start": {
+          "raw": "2026/1/23(金) 10:00",
+          "iso": "2026-01-23T10:00:00+09:00",
+          "date": "2026-01-23",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/1/26(月) 11:59",
+          "iso": "2026-01-26T11:59:00+09:00",
+          "date": "2026-01-26",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "start": {
+          "raw": "2026/2/6(金)",
+          "iso": null,
+          "date": "2026-02-06",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
+        ]
+      },
+      "purchasePeriod": null,
+      "shippingPeriod": {
+        "raw": "当選者のみにご案内いたします。",
+        "start": null,
+        "end": null,
+        "approximate": false,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "当選者への案内のみ。発送日を推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
+      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
+      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当選メールの正確な送信時刻",
+        "商品発送の具体的な日付"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "shipping": "当選者のみにご案内いたします。",
+        "productTitle": "ポケモンカードゲーム MEGA スペシャルカードセット メガエルレイドex"
+      },
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合"
+    },
+    {
+      "id": "rakutenbooks:title:d5fb54605dab01f1",
+      "sourceId": "rakutenbooks",
+      "title": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex【10パック】",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "fetchedAt": "2026-11-01T02:07:40.103Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "start": {
+          "raw": "2026/1/23(金) 10:00",
+          "iso": "2026-01-23T10:00:00+09:00",
+          "date": "2026-01-23",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/1/26(月) 11:59",
+          "iso": "2026-01-26T11:59:00+09:00",
+          "date": "2026-01-26",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "start": {
+          "raw": "2026/2/6(金)",
+          "iso": null,
+          "date": "2026-02-06",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
+        ]
+      },
+      "purchasePeriod": null,
+      "shippingPeriod": {
+        "raw": "当選者のみにご案内いたします。",
+        "start": null,
+        "end": null,
+        "approximate": false,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "当選者への案内のみ。発送日を推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
+      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
+      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当選メールの正確な送信時刻",
+        "商品発送の具体的な日付"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "shipping": "当選者のみにご案内いたします。",
+        "productTitle": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex【10パック】"
+      },
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合"
+    },
+    {
+      "id": "rakutenbooks:title:ffb58507c878c43a",
+      "sourceId": "rakutenbooks",
+      "title": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ【30パック】",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "fetchedAt": "2026-11-01T02:07:40.103Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "start": {
+          "raw": "2026/1/23(金) 10:00",
+          "iso": "2026-01-23T10:00:00+09:00",
+          "date": "2026-01-23",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/1/26(月) 11:59",
+          "iso": "2026-01-26T11:59:00+09:00",
+          "date": "2026-01-26",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "start": {
+          "raw": "2026/2/6(金)",
+          "iso": null,
+          "date": "2026-02-06",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
+        ]
+      },
+      "purchasePeriod": null,
+      "shippingPeriod": {
+        "raw": "当選者のみにご案内いたします。",
+        "start": null,
+        "end": null,
+        "approximate": false,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "当選者への案内のみ。発送日を推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
+      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
+      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当選メールの正確な送信時刻",
+        "商品発送の具体的な日付"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "shipping": "当選者のみにご案内いたします。",
+        "productTitle": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ【30パック】"
+      },
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合"
     }
   ],
   "sources": {
@@ -6105,13 +6094,13 @@
     },
     "rakutenbooks": {
       "name": "楽天ブックス",
-      "fetchedAt": "2026-10-31T22:25:52.502Z",
+      "fetchedAt": "2026-11-01T02:07:46.860Z",
       "coverage": "楽天ブックス公式のポケモンカード抽選受付ページを直接案件化。受付ページの商品コード・抽選期間・当選連絡予定日を採用し、公式検索と商品詳細の抽選販売情報も補助的に統合",
       "verifiedCases": 11,
       "discovery": "OFFICIAL_ENTRY_PLUS_SEARCH",
       "evidence": [
         {
-          "pid": 2620,
+          "pid": 2863,
           "requests": [
             {
               "url": "https://books.rakuten.co.jp/robots.txt",
@@ -6124,209 +6113,209 @@
               "url": "https://books.rakuten.co.jp/event/game/card/entry/",
               "status": 200,
               "bytes": 64333,
-              "sha256": "23cddb12b6070a11609897e4286bb20b8b94a4a93d4ee3950181609f9d53568b",
+              "sha256": "8af8eba9ed4dde32fd105fcdec46f0c72080c17aa087ad5f7d6b7a64387b5e47",
               "contentType": "text/html; charset=euc-jp"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8",
               "status": 200,
               "bytes": 146481,
-              "sha256": "732679cd5125ab033170a761f5906011c49f028a729cfe2d6ca91ef43171dd6e",
+              "sha256": "a5c171e8e1026d6a65db34a3c3e928d66fafca7c13c11572cb77fca93df17e92",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18450269/",
               "status": 200,
               "bytes": 91124,
-              "sha256": "8f6daf3b65950dd76d24ee639eec4033f88dbabef925b2d48f94fc4c99280954",
+              "sha256": "f96b9d1efaceb55d595bd5979369ac70e8b1d261ed9a19f3000e88a7fab1f9b9",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18771764/",
               "status": 200,
               "bytes": 91512,
-              "sha256": "c35166c67e2bf17593d3b58800c9ba4a59f53c789f2d2be6470f5f7c4ac647c7",
+              "sha256": "0a4414b3c33510ec150589b2f6a12bbebe51a86b611fcf9ea86ee947745b8b2a",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18669675/",
               "status": 200,
               "bytes": 101514,
-              "sha256": "0deaa2d8fc1d4a6b54308bced98627023d43c9901ab3e23e7cab085a9f5f7c51",
+              "sha256": "a602d5c0ec737982cb34183e401ee2d80a95135e599e695cd57973f4b1cfa6e0",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18182238/",
               "status": 200,
               "bytes": 94281,
-              "sha256": "098e48586844570c026bfa835fe3e047ce6c3bd129ce0b7b2ce1d50b02a61a58",
+              "sha256": "87f781053efa12600334164044e11c3d11b64a031c774e400f98bab202495231",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18182237/",
               "status": 200,
               "bytes": 93896,
-              "sha256": "7d636d0af89d0c780b59b516524ad536657c38ad57ed7698bd0c37e700967ac7",
+              "sha256": "b0470c4097b8847b2d977b8caa729345ee3ce302cd2a8b3c8e38d9056a59e814",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18548589/",
               "status": 200,
               "bytes": 93479,
-              "sha256": "2995a2420302de5258b30cd49f0c6d45f6e666ea1150fde8c13799e41f27e53a",
+              "sha256": "ffdeb1c8c3b89aad77180e796d347e61c0fe053c634ea13f719b6d046fcac25c",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18343992/",
               "status": 200,
               "bytes": 93915,
-              "sha256": "c5cbee6fe19d6ea12d8fad3aeaf9677d2c08c854a1d78b609920664e49639902",
+              "sha256": "9f9857cc828e0bc63fb1be944eb6c265e835e38445577bd5a8afd300a4c18e55",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18537075/",
               "status": 200,
               "bytes": 94159,
-              "sha256": "4877905ea62031cf3296e32d7ba155890bdecd3bbc152241117b0f089f1c4686",
+              "sha256": "7d3ced6ea9c53e1be1e8e4bfa05e31d0f0ada20c9d5b012bddb2c9fa04a9418b",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18537078/",
               "status": 200,
               "bytes": 94279,
-              "sha256": "cadbaa487f5ef4c859c3fd1cc56927b610f2d9455d08428bd491dd219f0f5965",
+              "sha256": "6fb2a39c90aff4f90328eebd8b4e6c5ed24f948fe75492b5019c3c71b47750b5",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18595283/",
               "status": 200,
               "bytes": 92361,
-              "sha256": "592e7d8bbe98add111e350114492dc37fe2b4d5a40a813addc3dd487ec3caec1",
+              "sha256": "fe2f3ce542945ca6ce0f5d90c2a3fc82e36e60af864b43077673ffbce9962a06",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18595457/",
               "status": 200,
               "bytes": 104128,
-              "sha256": "5c1ec7dd9a806fdabec6a40c78eafe1b6579590d3f1f1b263660d4429260f4d2",
+              "sha256": "3207366b57233738163ce8c87d10e790b2e153bdc53827ed90bae33d71893616",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18595282/",
               "status": 200,
               "bytes": 94253,
-              "sha256": "86253e91f419bd69a1150b016b0d319797fb18ea758de3541df284758feb43e3",
+              "sha256": "cc838af6279b0387e6b4f195d7dcf67f3cb6a832ef79a67d8fc4e07d81a5bef5",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/13284657/",
+              "status": 200,
+              "bytes": 133628,
+              "sha256": "4776b0f8e5f7381ad1fecee8eb36d3c03564246692e10eef6f18957b471b7a7f",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18460920/",
               "status": 200,
               "bytes": 90430,
-              "sha256": "a213ca61afdf02152e0e3b0478a3a17b9709cb7e4f96930335a229eb3ee71910",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/13284657/",
-              "status": 200,
-              "bytes": 133690,
-              "sha256": "b91f2343273a133ee93dba6ad9f7c9fc03e7dca67d6cedaa1580a4b9f21b12ac",
+              "sha256": "8165ce789a4089316706911d2d4c85b6a89364c01d558b0dfa97a321946162b2",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18084514/",
               "status": 200,
               "bytes": 87244,
-              "sha256": "c4419aabb74d28deae63ef927211a6760c41e500a8d676b5c2db5f0818c18d1e",
+              "sha256": "3fc161e90c871fc13ecd38646381eef6b3715bd3c09b930f3d7ede370255fbb3",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/16660918/",
               "status": 200,
               "bytes": 85910,
-              "sha256": "fc5e7866d7513e0ac689bf8eea1d8aa0c78e8ec736c48d847389a493b686101b",
+              "sha256": "4ba21db487630b4d6d890734fecc27b4870bc2c27f92a1cceb2df8ec0aec2468",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18061661/",
               "status": 200,
               "bytes": 89630,
-              "sha256": "6abee15a757f75d64effcc3f4520979237071892bce6b2cd825fd8ecfbe624c1",
+              "sha256": "a150930b24618caef1d477dff037b69bf1bfc3ec81c48fbd201a26e135d9c3dc",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847139/",
               "status": 200,
-              "bytes": 143796,
-              "sha256": "dca4c7e46528a68abff53dd038f877e8a7a6a0f1615fb5f8d598a785f86b4cb4",
+              "bytes": 143734,
+              "sha256": "02de2ad584b0c386eca85086ba9e88213de5152576431a59c87d09c3468462a1",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18084513/",
               "status": 200,
               "bytes": 91618,
-              "sha256": "292f3bf79c34a8c19237cb7e762b260a3e673aa8c376f80525896d23c40a1713",
+              "sha256": "52ca0022fb80eb1d342eb337f72957aa79d4a7fe8a6c17823999f2ccdcdcb05f",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847144/",
               "status": 200,
-              "bytes": 139695,
-              "sha256": "f31fc800c92f3c53e9c05b7d5900ea9567d5eda268fe63b9f952e3c9d1354fdd",
+              "bytes": 139633,
+              "sha256": "6110ebb6571978388f5612dc4e0ba15978f2842e8705cac34c10ebab25557fd8",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847142/",
               "status": 200,
-              "bytes": 138952,
-              "sha256": "cfbf14b76e22e4bd53c5e94db6dbc9a769f944337512ff885fa982f9656d758d",
+              "bytes": 138890,
+              "sha256": "537735821e790ac65aa92a2abebec77b133109cdaf15c246169fa28a5b18b4fe",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/15897236/",
               "status": 200,
-              "bytes": 134573,
-              "sha256": "27f963d9f9379546d7590b47d7928d33afab90952b1c7ce0f415d0874694e732",
+              "bytes": 134511,
+              "sha256": "4a06f3b4225e2928e9ae8a54da1eda22306069847920960e04a574080da02d7c",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18393016/",
               "status": 200,
-              "bytes": 140195,
-              "sha256": "57d5cafc1ef4ab67b77b769194767babb67006f3c7faf2825b6fa42c065c59ea",
+              "bytes": 140133,
+              "sha256": "2b61957c45a9df4bd679ede83fd2e522453f4da4e750a60bd7ebc01b4a956de6",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/16376774/",
               "status": 200,
-              "bytes": 132581,
-              "sha256": "4b3fd7fa78a82ce27d79cc261e2a0e6299222a44c6d1e5d6619eab885ce1c4d2",
+              "bytes": 132519,
+              "sha256": "99426c5afc21cef5554f614df2374592275bc1d81ccb303c88e20122bc1a280e",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17753695/",
               "status": 200,
-              "bytes": 135531,
-              "sha256": "9fedcb8dde8893eb967130f9a4e11c6372ddd8d52998982e7e707d57d11735bc",
+              "bytes": 135469,
+              "sha256": "f654f94a1e2e1e29e057a7c914ac3df1423453bb414fe59c6c6e51b0e21c0170",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/14297582/",
               "status": 200,
-              "bytes": 133001,
-              "sha256": "1c7074f990ceb638026490a6f032695c5ca921fbaaabfaa75f799d33643423b3",
+              "bytes": 132939,
+              "sha256": "6b20eb0954ffdabd160540e27480379b7a2b8aed75200e29d9c555427f8169ad",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17753694/",
               "status": 200,
-              "bytes": 134336,
-              "sha256": "2845403eb1d5bc3ad030c68c3ddd1260931277a5c44d709317df8886894ddd49",
+              "bytes": 134274,
+              "sha256": "1116dd323cd72a049640cb2f89b9e740d242d09f5cba2eb12a0d5e0f870d06b6",
               "contentType": "text/html;charset=UTF-8"
             }
           ]
         },
         {
-          "pid": 2635,
+          "pid": 2885,
           "requests": [
             {
               "url": "https://books.rakuten.co.jp/robots.txt",
@@ -6339,203 +6328,203 @@
               "url": "https://books.rakuten.co.jp/event/game/card/entry/",
               "status": 200,
               "bytes": 64333,
-              "sha256": "23cddb12b6070a11609897e4286bb20b8b94a4a93d4ee3950181609f9d53568b",
+              "sha256": "8af8eba9ed4dde32fd105fcdec46f0c72080c17aa087ad5f7d6b7a64387b5e47",
               "contentType": "text/html; charset=euc-jp"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8",
               "status": 200,
               "bytes": 146481,
-              "sha256": "8c3ed95597c3eb71efd0401cc11e17958f0c3661bf07a0749a292496bf25cb5d",
+              "sha256": "4a35355e6ddf54803c88f8b51bc4affe0c78c3c29fc983b6e8f36821a4633092",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18450269/",
               "status": 200,
               "bytes": 91124,
-              "sha256": "8f6daf3b65950dd76d24ee639eec4033f88dbabef925b2d48f94fc4c99280954",
+              "sha256": "f96b9d1efaceb55d595bd5979369ac70e8b1d261ed9a19f3000e88a7fab1f9b9",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18771764/",
               "status": 200,
               "bytes": 91512,
-              "sha256": "c35166c67e2bf17593d3b58800c9ba4a59f53c789f2d2be6470f5f7c4ac647c7",
+              "sha256": "0a4414b3c33510ec150589b2f6a12bbebe51a86b611fcf9ea86ee947745b8b2a",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18669675/",
               "status": 200,
               "bytes": 101514,
-              "sha256": "0deaa2d8fc1d4a6b54308bced98627023d43c9901ab3e23e7cab085a9f5f7c51",
+              "sha256": "a602d5c0ec737982cb34183e401ee2d80a95135e599e695cd57973f4b1cfa6e0",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18182238/",
               "status": 200,
               "bytes": 94281,
-              "sha256": "098e48586844570c026bfa835fe3e047ce6c3bd129ce0b7b2ce1d50b02a61a58",
+              "sha256": "87f781053efa12600334164044e11c3d11b64a031c774e400f98bab202495231",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18182237/",
               "status": 200,
               "bytes": 93896,
-              "sha256": "7d636d0af89d0c780b59b516524ad536657c38ad57ed7698bd0c37e700967ac7",
+              "sha256": "b0470c4097b8847b2d977b8caa729345ee3ce302cd2a8b3c8e38d9056a59e814",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18548589/",
               "status": 200,
               "bytes": 93479,
-              "sha256": "2995a2420302de5258b30cd49f0c6d45f6e666ea1150fde8c13799e41f27e53a",
+              "sha256": "ffdeb1c8c3b89aad77180e796d347e61c0fe053c634ea13f719b6d046fcac25c",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18343992/",
               "status": 200,
               "bytes": 93915,
-              "sha256": "c5cbee6fe19d6ea12d8fad3aeaf9677d2c08c854a1d78b609920664e49639902",
+              "sha256": "9f9857cc828e0bc63fb1be944eb6c265e835e38445577bd5a8afd300a4c18e55",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18537075/",
               "status": 200,
               "bytes": 94159,
-              "sha256": "4877905ea62031cf3296e32d7ba155890bdecd3bbc152241117b0f089f1c4686",
+              "sha256": "7d3ced6ea9c53e1be1e8e4bfa05e31d0f0ada20c9d5b012bddb2c9fa04a9418b",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18537078/",
               "status": 200,
               "bytes": 94279,
-              "sha256": "cadbaa487f5ef4c859c3fd1cc56927b610f2d9455d08428bd491dd219f0f5965",
+              "sha256": "6fb2a39c90aff4f90328eebd8b4e6c5ed24f948fe75492b5019c3c71b47750b5",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18595283/",
               "status": 200,
               "bytes": 92361,
-              "sha256": "592e7d8bbe98add111e350114492dc37fe2b4d5a40a813addc3dd487ec3caec1",
+              "sha256": "fe2f3ce542945ca6ce0f5d90c2a3fc82e36e60af864b43077673ffbce9962a06",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18595457/",
               "status": 200,
               "bytes": 104128,
-              "sha256": "5c1ec7dd9a806fdabec6a40c78eafe1b6579590d3f1f1b263660d4429260f4d2",
+              "sha256": "3207366b57233738163ce8c87d10e790b2e153bdc53827ed90bae33d71893616",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18595282/",
               "status": 200,
               "bytes": 94253,
-              "sha256": "86253e91f419bd69a1150b016b0d319797fb18ea758de3541df284758feb43e3",
+              "sha256": "cc838af6279b0387e6b4f195d7dcf67f3cb6a832ef79a67d8fc4e07d81a5bef5",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/13284657/",
+              "status": 200,
+              "bytes": 133628,
+              "sha256": "4776b0f8e5f7381ad1fecee8eb36d3c03564246692e10eef6f18957b471b7a7f",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18460920/",
               "status": 200,
               "bytes": 90430,
-              "sha256": "a213ca61afdf02152e0e3b0478a3a17b9709cb7e4f96930335a229eb3ee71910",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/13284657/",
-              "status": 200,
-              "bytes": 133690,
-              "sha256": "b91f2343273a133ee93dba6ad9f7c9fc03e7dca67d6cedaa1580a4b9f21b12ac",
+              "sha256": "8165ce789a4089316706911d2d4c85b6a89364c01d558b0dfa97a321946162b2",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18084514/",
               "status": 200,
               "bytes": 87244,
-              "sha256": "c4419aabb74d28deae63ef927211a6760c41e500a8d676b5c2db5f0818c18d1e",
+              "sha256": "3fc161e90c871fc13ecd38646381eef6b3715bd3c09b930f3d7ede370255fbb3",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/16660918/",
               "status": 200,
               "bytes": 85910,
-              "sha256": "fc5e7866d7513e0ac689bf8eea1d8aa0c78e8ec736c48d847389a493b686101b",
+              "sha256": "4ba21db487630b4d6d890734fecc27b4870bc2c27f92a1cceb2df8ec0aec2468",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18061661/",
               "status": 200,
               "bytes": 89630,
-              "sha256": "6abee15a757f75d64effcc3f4520979237071892bce6b2cd825fd8ecfbe624c1",
+              "sha256": "a150930b24618caef1d477dff037b69bf1bfc3ec81c48fbd201a26e135d9c3dc",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847139/",
               "status": 200,
-              "bytes": 143796,
-              "sha256": "dca4c7e46528a68abff53dd038f877e8a7a6a0f1615fb5f8d598a785f86b4cb4",
+              "bytes": 143734,
+              "sha256": "02de2ad584b0c386eca85086ba9e88213de5152576431a59c87d09c3468462a1",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18084513/",
               "status": 200,
               "bytes": 91618,
-              "sha256": "292f3bf79c34a8c19237cb7e762b260a3e673aa8c376f80525896d23c40a1713",
+              "sha256": "52ca0022fb80eb1d342eb337f72957aa79d4a7fe8a6c17823999f2ccdcdcb05f",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847144/",
               "status": 200,
-              "bytes": 139695,
-              "sha256": "f31fc800c92f3c53e9c05b7d5900ea9567d5eda268fe63b9f952e3c9d1354fdd",
+              "bytes": 139633,
+              "sha256": "6110ebb6571978388f5612dc4e0ba15978f2842e8705cac34c10ebab25557fd8",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847142/",
               "status": 200,
-              "bytes": 138952,
-              "sha256": "cfbf14b76e22e4bd53c5e94db6dbc9a769f944337512ff885fa982f9656d758d",
+              "bytes": 138890,
+              "sha256": "537735821e790ac65aa92a2abebec77b133109cdaf15c246169fa28a5b18b4fe",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/15897236/",
               "status": 200,
-              "bytes": 134573,
-              "sha256": "27f963d9f9379546d7590b47d7928d33afab90952b1c7ce0f415d0874694e732",
+              "bytes": 134511,
+              "sha256": "4a06f3b4225e2928e9ae8a54da1eda22306069847920960e04a574080da02d7c",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18393016/",
               "status": 200,
-              "bytes": 140195,
-              "sha256": "57d5cafc1ef4ab67b77b769194767babb67006f3c7faf2825b6fa42c065c59ea",
+              "bytes": 140133,
+              "sha256": "2b61957c45a9df4bd679ede83fd2e522453f4da4e750a60bd7ebc01b4a956de6",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/16376774/",
               "status": 200,
-              "bytes": 132581,
-              "sha256": "4b3fd7fa78a82ce27d79cc261e2a0e6299222a44c6d1e5d6619eab885ce1c4d2",
+              "bytes": 132519,
+              "sha256": "99426c5afc21cef5554f614df2374592275bc1d81ccb303c88e20122bc1a280e",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17753695/",
               "status": 200,
-              "bytes": 135531,
-              "sha256": "9fedcb8dde8893eb967130f9a4e11c6372ddd8d52998982e7e707d57d11735bc",
+              "bytes": 135469,
+              "sha256": "f654f94a1e2e1e29e057a7c914ac3df1423453bb414fe59c6c6e51b0e21c0170",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/14297582/",
               "status": 200,
-              "bytes": 133001,
-              "sha256": "1c7074f990ceb638026490a6f032695c5ca921fbaaabfaa75f799d33643423b3",
+              "bytes": 132939,
+              "sha256": "6b20eb0954ffdabd160540e27480379b7a2b8aed75200e29d9c555427f8169ad",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17753694/",
               "status": 200,
-              "bytes": 134336,
-              "sha256": "2845403eb1d5bc3ad030c68c3ddd1260931277a5c44d709317df8886894ddd49",
+              "bytes": 134274,
+              "sha256": "1116dd323cd72a049640cb2f89b9e740d242d09f5cba2eb12a0d5e0f870d06b6",
               "contentType": "text/html;charset=UTF-8"
             }
           ]
