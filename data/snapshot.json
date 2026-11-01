@@ -4536,7 +4536,7 @@
       "title": "ポケモンカードゲーム MEGA 拡張パック メガブレイブ 【30パック】",
       "sourceName": "楽天ブックス",
       "sourceUrl": "https://books.rakuten.co.jp/rb/18182237/",
-      "fetchedAt": "2026-11-01T15:58:09.350Z",
+      "fetchedAt": "2026-11-01T20:27:30.966Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -4682,7 +4682,7 @@
       "title": "ポケモンカードゲーム MEGA 拡張パック メガシンフォニア 【30パック】",
       "sourceName": "楽天ブックス",
       "sourceUrl": "https://books.rakuten.co.jp/rb/18182238/",
-      "fetchedAt": "2026-11-01T15:58:09.206Z",
+      "fetchedAt": "2026-11-01T20:27:30.704Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -4828,7 +4828,7 @@
       "title": "ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ",
       "sourceName": "楽天ブックス",
       "sourceUrl": "https://books.rakuten.co.jp/rb/18537078/",
-      "fetchedAt": "2026-11-01T15:58:09.866Z",
+      "fetchedAt": "2026-11-01T20:27:31.604Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -4975,7 +4975,7 @@
       "title": "ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION",
       "sourceName": "楽天ブックス",
       "sourceUrl": "https://books.rakuten.co.jp/rb/18595282/",
-      "fetchedAt": "2026-11-01T15:58:10.133Z",
+      "fetchedAt": "2026-11-01T20:27:31.970Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -5122,7 +5122,7 @@
       "title": "【セット商品】ポケモンカードゲーム MEGA 30th CELEBRATION カードセット 9種",
       "sourceName": "楽天ブックス",
       "sourceUrl": "https://books.rakuten.co.jp/rb/18595457/",
-      "fetchedAt": "2026-11-01T15:58:10.257Z",
+      "fetchedAt": "2026-11-01T20:27:32.062Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -5269,7 +5269,7 @@
       "title": "ONE PIECEカードゲーム ブースターパック 世界最強の戦士【OP-17】",
       "sourceName": "楽天ブックス",
       "sourceUrl": "https://books.rakuten.co.jp/rb/18669675/",
-      "fetchedAt": "2026-11-01T15:58:09.097Z",
+      "fetchedAt": "2026-11-01T20:27:30.455Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -5415,7 +5415,7 @@
       "title": "ポケモンカードゲーム MEGA スタートデッキ100 バトルコレクション 10個セット",
       "sourceName": "楽天ブックス",
       "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-11-01T15:58:08.344Z",
+      "fetchedAt": "2026-11-01T20:27:29.610Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -5512,7 +5512,7 @@
       "title": "ポケモンカードゲーム MEGA 拡張パック インフェルノX【30パック】",
       "sourceName": "楽天ブックス",
       "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-11-01T15:58:08.344Z",
+      "fetchedAt": "2026-11-01T20:27:29.610Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -5609,7 +5609,7 @@
       "title": "ポケモンカードゲーム MEGA スペシャルカードセット メガエルレイドex",
       "sourceName": "楽天ブックス",
       "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-11-01T15:58:08.344Z",
+      "fetchedAt": "2026-11-01T20:27:29.610Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -5706,7 +5706,7 @@
       "title": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex【10パック】",
       "sourceName": "楽天ブックス",
       "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-11-01T15:58:08.344Z",
+      "fetchedAt": "2026-11-01T20:27:29.610Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -5803,7 +5803,7 @@
       "title": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ【30パック】",
       "sourceName": "楽天ブックス",
       "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-11-01T15:58:08.344Z",
+      "fetchedAt": "2026-11-01T20:27:29.610Z",
       "publishedDate": null,
       "entryPeriod": {
         "found": true,
@@ -6094,13 +6094,13 @@
     },
     "rakutenbooks": {
       "name": "楽天ブックス",
-      "fetchedAt": "2026-11-01T15:58:13.054Z",
+      "fetchedAt": "2026-11-01T20:27:35.902Z",
       "coverage": "楽天ブックス公式のポケモンカード抽選受付ページを直接案件化。受付ページの商品コード・抽選期間・当選連絡予定日を採用し、公式検索と商品詳細の抽選販売情報も補助的に統合",
       "verifiedCases": 11,
       "discovery": "OFFICIAL_ENTRY_PLUS_SEARCH",
       "evidence": [
         {
-          "pid": 2867,
+          "pid": 2396,
           "requests": [
             {
               "url": "https://books.rakuten.co.jp/robots.txt",
@@ -6112,405 +6112,405 @@
             {
               "url": "https://books.rakuten.co.jp/event/game/card/entry/",
               "status": 200,
-              "bytes": 64332,
-              "sha256": "785aaa885e7035bac615f1e5c13873cc3b296dfafff06c0121717e03a790d6ad",
+              "bytes": 64333,
+              "sha256": "bce80d53e9fcd8d9308f58c3d5c14173202b80f6172a77ab21ebf9549372d4da",
               "contentType": "text/html; charset=euc-jp"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8",
               "status": 200,
-              "bytes": 147654,
-              "sha256": "c4dcad98e8c652fa0e2da5a189cebd1bd797801e94556e50f510a23a06302562",
+              "bytes": 147655,
+              "sha256": "aae1f4c5cbe55f4dd06026a0ca690216a36aec1a8ff15cf56df7d168bf695f16",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18450269/",
               "status": 200,
-              "bytes": 90969,
-              "sha256": "1c9616a8c202a1ee7d41a3522cd1b5796d42c99a78c605044b5768c5bc516df7",
+              "bytes": 90970,
+              "sha256": "d50bb16f47bfb95a4b7329b4e8d4d7a20ec2e6ed45ede14e5adbf729b3674fea",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18771764/",
               "status": 200,
-              "bytes": 91357,
-              "sha256": "9d9b884e2ba5f5c9082757add13c8ce46bd4b4c4923b9dcef9ec07a1fef0687f",
+              "bytes": 91358,
+              "sha256": "0d1a6a01979d988a7fe82d76202c852e950ac8e75929bad954519cecf2d7a0cb",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18669675/",
               "status": 200,
-              "bytes": 101297,
-              "sha256": "85a217b416b3ec7be36ad4b15c465b3706ca939a22e90d3756b0eb4a33875da0",
+              "bytes": 101298,
+              "sha256": "3ab5a74a1fe5820fa04c8a23d418f72db19ff9cbf68c64d1bb1de3189f39291c",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18182238/",
               "status": 200,
-              "bytes": 94126,
-              "sha256": "39de594abddab6771779eb1c7a0539f2a82e2c5e0a2c2d21d8d1f60b1e65923e",
+              "bytes": 94127,
+              "sha256": "0cc2c5333df669b2d90c562b3021291149d85751cd61f460736d07efb8135548",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18182237/",
               "status": 200,
-              "bytes": 93741,
-              "sha256": "bc38af776314268cd9b896bc10b8063ab8e0fe5da7b92f2e62d7a5e302674908",
+              "bytes": 93742,
+              "sha256": "7b57a77f8fd8acd374f97ff03116bc0d870cf8f09902921e8ca3cda7217a1ec6",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18548589/",
               "status": 200,
-              "bytes": 93324,
-              "sha256": "4a545bc2c7cee3f822d26bc866742cc27a8c9f634a2327742a8c87b76e63e3f5",
+              "bytes": 93325,
+              "sha256": "31826b8bcb6a591de1877b070bb02d745d400914b8a002cbeaa184482d9cbd7c",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18343992/",
               "status": 200,
-              "bytes": 93760,
-              "sha256": "1daa73ab381dbb84d85c4780f0b29f80e6b5c7bd3c7a262a92030ce64d653c33",
+              "bytes": 93761,
+              "sha256": "56edb4d4967245a7fd5e81a2fdface5b62ff1d20fb4d68e122faf0c1aae04b20",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18537075/",
               "status": 200,
-              "bytes": 94004,
-              "sha256": "4fb6c8ad96dd4b7cd8288f2b5a27b770ef19693e63e1f51315150252d7af5ad0",
+              "bytes": 94005,
+              "sha256": "ec0f3b871078077689dc5a6cb9e187605f75f7d36a07d31d4091210e4c9172a8",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18537078/",
               "status": 200,
-              "bytes": 94121,
-              "sha256": "fbca875ee32604008d46e57634f0610f5d714265212e73442d44a95c83fb3c2e",
+              "bytes": 94122,
+              "sha256": "b6cbe37d8690cc609015df143f0af677b789a4e89916d9f883ba598b75ec74f7",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18595283/",
               "status": 200,
-              "bytes": 92206,
-              "sha256": "e627fb2e6d06e94cd63eecad5c07d9bbea4efc572a252711feebec007f8eeccf",
+              "bytes": 92207,
+              "sha256": "e0044adef667d8503c0043316dd3fb7983f10406d7026a9b7028ca49b123a9c6",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18595282/",
               "status": 200,
-              "bytes": 94098,
-              "sha256": "989dfea891bcf38d6d82c24a0cbc57f1ebc9090e172e693e48bc958dbd47a052",
+              "bytes": 94099,
+              "sha256": "4543d04c9aebdc69712e59081ba502371906a2fa6c2f5adc6cf50d213c1f60a4",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18595457/",
               "status": 200,
-              "bytes": 106577,
-              "sha256": "5838290231f40a5f3cb7f55af5280155ef257202dc0ad57996d43a8336b217e7",
+              "bytes": 106578,
+              "sha256": "9d35ebd4788ca7a4e0fe8f8c440f4f27f73da75576a7574f6c7fc34d5c84f9f3",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18460920/",
               "status": 200,
-              "bytes": 90275,
-              "sha256": "1161b5f2956d78eada9ce98fc61964bb226034ce86e15c2dd67b170120e61f55",
+              "bytes": 90276,
+              "sha256": "2e904cfc810c72e52576aa3dfeb96d595b7f0ad09f095516ae76c481d94a9322",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/13284657/",
               "status": 200,
-              "bytes": 133473,
-              "sha256": "55e4aaa1ba8c1162b3dcc005c18212be44a17acb19b1da8cc7e402db0d282f38",
+              "bytes": 133474,
+              "sha256": "d2b593e66c1d5228d25b88e033d41abbca459d5266567ee2ff8f48f1b6e7468a",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18084514/",
               "status": 200,
-              "bytes": 87089,
-              "sha256": "5fd3174c7e812c147e5037f7c52bbabc79820735584c1df8417862a86d8aa7d5",
+              "bytes": 87090,
+              "sha256": "f5c490b22df7ce1d658d860423d9db12ff9f1234880b023c6247317b005defe2",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18061661/",
               "status": 200,
-              "bytes": 89475,
-              "sha256": "888b1c56575d3cc9c2f44b1d27b25ab2f73417f96450b6e5e67dbbe1b9665d58",
+              "bytes": 89476,
+              "sha256": "689012e79a3a13041df42bb4f5574113aedc6103c2b3f92d70dd8459c836c921",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847139/",
               "status": 200,
-              "bytes": 143579,
-              "sha256": "10858eaf5e61502bebfedd1948f299b39aba4cf83236956641b6f36bff19a1cd",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17847144/",
-              "status": 200,
-              "bytes": 139478,
-              "sha256": "ce00b9604e16d988bfbf14223a619470a9f9bff4d75c1e48ef2fc4dbeb9ea722",
+              "bytes": 143580,
+              "sha256": "d39ae4f709ecafe62d09dc68c90d8871e721dcb4b8e6b2e1b4f8fae02f148c38",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18084513/",
               "status": 200,
-              "bytes": 91463,
-              "sha256": "889b77e8dc384fed4b1586ff0c0482a8f614f267bbc1ddc8c9f859579ed9a382",
+              "bytes": 91464,
+              "sha256": "73ab1ad18065a615b3a1c9de887e7bf785c36f5bdad0d31c3bfec945d1240b4c",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17847144/",
+              "status": 200,
+              "bytes": 139479,
+              "sha256": "c1ebbf475363ec409cd6cd7e2cbfe37eef98972f197e8ac24da2d6522d754498",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847142/",
               "status": 200,
-              "bytes": 138735,
-              "sha256": "be291c2379db15a9a63c29968e8ecb85436415798be37c4e6a501af09ddf2796",
+              "bytes": 138736,
+              "sha256": "19ec279922638c60766b6ff6d3a9e599b2346cd2543534c1bda4f673e9cfa681",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/15897236/",
               "status": 200,
-              "bytes": 134356,
-              "sha256": "4430f3d3d688586752aaae3458709c5c136565cd3f1e4c461a24bbefac171f10",
+              "bytes": 134357,
+              "sha256": "2de5f4336ae56e3d6fe503932cee16aa60e9d3839022f195310440cba3468623",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18393016/",
               "status": 200,
-              "bytes": 139978,
-              "sha256": "3f1b62c829babab7dc396427146c16f78a565ac652486b8d63b969bfe57d6c1a",
+              "bytes": 139979,
+              "sha256": "a2574b87b0f73858fdfa6bc21a4473e2adceca65c0c97d2f97c62754308b44f3",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/16376774/",
               "status": 200,
-              "bytes": 132364,
-              "sha256": "c5ecf7a911093916ee18b715cf9296c9eb5886d53af9d4eb696482e1ee63b49b",
+              "bytes": 132365,
+              "sha256": "e53e2fc99e2f95d2e1bd42df9717924c441e6503bd118e3afb4ebba40b2dad1e",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17753695/",
               "status": 200,
-              "bytes": 135314,
-              "sha256": "20de7e2543b813943780d4457b1179e76c9b3b7e39d8c62d5064af6f8c7e39af",
+              "bytes": 135315,
+              "sha256": "c7b34de946d714b4b6b09dde255f1c96a450696bed129a27eb445f750caa5eb2",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/14297582/",
               "status": 200,
-              "bytes": 132784,
-              "sha256": "650628e35450de272ef0eae45ff707ebdec1f8d0a32deb399f0fa4f863474c84",
+              "bytes": 132785,
+              "sha256": "42842562b930d81bc4d3ee298987ca9396ff8a97b511a694441b75d749f63516",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17753694/",
               "status": 200,
-              "bytes": 134119,
-              "sha256": "91367b4adbca93faca6159a075ae8b6bc3c1e0e9453acfc24014c839ee32d920",
+              "bytes": 134120,
+              "sha256": "fa38dfcdb47d99c1514d913b3755073daac3017d83a2fe4afa232d338ac869e0",
               "contentType": "text/html;charset=UTF-8"
             }
           ]
         },
         {
-          "pid": 2889,
+          "pid": 2411,
           "requests": [
             {
               "url": "https://books.rakuten.co.jp/robots.txt",
               "status": 200,
-              "bytes": 419,
-              "sha256": "87f7505c1d60c9ea75d424ed8750d85b78b15f389b5f267a7399208acf41144d",
+              "bytes": 627,
+              "sha256": "252780ae3c0da7016c83f1efbdb64d31436001d81eca2b6e4a909e435fa5e57f",
               "contentType": "text/plain"
             },
             {
               "url": "https://books.rakuten.co.jp/event/game/card/entry/",
               "status": 200,
-              "bytes": 64332,
-              "sha256": "785aaa885e7035bac615f1e5c13873cc3b296dfafff06c0121717e03a790d6ad",
+              "bytes": 64333,
+              "sha256": "bce80d53e9fcd8d9308f58c3d5c14173202b80f6172a77ab21ebf9549372d4da",
               "contentType": "text/html; charset=euc-jp"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8",
               "status": 200,
-              "bytes": 147654,
-              "sha256": "d62f1fca245f19325f47f8a92bf1cefa60b8bafd91d8382a386c7e560487c33a",
+              "bytes": 147655,
+              "sha256": "19401b5516314fe41d2501a46126bbf0aa4ea3f2e68d430bd5a72fce932f7a97",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18450269/",
               "status": 200,
-              "bytes": 90969,
-              "sha256": "1c9616a8c202a1ee7d41a3522cd1b5796d42c99a78c605044b5768c5bc516df7",
+              "bytes": 90970,
+              "sha256": "d50bb16f47bfb95a4b7329b4e8d4d7a20ec2e6ed45ede14e5adbf729b3674fea",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18771764/",
               "status": 200,
-              "bytes": 91357,
-              "sha256": "9d9b884e2ba5f5c9082757add13c8ce46bd4b4c4923b9dcef9ec07a1fef0687f",
+              "bytes": 91358,
+              "sha256": "0d1a6a01979d988a7fe82d76202c852e950ac8e75929bad954519cecf2d7a0cb",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18669675/",
               "status": 200,
-              "bytes": 101297,
-              "sha256": "85a217b416b3ec7be36ad4b15c465b3706ca939a22e90d3756b0eb4a33875da0",
+              "bytes": 101298,
+              "sha256": "3ab5a74a1fe5820fa04c8a23d418f72db19ff9cbf68c64d1bb1de3189f39291c",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18182238/",
               "status": 200,
-              "bytes": 94126,
-              "sha256": "39de594abddab6771779eb1c7a0539f2a82e2c5e0a2c2d21d8d1f60b1e65923e",
+              "bytes": 94127,
+              "sha256": "0cc2c5333df669b2d90c562b3021291149d85751cd61f460736d07efb8135548",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18182237/",
               "status": 200,
-              "bytes": 93741,
-              "sha256": "bc38af776314268cd9b896bc10b8063ab8e0fe5da7b92f2e62d7a5e302674908",
+              "bytes": 93742,
+              "sha256": "7b57a77f8fd8acd374f97ff03116bc0d870cf8f09902921e8ca3cda7217a1ec6",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18548589/",
               "status": 200,
-              "bytes": 93324,
-              "sha256": "4a545bc2c7cee3f822d26bc866742cc27a8c9f634a2327742a8c87b76e63e3f5",
+              "bytes": 93325,
+              "sha256": "31826b8bcb6a591de1877b070bb02d745d400914b8a002cbeaa184482d9cbd7c",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18343992/",
               "status": 200,
-              "bytes": 93760,
-              "sha256": "1daa73ab381dbb84d85c4780f0b29f80e6b5c7bd3c7a262a92030ce64d653c33",
+              "bytes": 93761,
+              "sha256": "56edb4d4967245a7fd5e81a2fdface5b62ff1d20fb4d68e122faf0c1aae04b20",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18537075/",
               "status": 200,
-              "bytes": 94004,
-              "sha256": "4fb6c8ad96dd4b7cd8288f2b5a27b770ef19693e63e1f51315150252d7af5ad0",
+              "bytes": 94005,
+              "sha256": "ec0f3b871078077689dc5a6cb9e187605f75f7d36a07d31d4091210e4c9172a8",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18537078/",
               "status": 200,
-              "bytes": 94121,
-              "sha256": "fbca875ee32604008d46e57634f0610f5d714265212e73442d44a95c83fb3c2e",
+              "bytes": 94122,
+              "sha256": "b6cbe37d8690cc609015df143f0af677b789a4e89916d9f883ba598b75ec74f7",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18595283/",
               "status": 200,
-              "bytes": 92206,
-              "sha256": "e627fb2e6d06e94cd63eecad5c07d9bbea4efc572a252711feebec007f8eeccf",
+              "bytes": 92207,
+              "sha256": "e0044adef667d8503c0043316dd3fb7983f10406d7026a9b7028ca49b123a9c6",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18595282/",
               "status": 200,
-              "bytes": 94098,
-              "sha256": "989dfea891bcf38d6d82c24a0cbc57f1ebc9090e172e693e48bc958dbd47a052",
+              "bytes": 94099,
+              "sha256": "4543d04c9aebdc69712e59081ba502371906a2fa6c2f5adc6cf50d213c1f60a4",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18595457/",
               "status": 200,
-              "bytes": 106577,
-              "sha256": "5838290231f40a5f3cb7f55af5280155ef257202dc0ad57996d43a8336b217e7",
+              "bytes": 106578,
+              "sha256": "9d35ebd4788ca7a4e0fe8f8c440f4f27f73da75576a7574f6c7fc34d5c84f9f3",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18460920/",
               "status": 200,
-              "bytes": 90275,
-              "sha256": "1161b5f2956d78eada9ce98fc61964bb226034ce86e15c2dd67b170120e61f55",
+              "bytes": 90276,
+              "sha256": "2e904cfc810c72e52576aa3dfeb96d595b7f0ad09f095516ae76c481d94a9322",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/13284657/",
               "status": 200,
-              "bytes": 133473,
-              "sha256": "55e4aaa1ba8c1162b3dcc005c18212be44a17acb19b1da8cc7e402db0d282f38",
+              "bytes": 133474,
+              "sha256": "d2b593e66c1d5228d25b88e033d41abbca459d5266567ee2ff8f48f1b6e7468a",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18084514/",
               "status": 200,
-              "bytes": 87089,
-              "sha256": "5fd3174c7e812c147e5037f7c52bbabc79820735584c1df8417862a86d8aa7d5",
+              "bytes": 87090,
+              "sha256": "f5c490b22df7ce1d658d860423d9db12ff9f1234880b023c6247317b005defe2",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18061661/",
               "status": 200,
-              "bytes": 89475,
-              "sha256": "888b1c56575d3cc9c2f44b1d27b25ab2f73417f96450b6e5e67dbbe1b9665d58",
+              "bytes": 89476,
+              "sha256": "689012e79a3a13041df42bb4f5574113aedc6103c2b3f92d70dd8459c836c921",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847139/",
               "status": 200,
-              "bytes": 143579,
-              "sha256": "10858eaf5e61502bebfedd1948f299b39aba4cf83236956641b6f36bff19a1cd",
+              "bytes": 143580,
+              "sha256": "d39ae4f709ecafe62d09dc68c90d8871e721dcb4b8e6b2e1b4f8fae02f148c38",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847144/",
               "status": 200,
-              "bytes": 139478,
-              "sha256": "ce00b9604e16d988bfbf14223a619470a9f9bff4d75c1e48ef2fc4dbeb9ea722",
+              "bytes": 139479,
+              "sha256": "c1ebbf475363ec409cd6cd7e2cbfe37eef98972f197e8ac24da2d6522d754498",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18084513/",
               "status": 200,
-              "bytes": 91463,
-              "sha256": "889b77e8dc384fed4b1586ff0c0482a8f614f267bbc1ddc8c9f859579ed9a382",
+              "bytes": 91464,
+              "sha256": "73ab1ad18065a615b3a1c9de887e7bf785c36f5bdad0d31c3bfec945d1240b4c",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847142/",
               "status": 200,
-              "bytes": 138735,
-              "sha256": "be291c2379db15a9a63c29968e8ecb85436415798be37c4e6a501af09ddf2796",
+              "bytes": 138736,
+              "sha256": "19ec279922638c60766b6ff6d3a9e599b2346cd2543534c1bda4f673e9cfa681",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/15897236/",
               "status": 200,
-              "bytes": 134356,
-              "sha256": "4430f3d3d688586752aaae3458709c5c136565cd3f1e4c461a24bbefac171f10",
+              "bytes": 134357,
+              "sha256": "2de5f4336ae56e3d6fe503932cee16aa60e9d3839022f195310440cba3468623",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18393016/",
               "status": 200,
-              "bytes": 139978,
-              "sha256": "3f1b62c829babab7dc396427146c16f78a565ac652486b8d63b969bfe57d6c1a",
+              "bytes": 139979,
+              "sha256": "a2574b87b0f73858fdfa6bc21a4473e2adceca65c0c97d2f97c62754308b44f3",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/16376774/",
               "status": 200,
-              "bytes": 132364,
-              "sha256": "c5ecf7a911093916ee18b715cf9296c9eb5886d53af9d4eb696482e1ee63b49b",
+              "bytes": 132365,
+              "sha256": "e53e2fc99e2f95d2e1bd42df9717924c441e6503bd118e3afb4ebba40b2dad1e",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17753695/",
               "status": 200,
-              "bytes": 135314,
-              "sha256": "20de7e2543b813943780d4457b1179e76c9b3b7e39d8c62d5064af6f8c7e39af",
+              "bytes": 135315,
+              "sha256": "c7b34de946d714b4b6b09dde255f1c96a450696bed129a27eb445f750caa5eb2",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/14297582/",
               "status": 200,
-              "bytes": 132784,
-              "sha256": "650628e35450de272ef0eae45ff707ebdec1f8d0a32deb399f0fa4f863474c84",
+              "bytes": 132785,
+              "sha256": "42842562b930d81bc4d3ee298987ca9396ff8a97b511a694441b75d749f63516",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17753694/",
               "status": 200,
-              "bytes": 134119,
-              "sha256": "91367b4adbca93faca6159a075ae8b6bc3c1e0e9453acfc24014c839ee32d920",
+              "bytes": 134120,
+              "sha256": "fa38dfcdb47d99c1514d913b3755073daac3017d83a2fe4afa232d338ac869e0",
               "contentType": "text/html;charset=UTF-8"
             }
           ]
