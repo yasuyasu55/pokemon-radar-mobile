@@ -39,7 +39,7 @@ function updatePersonalStatus(){
 }
 updatePersonalStatus();
 $('retry-sync').onclick=()=>personal.sync();
- $('unapplied-only').onchange=render;
+ $('rakuten-only').onchange=render;
  $('amazon-only').onchange=render;
 function handlePersonalClick(e){
  const button=e.target.closest('button[data-personal]');if(!button)return;
@@ -241,11 +241,10 @@ function render(){
   const favorites=favoriteCases(allCases,personal.data.records);
   $('favorite-count').textContent=favorites.length;
   renderCards($('favorite-cases'),favorites,now,'<div class="empty"><strong>お気に入りはまだありません</strong><p>案件の☆を押すと、ここにまとめて表示されます。</p></div>');
-  const pf={unapplied:$('unapplied-only').checked};
-  const amazonOnly=$('amazon-only').checked;
-  const visible=allCases.filter(c=>(!$('new-only').checked||newCases.has(c.id))&&(!amazonOnly||c.sourceId==='official-amazon-jp')&&matches(c,filters,now)&&personalMatches(personal.get(c.id),pf));
+  const sellers=[$('amazon-only').checked?'official-amazon-jp':null,$('rakuten-only').checked?'rakutenbooks':null].filter(Boolean);
+  const visible=allCases.filter(c=>(!$('new-only').checked||newCases.has(c.id))&&(!sellers.length||sellers.includes(c.sourceId))&&matches(c,filters,now));
   $('count').textContent=`${visible.length}件 / 全${allCases.length}件`;
-  $('filter-description').textContent=`表示条件：${filters.phases.length?filters.phases.map(x=>phaseLabels[x]).join('・'):'受付状態すべて'}（締切済み除外） ＞ ${filters.receiving.length?filters.receiving.map(x=>receivingLabels[x]).join('・'):'受取方法すべて'}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}${amazonOnly?' ＞ Amazon招待だけ':''}${pf.favorite?' ＞ お気に入り':''}${pf.unapplied?' ＞ 未応募':''}`;
+  $('filter-description').textContent=`表示条件：${filters.phases.length?filters.phases.map(x=>phaseLabels[x]).join('・'):'受付状態すべて'}（締切済み除外） ＞ ${filters.receiving.length?filters.receiving.map(x=>receivingLabels[x]).join('・'):'受取方法すべて'}${filters.store?' ＞ 店舗名「'+filters.store+'」':''}${sellers.length?' ＞ '+sellers.map(s=>s==='rakutenbooks'?'楽天ブックス':'Amazon招待').join('・'):''}`;
   renderCards($('cases'),visible,now,'<div class="empty"><strong>この条件に合う案件はありません</strong><p>読み込めた公式抽選案内と、個人用画面で保存したAmazonの確認結果が対象です。他の店舗に抽選がないことを意味しません。</p></div>');
 }
 $('store').addEventListener('input',render);
