@@ -1,0 +1,28 @@
+name: Verify PC collection controls
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/pc-collector/**'
+      - 'tools/amazon-browser-probe/**'
+      - 'START-PC-COLLECTION.cmd'
+      - 'tests/pc-collector.test.mjs'
+      - 'tests/amazon-live-*.test.mjs'
+      - '.github/workflows/pc-collector-tests.yml'
+permissions:
+  contents: read
+jobs:
+  controls:
+    runs-on: windows-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check Node version command under Windows CMD
+        shell: cmd
+        run: node -e "process.exit(Math.sign(Number(process.versions.node.split('.')[0])-22)===-1?1:0)"
+      - name: Verify PC controls with simulated browser evidence
+        run: node --test tests/pc-collector.test.mjs tests/amazon-live-cli.test.mjs tests/amazon-live-update.test.mjs

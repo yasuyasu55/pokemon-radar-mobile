@@ -97,14 +97,15 @@ async function inspectProduct(context,candidate){
 export async function run(outDir,seedAsins=[],{fixedTargets=null}={}){
   const {chromium}=await import('playwright');
   fs.mkdirSync(outDir,{recursive:true});
-  const browser=await chromium.launch({headless:true});
+  const visiblePC=process.env.RADAR_PC_VISIBLE==='1';
+  const browser=await chromium.launch({headless:!visiblePC});
   const context=await browser.newContext({
     locale:'ja-JP',
     timezoneId:'Asia/Tokyo',
     viewport:{width:1365,height:900},
-    userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36'
+    ...(visiblePC?{}:{userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36'})
   });
-  const result={schemaVersion:1,mode:'BROWSER_POC',pid:process.pid,startedAt:new Date().toISOString(),queries:fixedTargets?[]:QUERIES,fixedTargets:Boolean(fixedTargets),searches:[],discovered:[],details:[],adoption:'NOT_ENABLED'};
+  const result={schemaVersion:1,mode:'BROWSER_POC',executionEnvironment:visiblePC?'PC_VISIBLE':'GITHUB_HEADLESS',pid:process.pid,startedAt:new Date().toISOString(),queries:fixedTargets?[]:QUERIES,fixedTargets:Boolean(fixedTargets),searches:[],discovered:[],details:[],adoption:'NOT_ENABLED'};
   try{
     const discovery=new Map((fixedTargets||seedAsins).filter(a=>/^[A-Z0-9]{10}$/.test(a)).map(asin=>[asin,{asin,title:null,queries:['watch-pool']}]));
     const page=await context.newPage();
@@ -154,4 +155,5 @@ if(process.argv[1]&&path.resolve(process.argv[1])===here){
   if(!out)throw new Error('Usage: node browser-probe.mjs output-directory');
   process.exitCode=await run(out);
 }
+
 

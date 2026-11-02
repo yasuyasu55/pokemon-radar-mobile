@@ -24,6 +24,12 @@ test('new search ASINs survive a run without two-pass confirmation',()=>{
   assert.equal(saveDiscoveryPool(next,{...run,discovered:[]}).items.length,1);
 });
 const mk=(pid,rows)=>({...structuredClone(run),pid,details:rows});
+test('two PC results are published with PC provenance, mixed results are not labelled PC',()=>{
+ const previous={cases:[],sources:{}};
+ const a={...structuredClone(run),executionEnvironment:'PC_VISIBLE'},b={...structuredClone(run),pid:2,executionEnvironment:'PC_VISIBLE'};
+ assert.match(adoptAmazon(previous,a,b).cases[0].verification,/PCの可視ブラウザ/);
+ assert.doesNotMatch(adoptAmazon(previous,run,b).cases[0].verification,/PCの可視ブラウザ/);
+});
 test('unconfirmed candidates go first in the next run and the order ignores check time churn',()=>{
   const items=[{asin:'A000000001',lastCheckedAt:'2026-01-01'},{asin:'A000000002',lastCheckedAt:'2026-03-01',unconfirmed:{since:'x'}},{asin:'A000000003',detailCandidate:true,lastCheckedAt:'2026-02-01'},{asin:'A000000004',state:'retired'}];
   assert.deepEqual(orderTargets(items,['A000000001','P000000001']),['A000000002','A000000003','A000000001','P000000001']);
@@ -55,3 +61,4 @@ test('blocked, missing and failed details preserve prior unconfirmed evidence',(
     assert.equal(result.items[0].unconfirmed.since,'T0');
   }
 });
+

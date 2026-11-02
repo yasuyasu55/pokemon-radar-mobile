@@ -55,19 +55,20 @@ export function verifiedRows(a,b) {
 export function adoptAmazon(previous,a,b) {
   const verified=verifiedRows(a,b);
   if(!verified.length) return previous; // never erase old rows on blocked/unknown
+  const verification=a.executionEnvironment==='PC_VISIBLE'&&b.executionEnvironment==='PC_VISIBLE'?'PCの可視ブラウザで商品詳細を独立2回確認':'GitHub Actions Chromiumで商品詳細を独立2回確認';
   const fresh=verified.map(r=>({id:`amazon:${r.asin}`,sourceId:'official-amazon-jp',sourceName:'Amazon',title:r.title,
     sourceUrl:r.url,fetchedAt:b.finishedAt,publishedDate:null,browserCapture:true,automatedDiscovery:true,
     lotteryType:'INVITATION_SALE',invitationState:'REQUESTABLE',applicationMethod:'Amazonの招待をリクエスト',
     entryPeriod:null,resultAnnouncement:null,purchasePeriod:null,receivingMethod:'DELIVERY',receivingLabel:'配送',
     stores:[],conditions:['Amazon商品詳細の招待リクエスト操作を独立した2回のサーバーブラウザで確認'],
     handoverRestrictions:[],prices:[],unknowns:['応募締切','当選通知時期','購入期限','本人の応募資格・リクエスト状況'],
-    verification:'GitHub Actions Chromiumで商品詳細を独立2回確認',asin:r.asin}));
+    verification,asin:r.asin}));
   const map=new Map(previous.cases.map(c=>[c.id,c]));
   for(const row of fresh) map.set(row.id,{...map.get(row.id),...row});
   return {...previous,cases:[...map.values()],sources:{...previous.sources,amazon:{...previous.sources?.amazon,
     name:'Amazon.co.jp',fetchedAt:b.finishedAt,verifiedCases:fresh.length,
     coverage:'既存watchとX候補ASINを商品詳細で独立2回確認。一致したREQUESTABLEのみ更新',
-    verification:'GitHub Actions Chromiumの商品詳細確認',lastRunNewAsins:fresh.filter(c=>!previous.cases.some(p=>p.id===c.id)).length}}};
+    verification,lastRunNewAsins:fresh.filter(c=>!previous.cases.some(p=>p.id===c.id)).length}}};
 }
 const here=fileURLToPath(import.meta.url);
 if(process.argv[1] && path.resolve(process.argv[1])===here) {
@@ -120,3 +121,4 @@ if(process.argv[1] && path.resolve(process.argv[1])===here) {
     }
   } else throw new Error('Usage: update-live.mjs all output snapshot pool');
 }
+
