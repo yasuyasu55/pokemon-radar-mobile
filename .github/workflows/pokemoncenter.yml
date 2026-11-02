@@ -1,9 +1,9 @@
 name: Verify and publish Pokemon Center delivery lotteries
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ['tools/pokemoncenter/**', 'tests/pokemoncenter.test.mjs', '.github/workflows/pokemoncenter.yml']
+  workflow_call:
+  schedule:
+    - cron: '5 23 * * *' # 08:05 JST, once daily
 permissions:
   contents: read
 concurrency:

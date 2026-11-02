@@ -1,0 +1,11 @@
+name: Initial Pokemon Center live verification
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/pokemoncenter-initial-check.yml']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  verify:
+    uses: ./.github/workflows/pokemoncenter.yml
