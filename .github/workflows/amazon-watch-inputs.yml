@@ -3,21 +3,13 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '57 21 * * *'
-  push:
-    branches: [main]
-    paths:
-      - 'data/snapshot.json'
-      - 'data/internal/amazon-asin-pool.json'
-      - 'tools/amazon-watch/**'
-      - 'tests/amazon-watch.test.mjs'
-      - '.github/workflows/amazon-watch-inputs.yml'
 
 permissions:
   contents: write
 
 concurrency:
-  group: amazon-watch-inputs
-  cancel-in-progress: true
+  group: otakara-publish
+  cancel-in-progress: false
 
 jobs:
   build:

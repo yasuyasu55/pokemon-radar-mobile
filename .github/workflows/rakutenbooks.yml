@@ -3,13 +3,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '11 22 * * *'
-  push:
-    branches: [main]
-    paths:
-      - 'tools/rakutenbooks/**'
-      - 'data/internal/rakutenbooks-watch-urls.json'
-      - 'tests/rakutenbooks.test.mjs'
-      - '.github/workflows/rakutenbooks.yml'
+
 permissions:
   contents: read
 concurrency:

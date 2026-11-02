@@ -3,20 +3,13 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '2 22 * * *'
-  push:
-    branches: [main]
-    paths:
-      - 'data/internal/x-social-discovery-config.json'
-      - 'tools/x-social-discovery/**'
-      - 'tests/x-social-discovery.test.mjs'
-      - '.github/workflows/x-social-discovery-inputs.yml'
 
 permissions:
   contents: write
 
 concurrency:
-  group: x-social-discovery-inputs
-  cancel-in-progress: true
+  group: otakara-publish
+  cancel-in-progress: false
 
 jobs:
   build:
