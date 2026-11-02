@@ -2,7 +2,7 @@ name: Collect X candidates and verify Amazon invitations
 on:
   workflow_dispatch:
   schedule:
-    - cron: '43 */2 * * *'
+    - cron: '43 22 * * *'
   # Production fetches run only on schedule or an explicit manual dispatch.
   # Code pushes must not immediately retry sites that just issued an access challenge.
 permissions:

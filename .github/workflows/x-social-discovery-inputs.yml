@@ -2,7 +2,7 @@ name: Build X social discovery inputs
 on:
   workflow_dispatch:
   schedule:
-    - cron: '37 */6 * * *'
+    - cron: '2 22 * * *'
   push:
     branches: [main]
     paths:
