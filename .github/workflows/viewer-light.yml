@@ -1,0 +1,25 @@
+name: Verify lightweight result viewer
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'app.mjs'
+      - 'personal.mjs'
+      - 'index.html'
+      - 'tests/viewer-light.cjs'
+      - '.github/workflows/viewer-light.yml'
+permissions:
+  contents: read
+jobs:
+  viewer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --package-lock=false playwright@1.55.0
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/viewer-light.cjs

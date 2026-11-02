@@ -40,7 +40,8 @@ export class PersonalStore{
    d=await r.json();if(!d.records||typeof d.records!=='object')throw new Error('invalid');
    this.data.records=d.records;this.overlay();
    this.message=Object.keys(this.data.pending).length?'未同期の変更があります':'同期済み · PC・スマホで共有';this.save();
-  }catch{this.message='同期できていません。通信回復後に再試行します。';this.overlay();this.save();}
+  }catch{this.message='同期できていません。「結果を更新」または「同期を再試行」を押してください。';this.overlay();this.save();}
   finally{this.busy=false;this.notify();}
  }
 }
+

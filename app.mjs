@@ -1,5 +1,5 @@
 import {NewCaseTracker} from './new-cases.mjs?v=1';
-import {PersonalStore,personalMatches,favoriteCases} from './personal.mjs?v=0113';
+import {PersonalStore,personalMatches,favoriteCases} from './personal.mjs?v=0114';
 import {AmazonPersonal,readCaptureHash} from './amazon-personal.mjs?v=0114';
 import {entryState,matches,safeUrl,deadlineDisplay} from './model.mjs?v=0112';
 const $=id=>document.getElementById(id);
@@ -262,6 +262,7 @@ async function refreshSnapshot(){
   $('source-updates').innerHTML='<table><thead><tr><th>情報源</th><th>データの最終反映</th></tr></thead><tbody>'+sourceRows+'</tbody></table>';
 
   if(changed)render();
+  return true;
  }catch{
   if(snapshot){$('data-notice').textContent='最新データを読み込めなかったため、表示中の情報を保持しています。各案件の取得日時をご確認ください。';}
   else{
@@ -269,12 +270,25 @@ async function refreshSnapshot(){
    const opened=[...$('cases').querySelectorAll('article details[open]')].map(d=>[d.closest('[data-id]').dataset.id,[...d.closest('article').querySelectorAll('details')].indexOf(d)]);
   $('cases').innerHTML='<div class="empty"><strong>取得済み情報を表示できません</strong><p>通信またはデータ読み込みに失敗しました。</p></div>';
   }
+  return false;
  }finally{refreshing=false;}
 }
-await refreshSnapshot();
-await personal.sync();
-await amazon.sync();
-setInterval(()=>{render();if(!document.hidden){personal.sync();amazon.sync();}},30000);
-setInterval(()=>{if(!document.hidden)refreshSnapshot();},300000);
-document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshSnapshot();personal.sync();amazon.sync();}});
+let updatingResults=false;
+async function updateResults(){
+ if(updatingResults)return;
+ updatingResults=true;
+ const button=$('refresh-results');button.disabled=true;
+ $('viewer-status').textContent='保存済みの結果を読み込んでいます…';
+ try{
+  const loaded=await refreshSnapshot();
+  await personal.sync();
+  await amazon.sync();
+  // Update deadlines on explicit refresh even when the saved data is unchanged.
+  render();
+  $('viewer-status').textContent=loaded?'結果表示時刻：'+time(new Date().toISOString())+' JST。自動通信・定期再描画は停止中。最新の受付状況は公式ページをご確認ください。':snapshot?'結果を更新できませんでした。前回の結果を保持しています。':'結果を読み込めませんでした。「結果を更新」で再試行してください。';
+ }finally{updatingResults=false;button.disabled=false;}
+}
+$('refresh-results').onclick=updateResults;
+await updateResults();
+
 
