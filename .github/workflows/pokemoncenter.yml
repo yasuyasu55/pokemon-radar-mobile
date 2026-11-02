@@ -30,6 +30,8 @@ jobs:
           sudo apt-get install -y tesseract-ocr tesseract-ocr-jpn python3-pil
       - run: node --test tests/*.test.mjs
       - name: Independent live fetch and OCR twice
+        id: collect
+        continue-on-error: true
         run: node tools/pokemoncenter/collect.mjs all "$RUNNER_TEMP/pokemoncenter"
       - name: Save structured evidence only
         if: always()
@@ -39,8 +41,15 @@ jobs:
           path: ${{ runner.temp }}/pokemoncenter/**/*.json
           retention-days: 7
       - name: Adopt only matching validated results
+        id: adopt
+        if: steps.collect.outcome == 'success'
         run: node tools/pokemoncenter/collect.mjs adopt "$RUNNER_TEMP/pokemoncenter" data/snapshot.json
-      - name: Commit validated snapshot
+      - name: Record attempt without replacing previous cases on failure
+        id: report
+        if: always() && (steps.collect.outcome == 'failure' || steps.adopt.outcome == 'success')
+        run: node tools/pokemoncenter/record-attempt.mjs "$RUNNER_TEMP/pokemoncenter" data/snapshot.json
+      - name: Commit validated snapshot and collection status
+        if: always() && steps.report.outcome == 'success'
         id: commit
         env:
           GH_TOKEN: ${{ github.token }}
@@ -49,12 +58,18 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/snapshot.json
           if git diff --cached --quiet; then echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"; exit 0; fi
-          git commit -m 'Add verified Pokemon Center delivery lotteries'
+          git commit -m 'Update Pokemon Center verification results and collection status'
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
           git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $AUTH" push origin HEAD:main
       - name: Confirm public data
+        if: always() && steps.commit.outcome == 'success'
         env:
           GH_TOKEN: ${{ github.token }}
           PUBLISHED_SHA: ${{ steps.commit.outputs.sha }}
         run: node tools/mobile/wait-publication.mjs "$PUBLISHED_SHA" data/snapshot.json
+      - name: Keep unsuccessful collection visible
+        if: always() && steps.collect.outcome == 'failure'
+        run: |
+          echo '::error::Pokemon Center collection failed. Previous cases were retained; see collection status and evidence.'
+          exit 1

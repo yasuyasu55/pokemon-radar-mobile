@@ -47,6 +47,7 @@ test('dry-run comparison requires independent successful live processes and equa
 });
 
 import {merge} from '../tools/pokemoncenter/collect.mjs';
+import {recordAttempt} from '../tools/pokemoncenter/record-attempt.mjs';
 import {entryState,matches} from '../model.mjs';
 function adoptionRuns(){
  const cases=parseTables(fixture,2026).map((c,i)=>({...c,id:'pokemoncenter:20260929:'+i,sourceId:'pokemoncenter',sourceUrl:'https://www.pokemoncenter-online.com/news/?id=20260929',receivingMethod:'DELIVERY',stores:[],conditions:['公式の応募枠の条件'],fetchedAt:'2026-10-11T00:00:00Z'}));
@@ -70,3 +71,23 @@ test('delivery lotteries appear in delivery filter but remain closed after actua
  for(const c of adoptionRuns()[0].cases){const now=Date.parse('2026-10-11T08:00:00+09:00');assert.equal(entryState(c,now),'closed');assert.equal(matches(c,{phases:[],receiving:['delivery'],store:''},Date.parse(c.entryPeriod.start.iso)+1000),true);assert.equal(matches(c,{phases:[],receiving:['delivery'],store:''},now),false);assert.equal(matches(c,{phases:['open'],receiving:['delivery'],store:''},now),false);assert.equal(matches(c,{phase:'all',receiving:['store'],store:''},now),false);}
 });
 
+test('blocked redirect records unknown availability and preserves cases and successful timestamp',()=>{
+ const previous={schemaVersion:1,cases:[{id:'old'}],sources:{pokemoncenter:{fetchedAt:'2026-10-11T00:00:00Z'},rakutenbooks:{fetchedAt:'2026-11-01T00:00:00Z'}}};
+ const original=JSON.stringify(previous);
+ const failure={ok:false,stage:'FETCH',finishedAt:'2026-11-02T08:36:09Z',error:'host blocked',ledger:[{errorKind:'REDIRECT_BLOCKED',finalUrl:'https://wr.pokemoncenter-online.com/?token=private'}]};
+ const next=recordAttempt(previous,[failure]);
+ assert.equal(next.sources.pokemoncenter.lastAttempt.status,'REDIRECT_BLOCKED');
+ assert.equal(next.sources.pokemoncenter.lastAttempt.redirectHost,'wr.pokemoncenter-online.com');
+ assert.match(next.sources.pokemoncenter.lastAttempt.message,/未確認/);
+ assert.equal(next.sources.pokemoncenter.fetchedAt,previous.sources.pokemoncenter.fetchedAt);
+ assert.deepEqual(next.cases,previous.cases);assert.deepEqual(next.sources.rakutenbooks,previous.sources.rakutenbooks);
+ assert.equal(JSON.stringify(previous),original);assert.ok(!JSON.stringify(next).includes('token='));
+});
+test('attempt success requires two independent equal runs; status does not adopt candidates',()=>{
+ const previous={schemaVersion:1,cases:[{id:'old'}]},[a,b]=adoptionRuns();
+ assert.equal(recordAttempt(previous,[a]).sources.pokemoncenter.lastAttempt.status,'FAILED');
+ assert.equal(recordAttempt(previous,[a,a]).sources.pokemoncenter.lastAttempt.status,'FAILED');
+ assert.equal(recordAttempt(previous,[a,b]).sources.pokemoncenter.lastAttempt.status,'VERIFIED');
+ assert.deepEqual(recordAttempt(previous,[a,b]).cases,previous.cases);
+ assert.throws(()=>recordAttempt(previous,[]));
+});

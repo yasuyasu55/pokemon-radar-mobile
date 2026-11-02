@@ -73,7 +73,7 @@ export async function collect(fetcher,ocr){
    applicationConditions:text.slice(text.indexOf('【応募枠の違いについて】'),text.indexOf('【商品の注文方法について')),
    stores:[],prices:[],conditions:[text.slice(text.indexOf('【応募枠の違いについて】'),text.indexOf('【商品の注文方法について'))],handoverRestrictions:[],webApplicationLabel:'商品ごとの応募ページURLは未確認',applicationNote:'案内ページを確認し、公式サイトの対象商品から応募してください。このリンクを開くだけでは応募されません。',resultNote:'マイページの抽選履歴・メールで確認',storeSelectionNote:'日本国内への配送。店頭への来店は不要',verification:'通常HTTPと日程画像OCRを独立2回照合',evidence:{entry:c.entryPeriod.raw,result:c.resultAnnouncement.raw,purchase:c.purchasePeriod.raw,receiving:['商品のお届け先は、日本国内に限らせていただきます。'],shipping:c.shippingPeriod.raw},unknowns:['あなたの本人認証・応募資格','商品ごとの応募ページURL'],fetchedAt:new Date().toISOString()}));
   return {ok:true,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),coverage:'公式トップから発見した最新のポケカ抽選案内1記事。画像の4項目表のみ対応',cases,rawTables,ledger};
- }catch(e){return {ok:false,mode:'LIVE',pid:process.pid,stage,error:e.message,cases:null,ledger};}
+ }catch(e){return {ok:false,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),stage,error:e.message,cases:null,ledger};}
 }
 function runOcr(body){
  const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'pco-ocr-'));
