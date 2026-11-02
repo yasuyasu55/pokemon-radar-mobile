@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {discover,extractCase,extractEntryCases,compare,merge,mergeOfficialCases} from '../tools/rakutenbooks/collect.mjs';
+import {discover,extractCase,extractEntryCases,compare,merge,mergeOfficialCases,collect,ENTRY,SEARCH,MAX_DETAILS} from '../tools/rakutenbooks/collect.mjs';
 import {entryState,matches} from '../model.mjs';
 
 const detail=(id='18595282',title='ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION')=>`<!doctype html><html><head><title>${title} - 楽天ブックス</title></head><body><h1>${title}</h1>
@@ -11,6 +11,40 @@ const detail=(id='18595282',title='ポケモンカードゲーム MEGA 拡張パ
 <p>※当落の結果は、販売開始日までにメールでご連絡します。</p>
 <h5>■抽選に関する注意事項</h5><p>エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。</p>
 <p>支払い方法、配送方法についてご確認ください。</p></body></html>`;
+
+function fakeFetcher(pages){
+ const calls=[];
+ const fetcher=async url=>{calls.push(url);const html=pages[url];return {ok:html!==undefined,status:html===undefined?503:200,requestedUrl:url,headers:{'content-type':'text/html; charset=utf-8'},body:Buffer.from(html??'unavailable')};};
+ return {fetcher,calls};
+}
+const link=id=>`<a href="https://books.rakuten.co.jp/rb/${id}/">ポケモンカード ${id}</a>`;
+test('entry links cannot suppress discovery of another product through search',async()=>{
+ const {fetcher,calls}=fakeFetcher({
+  'https://books.rakuten.co.jp/robots.txt':'User-agent: *\nAllow: /',
+  [ENTRY]:link('1'),[SEARCH]:link('2')+link('1'),
+  'https://books.rakuten.co.jp/rb/1/':detail('1'),
+  'https://books.rakuten.co.jp/rb/2/':detail('2','ポケモンカードゲーム MEGA 新商品')
+ });
+ const r=await collect(fetcher);
+ assert.equal(r.ok,true);assert.ok(calls.includes(SEARCH));
+ assert.ok(r.cases.some(c=>c.id==='rakutenbooks:2'));
+ assert.equal(calls.filter(u=>u==='https://books.rakuten.co.jp/rb/1/').length,1);
+});
+test('fixed watch URLs cannot consume all detail slots before discovered products',async()=>{
+ const watches=Array.from({length:40},(_,i)=>`https://books.rakuten.co.jp/rb/${i+10}/`);
+ const pages={'https://books.rakuten.co.jp/robots.txt':'User-agent: *\nAllow: /',[ENTRY]:link('10'),[SEARCH]:link('999')};
+ for(const url of [...watches,'https://books.rakuten.co.jp/rb/999/'])pages[url]=detail();
+ const {fetcher,calls}=fakeFetcher(pages);const r=await collect(fetcher,watches);
+ assert.equal(r.ok,true);
+ const details=calls.filter(u=>/\/rb\//.test(u));
+ assert.equal(details[0],'https://books.rakuten.co.jp/rb/999/');
+ assert.equal(details.length,MAX_DETAILS);
+ assert.equal(r.discoverySummary.skippedByLimit.length,11);
+});
+test('search access failure is unknown, not a successful old-entry-only discovery',async()=>{
+ const {fetcher}=fakeFetcher({'https://books.rakuten.co.jp/robots.txt':'User-agent: *\nAllow: /',[ENTRY]:link('1')});
+ const r=await collect(fetcher);assert.equal(r.ok,false);assert.equal(r.cases,null);assert.match(r.error,/503/);
+});
 
 test('older entry schedule does not hide the current product-detail lottery',()=>{
  const old={id:'rakutenbooks:title:old',title:'ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex【10パック】',entryPeriod:{end:{iso:'2026-01-26T11:59:00+09:00'}}};
@@ -100,4 +134,5 @@ test('official entry page can directly produce multiple stable delivery cases',(
  assert.equal(cases[0].receivingMethod,'DELIVERY');
  assert.equal(cases[0].sourceUrl,'https://books.rakuten.co.jp/event/game/card/entry/');
 });
+
 

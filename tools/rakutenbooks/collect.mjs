@@ -180,15 +180,26 @@ export async function collect(fetcher,extraUrls=[]){
   const entryHtml=await allowed(ENTRY);
   let entryCases=[];let entryParseError=null;
   try{entryCases=extractEntryCases(entryHtml,new Date().toISOString());}catch(e){entryParseError=e.message;}
-  let candidates=discover(entryHtml,ENTRY),discovery='OFFICIAL_LOTTERY_ENTRY_DIRECT';
-  if(!candidates.length){
-   const searchHtml=await allowed(SEARCH);
-   candidates=discover(searchHtml,SEARCH);discovery='OFFICIAL_ENTRY_PLUS_SEARCH';
-  }
+  // Search remains mandatory even when the entry page still links old products.
+  const entryCandidates=discover(entryHtml,ENTRY);
+  const searchCandidates=discover(await allowed(SEARCH),SEARCH);
+  const watchCandidates=[];
   for(const rawUrl of extraUrls){
    const c=discover(`<a href="${String(rawUrl).replace(/"/g,'&quot;')}"></a>`,ENTRY)[0];
-   if(c&&!candidates.some(x=>x.id===c.id))candidates.unshift(c);
+   if(c&&!watchCandidates.some(x=>x.id===c.id))watchCandidates.push(c);
   }
+  const knownIds=new Set(watchCandidates.map(c=>c.id));
+  const discovered=[...new Map([...entryCandidates,...searchCandidates].map(c=>[c.id,c])).values()];
+  const candidates=[...new Map([
+   ...discovered.filter(c=>!knownIds.has(c.id)),
+   ...discovered.filter(c=>knownIds.has(c.id)),
+   ...watchCandidates
+  ].map(c=>[c.id,c])).values()];
+  const discovery='OFFICIAL_ENTRY_AND_SEARCH';
+  const discoverySummary={entryLinks:entryCandidates.length,searchLinks:searchCandidates.length,watchLinks:watchCandidates.length,
+   total:candidates.length,checked:Math.min(candidates.length,MAX_DETAILS),
+   skippedByLimit:candidates.slice(MAX_DETAILS).map(c=>({id:c.id,url:c.url})),
+   notice:'検索リンクは候補のみ。新規公開件数ではありません。上限超過は未確認です。'};
   if(!candidates.length&&!entryCases.length)throw new Error('公式ページから商品候補を発見できません。0件とは扱いません');
   const parsed=[],rejected=[];
   for(const c of candidates.slice(0,MAX_DETAILS)){
@@ -198,8 +209,8 @@ export async function collect(fetcher,extraUrls=[]){
   const cases=mergeOfficialCases(entryCases,parsed);
   if(!cases.length)throw new Error('楽天ブックス抽選案件を確定できません');
   return {ok:true,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),
-   coverage:'楽天ブックス公式のポケモンカード抽選受付ページを直接案件化。受付ページの商品コード・抽選期間・当選連絡予定日を採用し、公式検索と商品詳細の抽選販売情報も補助的に統合',
-   discovery,candidates:candidates.length,entryCases:entryCases.length,entryParseError,checked:Math.min(candidates.length,MAX_DETAILS),cases,rejected,ledger};
+   coverage:'楽天ブックス公式の抽選受付ページと検索を毎回確認。発見候補を固定監視より優先し、商品詳細の抽選日程を照合。検索1ページ・詳細上限30件で、全商品の網羅ではありません',
+   discovery,discoverySummary,candidates:candidates.length,entryCases:entryCases.length,entryParseError,checked:Math.min(candidates.length,MAX_DETAILS),cases,rejected,ledger};
  }catch(e){return {ok:false,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),error:e.message,cases:null,ledger};}
 }
 const normalized=r=>JSON.stringify(r.cases.map(({fetchedAt,...c})=>c).sort((a,b)=>a.id.localeCompare(b.id)));
@@ -228,6 +239,7 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
   const r=await collect(createHttpsFetcher({allowedHosts:['books.rakuten.co.jp'],maxBytes:4*1024*1024,userAgent:'PokemonRadar/0.1 (+public lottery information check)'}),extra);
   fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,JSON.stringify(r,null,2)+'\n');
   console.log(JSON.stringify({ok:r.ok,pid:r.pid,discovery:r.discovery,candidates:r.candidates,checked:r.checked,cases:r.cases?.map(c=>({id:c.id,title:c.title,entryEnd:c.entryPeriod.end.iso,purchaseEnd:c.purchasePeriod?.end?.iso??null,shipping:c.shippingPeriod.raw}))??null,error:r.error,requests:r.ledger.map(x=>({url:x.requestedUrl,status:x.status,bytes:x.bytes,sha256:x.sha256}))}));
+  console.log(JSON.stringify({discoverySummary:r.discoverySummary??null,rejected:r.rejected??null}));
   process.exitCode=r.ok?0:10;
  }else if(action==='all'){
   fs.mkdirSync(target,{recursive:true});
@@ -249,4 +261,5 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
   console.log('楽天ブックス抽選 '+next.sources.rakutenbooks.verifiedCases+'件を照合・追加');
  }else throw new Error('run/all/adopt');
 }
+
 
