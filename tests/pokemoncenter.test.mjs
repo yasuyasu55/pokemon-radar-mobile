@@ -22,6 +22,26 @@ test('official image OCR: two products and all schedule endpoints match visual i
  assert.equal(c[0].entryPeriod.status,'INFERRED');
 });
 test('wrong publication year fails weekday validation',()=>assert.throws(()=>parseTables(fixture,2027)));
+test('2026-10-30 actual OCR: missing ポ requires exact product corroboration in official heading',()=>{
+ const raw=JSON.parse(fs.readFileSync(new URL('fixtures/pokemoncenter-20261030-ocr.json',import.meta.url),'utf8'));
+ assert.throws(()=>parseTables(raw,2026));
+ assert.throws(()=>parseTables(raw,2026,'ポケモンカードゲーム MEGA 拡張パック 別商品'));
+ const cases=parseTables(raw,2026,'ポケモンカードゲーム MEGA 拡張パック ハドウシーカーの追加抽選販売について');
+ assert.equal(cases[0].entryPeriod.start.iso,'2026-11-06T16:00:00+09:00');
+ assert.equal(cases[0].entryPeriod.end.iso,'2026-11-10T16:59:00+09:00');
+ assert.equal(cases[0].shippingPeriod.end.date,'2026-12-18');
+});
+test('unquoted official product heading is accepted without relaxing date verification',()=>{
+ const f=clone();f[0].title='■ポケモンカードゲーム MEGA 拡張パック ハドウシーカー';
+ assert.equal(parseTables(f,2026)[0].title,'ポケモンカードゲーム MEGA 拡張パック「ハドウシーカー」');
+ f[0].values[0]=f[0].alternate[0]='11月6日（木）16時00分～11月10日（火）16時59分';
+ assert.throws(()=>parseTables(f,2026));
+});
+test('unquoted ordinary goods and extra heading text remain rejected',()=>{
+ for(const title of ['ポケモンぬいぐるみ ハドウシーカー','ポケモンカードゲーム MEGA 拡張パック ハドウシーカー 抽選受付中']){
+  const f=clone();f[0].title=title;assert.throws(()=>parseTables(f,2026));
+ }
+});
 test('missing clock time is never supplemented',()=>{const f=clone();f[0].values[0]=f[0].alternate[0]='10月2日（金）〜10月5日（月）';assert.throws(()=>parseTables(f,2026));});
 test('missing first digit fails weekday validation',()=>{const f=clone();f[0].values[1]=f[0].alternate[1]='1月14日（水）15時00分以降';assert.throws(()=>parseTables(f,2026));});
 test('OCR date disagreement is rejected',()=>{const f=clone();f[0].alternate[0]=f[0].alternate[0].replace('16時59分','16時58分');assert.throws(()=>parseTables(f,2026));});

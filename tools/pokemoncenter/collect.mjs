@@ -26,10 +26,16 @@ export function scheduleImage(html,url){
  if(urls.length!==1||urls[0].origin!==new URL(ENTRY).origin||!urls[0].pathname.endsWith('.png'))throw new Error('日程表画像を一意に特定できません');
  return urls[0].href;
 }
-export function parseTables(tables,year){
+export function parseTables(tables,year,articleHeading=''){
  if(!Number.isInteger(year)||year<2020||year>2100||!tables.length)throw new Error('掲載年・表未取得');
  return tables.map(table=>{
-  const title=table.title.normalize('NFKC').match(/ポケモンカードゲーム\s*MEGA\s*拡張パック\s*「([^」]+)」/);
+  const normalized=table.title.normalize('NFKC').replace(/\s/g,'');
+  let title=normalized.match(/ポケモンカードゲームMEGA拡張パック(?:「([^」]+)」|([ァ-ヴー・A-Za-z0-9]+)$)/);
+  // OCR may merge the initial black square with ポ. Require the exact product name
+  // in both the image and the official article heading before repairing the prefix.
+  const product=normalized.match(/MEGA拡張パック([ァ-ヴー・A-Za-z0-9]+)$/)?.[1];
+  const heading=articleHeading.normalize('NFKC').replace(/[\s「」]/g,'');
+  if(!title&&product&&heading.includes('ポケモンカードゲームMEGA拡張パック'+product))title=[null,product];
   if(!title)throw new Error('商品名を読み取れません');
   if(table.labels.map(x=>x.replace(/\s/g,'')).join('|')!==LABELS.join('|'))throw new Error('日程ラベル不一致');
   const periods=table.values.map((raw,i)=>{
@@ -51,7 +57,7 @@ export function parseTables(tables,year){
    return {raw,start:resolved[0],end:resolved[1]??null,status:resolved.some(x=>x.inferredYear)?'INFERRED':'CONFIRMED',notBefore:i===1&&/以降/.test(raw)};
   });
   if(periods[0].end.iso>periods[1].start.iso||periods[1].start.iso>periods[2].start.iso)throw new Error('応募・発表・注文の順序不正');
-  return {title:'ポケモンカードゲーム MEGA 拡張パック「'+title[1]+'」',rawTitle:table.title,entryPeriod:periods[0],resultAnnouncement:periods[1],purchasePeriod:periods[2],shippingPeriod:periods[3]};
+  return {title:'ポケモンカードゲーム MEGA 拡張パック「'+(title[1]??title[2])+'」',rawTitle:table.title,entryPeriod:periods[0],resultAnnouncement:periods[1],purchasePeriod:periods[2],shippingPeriod:periods[3]};
  });
 }
 export async function collect(fetcher,ocr){
@@ -69,7 +75,7 @@ export async function collect(fetcher,ocr){
   const imageUrl=scheduleImage(html,news[0].url),img=await allowed(imageUrl);
   if(!/^image\/png/.test(img.headers['content-type']??''))throw new Error('画像Content-Type不正');
   stage='OCR';const rawTables=await ocr(img.body);stage='VERIFY';
-  const cases=parseTables(rawTables,Number(publication[1])).map(c=>({...c,id:'pokemoncenter:'+news[0].id+':'+encodeURIComponent(c.title),sourceId:'pokemoncenter',sourceName:'ポケモンセンターオンライン',publishedDate:publication.slice(1).join('-'),sourceUrl:news[0].url,scheduleImageUrl:imageUrl,receivingMethod:'DELIVERY',receivingLabel:'日本国内への配送',applicationMethod:'ポケモンセンターオンラインで応募',webApplicationUrl:null,
+  const cases=parseTables(rawTables,Number(publication[1]),htmlToText(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]||'')).map(c=>({...c,id:'pokemoncenter:'+news[0].id+':'+encodeURIComponent(c.title),sourceId:'pokemoncenter',sourceName:'ポケモンセンターオンライン',publishedDate:publication.slice(1).join('-'),sourceUrl:news[0].url,scheduleImageUrl:imageUrl,receivingMethod:'DELIVERY',receivingLabel:'日本国内への配送',applicationMethod:'ポケモンセンターオンラインで応募',webApplicationUrl:null,
    applicationConditions:text.slice(text.indexOf('【応募枠の違いについて】'),text.indexOf('【商品の注文方法について')),
    stores:[],prices:[],conditions:[text.slice(text.indexOf('【応募枠の違いについて】'),text.indexOf('【商品の注文方法について'))],handoverRestrictions:[],webApplicationLabel:'商品ごとの応募ページURLは未確認',applicationNote:'案内ページを確認し、公式サイトの対象商品から応募してください。このリンクを開くだけでは応募されません。',resultNote:'マイページの抽選履歴・メールで確認',storeSelectionNote:'日本国内への配送。店頭への来店は不要',verification:'通常HTTPと日程画像OCRを独立2回照合',evidence:{entry:c.entryPeriod.raw,result:c.resultAnnouncement.raw,purchase:c.purchasePeriod.raw,receiving:['商品のお届け先は、日本国内に限らせていただきます。'],shipping:c.shippingPeriod.raw},unknowns:['あなたの本人認証・応募資格','商品ごとの応募ページURL'],fetchedAt:new Date().toISOString()}));
   return {ok:true,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),coverage:'公式トップから発見した最新のポケカ抽選案内1記事。画像の4項目表のみ対応',cases,rawTables,ledger};
