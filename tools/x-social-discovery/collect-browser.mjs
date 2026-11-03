@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 import {BROWSER_HANDLES,normalizeVisiblePosts,ingestVisiblePosts} from './browser-candidates.mjs';
+import {readVisibleAccount} from './read-visible.mjs';
 
 const directory=process.argv[2]||'data/internal';
 const stateDir=path.join(process.env.LOCALAPPDATA||os.homedir(),'PokemonRadarCollector');
@@ -17,22 +18,11 @@ try{
  for(const handle of BROWSER_HANDLES){
   const page=await context.newPage();
   try{
-   await page.goto('https://x.com/'+handle,{waitUntil:'domcontentloaded',timeout:30000});
-   const cards=page.locator('article');
-   await cards.first().waitFor({state:'visible',timeout:20000});
-   // Only read the first rendered sample. No login automation, scrolling loops or hidden APIs.
-   const more=page.getByRole('button',{name:/^(Show more|さらに表示)$/});
-   for(let i=0,n=Math.min(await more.count(),8);i<n;i++){
-    const button=more.first();if(await button.isVisible())await button.click({timeout:2000});else break;
-   }
-   const rows=await cards.evaluateAll(es=>es.slice(0,20).map(e=>{
-    const root=e.closest('[data-href]')||e;
-    const status=e.querySelector('a[href*="/status/"]');
-    return {url:root.getAttribute('data-href')||status?.getAttribute('href'),text:e.innerText,postedAt:e.querySelector('time')?.getAttribute('datetime')||null,
-     urls:[...e.querySelectorAll('a[href]')].flatMap(a=>[a.getAttribute('title'),a.getAttribute('href')]).filter(x=>x?.startsWith('https://'))};
-   }));
+   const result=await readVisibleAccount(page,handle);
+   if(result.error){report.accounts.push({handle,status:'UNAVAILABLE',posts:0,error:result.error,stage:result.stage});continue;}
+   const rows=result.rows;
    const found=normalizeVisiblePosts(handle,rows);posts.push(...found);
-   report.accounts.push({handle,status:found.length?'VISIBLE_SAMPLE':'NO_POSTS_UNCONFIRMED',posts:found.length});
+   report.accounts.push({handle,status:found.length?'VISIBLE_SAMPLE':'NO_POSTS_UNCONFIRMED',posts:found.length,expansionIncomplete:result.expansionIncomplete});
   }catch(e){report.accounts.push({handle,status:'UNAVAILABLE',posts:0,error:e.name});}
   finally{await page.close();}
  }
