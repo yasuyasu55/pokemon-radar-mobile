@@ -1,7 +1,783 @@
 {
   "schemaVersion": 1,
   "policy": "candidate-only",
-  "amazon": [],
-  "official": [],
-  "review": []
+  "amazon": [
+    {
+      "canonicalUrl": "https://www.amazon.co.jp/dp/B0GXCRBL5J",
+      "asin": "B0GXCRBL5J",
+      "status": "candidate",
+      "verificationRequired": true,
+      "publishDirectly": false,
+      "source": "x-social",
+      "state": "new",
+      "evidence": [
+        {
+          "handle": "pokecasokuhou",
+          "postUrl": "https://x.com/pokecasokuhou/status/2061694631700799585",
+          "postedAt": null
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://www.amazon.co.jp/dp/B0H4PQ6LR5",
+      "asin": "B0H4PQ6LR5",
+      "status": "candidate",
+      "verificationRequired": true,
+      "publishDirectly": false,
+      "source": "x-social",
+      "state": "new",
+      "evidence": [
+        {
+          "handle": "pokecasokuhou",
+          "postUrl": "https://x.com/pokecasokuhou/status/2114585771139330495",
+          "postedAt": null
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://www.amazon.co.jp/dp/B0GXCM4BCZ",
+      "asin": "B0GXCM4BCZ",
+      "status": "candidate",
+      "verificationRequired": true,
+      "publishDirectly": false,
+      "source": "x-social",
+      "state": "new",
+      "evidence": [
+        {
+          "handle": "pokecasokuhou",
+          "postUrl": "https://x.com/pokecasokuhou/status/2063850615604978152",
+          "postedAt": null
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://www.amazon.co.jp/dp/B0GXCYMRGL",
+      "asin": "B0GXCYMRGL",
+      "status": "candidate",
+      "verificationRequired": true,
+      "publishDirectly": false,
+      "source": "x-social",
+      "state": "new",
+      "evidence": [
+        {
+          "handle": "pokecasokuhou",
+          "postUrl": "https://x.com/pokecasokuhou/status/2063850615604978152",
+          "postedAt": null
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://www.amazon.co.jp/dp/B0GP9QHQ3Y",
+      "asin": "B0GP9QHQ3Y",
+      "status": "candidate",
+      "verificationRequired": true,
+      "publishDirectly": false,
+      "source": "x-social",
+      "state": "new",
+      "evidence": [
+        {
+          "handle": "pokecasokuhou",
+          "postUrl": "https://x.com/pokecasokuhou/status/2046092214594679156",
+          "postedAt": null
+        }
+      ]
+    }
+  ],
+  "official": [
+    {
+      "canonicalUrl": "https://www.pokemoncenter-online.com/news/?id=20261030",
+      "status": "candidate",
+      "verificationRequired": true,
+      "publishDirectly": false,
+      "source": "x-social",
+      "state": "new",
+      "evidence": [
+        {
+          "handle": "lifeprep_list",
+          "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+          "postedAt": null
+        }
+      ]
+    }
+  ],
+  "review": [
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "pokecasokuhou",
+      "postUrl": "https://x.com/pokecasokuhou/status/2061694631700799585",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "pokecasokuhou",
+      "postUrl": "https://x.com/pokecasokuhou/status/2061694631700799585",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "pokecasokuhou",
+      "postUrl": "https://x.com/pokecasokuhou/status/2114585771139330495",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "pokecasokuhou",
+      "postUrl": "https://x.com/pokecasokuhou/status/2067836723795734746",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "pokecasokuhou",
+      "postUrl": "https://x.com/pokecasokuhou/status/2067836723795734746",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "pokecasokuhou",
+      "postUrl": "https://x.com/pokecasokuhou/status/2067836723795734746",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "pokecasokuhou",
+      "postUrl": "https://x.com/pokecasokuhou/status/2063850615604978152",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "pokecasokuhou",
+      "postUrl": "https://x.com/pokecasokuhou/status/2063850615604978152",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "pokecasokuhou",
+      "postUrl": "https://x.com/pokecasokuhou/status/2063850615604978152",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "pokecasokuhou",
+      "postUrl": "https://x.com/pokecasokuhou/status/2046092214594679156",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "pokecasokuhou",
+      "postUrl": "https://x.com/pokecasokuhou/status/2046092214594679156",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117453164500922378",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117455220691353892",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117455220691353892",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117455220691353892",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117455220691353892",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117455220691353892",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117455220691353892",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117455220691353892",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117274778050642103",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117274778050642103",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117274778050642103",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117274778050642103",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117274778050642103",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248509674229927",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248509674229927",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248509674229927",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248509674229927",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248509674229927",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248509674229927",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248509674229927",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248429349028041",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248429349028041",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248429349028041",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248429349028041",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248429349028041",
+      "postedAt": null
+    },
+    {
+      "reason": "unsupported-destination",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248429349028041",
+      "postedAt": null
+    },
+    {
+      "reason": "redirect-resolution-required",
+      "handle": "lifeprep_list",
+      "postUrl": "https://x.com/lifeprep_list/status/2117248429349028041",
+      "postedAt": null
+    }
+  ]
 }

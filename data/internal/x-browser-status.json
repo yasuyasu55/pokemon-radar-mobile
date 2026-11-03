@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-03T04:40:19.806Z",
+  "method": "pc-chrome-visible",
+  "coverage": "VISIBLE_SAMPLE_ONLY",
+  "publication": "candidate-only",
+  "accounts": [
+    {
+      "handle": "pokecamatomeru",
+      "status": "UNAVAILABLE",
+      "posts": 0,
+      "error": "TimeoutError"
+    },
+    {
+      "handle": "pokecasokuhou",
+      "status": "VISIBLE_SAMPLE",
+      "posts": 5
+    },
+    {
+      "handle": "lifeprep_list",
+      "status": "VISIBLE_SAMPLE",
+      "posts": 5
+    }
+  ],
+  "counts": {
+    "posts": 10,
+    "amazon": 5,
+    "official": 1,
+    "unresolved": 113,
+    "newAsins": 1
+  },
+  "status": "PARTIAL_OR_UNAVAILABLE"
+}
