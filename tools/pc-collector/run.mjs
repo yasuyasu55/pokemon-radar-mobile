@@ -30,6 +30,11 @@ try{
  else{
  const prior=read('data/snapshot.json');
  const evidence=fs.mkdtempSync(path.join(stateDir,'run-'));report.evidence=evidence;
+ try{
+  command(process.execPath,['tools/x-social-discovery/collect-browser.mjs','data/internal']);
+ }catch(e){report.errors.push('X visible sample incomplete; see x-browser-status.json');}
+ const xStatus='data/internal/x-browser-status.json';
+ if(fs.existsSync(xStatus))report.x=read(xStatus);
  console.log('Visible browser will check product pages. Do not click invitation or purchase buttons.');
  try{
   command(process.execPath,['tools/amazon-browser-probe/update-live.mjs','all',path.join(evidence,'amazon'),'data/snapshot.json','data/internal/amazon-asin-pool.json']);
@@ -46,6 +51,7 @@ try{
  const expected=after.cases.filter(c=>JSON.stringify(old.get(c.id))!==JSON.stringify(c));
  report.changedCases=expected.map(c=>({id:c.id,title:c.title,fetchedAt:c.fetchedAt,newId:!old.has(c.id)}));
  command('git',['add','--','data/snapshot.json','data/internal/amazon-asin-pool.json']);
+ for(const file of ['data/internal/x-candidates.json','data/internal/x-browser-status.json'])if(fs.existsSync(file))command('git',['add','--',file]);
  const diff=spawnSync('git',['diff','--cached','--quiet'],{cwd:root});
  if(diff.status===1){
   command('git',['-c','user.name=Pokemon Radar PC','-c','user.email=pokemon-radar-pc@users.noreply.github.com','commit','-m','Publish verified results from PC collectors']);
@@ -71,4 +77,3 @@ finally{
  console.log('Result file: '+reportPath);
  if(saveReport)console.log(JSON.stringify(report,null,2));
 }
-
