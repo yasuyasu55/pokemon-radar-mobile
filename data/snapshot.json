@@ -6092,11 +6092,11 @@
         }
       ],
       "lastAttempt": {
-        "checkedAt": "2026-11-02T08:36:09Z",
+        "checkedAt": "2026-11-03T03:54:28.123Z",
         "status": "FAILED",
-        "stage": "FETCH",
-        "message": "別ホスト（wr.pokemoncenter-online.com）への転送で取得停止。募集状況は未確認",
-        "runUrl": "https://github.com/yasuyasu55/pokemon-radar-mobile/actions/runs/41414197212"
+        "message": "商品名を読み取れません",
+        "stage": "VERIFY",
+        "runUrl": "https://github.com/yasuyasu55/pokemon-radar-mobile/actions/runs/41574925040"
       }
     },
     "rakutenbooks": {
