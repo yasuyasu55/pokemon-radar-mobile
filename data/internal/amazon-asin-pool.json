@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-03T04:47:03.069Z",
+  "updatedAt": "2026-11-04T02:41:52.979Z",
   "items": [
     {
       "asin": "B000WD3XBI",
@@ -1339,8 +1339,8 @@
       "asin": "B0GP9QHQ3Y",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-11-03T04:47:03.069Z",
-      "lastDiscoveryAt": "2026-11-03T04:47:03.069Z",
+      "lastSeenAt": "2026-11-04T02:41:52.979Z",
+      "lastDiscoveryAt": "2026-11-04T02:41:52.979Z",
       "lastCheckedAt": "2026-11-03T04:47:02.554Z",
       "title": "ポケモンカードゲーム MEGA 拡張パック アビスアイ BOX",
       "productKey": null,
@@ -1351,12 +1351,14 @@
         "watch-pool / ポケモンカード 招待",
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売",
         "watch-pool / ポケモンカード 抽選",
-        "x-browser"
+        "x-browser",
+        "x-social"
       ],
       "source": "amazon-search",
       "detailCandidate": false,
       "discoverySources": [
-        "x-browser"
+        "x-browser",
+        "x-social"
       ]
     },
     {
@@ -1413,8 +1415,8 @@
       "asin": "B0GXCM4BCZ",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:49:52.474Z",
-      "lastSeenAt": "2026-11-03T04:47:03.069Z",
-      "lastDiscoveryAt": "2026-11-03T04:47:03.069Z",
+      "lastSeenAt": "2026-11-04T02:41:52.979Z",
+      "lastDiscoveryAt": "2026-11-04T02:41:52.979Z",
       "lastCheckedAt": "2026-11-03T04:47:02.554Z",
       "title": null,
       "productKey": null,
@@ -1423,12 +1425,14 @@
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売",
         "watch-pool / ポケモンカード 招待 / ポケモン 招待販売",
         "watch-pool / ポケモンカード 抽選",
-        "x-browser"
+        "x-browser",
+        "x-social"
       ],
       "source": "amazon-search",
       "detailCandidate": true,
       "discoverySources": [
-        "x-browser"
+        "x-browser",
+        "x-social"
       ]
     },
     {
@@ -1454,8 +1458,8 @@
       "asin": "B0GXCRBL5J",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:52:55.985Z",
-      "lastSeenAt": "2026-11-03T04:47:03.069Z",
-      "lastDiscoveryAt": "2026-11-03T04:47:03.069Z",
+      "lastSeenAt": "2026-11-04T02:41:52.979Z",
+      "lastDiscoveryAt": "2026-11-04T02:41:52.979Z",
       "lastCheckedAt": "2026-11-03T04:47:02.554Z",
       "title": "ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION BOX",
       "productKey": null,
@@ -1465,12 +1469,14 @@
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売",
         "watch-pool / ポケモンカード 招待 / ポケモン 招待販売",
         "watch-pool / ポケモンカード 抽選",
-        "x-browser"
+        "x-browser",
+        "x-social"
       ],
       "source": "amazon-search",
       "detailCandidate": true,
       "discoverySources": [
-        "x-browser"
+        "x-browser",
+        "x-social"
       ]
     },
     {
@@ -1567,8 +1573,8 @@
       "asin": "B0GXCYMRGL",
       "state": "new",
       "firstSeenAt": "2026-10-14T03:49:52.474Z",
-      "lastSeenAt": "2026-11-03T04:47:03.069Z",
-      "lastDiscoveryAt": "2026-11-03T04:47:03.069Z",
+      "lastSeenAt": "2026-11-04T02:41:52.979Z",
+      "lastDiscoveryAt": "2026-11-04T02:41:52.979Z",
       "lastCheckedAt": "2026-11-03T04:47:02.554Z",
       "title": null,
       "productKey": null,
@@ -1577,12 +1583,14 @@
         "watch-pool / ポケモンカード 抽選 / ポケモンカード 招待 / ポケモン 招待販売",
         "watch-pool / ポケモンカード 招待 / ポケモン 招待販売",
         "watch-pool / ポケモンカード 抽選",
-        "x-browser"
+        "x-browser",
+        "x-social"
       ],
       "source": "amazon-search",
       "detailCandidate": true,
       "discoverySources": [
-        "x-browser"
+        "x-browser",
+        "x-social"
       ]
     },
     {
@@ -1623,19 +1631,21 @@
       "asin": "B0H4PQ6LR5",
       "state": "new",
       "firstSeenAt": "2026-11-03T04:40:28.109Z",
-      "lastSeenAt": "2026-11-03T04:47:03.069Z",
-      "lastDiscoveryAt": "2026-11-03T04:47:03.069Z",
+      "lastSeenAt": "2026-11-04T02:41:52.979Z",
+      "lastDiscoveryAt": "2026-11-04T02:41:52.979Z",
       "lastCheckedAt": "2026-11-03T04:47:02.554Z",
       "title": null,
       "productKey": null,
       "queries": [
         "x-browser",
         "watch-pool / ポケモンカード 抽選",
-        "watch-pool"
+        "watch-pool",
+        "x-social"
       ],
       "source": "x-browser",
       "discoverySources": [
-        "x-browser"
+        "x-browser",
+        "x-social"
       ],
       "detailCandidate": true
     },
