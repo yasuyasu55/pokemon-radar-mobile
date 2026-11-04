@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T03:06:30.111Z",
+  "generatedAt": "2026-11-04T01:43:43.006Z",
   "consumer": "CRAWL_STORM_X",
   "items": [
     {
@@ -9,7 +9,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-21T00:56:08.520Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B06X9GVD7J",
@@ -137,7 +137,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0BKGX74WP",
@@ -145,7 +145,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0BNKBBYK1",
@@ -161,7 +161,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0BNKCYCR8",
@@ -177,7 +177,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0BNZXM7CD",
@@ -185,7 +185,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0BNZYL56S",
@@ -313,7 +313,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0CMZQYKF6",
@@ -369,7 +369,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0D86FVG5R",
@@ -377,7 +377,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0DB56CSM6",
@@ -401,7 +401,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0DB7XZDL7",
@@ -409,7 +409,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0DG6PSWN1",
@@ -433,7 +433,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0DP4586RV",
@@ -441,7 +441,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0DP481Y24",
@@ -449,7 +449,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0DWV2N6JD",
@@ -473,7 +473,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0F18B4CVX",
@@ -481,7 +481,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0F18J2CJF",
@@ -489,7 +489,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0F9KJGGZ5",
@@ -497,7 +497,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0FG1WT6DV",
@@ -521,7 +521,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0FLD7HMRP",
@@ -529,7 +529,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0FSJXSPPX",
@@ -537,7 +537,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0FSKBY89D",
@@ -545,7 +545,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0FWB6WJN8",
@@ -569,7 +569,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0G2FVLXVL",
@@ -577,7 +577,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0G3XHTC4T",
@@ -609,7 +609,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0GP9QHQ3Y",
@@ -617,7 +617,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0GP9QQ1JG",
@@ -641,7 +641,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0GXCM4BCZ",
@@ -649,7 +649,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0GXCPF84C",
@@ -657,7 +657,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0GXCRBL5J",
@@ -665,7 +665,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0GXCSGX8Y",
@@ -673,7 +673,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0GXCT83HB",
@@ -681,7 +681,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0GXCTRZ8L",
@@ -689,7 +689,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0GXCX36HP",
@@ -697,7 +697,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0GXCX46KQ",
@@ -705,7 +705,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0GXCYMRGL",
@@ -713,7 +713,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0GXCZ1VDC",
@@ -721,7 +721,7 @@
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-11-01T06:51:25.443Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0H2C6NJVJ",
@@ -732,12 +732,20 @@
       "lastCheckedAt": "2026-10-29T06:28:28.858Z"
     },
     {
+      "asin": "B0H4PQ6LR5",
+      "url": "https://www.amazon.co.jp/dp/B0H4PQ6LR5",
+      "priority": 90,
+      "state": "new",
+      "productKey": null,
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
+    },
+    {
       "asin": "B0H7817G9M",
       "url": "https://www.amazon.co.jp/dp/B0H7817G9M",
       "priority": 90,
       "state": "new",
       "productKey": null,
-      "lastCheckedAt": "2026-10-14T23:28:42.018Z"
+      "lastCheckedAt": "2026-11-03T04:47:02.554Z"
     },
     {
       "asin": "B0H783FY5Z",
