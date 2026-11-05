@@ -6290,12 +6290,12 @@
         }
       ],
       "lastAttempt": {
-        "checkedAt": "2026-11-04T02:59:36.911Z",
-        "status": "VERIFIED",
-        "message": "独立2回の取得・照合成功",
-        "stage": "VERIFY",
-        "runUrl": "https://github.com/yasuyasu55/pokemon-radar-mobile/actions/runs/41764176961",
-        "verifiedCases": 1
+        "checkedAt": "2026-11-05T03:27:14.098Z",
+        "status": "REDIRECT_BLOCKED",
+        "message": "別ホストへの転送で取得停止。募集状況は未確認",
+        "stage": "FETCH",
+        "redirectHost": "wr.pokemoncenter-online.com",
+        "runUrl": "https://github.com/yasuyasu55/pokemon-radar-mobile/actions/runs/41961657883"
       }
     },
     "rakutenbooks": {
