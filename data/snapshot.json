@@ -7021,12 +7021,12 @@
         }
       ],
       "lastAttempt": {
-        "checkedAt": "2026-11-08T02:22:17.731Z",
+        "checkedAt": "2026-11-09T02:36:00.848Z",
         "status": "REDIRECT_BLOCKED",
         "message": "別ホストへの転送で取得停止。募集状況は未確認",
         "stage": "FETCH",
         "redirectHost": "wr.pokemoncenter-online.com",
-        "runUrl": "https://github.com/yasuyasu55/pokemon-radar-mobile/actions/runs/42438230596"
+        "runUrl": "https://github.com/yasuyasu55/pokemon-radar-mobile/actions/runs/42551805793"
       }
     },
     "rakutenbooks": {
