@@ -10,7 +10,31 @@ import {createHash} from 'node:crypto';
 export const ENTRY='https://books.rakuten.co.jp/event/game/card/entry/';
 export const ENTRY_LEGACY='https://books.rakuten.co.jp/event/game/card/entry/index-sp.html?slide=modal';
 export const SEARCH='https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8';
-export const MAX_DETAILS=30;
+export const MAX_DETAILS=60;
+export function searchUrls(){
+ const urls=[SEARCH];
+ for(let page=2;page<=3;page++){const u=new URL(SEARCH);u.searchParams.set('p',String(page));urls.push(u.href);}
+ for(const term of ['ポケモンカード ハドウシーカー','ポケモンカード スペシャルデッキセット','ポケモンカード スターターセット']){
+  const u=new URL(SEARCH);u.searchParams.set('sitem',term);urls.push(u.href);
+ }
+ return urls;
+}
+// Interleave discovery with continuous watches so neither can starve the other.
+// Rotate the bounded backlog by JST date, identically for both verification passes.
+export function selectTargets(discovered,watches,day=new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Tokyo'})){
+ const unique=xs=>[...new Map(xs.map(x=>[x.id,x])).values()];
+ const known=unique(watches),ids=new Set(known.map(x=>x.id));
+ const fresh=unique(discovered).filter(x=>!ids.has(x.id));
+ const rotate=xs=>{if(xs.length<=MAX_DETAILS/2)return xs;const offset=(Math.floor(Date.parse(day+'T00:00:00Z')/86400000)*Math.floor(MAX_DETAILS/2))%xs.length;return [...xs.slice(offset),...xs.slice(0,offset)];};
+ const a=rotate(fresh),b=rotate(known),out=[];
+ for(let i=0;i<Math.max(a.length,b.length);i++){if(a[i])out.push(a[i]);if(b[i])out.push(b[i]);}
+ return {selected:out.slice(0,MAX_DETAILS),deferred:out.slice(MAX_DETAILS)};
+}
+export function entrySignature(c){return JSON.stringify([c.entryPeriod?.start?.iso??null,c.entryPeriod?.end?.iso??null]);}
+export function rememberWatch(previous,run){
+ const urls=[...(previous?.urls??[]),...run.cases.map(c=>c.sourceUrl),...(run.discoverySummary?.skippedByLimit??[]).map(c=>c.url)];
+ return {...previous,schemaVersion:1,policy:'detail-page-verification-required',urls:[...new Set(urls.filter(u=>/^https:\/\/books\.rakuten\.co\.jp\/rb\/\d+\/$/.test(u)))]};
+}
 
 function labelOf(a){
  const alt=[...(a.rawInner??'').matchAll(/\balt=["']([^"']+)["']/gi)].map(m=>m[1]).join(' ');
@@ -182,23 +206,25 @@ export async function collect(fetcher,extraUrls=[]){
   try{entryCases=extractEntryCases(entryHtml,new Date().toISOString());}catch(e){entryParseError=e.message;}
   // Search remains mandatory even when the entry page still links old products.
   const entryCandidates=discover(entryHtml,ENTRY);
-  const searchCandidates=discover(await allowed(SEARCH),SEARCH);
+  const searchCandidates=[],searches=[],warnings=[];
+  if(!entryCandidates.length)warnings.push('ENTRY_NO_PRODUCT_LINKS');
+  for(const url of searchUrls()){
+   try{const found=discover(await allowed(url),url);searchCandidates.push(...found);searches.push({url,status:'SUCCESS',links:found.length});}
+   catch(e){searches.push({url,status:'FAILED',error:e.message});warnings.push('SEARCH_FETCH_FAILED');}
+  }
+  if(searches.every(s=>s.status==='FAILED'))throw new Error('全検索経路の取得失敗。募集なしとは判定できません');
   const watchCandidates=[];
   for(const rawUrl of extraUrls){
    const c=discover(`<a href="${String(rawUrl).replace(/"/g,'&quot;')}"></a>`,ENTRY)[0];
    if(c&&!watchCandidates.some(x=>x.id===c.id))watchCandidates.push(c);
   }
-  const knownIds=new Set(watchCandidates.map(c=>c.id));
   const discovered=[...new Map([...entryCandidates,...searchCandidates].map(c=>[c.id,c])).values()];
-  const candidates=[...new Map([
-   ...discovered.filter(c=>!knownIds.has(c.id)),
-   ...discovered.filter(c=>knownIds.has(c.id)),
-   ...watchCandidates
-  ].map(c=>[c.id,c])).values()];
+  const plan=selectTargets(discovered,watchCandidates);
+  const candidates=[...plan.selected,...plan.deferred];
   const discovery='OFFICIAL_ENTRY_AND_SEARCH';
   const discoverySummary={entryLinks:entryCandidates.length,searchLinks:searchCandidates.length,watchLinks:watchCandidates.length,
    total:candidates.length,checked:Math.min(candidates.length,MAX_DETAILS),
-   skippedByLimit:candidates.slice(MAX_DETAILS).map(c=>({id:c.id,url:c.url})),
+   searches,warnings,skippedByLimit:plan.deferred.map(c=>({id:c.id,url:c.url})),
    notice:'検索リンクは候補のみ。新規公開件数ではありません。上限超過は未確認です。'};
   if(!candidates.length&&!entryCases.length)throw new Error('公式ページから商品候補を発見できません。0件とは扱いません');
   const parsed=[],rejected=[];
@@ -209,7 +235,7 @@ export async function collect(fetcher,extraUrls=[]){
   const cases=mergeOfficialCases(entryCases,parsed);
   if(!cases.length)throw new Error('楽天ブックス抽選案件を確定できません');
   return {ok:true,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),
-   coverage:'楽天ブックス公式の抽選受付ページと検索を毎回確認。発見候補を固定監視より優先し、商品詳細の抽選日程を照合。検索1ページ・詳細上限30件で、全商品の網羅ではありません',
+   coverage:'楽天ブックス公式の抽選受付ページと検索を毎回確認。発見候補を固定監視より優先し、商品詳細の抽選日程を照合。検索最大6ページ・詳細上限60件で、全商品の網羅ではありません',
    discovery,discoverySummary,candidates:candidates.length,entryCases:entryCases.length,entryParseError,checked:Math.min(candidates.length,MAX_DETAILS),cases,rejected,ledger};
  }catch(e){return {ok:false,mode:'LIVE',pid:process.pid,finishedAt:new Date().toISOString(),error:e.message,cases:null,ledger};}
 }
@@ -226,8 +252,16 @@ export function merge(previous,a,b){
   if(c.sourceId!=='rakutenbooks'||!/^rakutenbooks:(?:\d+|title:[a-f0-9]{16})$/.test(c.id)||ids.has(c.id)||new URL(c.sourceUrl).origin!=='https://books.rakuten.co.jp'||c.receivingMethod!=='DELIVERY'||!c.entryPeriod?.end?.iso||(!c.id.startsWith('rakutenbooks:title:')&&!c.purchasePeriod?.end?.iso)||!c.conditions?.length)throw new Error('採用項目不正');
   ids.add(c.id);
  }
+ const oldById=new Map(previous.cases.map(c=>[c.id,c]));
+ const changes={new:[],reopened:[],rechecked:[]};
+ const adopted=b.cases.map(c=>{
+  const old=oldById.get(c.id),reopened=!!old&&entrySignature(old)!==entrySignature(c);
+  const kind=!old?'new':reopened?'reopened':'rechecked';changes[kind].push({id:c.id,title:c.title});
+  return {...structuredClone(c),firstPublishedAt:old?.firstPublishedAt??(!old?b.finishedAt:null),
+   ...(reopened?{reopenedAt:b.finishedAt}:old?.reopenedAt?{reopenedAt:old.reopenedAt}:{})};
+ });
  const kept=previous.cases.filter(c=>!ids.has(c.id)).map(c=>c.sourceId==='rakutenbooks'?{...c,retainedFromPrevious:true}:c);
- return {...previous,cases:[...kept,...b.cases],sources:{...(previous.sources??{}),rakutenbooks:{name:'楽天ブックス',fetchedAt:b.finishedAt,coverage:b.coverage,verifiedCases:b.cases.length,discovery:b.discovery,evidence:[a,b].map(r=>({pid:r.pid,requests:r.ledger.map(e=>({url:e.requestedUrl,status:e.status,bytes:e.bytes,sha256:e.sha256,contentType:e.headers?.['content-type']}))}))}}};
+ return {...previous,cases:[...kept,...adopted],sources:{...(previous.sources??{}),rakutenbooks:{name:'楽天ブックス',fetchedAt:b.finishedAt,coverage:b.coverage,verifiedCases:b.cases.length,discovery:b.discovery,discoverySummary:b.discoverySummary,changes,checkedAt:b.finishedAt,coverageStatus:(b.discoverySummary?.warnings?.length||b.discoverySummary?.skippedByLimit?.length||b.rejected?.some(c=>/HTTP|timeout|DNS|TLS|robots/.test(c.reason)))?'PARTIAL':'VERIFIED',evidence:[a,b].map(r=>({pid:r.pid,requests:r.ledger.map(e=>({url:e.requestedUrl,status:e.status,bytes:e.bytes,sha256:e.sha256,contentType:e.headers?.['content-type']}))}))}}};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  const [action,target]=process.argv.slice(2);
@@ -258,6 +292,9 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
   const snapshot=process.argv[4],read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
   const next=merge(read(snapshot),read(path.join(target,'run-1.json')),read(path.join(target,'run-2.json')));
   fs.writeFileSync(snapshot+'.tmp',JSON.stringify(next,null,2)+'\n');fs.renameSync(snapshot+'.tmp',snapshot);
+  const watchPath='data/internal/rakutenbooks-watch-urls.json';
+  const watch=fs.existsSync(watchPath)?read(watchPath):{urls:[]};
+  fs.writeFileSync(watchPath,JSON.stringify(rememberWatch(watch,read(path.join(target,'run-2.json'))),null,2)+'\n');
   console.log('楽天ブックス抽選 '+next.sources.rakutenbooks.verifiedCases+'件を照合・追加');
  }else throw new Error('run/all/adopt');
 }

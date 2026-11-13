@@ -50,7 +50,7 @@ try{
  const after=read('data/snapshot.json'),old=new Map(prior.cases.map(c=>[c.id,c]));
  const expected=after.cases.filter(c=>JSON.stringify(old.get(c.id))!==JSON.stringify(c));
  report.changedCases=expected.map(c=>({id:c.id,title:c.title,fetchedAt:c.fetchedAt,newId:!old.has(c.id)}));
- command('git',['add','--','data/snapshot.json','data/internal/amazon-asin-pool.json']);
+ command('git',['add','--','data/snapshot.json','data/internal/amazon-asin-pool.json','data/internal/rakutenbooks-watch-urls.json']);
  for(const file of ['data/internal/x-candidates.json','data/internal/x-browser-status.json'])if(fs.existsSync(file))command('git',['add','--',file]);
  const diff=spawnSync('git',['diff','--cached','--quiet'],{cwd:root});
  if(diff.status===1){

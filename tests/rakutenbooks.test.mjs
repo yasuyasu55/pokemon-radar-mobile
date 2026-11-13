@@ -31,7 +31,7 @@ test('entry links cannot suppress discovery of another product through search',a
  assert.equal(calls.filter(u=>u==='https://books.rakuten.co.jp/rb/1/').length,1);
 });
 test('fixed watch URLs cannot consume all detail slots before discovered products',async()=>{
- const watches=Array.from({length:40},(_,i)=>`https://books.rakuten.co.jp/rb/${i+10}/`);
+ const watches=Array.from({length:70},(_,i)=>`https://books.rakuten.co.jp/rb/${i+10}/`);
  const pages={'https://books.rakuten.co.jp/robots.txt':'User-agent: *\nAllow: /',[ENTRY]:link('10'),[SEARCH]:link('999')};
  for(const url of [...watches,'https://books.rakuten.co.jp/rb/999/'])pages[url]=detail();
  const {fetcher,calls}=fakeFetcher(pages);const r=await collect(fetcher,watches);
@@ -43,7 +43,7 @@ test('fixed watch URLs cannot consume all detail slots before discovered product
 });
 test('search access failure is unknown, not a successful old-entry-only discovery',async()=>{
  const {fetcher}=fakeFetcher({'https://books.rakuten.co.jp/robots.txt':'User-agent: *\nAllow: /',[ENTRY]:link('1')});
- const r=await collect(fetcher);assert.equal(r.ok,false);assert.equal(r.cases,null);assert.match(r.error,/503/);
+ const r=await collect(fetcher);assert.equal(r.ok,false);assert.equal(r.cases,null);assert.match(r.error,/全検索経路/);
 });
 
 test('older entry schedule does not hide the current product-detail lottery',()=>{
@@ -136,3 +136,41 @@ test('official entry page can directly produce multiple stable delivery cases',(
 });
 
 
+
+import {searchUrls,selectTargets,rememberWatch,entrySignature} from '../tools/rakutenbooks/collect.mjs';
+test('discovery reaches page 2 and named product searches while recording broken routes',async()=>{
+ const urls=searchUrls();assert.equal(urls.length,6);assert.equal(new URL(urls[1]).searchParams.get('p'),'2');
+ const pages={'https://books.rakuten.co.jp/robots.txt':'User-agent: *\nAllow: /',[ENTRY]:'<p>抽選受付ページ</p>'};
+ for(const u of urls)pages[u]='<p>なし</p>';
+ pages[urls[1]]=link('18664603');pages[urls[3]]=link('18664602');
+ pages['https://books.rakuten.co.jp/rb/18664603/']=detail('1','ポケモンカードゲーム MEGA ハドウシーカー');
+ pages['https://books.rakuten.co.jp/rb/18664602/']=detail('2','ポケモンカードゲーム MEGA スペシャルデッキセット');
+ delete pages[urls[5]];
+ const r=await collect(fakeFetcher(pages).fetcher);
+ assert.equal(r.ok,true);assert.equal(r.cases.length,2);
+ assert.ok(r.discoverySummary.warnings.includes('ENTRY_NO_PRODUCT_LINKS'));
+ assert.ok(r.discoverySummary.warnings.includes('SEARCH_FETCH_FAILED'));
+ assert.equal(r.discoverySummary.searches.filter(s=>s.status==='FAILED').length,1);
+});
+test('large discovery and watch queues both get slots and rotate without silently losing the backlog',()=>{
+ const group=(prefix)=>Array.from({length:90},(_,i)=>({id:prefix+i,url:'https://books.rakuten.co.jp/rb/'+i+'/'}));
+ const plan=selectTargets(group('d'),group('w'),'2026-11-13');
+ assert.equal(plan.selected.length,MAX_DETAILS);assert.equal(plan.deferred.length,180-MAX_DETAILS);
+ assert.equal(plan.selected.filter(c=>c.id.startsWith('w')).length,MAX_DETAILS/2);
+ assert.deepEqual(plan,selectTargets(group('d'),group('w'),'2026-11-13'));
+ assert.notDeepEqual(plan.selected,selectTargets(group('d'),group('w'),'2026-11-14').selected);
+});
+test('verified and deferred canonical products persist for next runs, excluding affiliate or other hosts',()=>{
+ const run={cases:[{sourceUrl:'https://books.rakuten.co.jp/rb/2/'},{sourceUrl:ENTRY}],discoverySummary:{skippedByLimit:[{url:'https://books.rakuten.co.jp/rb/3/'},{url:'https://evil.example/rb/4/'}]}};
+ assert.deepEqual(rememberWatch({urls:['https://books.rakuten.co.jp/rb/1/']},run).urls,[1,2,3].map(id=>'https://books.rakuten.co.jp/rb/'+id+'/'));
+});
+test('reopened periods are distinct from rechecks and retain first publication date',()=>{
+ const [a,b]=runs(),prior={schemaVersion:1,cases:[]};
+ const first=merge(prior,a,b);assert.equal(first.sources.rakutenbooks.changes.new.length,1);
+ const same=merge(first,a,b);assert.equal(same.sources.rakutenbooks.changes.rechecked.length,1);
+ for(const r of [a,b]){r.cases[0].entryPeriod.end.iso='2026-11-18T23:59:00+09:00';r.finishedAt='2026-11-13T01:00:00Z';}
+ const next=merge(first,a,b);assert.equal(next.sources.rakutenbooks.changes.reopened.length,1);
+ assert.equal(next.cases[0].firstPublishedAt,first.cases[0].firstPublishedAt);
+ assert.equal(next.cases[0].reopenedAt,b.finishedAt);
+ assert.notEqual(entrySignature(first.cases[0]),entrySignature(next.cases[0]));
+});

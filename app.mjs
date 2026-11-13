@@ -1,4 +1,4 @@
-import {NewCaseTracker} from './new-cases.mjs?v=1';
+import {NewCaseTracker} from './new-cases.mjs?v=2';
 import {PersonalStore,personalMatches,favoriteCases} from './personal.mjs?v=0114';
 import {AmazonPersonal,readCaptureHash} from './amazon-personal.mjs?v=0114';
 import {entryState,matches,safeUrl,deadlineDisplay} from './model.mjs?v=0112';
@@ -217,7 +217,7 @@ function renderCards(container,cases,now,empty){
  const opened=[...container.querySelectorAll('article details[open]')].map(d=>[d.closest('[data-id]').dataset.id,[...d.closest('article').querySelectorAll('details')].indexOf(d)]);
  const rendered=[];const failed=[];
  for(const c of cases){
-  try{rendered.push(card(c,now).replace('<h3>','<h3>'+(newCases.has(c.id)?'<span class="badge">NEW・前回確認後に追加</span> ':'')));}
+  try{rendered.push(card(c,now).replace('<h3>','<h3>'+(newCases.has(c.id)?'<span class="badge">'+(newCases.isReopened(c.id)?'再募集・応募期間変更':'NEW・前回確認後に追加')+'</span> ':c.reopenedAt&&now-Date.parse(c.reopenedAt)<7*86400000?'<span class="badge">再募集・応募期間変更</span> ':'')));}
   catch(e){failed.push(c?.id??'unknown');console.error('POKEMON RADAR card render failed',c?.id,e);}
  }
  container.innerHTML=rendered.length?rendered.join('')+(failed.length?'<div class="empty"><strong>'+failed.length+'件は表示情報不足で保留しました</strong><p>他の案件は通常どおり表示しています。</p></div>':''):(cases.length?'<div class="empty"><strong>案件データの表示に失敗しました</strong><p>データ自体は取得済みです。再読み込みしてください。</p></div>':empty);
@@ -232,7 +232,7 @@ function render(){
   updateSharePanel();
   const newCount=(snapshot?.cases??[]).filter(c=>newCases.has(c.id)&&entryState(c,now)!=='closed').length;
   $('new-count').textContent=String(newCount);
-  $('new-help').textContent=newCases.available?'この端末で初回表示した案件を基準に、その後初めて掲載された案件。再取得では増えません。締切済みは件数から除外します。':'端末に記録を保存できません。再起動後の新規判定は保持できません。';
+  $('new-help').textContent=newCases.available?'この端末で初回表示した案件を基準に、その後初めて掲載された案件と応募期間が変わった再募集。再取得だけでは増えません。締切済みは件数から除外します。':'端末に記録を保存できません。再起動後の新規判定は保持できません。';
   $('open-count').textContent=snapshot?snapshot.cases.filter(c=>['open','soon'].includes(entryState(c,now))).length:'未確認';
   $('soon-count').textContent=snapshot?snapshot.cases.filter(c=>entryState(c,now)==='soon').length:'未確認';
   const sources=[...new Set((snapshot?.cases??[]).map(c=>c.sourceId||'otakara'))];
@@ -257,7 +257,7 @@ async function refreshSnapshot(){
   const changed=JSON.stringify(next)!==JSON.stringify(snapshot);snapshot=next;newCases.update(next.cases);
   $('data-notice').textContent='情報源ごとの最終反映日時を下に表示しています。画面の読み込み成功や再取得は、新規案件の追加を意味しません。';
   const formatAt=iso=>{const d=new Date(iso);return Number.isFinite(d.getTime())?new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(d)+' JST':'未記録';};
-  const sourceRows=Object.values(snapshot.sources??{}).map(s=>'<tr><th scope="row">'+esc(s.name??'情報源')+'</th><td>'+esc(formatAt(s.fetchedAt))+(s.lastAttempt?'<br><small>'+esc(s.lastAttempt.message)+'（確認：'+esc(formatAt(s.lastAttempt.checkedAt))+'）</small>':'')+'</td></tr>').join('');
+  const sourceRows=Object.values(snapshot.sources??{}).map(s=>'<tr><th scope="row">'+esc(s.name??'情報源')+'</th><td>'+esc(formatAt(s.fetchedAt))+(s.changes?'<br><small>今回追加 '+s.changes.new.length+'件・再募集 '+s.changes.reopened.length+'件・再確認 '+s.changes.rechecked.length+'件</small>':'')+(s.discoverySummary?'<br><small>確認 '+s.discoverySummary.checked+'件・上限で未確認 '+s.discoverySummary.skippedByLimit.length+'件'+(s.coverageStatus==='PARTIAL'?'／一部の発見経路に不足あり':'')+'</small>':'')+(s.lastAttempt?'<br><small>'+esc(s.lastAttempt.message)+'（確認：'+esc(formatAt(s.lastAttempt.checkedAt))+'）</small>':'')+'</td></tr>').join('');
   $('source-updates').innerHTML='<table><thead><tr><th>情報源</th><th>データの最終反映・取得状況</th></tr></thead><tbody>'+sourceRows+'</tbody></table>';
 
   if(changed)render();
