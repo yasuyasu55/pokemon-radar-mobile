@@ -3,6 +3,9 @@
   "verifiedUrlDate": "2026-10-14",
   "policy": "detail-page-verification-required",
   "urls": [
+    "https://books.rakuten.co.jp/rb/18664603/",
+    "https://books.rakuten.co.jp/rb/18664602/",
+    "https://books.rakuten.co.jp/rb/18596838/",
     "https://books.rakuten.co.jp/rb/18595282/",
     "https://books.rakuten.co.jp/rb/18595457/",
     "https://books.rakuten.co.jp/rb/18595283/",
@@ -15,5 +18,7 @@
     "https://books.rakuten.co.jp/rb/18669675/",
     "https://books.rakuten.co.jp/rb/18771764/",
     "https://books.rakuten.co.jp/rb/18450269/"
-  ]
+  ],
+  "candidateUrlsAddedAt": "2026-11-13",
+  "candidateUrlNote": "ユーザー提供の商品URL3件を追加。案件公開には既存の独立2回の商品詳細確認が必要。"
 }
