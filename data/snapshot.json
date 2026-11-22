@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "appVersion": "0.1.12",
   "sourceId": "otakarasouko-group",
-  "evidenceRunId": "44860038869",
-  "fetchedAt": "2026-11-21T03:14:42.728Z",
+  "evidenceRunId": "44975280380",
+  "fetchedAt": "2026-11-22T02:16:39.566Z",
   "updateMode": "毎日7:17ごろ（日本時間）に自動更新・検証失敗時は前回データを保持",
   "liveRunsVerified": 2,
   "fetchEvidence": [
     {
-      "startedAt": "2026-11-21T03:14:08.997Z",
-      "finishedAt": "2026-11-21T03:14:15.844Z",
+      "startedAt": "2026-11-22T02:16:06.205Z",
+      "finishedAt": "2026-11-22T02:16:12.870Z",
       "requests": [
         {
           "stage": "robots",
@@ -25,8 +25,8 @@
           "url": "https://www.otakarasouko.com/new_information/",
           "finalUrl": "https://www.otakarasouko.com/new_information/",
           "status": 200,
-          "bytes": 79162,
-          "sha256": "e8f1218dd5c39b28b6786a873faa616d7e476d0d9518eae1f5f9e5f30cbb625d",
+          "bytes": 79535,
+          "sha256": "b8db046a953ca59417c53f95b6b7473a616696c66acec37abfc69885d1fca43c",
           "contentType": "text/html; charset=UTF-8"
         },
         {
@@ -34,15 +34,15 @@
           "url": "https://www.otakarasouko.com/information/109459977/",
           "finalUrl": "https://www.otakarasouko.com/information/109459977/",
           "status": 200,
-          "bytes": 96603,
-          "sha256": "60dcfe599872ad97d31341fb774826fd451ff5daa802346fc9f01576355ac1f0",
+          "bytes": 96976,
+          "sha256": "320d60f55e1da4a84c0092879887dd608bbe832e606b87989262e265619f33a5",
           "contentType": "text/html; charset=UTF-8"
         }
       ]
     },
     {
-      "startedAt": "2026-11-21T03:14:35.944Z",
-      "finishedAt": "2026-11-21T03:14:42.728Z",
+      "startedAt": "2026-11-22T02:16:32.946Z",
+      "finishedAt": "2026-11-22T02:16:39.566Z",
       "requests": [
         {
           "stage": "robots",
@@ -58,8 +58,8 @@
           "url": "https://www.otakarasouko.com/new_information/",
           "finalUrl": "https://www.otakarasouko.com/new_information/",
           "status": 200,
-          "bytes": 79162,
-          "sha256": "e8f1218dd5c39b28b6786a873faa616d7e476d0d9518eae1f5f9e5f30cbb625d",
+          "bytes": 79535,
+          "sha256": "b8db046a953ca59417c53f95b6b7473a616696c66acec37abfc69885d1fca43c",
           "contentType": "text/html; charset=UTF-8"
         },
         {
@@ -67,8 +67,8 @@
           "url": "https://www.otakarasouko.com/information/109459977/",
           "finalUrl": "https://www.otakarasouko.com/information/109459977/",
           "status": 200,
-          "bytes": 96603,
-          "sha256": "60dcfe599872ad97d31341fb774826fd451ff5daa802346fc9f01576355ac1f0",
+          "bytes": 96976,
+          "sha256": "320d60f55e1da4a84c0092879887dd608bbe832e606b87989262e265619f33a5",
           "contentType": "text/html; charset=UTF-8"
         }
       ]
@@ -80,7 +80,7 @@
       "title": "【アプリ会員様限定】ポケモンカードゲーム「拡張パック ハドウシーカー」抽選販売に関して",
       "sourceName": "お宝創庫グループ",
       "sourceUrl": "https://www.otakarasouko.com/information/109459977/",
-      "fetchedAt": "2026-11-21T03:14:41.652Z",
+      "fetchedAt": "2026-11-22T02:16:38.567Z",
       "publishedDate": "2026-11-19",
       "entryPeriod": {
         "start": {
@@ -5965,7 +5965,8 @@
         "result": "当選発表 2026年11月20日(金) 18時以降順次 ご本人様確認について お申込みいただき当選されたご本人様以外の販売はいたしかねます。 また、商品受け取りの際、全てのお客様に店頭にてご登録いただいた顔写真付きのご本人確認書類をご提示いただきます。 ご本人様確認は、お申し込み時に入力いただいている情報とご本人様確認書類に基づき確認いたします。 一致しない場合ならびに不備があった場合は購入をお断りさせていただきます。 【ご本人様確認書類として認められるもの】​ (1)パスポート+ 住所確認書類 (2)運転免許証​(マイナ運転免許証は不可)​",
         "purchase": "商品受取り日程 2026年11月27日(金)~2026年12月6日(日) ※お受け取り時間は、10時~22時30分 ※おひとり様、それぞれ1日程までのお申込みとなります。 お申込み 応募受付期間 2026年11月6日(金)10:00~2026年11月8日(日)23:59 申込みはこちら 当選発表 2026年11月20日(金) 18時以降順次"
       },
-      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "shibuya-tsutaya:2715",
@@ -6111,7 +6112,8 @@
         "result": "当選発表 2026年10月9日(金) 18時以降順次 ご本人様確認について お申込みいただき当選されたご本人様以外の販売はいたしかねます。 また、商品受け取りの際、全てのお客様に店頭にてご登録いただいた顔写真付きのご本人確認書類をご提示いただきます。 ご本人様確認は、お申し込み時に入力いただいている情報とご本人様確認書類に基づき確認いたします。 一致しない場合ならびに不備があった場合は購入をお断りさせていただきます。 【ご本人様確認書類として認められるもの】​ (1)パスポート+ 住所確認書類 (2)運転免許証​(マイナ運転免許証は不可)​",
         "purchase": "商品受取り日程 2026年10月16日(金)~2026年10月25日(日) ※お受け取り時間は、10時~22時30分 ※おひとり様、それぞれ1日程までのお申込みとなります。 お申込み 応募受付期間 2026年9月25日(金) 10:00 ~ 2026年9月27日(日) 23:59 申込みはこちら 当選発表 2026年10月9日(金) 18時以降順次"
       },
-      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "shibuya-tsutaya:2596",
@@ -6258,7 +6260,8 @@
         "result": "当選発表 2026年9月8日(火) 18時以降順次 ご本人様確認について お申込みいただき当選されたご本人様以外の販売はいたしかねます。 また、商品受け取りの際、全てのお客様に店頭にてご登録いただいた顔写真付きのご本人確認書類をご提示いただきます。 ご本人様確認は、お申し込み時に入力いただいている情報とご本人様確認書類に基づき確認いたします。 一致しない場合ならびに不備があった場合は購入をお断りさせていただきます。 【ご本人様確認書類として認められるもの】​ (1)パスポート+ 住所確認書類 (2)運転免許証​(マイナ運転免許証は不可)​",
         "purchase": "商品受取り日程 2026年9月16日(水)~2026年9月23日(水) ※お受け取り時間は、10時~22時30分 ※おひとり様、それぞれ1日程までのお申込みとなります。 お申込み 応募受付期間 2026年8月28日(金)10:00~2026年8月30日(日)23:59 申込みはこちら 当選発表 2026年9月8日(火) 18時以降順次"
       },
-      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "shibuya-tsutaya:2356",
@@ -6405,7 +6408,8 @@
         "result": "当選発表 2026年7月24日(金) 18時以降順次 ご本人様確認について お申込みいただき当選されたご本人様以外の販売はいたしかねます。 また、商品受け取りの際、全てのお客様に店頭にてご登録いただいた顔写真付きのご本人確認書類をご提示いただきます。 ご本人様確認は、お申し込み時に入力いただいている情報とご本人様確認書類に基づき確認いたします。 一致しない場合ならびに不備があった場合は購入をお断りさせていただきます。 【ご本人様確認書類として認められるもの】​ (1)パスポート+ 住所確認書類 (2)運転免許証​(マイナ運転免許証は不可)​",
         "purchase": "商品受取り日程 2026年7月31日(金)~2026年8月2日(日) ※お受け取り時間は、10時~22時30分 ※おひとり様、それぞれ1日程までのお申込みとなります。 お申込み 応募受付期間 2026年7月10日(金)10:00~2026年7月12日(日)23:59 ▼お申し込みはこちら▼ 拡張パック ストームエメラルダ スターターセットex イーブイex"
       },
-      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "shibuya-tsutaya:2085",
@@ -6550,7 +6554,8 @@
         "result": "当選発表 2026年5月15日(金) 18時以降順次 ご本人様確認について お申込みいただき当選されたご本人様以外の販売はいたしかねます。 また、商品受け取りの際、全てのお客様に店頭にてご登録いただいた顔写真付きのご本人確認書類をご提示いただきます。 ご本人様確認は、お申し込み時に入力いただいている情報とご本人様確認書類に基づき確認いたします。 一致しない場合ならびに不備があった場合は購入をお断りさせていただきます。 【ご本人様確認書類として認められるもの】​ (1)パスポート+ 住所確認書類 (2)運転免許証​",
         "purchase": "商品受取り日程 2026年5月22日(金)~2026年5月24日(日) 2026年5月29日(金)~2026年5月31日(日) ※お受け取り時間は、10時~22時30分 ※おひとり様、1日程までのお申込みとなります。 お申込み 応募受付期間 2026年5月1日(金)10:00~2026年5月3日(日)23:59 申込みはこちら 当選発表"
       },
-      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+      "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18182237",
@@ -6698,7 +6703,8 @@
         ]
       },
       "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": null,
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18182238",
@@ -6846,7 +6852,8 @@
         ]
       },
       "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": null,
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18537143",
@@ -6994,7 +7001,8 @@
         ]
       },
       "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": "2026-11-13T02:00:35.948Z"
+      "firstPublishedAt": "2026-11-13T02:00:35.948Z",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18669675",
@@ -7142,7 +7150,8 @@
         ]
       },
       "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": null,
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18771764",
@@ -7290,7 +7299,8 @@
         ]
       },
       "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": null,
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:title:5f71ed9314e62cde",
@@ -7388,7 +7398,8 @@
         "productTitle": "ポケモンカードゲーム MEGA スタートデッキ100 バトルコレクション 10個セット"
       },
       "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": null,
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:title:6bdd5960809a3b57",
@@ -7486,7 +7497,8 @@
         "productTitle": "ポケモンカードゲーム MEGA 拡張パック インフェルノX【30パック】"
       },
       "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": null,
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:title:add75e344a1811aa",
@@ -7584,7 +7596,8 @@
         "productTitle": "ポケモンカードゲーム MEGA スペシャルカードセット メガエルレイドex"
       },
       "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": null,
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:title:d5fb54605dab01f1",
@@ -7682,7 +7695,8 @@
         "productTitle": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex【10パック】"
       },
       "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": null,
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:title:ffb58507c878c43a",
@@ -7780,7 +7794,8 @@
         "productTitle": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ【30パック】"
       },
       "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": null,
+      "retainedFromPrevious": true
     }
   ],
   "sources": {
