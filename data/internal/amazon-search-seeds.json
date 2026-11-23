@@ -1,32 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-22T01:41:57.011Z",
+  "generatedAt": "2026-11-23T02:01:28.272Z",
   "recentClosedDays": 14,
   "seeds": [
-    {
-      "id": "seed:d6bc9addc8b90041",
-      "query": "11月27日(金)発売 MEGA 拡張パック ハドウシーカー 受付の",
-      "kind": "case-derived",
-      "caseIds": [
-        "geo:789"
-      ],
-      "sourceIds": [
-        "geo"
-      ],
-      "priority": 100
-    },
-    {
-      "id": "seed:ae39718dc0b97f0b",
-      "query": "11月27日(金)発売 MEGA 拡張パック ハドウシーカー 受付の 招待",
-      "kind": "case-derived",
-      "caseIds": [
-        "geo:789"
-      ],
-      "sourceIds": [
-        "geo"
-      ],
-      "priority": 100
-    },
     {
       "id": "seed:6ffc835d43743498",
       "query": "30thセレブレーション",
@@ -448,30 +424,6 @@
       "priority": 100
     },
     {
-      "id": "seed:ab61b6d457c27081",
-      "query": "MEGA 拡張パック 30th CELEBRATION 商品 受付の",
-      "kind": "case-derived",
-      "caseIds": [
-        "geo:790"
-      ],
-      "sourceIds": [
-        "geo"
-      ],
-      "priority": 100
-    },
-    {
-      "id": "seed:d6cb9e9f55a1da6f",
-      "query": "MEGA 拡張パック 30th CELEBRATION 商品 受付の 招待",
-      "kind": "case-derived",
-      "caseIds": [
-        "geo:790"
-      ],
-      "sourceIds": [
-        "geo"
-      ],
-      "priority": 100
-    },
-    {
       "id": "seed:08ea80f24727eefc",
       "query": "MEGA 拡張パック 30th CELEBRATION 招待",
       "kind": "case-derived",
@@ -633,13 +585,11 @@
       "kind": "case-derived",
       "caseIds": [
         "pokemoncenter:20261030:%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0%20MEGA%20%E6%8B%A1%E5%BC%B5%E3%83%91%E3%83%83%E3%82%AF%E3%80%8C%E3%83%8F%E3%83%89%E3%82%A6%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%E3%80%8D",
-        "rakutenbooks:18664603",
-        "shibuya-tsutaya:2853"
+        "rakutenbooks:18664603"
       ],
       "sourceIds": [
         "pokemoncenter",
-        "rakutenbooks",
-        "shibuya-tsutaya"
+        "rakutenbooks"
       ],
       "priority": 100
     },
@@ -673,13 +623,11 @@
       "kind": "case-derived",
       "caseIds": [
         "pokemoncenter:20261030:%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0%20MEGA%20%E6%8B%A1%E5%BC%B5%E3%83%91%E3%83%83%E3%82%AF%E3%80%8C%E3%83%8F%E3%83%89%E3%82%A6%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%E3%80%8D",
-        "rakutenbooks:18664603",
-        "shibuya-tsutaya:2853"
+        "rakutenbooks:18664603"
       ],
       "sourceIds": [
         "pokemoncenter",
-        "rakutenbooks",
-        "shibuya-tsutaya"
+        "rakutenbooks"
       ],
       "priority": 100
     },
@@ -849,26 +797,6 @@
       "sourceIds": [
         "rakutenbooks"
       ],
-      "priority": 100
-    },
-    {
-      "id": "seed:83432dfc4ff9a4cf",
-      "query": "スペシャルデッキセットMEGA メガオーダイル・メガカイリュー・メガゲンガー",
-      "kind": "case-derived",
-      "caseIds": [
-        "otakarasouko:107350222"
-      ],
-      "sourceIds": [],
-      "priority": 100
-    },
-    {
-      "id": "seed:58a18483d6cdca51",
-      "query": "スペシャルデッキセットMEGA メガオーダイル・メガカイリュー・メガゲンガー 招待",
-      "kind": "case-derived",
-      "caseIds": [
-        "otakarasouko:107350222"
-      ],
-      "sourceIds": [],
       "priority": 100
     },
     {
