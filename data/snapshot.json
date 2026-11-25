@@ -7977,11 +7977,11 @@
         }
       ],
       "lastAttempt": {
-        "checkedAt": "2026-11-24T06:55:52.897Z",
+        "checkedAt": "2026-11-25T05:23:59.378Z",
         "status": "FAILED",
         "message": "商品名を読み取れません",
         "stage": "VERIFY",
-        "runUrl": "https://github.com/yasuyasu55/pokemon-radar-mobile/actions/runs/45344070488"
+        "runUrl": "https://github.com/yasuyasu55/pokemon-radar-mobile/actions/runs/45553255212"
       }
     },
     "rakutenbooks": {
