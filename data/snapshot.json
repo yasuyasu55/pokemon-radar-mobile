@@ -4930,154 +4930,6 @@
       "retainedFromPrevious": true
     },
     {
-      "id": "rakutenbooks:18664602",
-      "sourceId": "rakutenbooks",
-      "genre": "pokemon-card",
-      "title": "ポケモンカードゲーム MEGA スペシャルデッキセットMEGA メガオーダイル・メガカイリュー・メガゲンガー",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/rb/18664602/",
-      "fetchedAt": "2026-11-25T04:54:45.550Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
-        "start": {
-          "raw": "2026/11/13(金) 10:00",
-          "iso": "2026-11-13T10:00:00+09:00",
-          "date": "2026-11-13",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/11/18(水) 23:59",
-          "iso": "2026-11-18T23:59:00+09:00",
-          "date": "2026-11-18",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "水",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "start": {
-          "raw": "2026/11/29(日) 10:00",
-          "iso": "2026-11-29T10:00:00+09:00",
-          "date": "2026-11-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": false,
-        "notAfter": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
-        ]
-      },
-      "purchasePeriod": {
-        "found": true,
-        "raw": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
-        "start": {
-          "raw": "2026/11/29(日) 10:00",
-          "iso": "2026-11-29T10:00:00+09:00",
-          "date": "2026-11-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/12/03(木) 23:59",
-          "iso": "2026-12-03T23:59:00+09:00",
-          "date": "2026-12-03",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "shippingPeriod": {
-        "raw": "2026年11月下旬発送",
-        "start": null,
-        "end": null,
-        "approximate": true,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "発送予定の原文を保持。日付範囲は推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックスで抽選エントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18664602/",
-      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
-      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
-      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)",
-        "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
-        "お届け先について",
-        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-        "支払い方法、配送方法について",
-        "当選時の支払い方法はクレジットカード決済のみとなります。",
-        "以下の支払い方法、配送方法はご利用いただけません。",
-        "・支払い方法:代金引換",
-        "住所登録が不十分な場合はエントリーができません。",
-        "抽選に当選された場合、エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当落メールの正確な送信時刻"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
-        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "purchase": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
-        "receiving": [
-          "発送予定日:2026年11月下旬発送",
-          "お届け先について",
-          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-          "支払い方法、配送方法について",
-          "当選時の配送方法は宅配・ポスト投函のみとなります。",
-          "以下の支払い方法、配送方法はご利用いただけません。",
-          "・配送方法:コンビニ店頭受取、郵便局受取",
-          "発送予定: 2026年11月下旬発送"
-        ]
-      },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": "2026-11-13T02:00:35.948Z",
-      "retainedFromPrevious": true
-    },
-    {
       "id": "rakutenbooks:18664603",
       "sourceId": "rakutenbooks",
       "genre": "pokemon-card",
@@ -5371,7 +5223,8 @@
         ]
       },
       "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": null,
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18182238",
@@ -5519,155 +5372,8 @@
         ]
       },
       "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": null
-    },
-    {
-      "id": "rakutenbooks:18537078",
-      "sourceId": "rakutenbooks",
-      "genre": "pokemon-card",
-      "title": "ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/rb/18537078/",
-      "fetchedAt": "2026-11-26T04:09:28.142Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
-        "start": {
-          "raw": "2026/11/13(金) 10:00",
-          "iso": "2026-11-13T10:00:00+09:00",
-          "date": "2026-11-13",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/11/18(水) 23:59",
-          "iso": "2026-11-18T23:59:00+09:00",
-          "date": "2026-11-18",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "水",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "start": {
-          "raw": "2026/11/29(日) 10:00",
-          "iso": "2026-11-29T10:00:00+09:00",
-          "date": "2026-11-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": false,
-        "notAfter": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
-        ]
-      },
-      "purchasePeriod": {
-        "found": true,
-        "raw": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
-        "start": {
-          "raw": "2026/11/29(日) 10:00",
-          "iso": "2026-11-29T10:00:00+09:00",
-          "date": "2026-11-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/12/03(木) 23:59",
-          "iso": "2026-12-03T23:59:00+09:00",
-          "date": "2026-12-03",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "shippingPeriod": {
-        "raw": "2026年11月下旬発送",
-        "start": null,
-        "end": null,
-        "approximate": true,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "発送予定の原文を保持。日付範囲は推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックスで抽選エントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18537078/",
-      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
-      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
-      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)",
-        "※ご注文後に商品のキャンセルはできません。",
-        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
-        "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
-        "お届け先について",
-        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-        "支払い方法、配送方法について",
-        "当選時の支払い方法はクレジットカード決済のみとなります。",
-        "以下の支払い方法、配送方法はご利用いただけません。",
-        "・支払い方法:代金引換",
-        "住所登録が不十分な場合はエントリーができません。"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当落メールの正確な送信時刻"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
-        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "purchase": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
-        "receiving": [
-          "発送予定日:2026年11月下旬発送",
-          "お届け先について",
-          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-          "支払い方法、配送方法について",
-          "当選時の配送方法は宅配・ポスト投函のみとなります。",
-          "以下の支払い方法、配送方法はご利用いただけません。",
-          "・配送方法:コンビニ店頭受取、郵便局受取",
-          "発送予定: 2026年11月下旬発送"
-        ]
-      },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": null,
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18537143",
@@ -5815,303 +5521,8 @@
         ]
       },
       "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": "2026-11-13T02:00:35.948Z"
-    },
-    {
-      "id": "rakutenbooks:18595282",
-      "sourceId": "rakutenbooks",
-      "genre": "pokemon-card",
-      "title": "ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/rb/18595282/",
-      "fetchedAt": "2026-11-26T04:09:26.377Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
-        "start": {
-          "raw": "2026/11/13(金) 10:00",
-          "iso": "2026-11-13T10:00:00+09:00",
-          "date": "2026-11-13",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/11/18(水) 23:59",
-          "iso": "2026-11-18T23:59:00+09:00",
-          "date": "2026-11-18",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "水",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "start": {
-          "raw": "2026/11/29(日) 10:00",
-          "iso": "2026-11-29T10:00:00+09:00",
-          "date": "2026-11-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": false,
-        "notAfter": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
-        ]
-      },
-      "purchasePeriod": {
-        "found": true,
-        "raw": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
-        "start": {
-          "raw": "2026/11/29(日) 10:00",
-          "iso": "2026-11-29T10:00:00+09:00",
-          "date": "2026-11-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/12/03(木) 23:59",
-          "iso": "2026-12-03T23:59:00+09:00",
-          "date": "2026-12-03",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "shippingPeriod": {
-        "raw": "2026年11月下旬発送",
-        "start": null,
-        "end": null,
-        "approximate": true,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "発送予定の原文を保持。日付範囲は推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックスで抽選エントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18595282/",
-      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
-      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
-      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)",
-        "※ご注文後に商品のキャンセルはできません。",
-        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
-        "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
-        "お届け先について",
-        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-        "支払い方法、配送方法について",
-        "当選時の支払い方法はクレジットカード決済のみとなります。",
-        "以下の支払い方法、配送方法はご利用いただけません。",
-        "・支払い方法:代金引換",
-        "住所登録が不十分な場合はエントリーができません。"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当落メールの正確な送信時刻"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
-        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "purchase": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
-        "receiving": [
-          "発送予定日:2026年11月下旬発送",
-          "お届け先について",
-          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-          "支払い方法、配送方法について",
-          "当選時の配送方法は宅配・ポスト投函のみとなります。",
-          "以下の支払い方法、配送方法はご利用いただけません。",
-          "・配送方法:コンビニ店頭受取、郵便局受取",
-          "発送予定: 2026年11月下旬発送"
-        ]
-      },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": null
-    },
-    {
-      "id": "rakutenbooks:18595457",
-      "sourceId": "rakutenbooks",
-      "genre": "pokemon-card",
-      "title": "【セット商品】ポケモンカードゲーム MEGA 30th CELEBRATION カードセット 9種",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/rb/18595457/",
-      "fetchedAt": "2026-11-26T04:09:27.058Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
-        "start": {
-          "raw": "2026/11/13(金) 10:00",
-          "iso": "2026-11-13T10:00:00+09:00",
-          "date": "2026-11-13",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/11/18(水) 23:59",
-          "iso": "2026-11-18T23:59:00+09:00",
-          "date": "2026-11-18",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "水",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "start": {
-          "raw": "2026/11/29(日) 10:00",
-          "iso": "2026-11-29T10:00:00+09:00",
-          "date": "2026-11-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": false,
-        "notAfter": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
-        ]
-      },
-      "purchasePeriod": {
-        "found": true,
-        "raw": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
-        "start": {
-          "raw": "2026/11/29(日) 10:00",
-          "iso": "2026-11-29T10:00:00+09:00",
-          "date": "2026-11-29",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "日",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/12/03(木) 23:59",
-          "iso": "2026-12-03T23:59:00+09:00",
-          "date": "2026-12-03",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "木",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "shippingPeriod": {
-        "raw": "2026年11月下旬発送",
-        "start": null,
-        "end": null,
-        "approximate": true,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "発送予定の原文を保持。日付範囲は推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックスで抽選エントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18595457/",
-      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
-      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
-      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)",
-        "※ご注文後に商品のキャンセルはできません。",
-        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
-        "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
-        "お届け先について",
-        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-        "支払い方法、配送方法について",
-        "当選時の支払い方法はクレジットカード決済のみとなります。",
-        "以下の支払い方法、配送方法はご利用いただけません。",
-        "・支払い方法:代金引換",
-        "住所登録が不十分な場合はエントリーができません。"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当落メールの正確な送信時刻"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
-        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
-        "purchase": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
-        "receiving": [
-          "発送予定日:2026年11月下旬発送",
-          "お届け先について",
-          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
-          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
-          "支払い方法、配送方法について",
-          "当選時の配送方法は宅配・ポスト投函のみとなります。",
-          "以下の支払い方法、配送方法はご利用いただけません。",
-          "・配送方法:コンビニ店頭受取、郵便局受取",
-          "発送予定: 2026年11月下旬発送"
-        ]
-      },
-      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": "2026-11-13T02:00:35.948Z",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18596838",
@@ -6259,7 +5670,8 @@
         ]
       },
       "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": "2026-11-13T02:00:35.948Z"
+      "firstPublishedAt": "2026-11-13T02:00:35.948Z",
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18669675",
@@ -6407,7 +5819,8 @@
         ]
       },
       "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": null,
+      "retainedFromPrevious": true
     },
     {
       "id": "rakutenbooks:18771764",
@@ -6555,497 +5968,8 @@
         ]
       },
       "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
-      "firstPublishedAt": null
-    },
-    {
-      "id": "rakutenbooks:title:5f71ed9314e62cde",
-      "sourceId": "rakutenbooks",
-      "title": "ポケモンカードゲーム MEGA スタートデッキ100 バトルコレクション 10個セット",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-11-26T04:09:20.691Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "start": {
-          "raw": "2026/1/23(金) 10:00",
-          "iso": "2026-01-23T10:00:00+09:00",
-          "date": "2026-01-23",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/1/26(月) 11:59",
-          "iso": "2026-01-26T11:59:00+09:00",
-          "date": "2026-01-26",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "月",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "start": {
-          "raw": "2026/2/6(金)",
-          "iso": null,
-          "date": "2026-02-06",
-          "timeUnconfirmed": true,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
-        ]
-      },
-      "purchasePeriod": null,
-      "shippingPeriod": {
-        "raw": "当選者のみにご案内いたします。",
-        "start": null,
-        "end": null,
-        "approximate": false,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "当選者への案内のみ。発送日を推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
-      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
-      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当選メールの正確な送信時刻",
-        "商品発送の具体的な日付"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "shipping": "当選者のみにご案内いたします。",
-        "productTitle": "ポケモンカードゲーム MEGA スタートデッキ100 バトルコレクション 10個セット"
-      },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "firstPublishedAt": null
-    },
-    {
-      "id": "rakutenbooks:title:6bdd5960809a3b57",
-      "sourceId": "rakutenbooks",
-      "title": "ポケモンカードゲーム MEGA 拡張パック インフェルノX【30パック】",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-11-26T04:09:20.691Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "start": {
-          "raw": "2026/1/23(金) 10:00",
-          "iso": "2026-01-23T10:00:00+09:00",
-          "date": "2026-01-23",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/1/26(月) 11:59",
-          "iso": "2026-01-26T11:59:00+09:00",
-          "date": "2026-01-26",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "月",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "start": {
-          "raw": "2026/2/6(金)",
-          "iso": null,
-          "date": "2026-02-06",
-          "timeUnconfirmed": true,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
-        ]
-      },
-      "purchasePeriod": null,
-      "shippingPeriod": {
-        "raw": "当選者のみにご案内いたします。",
-        "start": null,
-        "end": null,
-        "approximate": false,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "当選者への案内のみ。発送日を推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
-      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
-      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当選メールの正確な送信時刻",
-        "商品発送の具体的な日付"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "shipping": "当選者のみにご案内いたします。",
-        "productTitle": "ポケモンカードゲーム MEGA 拡張パック インフェルノX【30パック】"
-      },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "firstPublishedAt": null
-    },
-    {
-      "id": "rakutenbooks:title:add75e344a1811aa",
-      "sourceId": "rakutenbooks",
-      "title": "ポケモンカードゲーム MEGA スペシャルカードセット メガエルレイドex",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-11-26T04:09:20.691Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "start": {
-          "raw": "2026/1/23(金) 10:00",
-          "iso": "2026-01-23T10:00:00+09:00",
-          "date": "2026-01-23",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/1/26(月) 11:59",
-          "iso": "2026-01-26T11:59:00+09:00",
-          "date": "2026-01-26",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "月",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "start": {
-          "raw": "2026/2/6(金)",
-          "iso": null,
-          "date": "2026-02-06",
-          "timeUnconfirmed": true,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
-        ]
-      },
-      "purchasePeriod": null,
-      "shippingPeriod": {
-        "raw": "当選者のみにご案内いたします。",
-        "start": null,
-        "end": null,
-        "approximate": false,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "当選者への案内のみ。発送日を推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
-      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
-      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当選メールの正確な送信時刻",
-        "商品発送の具体的な日付"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "shipping": "当選者のみにご案内いたします。",
-        "productTitle": "ポケモンカードゲーム MEGA スペシャルカードセット メガエルレイドex"
-      },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "firstPublishedAt": null
-    },
-    {
-      "id": "rakutenbooks:title:d5fb54605dab01f1",
-      "sourceId": "rakutenbooks",
-      "title": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex【10パック】",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-11-26T04:09:20.691Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "start": {
-          "raw": "2026/1/23(金) 10:00",
-          "iso": "2026-01-23T10:00:00+09:00",
-          "date": "2026-01-23",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/1/26(月) 11:59",
-          "iso": "2026-01-26T11:59:00+09:00",
-          "date": "2026-01-26",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "月",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "start": {
-          "raw": "2026/2/6(金)",
-          "iso": null,
-          "date": "2026-02-06",
-          "timeUnconfirmed": true,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
-        ]
-      },
-      "purchasePeriod": null,
-      "shippingPeriod": {
-        "raw": "当選者のみにご案内いたします。",
-        "start": null,
-        "end": null,
-        "approximate": false,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "当選者への案内のみ。発送日を推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
-      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
-      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当選メールの正確な送信時刻",
-        "商品発送の具体的な日付"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "shipping": "当選者のみにご案内いたします。",
-        "productTitle": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex【10パック】"
-      },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "firstPublishedAt": null
-    },
-    {
-      "id": "rakutenbooks:title:ffb58507c878c43a",
-      "sourceId": "rakutenbooks",
-      "title": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ【30パック】",
-      "sourceName": "楽天ブックス",
-      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "fetchedAt": "2026-11-26T04:09:20.691Z",
-      "publishedDate": null,
-      "entryPeriod": {
-        "found": true,
-        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "start": {
-          "raw": "2026/1/23(金) 10:00",
-          "iso": "2026-01-23T10:00:00+09:00",
-          "date": "2026-01-23",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": {
-          "raw": "2026/1/26(月) 11:59",
-          "iso": "2026-01-26T11:59:00+09:00",
-          "date": "2026-01-26",
-          "timeUnconfirmed": false,
-          "inferredYear": false,
-          "weekday": "月",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "deadlineOnly": false,
-        "status": "CONFIRMED",
-        "notes": []
-      },
-      "resultAnnouncement": {
-        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "start": {
-          "raw": "2026/2/6(金)",
-          "iso": null,
-          "date": "2026-02-06",
-          "timeUnconfirmed": true,
-          "inferredYear": false,
-          "weekday": "金",
-          "weekdayMatches": true,
-          "notes": [],
-          "reason": null
-        },
-        "end": null,
-        "deadlineOnly": false,
-        "single": true,
-        "approximate": true,
-        "status": "CONFIRMED",
-        "notes": [
-          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
-        ]
-      },
-      "purchasePeriod": null,
-      "shippingPeriod": {
-        "raw": "当選者のみにご案内いたします。",
-        "start": null,
-        "end": null,
-        "approximate": false,
-        "status": "UNCONFIRMED",
-        "notes": [
-          "当選者への案内のみ。発送日を推測しない"
-        ]
-      },
-      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
-      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
-      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
-      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
-      "receivingMethod": "DELIVERY",
-      "receivingLabel": "配送",
-      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
-      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
-      "stores": [],
-      "prices": [],
-      "conditions": [
-        "楽天会員登録(無料)"
-      ],
-      "handoverRestrictions": [],
-      "unknowns": [
-        "あなたの楽天会員としての応募資格・応募状況",
-        "当選メールの正確な送信時刻",
-        "商品発送の具体的な日付"
-      ],
-      "evidence": {
-        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
-        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
-        "shipping": "当選者のみにご案内いたします。",
-        "productTitle": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ【30パック】"
-      },
-      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
-      "firstPublishedAt": null
+      "firstPublishedAt": null,
+      "retainedFromPrevious": true
     },
     {
       "id": "shibuya-tsutaya:2853",
@@ -7777,6 +6701,1087 @@
         "purchase": "商品受取り日程 2026年5月22日(金)~2026年5月24日(日) 2026年5月29日(金)~2026年5月31日(日) ※お受け取り時間は、10時~22時30分 ※おひとり様、1日程までのお申込みとなります。 お申込み 応募受付期間 2026年5月1日(金)10:00~2026年5月3日(日)23:59 申込みはこちら 当選発表"
       },
       "verification": "SHIBUYA TSUTAYA公式EVENT一覧と個別記事を通常HTTPで独立2回取得し、抽出値を照合"
+    },
+    {
+      "id": "rakutenbooks:18537078",
+      "sourceId": "rakutenbooks",
+      "genre": "pokemon-card",
+      "title": "ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/rb/18537078/",
+      "fetchedAt": "2026-11-27T04:14:58.009Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
+        "start": {
+          "raw": "2026/11/13(金) 10:00",
+          "iso": "2026-11-13T10:00:00+09:00",
+          "date": "2026-11-13",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/11/18(水) 23:59",
+          "iso": "2026-11-18T23:59:00+09:00",
+          "date": "2026-11-18",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "水",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "start": {
+          "raw": "2026/11/29(日) 10:00",
+          "iso": "2026-11-29T10:00:00+09:00",
+          "date": "2026-11-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": false,
+        "notAfter": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
+        ]
+      },
+      "purchasePeriod": {
+        "found": true,
+        "raw": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
+        "start": {
+          "raw": "2026/11/29(日) 10:00",
+          "iso": "2026-11-29T10:00:00+09:00",
+          "date": "2026-11-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/12/03(木) 23:59",
+          "iso": "2026-12-03T23:59:00+09:00",
+          "date": "2026-12-03",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "shippingPeriod": {
+        "raw": "2026年11月下旬発送",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "発送予定の原文を保持。日付範囲は推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックスで抽選エントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18537078/",
+      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
+      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
+      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)",
+        "※ご注文後に商品のキャンセルはできません。",
+        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
+        "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
+        "お届け先について",
+        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+        "支払い方法、配送方法について",
+        "当選時の支払い方法はクレジットカード決済のみとなります。",
+        "以下の支払い方法、配送方法はご利用いただけません。",
+        "・支払い方法:代金引換",
+        "住所登録が不十分な場合はエントリーができません。"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当落メールの正確な送信時刻"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
+        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "purchase": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
+        "receiving": [
+          "発送予定日:2026年11月下旬発送",
+          "お届け先について",
+          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+          "支払い方法、配送方法について",
+          "当選時の配送方法は宅配・ポスト投函のみとなります。",
+          "以下の支払い方法、配送方法はご利用いただけません。",
+          "・配送方法:コンビニ店頭受取、郵便局受取",
+          "発送予定: 2026年11月下旬発送"
+        ]
+      },
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
+      "firstPublishedAt": null
+    },
+    {
+      "id": "rakutenbooks:18595282",
+      "sourceId": "rakutenbooks",
+      "genre": "pokemon-card",
+      "title": "ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/rb/18595282/",
+      "fetchedAt": "2026-11-27T04:14:57.693Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
+        "start": {
+          "raw": "2026/11/13(金) 10:00",
+          "iso": "2026-11-13T10:00:00+09:00",
+          "date": "2026-11-13",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/11/18(水) 23:59",
+          "iso": "2026-11-18T23:59:00+09:00",
+          "date": "2026-11-18",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "水",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "start": {
+          "raw": "2026/11/29(日) 10:00",
+          "iso": "2026-11-29T10:00:00+09:00",
+          "date": "2026-11-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": false,
+        "notAfter": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
+        ]
+      },
+      "purchasePeriod": {
+        "found": true,
+        "raw": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
+        "start": {
+          "raw": "2026/11/29(日) 10:00",
+          "iso": "2026-11-29T10:00:00+09:00",
+          "date": "2026-11-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/12/03(木) 23:59",
+          "iso": "2026-12-03T23:59:00+09:00",
+          "date": "2026-12-03",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "shippingPeriod": {
+        "raw": "2026年11月下旬発送",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "発送予定の原文を保持。日付範囲は推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックスで抽選エントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18595282/",
+      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
+      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
+      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)",
+        "※ご注文後に商品のキャンセルはできません。",
+        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
+        "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
+        "お届け先について",
+        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+        "支払い方法、配送方法について",
+        "当選時の支払い方法はクレジットカード決済のみとなります。",
+        "以下の支払い方法、配送方法はご利用いただけません。",
+        "・支払い方法:代金引換",
+        "住所登録が不十分な場合はエントリーができません。"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当落メールの正確な送信時刻"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
+        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "purchase": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
+        "receiving": [
+          "発送予定日:2026年11月下旬発送",
+          "お届け先について",
+          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+          "支払い方法、配送方法について",
+          "当選時の配送方法は宅配・ポスト投函のみとなります。",
+          "以下の支払い方法、配送方法はご利用いただけません。",
+          "・配送方法:コンビニ店頭受取、郵便局受取",
+          "発送予定: 2026年11月下旬発送"
+        ]
+      },
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
+      "firstPublishedAt": null
+    },
+    {
+      "id": "rakutenbooks:18595457",
+      "sourceId": "rakutenbooks",
+      "genre": "pokemon-card",
+      "title": "【セット商品】ポケモンカードゲーム MEGA 30th CELEBRATION カードセット 9種",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/rb/18595457/",
+      "fetchedAt": "2026-11-27T04:14:57.765Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
+        "start": {
+          "raw": "2026/11/13(金) 10:00",
+          "iso": "2026-11-13T10:00:00+09:00",
+          "date": "2026-11-13",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/11/18(水) 23:59",
+          "iso": "2026-11-18T23:59:00+09:00",
+          "date": "2026-11-18",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "水",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "start": {
+          "raw": "2026/11/29(日) 10:00",
+          "iso": "2026-11-29T10:00:00+09:00",
+          "date": "2026-11-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": false,
+        "notAfter": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
+        ]
+      },
+      "purchasePeriod": {
+        "found": true,
+        "raw": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
+        "start": {
+          "raw": "2026/11/29(日) 10:00",
+          "iso": "2026-11-29T10:00:00+09:00",
+          "date": "2026-11-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/12/03(木) 23:59",
+          "iso": "2026-12-03T23:59:00+09:00",
+          "date": "2026-12-03",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "shippingPeriod": {
+        "raw": "2026年11月下旬発送",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "発送予定の原文を保持。日付範囲は推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックスで抽選エントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18595457/",
+      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
+      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
+      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)",
+        "※ご注文後に商品のキャンセルはできません。",
+        "※外箱はあくまでも輸送箱となっておりますので、外装の軽微な傷や汚れ・凹みなどによる交換・返品は承っておりません。",
+        "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
+        "お届け先について",
+        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+        "支払い方法、配送方法について",
+        "当選時の支払い方法はクレジットカード決済のみとなります。",
+        "以下の支払い方法、配送方法はご利用いただけません。",
+        "・支払い方法:代金引換",
+        "住所登録が不十分な場合はエントリーができません。"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当落メールの正確な送信時刻"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
+        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "purchase": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
+        "receiving": [
+          "発送予定日:2026年11月下旬発送",
+          "お届け先について",
+          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+          "支払い方法、配送方法について",
+          "当選時の配送方法は宅配・ポスト投函のみとなります。",
+          "以下の支払い方法、配送方法はご利用いただけません。",
+          "・配送方法:コンビニ店頭受取、郵便局受取",
+          "発送予定: 2026年11月下旬発送"
+        ]
+      },
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
+      "firstPublishedAt": null
+    },
+    {
+      "id": "rakutenbooks:18664602",
+      "sourceId": "rakutenbooks",
+      "genre": "pokemon-card",
+      "title": "ポケモンカードゲーム MEGA スペシャルデッキセットMEGA メガオーダイル・メガカイリュー・メガゲンガー",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/rb/18664602/",
+      "fetchedAt": "2026-11-27T04:14:57.505Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
+        "start": {
+          "raw": "2026/11/13(金) 10:00",
+          "iso": "2026-11-13T10:00:00+09:00",
+          "date": "2026-11-13",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/11/18(水) 23:59",
+          "iso": "2026-11-18T23:59:00+09:00",
+          "date": "2026-11-18",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "水",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "start": {
+          "raw": "2026/11/29(日) 10:00",
+          "iso": "2026-11-29T10:00:00+09:00",
+          "date": "2026-11-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": false,
+        "notAfter": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "当落通知の正確な時刻は未確認。公式記載は当選者販売開始日まで"
+        ]
+      },
+      "purchasePeriod": {
+        "found": true,
+        "raw": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
+        "start": {
+          "raw": "2026/11/29(日) 10:00",
+          "iso": "2026-11-29T10:00:00+09:00",
+          "date": "2026-11-29",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "日",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/12/03(木) 23:59",
+          "iso": "2026-12-03T23:59:00+09:00",
+          "date": "2026-12-03",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "木",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "shippingPeriod": {
+        "raw": "2026年11月下旬発送",
+        "start": null,
+        "end": null,
+        "approximate": true,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "発送予定の原文を保持。日付範囲は推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックスで抽選エントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/rb/18664602/",
+      "webApplicationLabel": "公式の商品詳細ページから応募条件を確認",
+      "applicationNote": "楽天ブックスへログインし、商品詳細の抽選案内から手続きしてください。このリンクを開くだけでは応募されません。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "楽天ブックスの注文として配送。応募時の会員情報・配送条件を確認",
+      "resultNote": "当落結果は当選者販売開始日までにメールで連絡。正確な通知時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)",
+        "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
+        "お届け先について",
+        "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+        "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+        "支払い方法、配送方法について",
+        "当選時の支払い方法はクレジットカード決済のみとなります。",
+        "以下の支払い方法、配送方法はご利用いただけません。",
+        "・支払い方法:代金引換",
+        "住所登録が不十分な場合はエントリーができません。",
+        "抽選に当選された場合、エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当落メールの正確な送信時刻"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間:2026/11/13(金) 10:00 〜 2026/11/18(水) 23:59",
+        "result": "※当落の結果は、販売開始日までにメールでご連絡します。",
+        "purchase": "当選者販売期間:2026/11/29(日) 10:00 〜 2026/12/03(木) 23:59",
+        "receiving": [
+          "発送予定日:2026年11月下旬発送",
+          "お届け先について",
+          "エントリー時の会員情報のご住所と異なるお届け先住所でのご注文は承ることができません。",
+          "ご注文確定後のお届け先住所の変更は、いかなる理由があってもお受けできません。",
+          "支払い方法、配送方法について",
+          "当選時の配送方法は宅配・ポスト投函のみとなります。",
+          "以下の支払い方法、配送方法はご利用いただけません。",
+          "・配送方法:コンビニ店頭受取、郵便局受取",
+          "発送予定: 2026年11月下旬発送"
+        ]
+      },
+      "verification": "楽天ブックス公式の商品詳細を通常HTTPで独立2回取得し、抽出値を照合",
+      "firstPublishedAt": "2026-11-13T02:00:35.948Z"
+    },
+    {
+      "id": "rakutenbooks:title:5f71ed9314e62cde",
+      "sourceId": "rakutenbooks",
+      "title": "ポケモンカードゲーム MEGA スタートデッキ100 バトルコレクション 10個セット",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "fetchedAt": "2026-11-27T04:14:42.730Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "start": {
+          "raw": "2026/1/23(金) 10:00",
+          "iso": "2026-01-23T10:00:00+09:00",
+          "date": "2026-01-23",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/1/26(月) 11:59",
+          "iso": "2026-01-26T11:59:00+09:00",
+          "date": "2026-01-26",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "start": {
+          "raw": "2026/2/6(金)",
+          "iso": null,
+          "date": "2026-02-06",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
+        ]
+      },
+      "purchasePeriod": null,
+      "shippingPeriod": {
+        "raw": "当選者のみにご案内いたします。",
+        "start": null,
+        "end": null,
+        "approximate": false,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "当選者への案内のみ。発送日を推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
+      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
+      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当選メールの正確な送信時刻",
+        "商品発送の具体的な日付"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "shipping": "当選者のみにご案内いたします。",
+        "productTitle": "ポケモンカードゲーム MEGA スタートデッキ100 バトルコレクション 10個セット"
+      },
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
+      "firstPublishedAt": null
+    },
+    {
+      "id": "rakutenbooks:title:6bdd5960809a3b57",
+      "sourceId": "rakutenbooks",
+      "title": "ポケモンカードゲーム MEGA 拡張パック インフェルノX【30パック】",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "fetchedAt": "2026-11-27T04:14:42.730Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "start": {
+          "raw": "2026/1/23(金) 10:00",
+          "iso": "2026-01-23T10:00:00+09:00",
+          "date": "2026-01-23",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/1/26(月) 11:59",
+          "iso": "2026-01-26T11:59:00+09:00",
+          "date": "2026-01-26",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "start": {
+          "raw": "2026/2/6(金)",
+          "iso": null,
+          "date": "2026-02-06",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
+        ]
+      },
+      "purchasePeriod": null,
+      "shippingPeriod": {
+        "raw": "当選者のみにご案内いたします。",
+        "start": null,
+        "end": null,
+        "approximate": false,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "当選者への案内のみ。発送日を推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
+      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
+      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当選メールの正確な送信時刻",
+        "商品発送の具体的な日付"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "shipping": "当選者のみにご案内いたします。",
+        "productTitle": "ポケモンカードゲーム MEGA 拡張パック インフェルノX【30パック】"
+      },
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
+      "firstPublishedAt": null
+    },
+    {
+      "id": "rakutenbooks:title:add75e344a1811aa",
+      "sourceId": "rakutenbooks",
+      "title": "ポケモンカードゲーム MEGA スペシャルカードセット メガエルレイドex",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "fetchedAt": "2026-11-27T04:14:42.730Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "start": {
+          "raw": "2026/1/23(金) 10:00",
+          "iso": "2026-01-23T10:00:00+09:00",
+          "date": "2026-01-23",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/1/26(月) 11:59",
+          "iso": "2026-01-26T11:59:00+09:00",
+          "date": "2026-01-26",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "start": {
+          "raw": "2026/2/6(金)",
+          "iso": null,
+          "date": "2026-02-06",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
+        ]
+      },
+      "purchasePeriod": null,
+      "shippingPeriod": {
+        "raw": "当選者のみにご案内いたします。",
+        "start": null,
+        "end": null,
+        "approximate": false,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "当選者への案内のみ。発送日を推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
+      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
+      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当選メールの正確な送信時刻",
+        "商品発送の具体的な日付"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "shipping": "当選者のみにご案内いたします。",
+        "productTitle": "ポケモンカードゲーム MEGA スペシャルカードセット メガエルレイドex"
+      },
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
+      "firstPublishedAt": null
+    },
+    {
+      "id": "rakutenbooks:title:d5fb54605dab01f1",
+      "sourceId": "rakutenbooks",
+      "title": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex【10パック】",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "fetchedAt": "2026-11-27T04:14:42.730Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "start": {
+          "raw": "2026/1/23(金) 10:00",
+          "iso": "2026-01-23T10:00:00+09:00",
+          "date": "2026-01-23",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/1/26(月) 11:59",
+          "iso": "2026-01-26T11:59:00+09:00",
+          "date": "2026-01-26",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "start": {
+          "raw": "2026/2/6(金)",
+          "iso": null,
+          "date": "2026-02-06",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
+        ]
+      },
+      "purchasePeriod": null,
+      "shippingPeriod": {
+        "raw": "当選者のみにご案内いたします。",
+        "start": null,
+        "end": null,
+        "approximate": false,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "当選者への案内のみ。発送日を推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
+      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
+      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当選メールの正確な送信時刻",
+        "商品発送の具体的な日付"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "shipping": "当選者のみにご案内いたします。",
+        "productTitle": "ポケモンカードゲーム MEGA ハイクラスパック MEGAドリームex【10パック】"
+      },
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
+      "firstPublishedAt": null
+    },
+    {
+      "id": "rakutenbooks:title:ffb58507c878c43a",
+      "sourceId": "rakutenbooks",
+      "title": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ【30パック】",
+      "sourceName": "楽天ブックス",
+      "sourceUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "fetchedAt": "2026-11-27T04:14:42.730Z",
+      "publishedDate": null,
+      "entryPeriod": {
+        "found": true,
+        "raw": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "start": {
+          "raw": "2026/1/23(金) 10:00",
+          "iso": "2026-01-23T10:00:00+09:00",
+          "date": "2026-01-23",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": {
+          "raw": "2026/1/26(月) 11:59",
+          "iso": "2026-01-26T11:59:00+09:00",
+          "date": "2026-01-26",
+          "timeUnconfirmed": false,
+          "inferredYear": false,
+          "weekday": "月",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "deadlineOnly": false,
+        "status": "CONFIRMED",
+        "notes": []
+      },
+      "resultAnnouncement": {
+        "raw": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "start": {
+          "raw": "2026/2/6(金)",
+          "iso": null,
+          "date": "2026-02-06",
+          "timeUnconfirmed": true,
+          "inferredYear": false,
+          "weekday": "金",
+          "weekdayMatches": true,
+          "notes": [],
+          "reason": null
+        },
+        "end": null,
+        "deadlineOnly": false,
+        "single": true,
+        "approximate": true,
+        "status": "CONFIRMED",
+        "notes": [
+          "公式抽選受付ページの当選連絡予定日を保持。時刻は補完しない"
+        ]
+      },
+      "purchasePeriod": null,
+      "shippingPeriod": {
+        "raw": "当選者のみにご案内いたします。",
+        "start": null,
+        "end": null,
+        "approximate": false,
+        "status": "UNCONFIRMED",
+        "notes": [
+          "当選者への案内のみ。発送日を推測しない"
+        ]
+      },
+      "applicationMethod": "楽天ブックス公式のポケモンカード抽選受付ページからエントリー",
+      "webApplicationUrl": "https://books.rakuten.co.jp/event/game/card/entry/",
+      "webApplicationLabel": "楽天ブックス公式 抽選受付ページ",
+      "applicationNote": "楽天会員で公式抽選受付ページからエントリー。ページ記載の注文履歴・住所等の応募条件を確認してください。",
+      "receivingMethod": "DELIVERY",
+      "receivingLabel": "配送",
+      "storeSelectionNote": "配送案件。コンビニ店頭受取・郵便局受取は利用不可",
+      "resultNote": "当選者のみにメールで案内。落選時は連絡なし。正確な送信時刻は未確認",
+      "stores": [],
+      "prices": [],
+      "conditions": [
+        "楽天会員登録(無料)"
+      ],
+      "handoverRestrictions": [],
+      "unknowns": [
+        "あなたの楽天会員としての応募資格・応募状況",
+        "当選メールの正確な送信時刻",
+        "商品発送の具体的な日付"
+      ],
+      "evidence": {
+        "entry": "抽選受付期間 2026/1/23(金) 10:00 ~ 2026/1/26(月) 11:59",
+        "result": "当選連絡予定日 当選連絡予定日:2026/2/6(金)頃 ※当選者のみにメールにてご案内いたします。 ※当落のお問い合わせにはお答えいたしません。",
+        "shipping": "当選者のみにご案内いたします。",
+        "productTitle": "ポケモンカードゲーム MEGA 拡張パック ムニキスゼロ【30パック】"
+      },
+      "verification": "楽天ブックス公式のポケモンカード抽選受付ページを通常HTTPで独立2回取得し、商品コード・抽選期間・当選連絡予定日を照合",
+      "firstPublishedAt": null
     }
   ],
   "sources": {
@@ -7986,31 +7991,31 @@
     },
     "rakutenbooks": {
       "name": "楽天ブックス",
-      "fetchedAt": "2026-11-26T04:09:41.784Z",
+      "fetchedAt": "2026-11-27T04:14:58.012Z",
       "coverage": "楽天ブックス公式の抽選受付ページと検索を毎回確認。発見候補を固定監視より優先し、商品詳細の抽選日程を照合。検索最大6ページ・詳細上限60件で、全商品の網羅ではありません",
-      "verifiedCases": 14,
+      "verifiedCases": 9,
       "discovery": "OFFICIAL_ENTRY_AND_SEARCH",
       "discoverySummary": {
         "entryLinks": 0,
-        "searchLinks": 108,
+        "searchLinks": 105,
         "watchLinks": 64,
-        "total": 84,
+        "total": 85,
         "checked": 60,
         "searches": [
           {
             "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8",
             "status": "SUCCESS",
-            "links": 17
+            "links": 16
           },
           {
             "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8&p=2",
             "status": "SUCCESS",
-            "links": 17
+            "links": 16
           },
           {
             "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8&p=3",
             "status": "SUCCESS",
-            "links": 17
+            "links": 16
           },
           {
             "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89+%E3%83%8F%E3%83%89%E3%82%A6%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC",
@@ -8033,100 +8038,104 @@
         ],
         "skippedByLimit": [
           {
-            "id": "17847144",
-            "url": "https://books.rakuten.co.jp/rb/17847144/"
+            "id": "18537075",
+            "url": "https://books.rakuten.co.jp/rb/18537075/"
           },
           {
-            "id": "18084513",
-            "url": "https://books.rakuten.co.jp/rb/18084513/"
+            "id": "18343992",
+            "url": "https://books.rakuten.co.jp/rb/18343992/"
           },
           {
-            "id": "17847142",
-            "url": "https://books.rakuten.co.jp/rb/17847142/"
+            "id": "18548589",
+            "url": "https://books.rakuten.co.jp/rb/18548589/"
           },
           {
-            "id": "15897236",
-            "url": "https://books.rakuten.co.jp/rb/15897236/"
+            "id": "18182237",
+            "url": "https://books.rakuten.co.jp/rb/18182237/"
           },
           {
-            "id": "18393016",
-            "url": "https://books.rakuten.co.jp/rb/18393016/"
+            "id": "18182238",
+            "url": "https://books.rakuten.co.jp/rb/18182238/"
           },
           {
-            "id": "16376774",
-            "url": "https://books.rakuten.co.jp/rb/16376774/"
+            "id": "18669675",
+            "url": "https://books.rakuten.co.jp/rb/18669675/"
           },
           {
-            "id": "18258292",
-            "url": "https://books.rakuten.co.jp/rb/18258292/"
+            "id": "18771764",
+            "url": "https://books.rakuten.co.jp/rb/18771764/"
           },
           {
-            "id": "14297582",
-            "url": "https://books.rakuten.co.jp/rb/14297582/"
+            "id": "18450269",
+            "url": "https://books.rakuten.co.jp/rb/18450269/"
           },
           {
-            "id": "17753694",
-            "url": "https://books.rakuten.co.jp/rb/17753694/"
+            "id": "18537143",
+            "url": "https://books.rakuten.co.jp/rb/18537143/"
           },
           {
-            "id": "18595234",
-            "url": "https://books.rakuten.co.jp/rb/18595234/"
+            "id": "17970272",
+            "url": "https://books.rakuten.co.jp/rb/17970272/"
           },
           {
-            "id": "17705217",
-            "url": "https://books.rakuten.co.jp/rb/17705217/"
+            "id": "16138135",
+            "url": "https://books.rakuten.co.jp/rb/16138135/"
           },
           {
-            "id": "16720355",
-            "url": "https://books.rakuten.co.jp/rb/16720355/"
+            "id": "16137977",
+            "url": "https://books.rakuten.co.jp/rb/16137977/"
           },
           {
-            "id": "16720356",
-            "url": "https://books.rakuten.co.jp/rb/16720356/"
+            "id": "17008876",
+            "url": "https://books.rakuten.co.jp/rb/17008876/"
           },
           {
-            "id": "18864053",
-            "url": "https://books.rakuten.co.jp/rb/18864053/"
+            "id": "17958917",
+            "url": "https://books.rakuten.co.jp/rb/17958917/"
           },
           {
-            "id": "18864054",
-            "url": "https://books.rakuten.co.jp/rb/18864054/"
+            "id": "16138005",
+            "url": "https://books.rakuten.co.jp/rb/16138005/"
           },
           {
-            "id": "17823560",
-            "url": "https://books.rakuten.co.jp/rb/17823560/"
+            "id": "16137903",
+            "url": "https://books.rakuten.co.jp/rb/16137903/"
           },
           {
-            "id": "17705216",
-            "url": "https://books.rakuten.co.jp/rb/17705216/"
+            "id": "17393668",
+            "url": "https://books.rakuten.co.jp/rb/17393668/"
           },
           {
-            "id": "16878364",
-            "url": "https://books.rakuten.co.jp/rb/16878364/"
+            "id": "16137978",
+            "url": "https://books.rakuten.co.jp/rb/16137978/"
           },
           {
-            "id": "17083011",
-            "url": "https://books.rakuten.co.jp/rb/17083011/"
+            "id": "17393658",
+            "url": "https://books.rakuten.co.jp/rb/17393658/"
           },
           {
-            "id": "17307397",
-            "url": "https://books.rakuten.co.jp/rb/17307397/"
+            "id": "15924195",
+            "url": "https://books.rakuten.co.jp/rb/15924195/"
           },
           {
-            "id": "17222123",
-            "url": "https://books.rakuten.co.jp/rb/17222123/"
+            "id": "17393656",
+            "url": "https://books.rakuten.co.jp/rb/17393656/"
           },
           {
-            "id": "17426083",
-            "url": "https://books.rakuten.co.jp/rb/17426083/"
+            "id": "17970273",
+            "url": "https://books.rakuten.co.jp/rb/17970273/"
           },
           {
-            "id": "18664603",
-            "url": "https://books.rakuten.co.jp/rb/18664603/"
+            "id": "17958918",
+            "url": "https://books.rakuten.co.jp/rb/17958918/"
           },
           {
-            "id": "18664602",
-            "url": "https://books.rakuten.co.jp/rb/18664602/"
+            "id": "16186608",
+            "url": "https://books.rakuten.co.jp/rb/16186608/"
+          },
+          {
+            "id": "17008877",
+            "url": "https://books.rakuten.co.jp/rb/17008877/"
           }
         ],
         "notice": "検索リンクは候補のみ。新規公開件数ではありません。上限超過は未確認です。"
@@ -8136,20 +8145,8 @@
         "reopened": [],
         "rechecked": [
           {
-            "id": "rakutenbooks:18182237",
-            "title": "ポケモンカードゲーム MEGA 拡張パック メガブレイブ 【30パック】"
-          },
-          {
-            "id": "rakutenbooks:18182238",
-            "title": "ポケモンカードゲーム MEGA 拡張パック メガシンフォニア 【30パック】"
-          },
-          {
             "id": "rakutenbooks:18537078",
             "title": "ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ"
-          },
-          {
-            "id": "rakutenbooks:18537143",
-            "title": "ポケモンカードゲーム MEGA スターターセットex イーブイex"
           },
           {
             "id": "rakutenbooks:18595282",
@@ -8160,16 +8157,8 @@
             "title": "【セット商品】ポケモンカードゲーム MEGA 30th CELEBRATION カードセット 9種"
           },
           {
-            "id": "rakutenbooks:18596838",
-            "title": "【セット商品】ポケモンカードゲーム MEGA スターターセットex 3種(イーブイex + ゾロア&ゾロアークex + ニャオハ&マスカーニャex)"
-          },
-          {
-            "id": "rakutenbooks:18669675",
-            "title": "ONE PIECEカードゲーム ブースターパック 世界最強の戦士【OP-17】"
-          },
-          {
-            "id": "rakutenbooks:18771764",
-            "title": "ONE PIECEカードゲーム エクストラブースター ONE PIECE Heroines Edition vol.2【EB-05】"
+            "id": "rakutenbooks:18664602",
+            "title": "ポケモンカードゲーム MEGA スペシャルデッキセットMEGA メガオーダイル・メガカイリュー・メガゲンガー"
           },
           {
             "id": "rakutenbooks:title:5f71ed9314e62cde",
@@ -8193,967 +8182,967 @@
           }
         ]
       },
-      "checkedAt": "2026-11-26T04:09:41.784Z",
+      "checkedAt": "2026-11-27T04:14:58.012Z",
       "coverageStatus": "PARTIAL",
       "evidence": [
         {
-          "pid": 2525,
+          "pid": 2714,
           "requests": [
             {
               "url": "https://books.rakuten.co.jp/robots.txt",
               "status": 200,
-              "bytes": 419,
-              "sha256": "87f7505c1d60c9ea75d424ed8750d85b78b15f389b5f267a7399208acf41144d",
+              "bytes": 627,
+              "sha256": "252780ae3c0da7016c83f1efbdb64d31436001d81eca2b6e4a909e435fa5e57f",
               "contentType": "text/plain"
             },
             {
               "url": "https://books.rakuten.co.jp/event/game/card/entry/",
               "status": 200,
-              "bytes": 63622,
-              "sha256": "42a9b7af6cd4b19dc2a693377b00253da89d67226481c6eeb7222f40b2c60de0",
+              "bytes": 63623,
+              "sha256": "fbd89ea7aa315b67d3eb15a14cbc2cad5b2d6ef654fc83611ade4e83a3aed121",
               "contentType": "text/html; charset=euc-jp"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8",
               "status": 200,
-              "bytes": 150735,
-              "sha256": "936d3296133d2c91c9e69818e5579e2d78d9d92eb0c3afffe62c1173fb422d5c",
+              "bytes": 147764,
+              "sha256": "f6f66f91fed31933b803566cb689c9fe2592e94a23a7ce7991ddb6b43eb6f279",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8&p=2",
               "status": 200,
-              "bytes": 150735,
-              "sha256": "cd50c904a2af7a709d8ed05a91a5f0a5eb3269c475bdfa50764e72acaad94b48",
+              "bytes": 147764,
+              "sha256": "558416cc59402811461592687551816c10c08f9ca0c016e9e93cf90a82e28c3b",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8&p=3",
               "status": 200,
-              "bytes": 150735,
-              "sha256": "6ff3561a0732403d577b5b0902d48c81366c462a3823c792f2aaac4a45561b93",
+              "bytes": 147764,
+              "sha256": "297d9825bb168b62978493631aa2ad3cb4a1805c3952019ae3cc7e28c79ddfc8",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89+%E3%83%8F%E3%83%89%E3%82%A6%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC",
               "status": 200,
-              "bytes": 77540,
-              "sha256": "4385a65b69c14bd51edebda442c6c262e087da15cf58062907a9163b1ddbbc08",
+              "bytes": 77541,
+              "sha256": "9364ac5cfffa028f43c9253a4cc97960bd337a0961504d157667124514424ad7",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89+%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%87%E3%83%83%E3%82%AD%E3%82%BB%E3%83%83%E3%83%88",
               "status": 200,
-              "bytes": 162143,
-              "sha256": "40f627683acdc38c637e441ebfcd965a1dc66b0fecbfd8299fb825c688a778d3",
+              "bytes": 162144,
+              "sha256": "7e14c10469a0e966fc6ae8dff23fe720bfd1329ece8836b60e3603858a76b3a7",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89+%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BF%E3%83%BC%E3%82%BB%E3%83%83%E3%83%88",
               "status": 200,
-              "bytes": 177442,
-              "sha256": "bd3c512440b14a07f8c2550b3d8bdfcf238828b3685b4bb42d9d62d263eb4849",
+              "bytes": 176924,
+              "sha256": "1d523a225647a85b16294220da9cb24d0b7bf89863280c68451f2ff6e27dd9c3",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/13284657/",
               "status": 200,
-              "bytes": 142029,
-              "sha256": "ac0ef478a08b328adb9d27e52aef15e3b97069347ebc971bdc47a3b7560af59d",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18596838/",
-              "status": 200,
-              "bytes": 97550,
-              "sha256": "7381baaaa3afd7e5e454d683c901d3d1cdc1d4053ed03dc729712df54cb041c0",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16660918/",
-              "status": 200,
-              "bytes": 86243,
-              "sha256": "63fc8359711c7727748e577f121e48ba4d2605c5a19ab2be050b7431679706bc",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18595282/",
-              "status": 200,
-              "bytes": 94538,
-              "sha256": "2b36212cc0daf4a5b1ff210adf5191596bdaa4616a12705a64b3023d9ec4f3d0",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17753695/",
-              "status": 200,
-              "bytes": 143870,
-              "sha256": "45c52773ea6c610377b7f8b56eb904d51c2ee89541b0dccf2883dbff7efda9bb",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18595457/",
-              "status": 200,
-              "bytes": 108749,
-              "sha256": "83020dbc6315ba5fd4e7cc9750cad2f00dcc2a61776da11e44992a78bfff6d7e",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18657499/",
-              "status": 200,
-              "bytes": 152445,
-              "sha256": "f829181fa93a49e241678014b20f3bf3a1b3129835b84ccba90d89147f1dd964",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18595283/",
-              "status": 200,
-              "bytes": 89809,
-              "sha256": "5a6c9f7969583a7bed8b3208fb8e56b6f7e0e63487d6bf6b5070bcb519888458",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17962880/",
-              "status": 200,
-              "bytes": 145673,
-              "sha256": "faae69902eb6952fed695eaba711465ad3825088085ce93e30c79e1d4f742067",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18537078/",
-              "status": 200,
-              "bytes": 94555,
-              "sha256": "ba670c40e7197e719ca87205d529837a78ce082545e2ccd23868552210d215c2",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16878354/",
-              "status": 200,
-              "bytes": 141765,
-              "sha256": "bf42555126233a8cbe76dd869b12283d26810782f66cef4feae1b591a29c5323",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18537075/",
-              "status": 200,
-              "bytes": 90939,
-              "sha256": "a52ef2229234f24db53d8dc6101eea80a6eeec55205cedbf0f64b0fa894d42dc",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17083005/",
-              "status": 200,
-              "bytes": 143905,
-              "sha256": "00da2e806adc18b2181a4804ccaf051941f5f3c695fc53c7f9694a2bed0c4cca",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18343992/",
-              "status": 200,
-              "bytes": 90673,
-              "sha256": "4d92881f7c1358657b237a5b6afc94f627dc012da897828b308d724087598efa",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16049795/",
-              "status": 200,
-              "bytes": 146673,
-              "sha256": "a678a881c22045ba80b138db9e2b09c9e14f368ca80e23b917b7a22f7a947d72",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18548589/",
-              "status": 200,
-              "bytes": 90217,
-              "sha256": "4db6b15e086cd9baa56f668fa0df6983df76907103f68b49960d4fddbaf67835",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17545724/",
-              "status": 200,
-              "bytes": 90512,
-              "sha256": "8a76e18c5853f44c6917923dd20b993313d720846ecf8347d77fe7c64b6d3efc",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18182237/",
-              "status": 200,
-              "bytes": 94262,
-              "sha256": "f127b87215c045cde5f3f00c5d94cbbc33ca31e3b002d5dec6797d950004ab92",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16186604/",
-              "status": 200,
-              "bytes": 143166,
-              "sha256": "d17f3efc8c02f1d3a73303e6b2bc0bc0e67e923882101e6da2a4e459097cfd63",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18182238/",
-              "status": 200,
-              "bytes": 94820,
-              "sha256": "85051f294c234719c4b8243bcee472b0e5534edfc799aa8da9d07caee82a5250",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16660919/",
-              "status": 200,
-              "bytes": 140657,
-              "sha256": "b5ba7933f0a58f80e1ce57954f784f6029c31fa192abb50488d921f3dc253426",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18669675/",
-              "status": 200,
-              "bytes": 101689,
-              "sha256": "e75821bf0c1eb856609c952afc9062b8af0a1bec17206bcfad7becc68f4bc64c",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16660921/",
-              "status": 200,
-              "bytes": 142614,
-              "sha256": "622651f1fad0c5c406cf57fe6c48afe632507bc51fe6c6fa898c0e2c85c4179b",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18771764/",
-              "status": 200,
-              "bytes": 91864,
-              "sha256": "e0c6268319ddfe72354b9faf0967615c107d52546f2b26ba4f7315b9bdf114e7",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17426084/",
-              "status": 200,
-              "bytes": 137356,
-              "sha256": "029636f62fd885ef839112843fc492b7204a2b32f6668051eb9ad46048cca04d",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18450269/",
-              "status": 200,
-              "bytes": 87797,
-              "sha256": "d5cc65029a4c9e530ab468da44050d811251611348cd9acbfa0c7a3e5e323420",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17053771/",
-              "status": 200,
-              "bytes": 141919,
-              "sha256": "5063961c88392ca38da238d36c1a0f47ec66d5f7cf7935fe30bd63a5dff943f8",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18537143/",
-              "status": 200,
-              "bytes": 91892,
-              "sha256": "50e728b105403e72faa0bb89d07972db207a48c624046d7ce919b0c7256d6f3c",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17962869/",
-              "status": 200,
-              "bytes": 139012,
-              "sha256": "36185f1b922792d410ccbcdbe96daf611f311b855a4840582c7b95c74c84484e",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17970272/",
-              "status": 200,
-              "bytes": 87262,
-              "sha256": "3951299549bcfae72ddb8b46bc6ba5eb13bdb38d3dd3166c63adea8589efe52a",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17821635/",
-              "status": 200,
-              "bytes": 137751,
-              "sha256": "5d4b038ce49b9857f0fd78a780e098a9e4ccd14bdd71e6fafb6f60f1adca6da2",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16138135/",
-              "status": 200,
-              "bytes": 143006,
-              "sha256": "add40c8feb5bf4df5d5e5d49cbfc174c0aaba6e93fc4f430d8f95f654e003ab4",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17005455/",
-              "status": 200,
-              "bytes": 140650,
-              "sha256": "8ff50aa8b1e93db23176014ef0923df32d7c5b773d50c6cf556c6b5d18ded282",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16137977/",
-              "status": 200,
-              "bytes": 144383,
-              "sha256": "0c4f579d6f0a76b0cfd8ebe8266397c3cddd556d1770bc4df7b0185334cda654",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16049789/",
-              "status": 200,
-              "bytes": 142544,
-              "sha256": "f1536e97d79337108906a04b288655313fc4f6883ab1c22ff597fd7a9f47629b",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17008876/",
-              "status": 200,
-              "bytes": 142922,
-              "sha256": "e8d2b80e1e898040d359cf403ed6696b3e86aae2fbf72405a46b9a0f94a9a1dd",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17393572/",
-              "status": 200,
-              "bytes": 86405,
-              "sha256": "47584596faf30b266bccb52c5d6656960adde14faadf689a4c3b74cc56fdf2c0",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17958917/",
-              "status": 200,
-              "bytes": 144090,
-              "sha256": "902579615bb634e5ce8ac39a8cab3899e11118c7051d7821e03538e7c50b8c3a",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16186607/",
-              "status": 200,
-              "bytes": 141134,
-              "sha256": "3deda643f538f91f233c05789c0c4410853110cb7b5cd017cda78c9ba53e61c5",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16138005/",
-              "status": 200,
-              "bytes": 141078,
-              "sha256": "2190980933d9ee7deb3edc7a58be4048fac209819e57cff7aafc3e284e2c7224",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16137903/",
-              "status": 200,
-              "bytes": 143021,
-              "sha256": "10a08d1efc67dc85445a2f17fbd9dc221b36a3a1cb3e906f00d504024a892b16",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17393668/",
-              "status": 200,
-              "bytes": 86779,
-              "sha256": "6a24e0efd968cea00d4e940542148e27204b9f3188d9affdcb5db401c7222072",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16137978/",
-              "status": 200,
-              "bytes": 142980,
-              "sha256": "36040f9afb9f373363fdc002048a230848c9b2557d9e2eb848f987f2117a8556",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17393658/",
-              "status": 200,
-              "bytes": 85693,
-              "sha256": "ad6af1143b685c77376f1609717a100e431a90e8faf89c688d055b8f4d68c056",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/15924195/",
-              "status": 200,
-              "bytes": 142925,
-              "sha256": "4d466912d8c7046a91121a3bb97aa3f25c75090f4fa2f67246fb52cd64c4c9b3",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17393656/",
-              "status": 200,
-              "bytes": 89496,
-              "sha256": "b504202ee7ec953fd3c9e0335a08a68ded70a98865db00ad250c9bac005f3da0",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17970273/",
-              "status": 200,
-              "bytes": 89232,
-              "sha256": "bc80cda01e23575f38bec9855216d5bd5f56c97658b70681e8eb553ec63e7c3c",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17958918/",
-              "status": 200,
-              "bytes": 144051,
-              "sha256": "60e583bae96404aa60214bd3af1f562261aa812dd2a5f8619927024a492ae755",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16186608/",
-              "status": 200,
-              "bytes": 141134,
-              "sha256": "9f8aedbd383d167e8e6f27ae1d2b872d086cea79b1ab5b969cf95d42e4257b13",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17008877/",
-              "status": 200,
-              "bytes": 144394,
-              "sha256": "e0f572f6188547636a0e7c5d5d7a14d8fa7c86999b866e2fa043ef682025b19d",
+              "bytes": 142434,
+              "sha256": "b48905e1667492d13b206fe89ced819fadc59a350316d8d496c4e27ac1f28b22",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/15924194/",
               "status": 200,
-              "bytes": 145550,
-              "sha256": "cc657a5d6c910e8b16b51c229c372106bec625e6fca95caf8cea513087c37097",
+              "bytes": 145955,
+              "sha256": "c09d89d1989e480985a8dc574e3c6401208505e4964201378e310b28ef34dbf1",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16660918/",
+              "status": 200,
+              "bytes": 86648,
+              "sha256": "8e18f29f5ed25731a6b8a4b65d9115a78f754fbcd149a1ae38d902905cb1e01e",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847140/",
               "status": 200,
-              "bytes": 147719,
-              "sha256": "fa437781157b8877cebb532b0dba34bc2df7062f161aebfef11fd0b506d86862",
+              "bytes": 148124,
+              "sha256": "aef6f2f56d04c75b9375c861d0e6bf42c173d858ba22d5dd4f22317ef3ee1d6f",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17753695/",
+              "status": 200,
+              "bytes": 144275,
+              "sha256": "ad935ecf3e4aaace483b53b610c9d5a9939af6e9f2e01b5e261da931e14e1431",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/15889203/",
               "status": 200,
-              "bytes": 141045,
-              "sha256": "00cd5bbb7502c895f31d404c22e42fb9dd5b500c1466a6dc7dd373a91883139e",
+              "bytes": 141450,
+              "sha256": "0e4d44c2bb74c9d21ec8608ad18e97069141587dc22bfc42bded1c12e2229569",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18657499/",
+              "status": 200,
+              "bytes": 152850,
+              "sha256": "d7dd195e6c9a89c5e842228e670f7a5e662e14ad655e4875d6abc41924b7971b",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17393657/",
               "status": 200,
-              "bytes": 90484,
-              "sha256": "3ac47cc556ea2a5ad81169d74d52c72f9dd1f5833d648ada3e294845b8b61fb5",
+              "bytes": 90889,
+              "sha256": "a36f6ca5f621f7ca67aa3429ce47883ed7094e97ab7f66f62846a6faa445e00b",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17962880/",
+              "status": 200,
+              "bytes": 146078,
+              "sha256": "11225d9cd5ddb4c1f61880e03c0d58f5eab97b529b1ecedcf40827c17de84748",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18182245/",
               "status": 200,
-              "bytes": 87634,
-              "sha256": "d6b6bc687dce099be724c5416d9c9bcfcce03560a2d619a25595920a621c021e",
+              "bytes": 88039,
+              "sha256": "d289fea0740ebc1aecc1bd600558740bb4746c48b2148e41e797a58508479cb8",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16878354/",
+              "status": 200,
+              "bytes": 142170,
+              "sha256": "383943d7548a0ff48c66ebf09dcfb17893770f98f63a530ff4e0a1d1e048c143",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/16383379/",
               "status": 200,
-              "bytes": 138121,
-              "sha256": "dc61c3ca2961498b6ef018431dc21d9269bff9ef7c78e0dcf1dbfa07be8f87f8",
+              "bytes": 138526,
+              "sha256": "ff2e3fecd20e774437f608114612bcacbea056ab36bc969e2153f46cb2867b62",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17083005/",
+              "status": 200,
+              "bytes": 144310,
+              "sha256": "f4a2794e129637b760baa527ee1126ddd89240dfa3b401a0ee1b8ceeaec4721b",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18460920/",
               "status": 200,
-              "bytes": 90763,
-              "sha256": "68112d9eac1e60a76f7f35557b2b6ae17695b600c1271596bbc0073b0dc93c08",
+              "bytes": 91168,
+              "sha256": "0ca9b940e19b5ab5cdb8e094369a4b71b0778037013744b0b0996ad0e44ed62a",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16049795/",
+              "status": 200,
+              "bytes": 147078,
+              "sha256": "9f9ea2b4f3eb846b5ecaadda2d10454d0ff419d844af8faed406a3d86bc0c117",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18084514/",
               "status": 200,
-              "bytes": 87577,
-              "sha256": "c9dbc1b202edcade4df489e25897a59e4b33b82451979753b9fcaff0aa24fd4c",
+              "bytes": 87982,
+              "sha256": "94e71588484d654739cf164eafceb5f99e40c93a1ce20925f35a480d6d7e2c10",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17545724/",
+              "status": 200,
+              "bytes": 90917,
+              "sha256": "d5d8fe15ec658821fc5cd70995bb5fd00f8598c7e25e47a0b8b6f0168fd71f17",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847139/",
               "status": 200,
-              "bytes": 152135,
-              "sha256": "05fc82a9be7f37d3dae500433ee3a82eafaf5a960c4c7d34f6e69381b265b549",
+              "bytes": 152540,
+              "sha256": "a94d92d619691ab9a7dba8c59a5989da016c67d971f5e3ead53458657100d3eb",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16186604/",
+              "status": 200,
+              "bytes": 143571,
+              "sha256": "ebfeb51c299066d50425da438a2b2202bd8690a611a5defcbfb6ff37e2c219d0",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18061661/",
               "status": 200,
-              "bytes": 89963,
-              "sha256": "c954db9b9318e3d17fe37ef4d795e7a97bd904e37ac0a4552d839c0f92a2d6a3",
+              "bytes": 90368,
+              "sha256": "9caf69be0db40823171657ee92f73015881fdfb9558429b59e9ac65fcba3fae7",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16660919/",
+              "status": 200,
+              "bytes": 141062,
+              "sha256": "c63d31bf0743777e0a37de3b173d0122057ef34874f5e37602b34010f2e27f72",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17847144/",
+              "status": 200,
+              "bytes": 148439,
+              "sha256": "602b2ee6eefe7cd0241150957258ca6edc082b468ac604206e28f67cb2824e82",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16660921/",
+              "status": 200,
+              "bytes": 143019,
+              "sha256": "a1d0a5b2f4db8c0772769599e88fef5de8ba7c87b93d1de33b36f85b46fcb293",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18084513/",
+              "status": 200,
+              "bytes": 92356,
+              "sha256": "a387fd53cd8054a59c47d8a621f628283c5fb53c279b8663233ca4385e6e39c1",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17426084/",
+              "status": 200,
+              "bytes": 137761,
+              "sha256": "9f9314fa4dc0a0fa934d194dc5657d9d104aa392e3ef6c1ef2c8a7f3d5cd7dda",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17847142/",
+              "status": 200,
+              "bytes": 147696,
+              "sha256": "ee3cfac39c959a5b516c63ee3df73e9091994a12f59530e8005cdde9f4581ed3",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17053771/",
+              "status": 200,
+              "bytes": 142324,
+              "sha256": "d3f71caf61de522407eef3dfc1c7a7e39a943b89859088a227545558263994cc",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/15897236/",
+              "status": 200,
+              "bytes": 143317,
+              "sha256": "0a51d03e1778a1d309582e2707d13cad024f5363bf3530af9b4648b136c20eb7",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17962869/",
+              "status": 200,
+              "bytes": 139417,
+              "sha256": "a6d010d7e7131f1b9e1f2465eed9a0edb32eec137d55d71ff9c09b564c637d72",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18393016/",
+              "status": 200,
+              "bytes": 148939,
+              "sha256": "aaa699b507d3433aa80d306a30f5cb3648172933090529a8a4a7c2b1ac3a82af",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17821635/",
+              "status": 200,
+              "bytes": 138156,
+              "sha256": "cea78040797bb01f802c6d05f1e49498b77676ac8e1b780c4871a9e89412158a",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16376774/",
+              "status": 200,
+              "bytes": 141325,
+              "sha256": "6603a205cedcb0f5c45e232e9b2ed41f9ffb56803285cfefaa2189aadc6718d2",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17005455/",
+              "status": 200,
+              "bytes": 141055,
+              "sha256": "f900152c2068eafb10c136feabbd841da79f1d7ff48e15326e68b8cd23a541c5",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18258292/",
+              "status": 200,
+              "bytes": 150184,
+              "sha256": "d69c18df14de9deacc0bd3e53a4e146b586f747d774328bfc9523f7b9a2da9fc",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16049789/",
+              "status": 200,
+              "bytes": 142949,
+              "sha256": "6076ce956ac89f68ad90bb05985f2f68e1d54df5e24891d005941103d11bd631",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/14297582/",
+              "status": 200,
+              "bytes": 141745,
+              "sha256": "38532cd6c5a38e2b6d2c40ad5640e3ed85b2d35286056439c9a4fe8ddd0cd426",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17393572/",
+              "status": 200,
+              "bytes": 86810,
+              "sha256": "096359ced7d48621260a108a68bf03f52df8cde2262bfefa8893763a0afcda9d",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17753694/",
+              "status": 200,
+              "bytes": 143080,
+              "sha256": "1b3050b26bbd341ec74246a15ab716e063c14a21f680691a1961a9a34c89e601",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17821637/",
+              "status": 200,
+              "bytes": 142972,
+              "sha256": "88691415317c9aaf10ae063d6efaabca27b245e8f81dbd0977569bc9255c7055",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18595234/",
+              "status": 200,
+              "bytes": 150882,
+              "sha256": "81561b82b44d75e2575ea802bfea57c4b54db0876f535c54a5b3c5b09816344d",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16186607/",
+              "status": 200,
+              "bytes": 141539,
+              "sha256": "d39ec5d3b25fb69b8314b0b1445ef093a7a07348d6238cb5a32d5e7b69e6b20f",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17705217/",
+              "status": 200,
+              "bytes": 90020,
+              "sha256": "8a6f67a788b98b79f9b0d9f5097e4eaf853bc00a5ba0a5a3037e0488e07be268",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16720355/",
+              "status": 200,
+              "bytes": 141674,
+              "sha256": "fb912ed92815de5664db4bc9338e7724e7a808e251c1eac66088bff9cfc12459",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16720356/",
+              "status": 200,
+              "bytes": 141571,
+              "sha256": "520d13dbc4de71742bc73c8609b8a03eb53299c852c84338ca5c5228aa0b735f",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18864053/",
+              "status": 200,
+              "bytes": 147461,
+              "sha256": "915129b5e4c91883903ab3c4bdd61a6f76de48b5e9f4eaefad1dbc35fc2e5ae0",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18864054/",
+              "status": 200,
+              "bytes": 147455,
+              "sha256": "b1c3eccc02258b533bbd82d969f70db0876ac707651a4252ce6ec01b35bbbb7c",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17823560/",
+              "status": 200,
+              "bytes": 152763,
+              "sha256": "982a1072ebc13cbfb5ab5f8f77993720e90137d0073d20496941016d4bfb9243",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17705216/",
+              "status": 200,
+              "bytes": 90315,
+              "sha256": "e33efe6aad16fb53af66fb282b00b2db9659ff329139bfb119545dc7bc0fceb1",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16878364/",
+              "status": 200,
+              "bytes": 85481,
+              "sha256": "6bb36b402e734f9bd62c58f7035ad2ef3f62ecb173d13ac15fd33f33bfbcc17c",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17083011/",
+              "status": 200,
+              "bytes": 87269,
+              "sha256": "1d97a7f44f3f168cb48edff7f8944d566bad4813fd8c202dda81dbe71caf9a72",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17307397/",
+              "status": 200,
+              "bytes": 147319,
+              "sha256": "63bb9745a11cd0af26b26fb38d8c0867520f9b513bcc7336dde3b32fb9981a9a",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17222123/",
+              "status": 200,
+              "bytes": 86522,
+              "sha256": "3dcc2fe9d581dc87bcdd1ff861a9d1b58f6561e9dd50e36fc0347d5bdb03df93",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17426083/",
+              "status": 200,
+              "bytes": 84285,
+              "sha256": "5ba8c3df0463a57d548b80fc45a39cef083b47c8d4e8d9f4d3dc1121b5754f3c",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18664603/",
+              "status": 200,
+              "bytes": 90614,
+              "sha256": "82387a313c028bf2104769e2a716b7e9d96d616957da40d73baf248f875dee7f",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18664602/",
+              "status": 200,
+              "bytes": 91412,
+              "sha256": "1a1c5e19d6a338deb54e1acb4d077f8a40a992e79eade40e21232705e2b3e1c4",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18596838/",
+              "status": 200,
+              "bytes": 97622,
+              "sha256": "d9922b05034ced9134e0acab4f90e4a716b8b5e79e1f1bfba938bc32c8799c1a",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18595282/",
+              "status": 200,
+              "bytes": 94943,
+              "sha256": "7048a8384e1824feb07c7ef4ba9b388e5f6bf8033d3aaa0192e28fcb302b6157",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18595457/",
+              "status": 200,
+              "bytes": 109154,
+              "sha256": "665dc6a0e2d1fb57e39d9e2803e352139b89e44daf4632d09d9d2935235305bc",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18595283/",
+              "status": 200,
+              "bytes": 90214,
+              "sha256": "2e8c7d570855e451e43ec570f14f2f890ce11f2c6b2fcced5f090a572db1d72f",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18537078/",
+              "status": 200,
+              "bytes": 94960,
+              "sha256": "de0e3a3bf9540d5714951fd82d50d87cc2ae59f6df00a6f89d5a27cf20b32db0",
               "contentType": "text/html;charset=UTF-8"
             }
           ]
         },
         {
-          "pid": 2630,
+          "pid": 2771,
           "requests": [
             {
               "url": "https://books.rakuten.co.jp/robots.txt",
               "status": 200,
-              "bytes": 419,
-              "sha256": "87f7505c1d60c9ea75d424ed8750d85b78b15f389b5f267a7399208acf41144d",
+              "bytes": 627,
+              "sha256": "252780ae3c0da7016c83f1efbdb64d31436001d81eca2b6e4a909e435fa5e57f",
               "contentType": "text/plain"
             },
             {
               "url": "https://books.rakuten.co.jp/event/game/card/entry/",
               "status": 200,
-              "bytes": 63622,
-              "sha256": "42a9b7af6cd4b19dc2a693377b00253da89d67226481c6eeb7222f40b2c60de0",
+              "bytes": 63623,
+              "sha256": "fbd89ea7aa315b67d3eb15a14cbc2cad5b2d6ef654fc83611ade4e83a3aed121",
               "contentType": "text/html; charset=euc-jp"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8",
               "status": 200,
-              "bytes": 150735,
-              "sha256": "c6a415d5b9ffc112d9e8bb282b70920ca6807b045a1d07653d1252df93c12155",
+              "bytes": 147764,
+              "sha256": "f46760a5770688aef9415e33594a753afd8fc8c015de56de4aaa033e562a865b",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8&p=2",
               "status": 200,
-              "bytes": 150735,
-              "sha256": "ff5c858c520ad271c9721c9d53489bb1ca9a571d0a017ede909afd37f0bf047e",
+              "bytes": 147764,
+              "sha256": "ba153a2905d0c435abd2443f9a8ff282d37df0ca1450bec95b9b6b029a0cf796",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0+%E6%8A%BD%E9%81%B8&p=3",
               "status": 200,
-              "bytes": 150735,
-              "sha256": "ea4bf119a8dabe1588309bde10b7da4228ad100bfb9b0a32957ba1ea071a91e4",
+              "bytes": 147764,
+              "sha256": "13247382d019e40c77a80a3f84394e58c6a10a114d4cb8b0538af6b90326f134",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89+%E3%83%8F%E3%83%89%E3%82%A6%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC",
               "status": 200,
-              "bytes": 77540,
-              "sha256": "eb51b2892afd148459cb2a59bb5243e3a1044290e3e86f4193bb5c1dde5379b8",
+              "bytes": 77541,
+              "sha256": "469623adcf2405d529b15ee51c5e08a5e22452eae7034c64ef6a48ca3339e278",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89+%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%87%E3%83%83%E3%82%AD%E3%82%BB%E3%83%83%E3%83%88",
               "status": 200,
-              "bytes": 162143,
-              "sha256": "ad47054f908c7d0ab78ff5b6b2bae1ddc021921f9102433b854eb4c868d2a5a5",
+              "bytes": 162144,
+              "sha256": "81bf75dbc4191fff523f83b657d63536881dd5d53c3630eb34b08d36893f9dc4",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/search?g=006&sitem=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%89+%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BF%E3%83%BC%E3%82%BB%E3%83%83%E3%83%88",
               "status": 200,
-              "bytes": 177442,
-              "sha256": "dfb0cc69d61707df51ed7299c934eacbf04eddde26757b4c1bb27bad9464f6d1",
+              "bytes": 176924,
+              "sha256": "b71154c04b931f44a0bf4a948cbe42b34e5c0a3a50e05b65cec17debf21ad3ce",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/13284657/",
               "status": 200,
-              "bytes": 142029,
-              "sha256": "ac0ef478a08b328adb9d27e52aef15e3b97069347ebc971bdc47a3b7560af59d",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18596838/",
-              "status": 200,
-              "bytes": 97550,
-              "sha256": "7381baaaa3afd7e5e454d683c901d3d1cdc1d4053ed03dc729712df54cb041c0",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16660918/",
-              "status": 200,
-              "bytes": 86243,
-              "sha256": "63fc8359711c7727748e577f121e48ba4d2605c5a19ab2be050b7431679706bc",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18595282/",
-              "status": 200,
-              "bytes": 94538,
-              "sha256": "2b36212cc0daf4a5b1ff210adf5191596bdaa4616a12705a64b3023d9ec4f3d0",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17753695/",
-              "status": 200,
-              "bytes": 143870,
-              "sha256": "45c52773ea6c610377b7f8b56eb904d51c2ee89541b0dccf2883dbff7efda9bb",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18595457/",
-              "status": 200,
-              "bytes": 108749,
-              "sha256": "83020dbc6315ba5fd4e7cc9750cad2f00dcc2a61776da11e44992a78bfff6d7e",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18657499/",
-              "status": 200,
-              "bytes": 152445,
-              "sha256": "f829181fa93a49e241678014b20f3bf3a1b3129835b84ccba90d89147f1dd964",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18595283/",
-              "status": 200,
-              "bytes": 89809,
-              "sha256": "5a6c9f7969583a7bed8b3208fb8e56b6f7e0e63487d6bf6b5070bcb519888458",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17962880/",
-              "status": 200,
-              "bytes": 145673,
-              "sha256": "faae69902eb6952fed695eaba711465ad3825088085ce93e30c79e1d4f742067",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18537078/",
-              "status": 200,
-              "bytes": 94555,
-              "sha256": "ba670c40e7197e719ca87205d529837a78ce082545e2ccd23868552210d215c2",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16878354/",
-              "status": 200,
-              "bytes": 141765,
-              "sha256": "bf42555126233a8cbe76dd869b12283d26810782f66cef4feae1b591a29c5323",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18537075/",
-              "status": 200,
-              "bytes": 90939,
-              "sha256": "a52ef2229234f24db53d8dc6101eea80a6eeec55205cedbf0f64b0fa894d42dc",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17083005/",
-              "status": 200,
-              "bytes": 143905,
-              "sha256": "00da2e806adc18b2181a4804ccaf051941f5f3c695fc53c7f9694a2bed0c4cca",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18343992/",
-              "status": 200,
-              "bytes": 90673,
-              "sha256": "4d92881f7c1358657b237a5b6afc94f627dc012da897828b308d724087598efa",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16049795/",
-              "status": 200,
-              "bytes": 146673,
-              "sha256": "a678a881c22045ba80b138db9e2b09c9e14f368ca80e23b917b7a22f7a947d72",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18548589/",
-              "status": 200,
-              "bytes": 90217,
-              "sha256": "4db6b15e086cd9baa56f668fa0df6983df76907103f68b49960d4fddbaf67835",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17545724/",
-              "status": 200,
-              "bytes": 90512,
-              "sha256": "8a76e18c5853f44c6917923dd20b993313d720846ecf8347d77fe7c64b6d3efc",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18182237/",
-              "status": 200,
-              "bytes": 94262,
-              "sha256": "f127b87215c045cde5f3f00c5d94cbbc33ca31e3b002d5dec6797d950004ab92",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16186604/",
-              "status": 200,
-              "bytes": 143166,
-              "sha256": "d17f3efc8c02f1d3a73303e6b2bc0bc0e67e923882101e6da2a4e459097cfd63",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18182238/",
-              "status": 200,
-              "bytes": 94820,
-              "sha256": "85051f294c234719c4b8243bcee472b0e5534edfc799aa8da9d07caee82a5250",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16660919/",
-              "status": 200,
-              "bytes": 140657,
-              "sha256": "b5ba7933f0a58f80e1ce57954f784f6029c31fa192abb50488d921f3dc253426",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18669675/",
-              "status": 200,
-              "bytes": 101689,
-              "sha256": "e75821bf0c1eb856609c952afc9062b8af0a1bec17206bcfad7becc68f4bc64c",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16660921/",
-              "status": 200,
-              "bytes": 142614,
-              "sha256": "622651f1fad0c5c406cf57fe6c48afe632507bc51fe6c6fa898c0e2c85c4179b",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18771764/",
-              "status": 200,
-              "bytes": 91864,
-              "sha256": "e0c6268319ddfe72354b9faf0967615c107d52546f2b26ba4f7315b9bdf114e7",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17426084/",
-              "status": 200,
-              "bytes": 137356,
-              "sha256": "029636f62fd885ef839112843fc492b7204a2b32f6668051eb9ad46048cca04d",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18450269/",
-              "status": 200,
-              "bytes": 87797,
-              "sha256": "d5cc65029a4c9e530ab468da44050d811251611348cd9acbfa0c7a3e5e323420",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17053771/",
-              "status": 200,
-              "bytes": 141919,
-              "sha256": "5063961c88392ca38da238d36c1a0f47ec66d5f7cf7935fe30bd63a5dff943f8",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/18537143/",
-              "status": 200,
-              "bytes": 91892,
-              "sha256": "50e728b105403e72faa0bb89d07972db207a48c624046d7ce919b0c7256d6f3c",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17962869/",
-              "status": 200,
-              "bytes": 139012,
-              "sha256": "36185f1b922792d410ccbcdbe96daf611f311b855a4840582c7b95c74c84484e",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17970272/",
-              "status": 200,
-              "bytes": 87262,
-              "sha256": "3951299549bcfae72ddb8b46bc6ba5eb13bdb38d3dd3166c63adea8589efe52a",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17821635/",
-              "status": 200,
-              "bytes": 137751,
-              "sha256": "5d4b038ce49b9857f0fd78a780e098a9e4ccd14bdd71e6fafb6f60f1adca6da2",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16138135/",
-              "status": 200,
-              "bytes": 143006,
-              "sha256": "add40c8feb5bf4df5d5e5d49cbfc174c0aaba6e93fc4f430d8f95f654e003ab4",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17005455/",
-              "status": 200,
-              "bytes": 140650,
-              "sha256": "8ff50aa8b1e93db23176014ef0923df32d7c5b773d50c6cf556c6b5d18ded282",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16137977/",
-              "status": 200,
-              "bytes": 144383,
-              "sha256": "0c4f579d6f0a76b0cfd8ebe8266397c3cddd556d1770bc4df7b0185334cda654",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16049789/",
-              "status": 200,
-              "bytes": 142544,
-              "sha256": "f1536e97d79337108906a04b288655313fc4f6883ab1c22ff597fd7a9f47629b",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17008876/",
-              "status": 200,
-              "bytes": 142922,
-              "sha256": "e8d2b80e1e898040d359cf403ed6696b3e86aae2fbf72405a46b9a0f94a9a1dd",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17393572/",
-              "status": 200,
-              "bytes": 86405,
-              "sha256": "47584596faf30b266bccb52c5d6656960adde14faadf689a4c3b74cc56fdf2c0",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17958917/",
-              "status": 200,
-              "bytes": 144090,
-              "sha256": "902579615bb634e5ce8ac39a8cab3899e11118c7051d7821e03538e7c50b8c3a",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16186607/",
-              "status": 200,
-              "bytes": 141134,
-              "sha256": "3deda643f538f91f233c05789c0c4410853110cb7b5cd017cda78c9ba53e61c5",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16138005/",
-              "status": 200,
-              "bytes": 141078,
-              "sha256": "2190980933d9ee7deb3edc7a58be4048fac209819e57cff7aafc3e284e2c7224",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16137903/",
-              "status": 200,
-              "bytes": 143021,
-              "sha256": "10a08d1efc67dc85445a2f17fbd9dc221b36a3a1cb3e906f00d504024a892b16",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17393668/",
-              "status": 200,
-              "bytes": 86779,
-              "sha256": "6a24e0efd968cea00d4e940542148e27204b9f3188d9affdcb5db401c7222072",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16137978/",
-              "status": 200,
-              "bytes": 142980,
-              "sha256": "36040f9afb9f373363fdc002048a230848c9b2557d9e2eb848f987f2117a8556",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17393658/",
-              "status": 200,
-              "bytes": 85693,
-              "sha256": "ad6af1143b685c77376f1609717a100e431a90e8faf89c688d055b8f4d68c056",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/15924195/",
-              "status": 200,
-              "bytes": 142925,
-              "sha256": "4d466912d8c7046a91121a3bb97aa3f25c75090f4fa2f67246fb52cd64c4c9b3",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17393656/",
-              "status": 200,
-              "bytes": 89496,
-              "sha256": "b504202ee7ec953fd3c9e0335a08a68ded70a98865db00ad250c9bac005f3da0",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17970273/",
-              "status": 200,
-              "bytes": 89232,
-              "sha256": "bc80cda01e23575f38bec9855216d5bd5f56c97658b70681e8eb553ec63e7c3c",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17958918/",
-              "status": 200,
-              "bytes": 144051,
-              "sha256": "60e583bae96404aa60214bd3af1f562261aa812dd2a5f8619927024a492ae755",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/16186608/",
-              "status": 200,
-              "bytes": 141134,
-              "sha256": "9f8aedbd383d167e8e6f27ae1d2b872d086cea79b1ab5b969cf95d42e4257b13",
-              "contentType": "text/html;charset=UTF-8"
-            },
-            {
-              "url": "https://books.rakuten.co.jp/rb/17008877/",
-              "status": 200,
-              "bytes": 144394,
-              "sha256": "e0f572f6188547636a0e7c5d5d7a14d8fa7c86999b866e2fa043ef682025b19d",
+              "bytes": 142434,
+              "sha256": "b48905e1667492d13b206fe89ced819fadc59a350316d8d496c4e27ac1f28b22",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/15924194/",
               "status": 200,
-              "bytes": 145550,
-              "sha256": "cc657a5d6c910e8b16b51c229c372106bec625e6fca95caf8cea513087c37097",
+              "bytes": 145955,
+              "sha256": "c09d89d1989e480985a8dc574e3c6401208505e4964201378e310b28ef34dbf1",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16660918/",
+              "status": 200,
+              "bytes": 86648,
+              "sha256": "8e18f29f5ed25731a6b8a4b65d9115a78f754fbcd149a1ae38d902905cb1e01e",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847140/",
               "status": 200,
-              "bytes": 147719,
-              "sha256": "fa437781157b8877cebb532b0dba34bc2df7062f161aebfef11fd0b506d86862",
+              "bytes": 148124,
+              "sha256": "aef6f2f56d04c75b9375c861d0e6bf42c173d858ba22d5dd4f22317ef3ee1d6f",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17753695/",
+              "status": 200,
+              "bytes": 144275,
+              "sha256": "ad935ecf3e4aaace483b53b610c9d5a9939af6e9f2e01b5e261da931e14e1431",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/15889203/",
               "status": 200,
-              "bytes": 141045,
-              "sha256": "00cd5bbb7502c895f31d404c22e42fb9dd5b500c1466a6dc7dd373a91883139e",
+              "bytes": 141450,
+              "sha256": "0e4d44c2bb74c9d21ec8608ad18e97069141587dc22bfc42bded1c12e2229569",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18657499/",
+              "status": 200,
+              "bytes": 152850,
+              "sha256": "d7dd195e6c9a89c5e842228e670f7a5e662e14ad655e4875d6abc41924b7971b",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17393657/",
               "status": 200,
-              "bytes": 90484,
-              "sha256": "3ac47cc556ea2a5ad81169d74d52c72f9dd1f5833d648ada3e294845b8b61fb5",
+              "bytes": 90889,
+              "sha256": "a36f6ca5f621f7ca67aa3429ce47883ed7094e97ab7f66f62846a6faa445e00b",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17962880/",
+              "status": 200,
+              "bytes": 146078,
+              "sha256": "11225d9cd5ddb4c1f61880e03c0d58f5eab97b529b1ecedcf40827c17de84748",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18182245/",
               "status": 200,
-              "bytes": 87634,
-              "sha256": "d6b6bc687dce099be724c5416d9c9bcfcce03560a2d619a25595920a621c021e",
+              "bytes": 88039,
+              "sha256": "d289fea0740ebc1aecc1bd600558740bb4746c48b2148e41e797a58508479cb8",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16878354/",
+              "status": 200,
+              "bytes": 142170,
+              "sha256": "383943d7548a0ff48c66ebf09dcfb17893770f98f63a530ff4e0a1d1e048c143",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/16383379/",
               "status": 200,
-              "bytes": 138121,
-              "sha256": "dc61c3ca2961498b6ef018431dc21d9269bff9ef7c78e0dcf1dbfa07be8f87f8",
+              "bytes": 138526,
+              "sha256": "ff2e3fecd20e774437f608114612bcacbea056ab36bc969e2153f46cb2867b62",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17083005/",
+              "status": 200,
+              "bytes": 144310,
+              "sha256": "f4a2794e129637b760baa527ee1126ddd89240dfa3b401a0ee1b8ceeaec4721b",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18460920/",
               "status": 200,
-              "bytes": 90763,
-              "sha256": "68112d9eac1e60a76f7f35557b2b6ae17695b600c1271596bbc0073b0dc93c08",
+              "bytes": 91168,
+              "sha256": "0ca9b940e19b5ab5cdb8e094369a4b71b0778037013744b0b0996ad0e44ed62a",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16049795/",
+              "status": 200,
+              "bytes": 147078,
+              "sha256": "9f9ea2b4f3eb846b5ecaadda2d10454d0ff419d844af8faed406a3d86bc0c117",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18084514/",
               "status": 200,
-              "bytes": 87577,
-              "sha256": "c9dbc1b202edcade4df489e25897a59e4b33b82451979753b9fcaff0aa24fd4c",
+              "bytes": 87982,
+              "sha256": "94e71588484d654739cf164eafceb5f99e40c93a1ce20925f35a480d6d7e2c10",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17545724/",
+              "status": 200,
+              "bytes": 90917,
+              "sha256": "d5d8fe15ec658821fc5cd70995bb5fd00f8598c7e25e47a0b8b6f0168fd71f17",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/17847139/",
               "status": 200,
-              "bytes": 152135,
-              "sha256": "05fc82a9be7f37d3dae500433ee3a82eafaf5a960c4c7d34f6e69381b265b549",
+              "bytes": 152540,
+              "sha256": "a94d92d619691ab9a7dba8c59a5989da016c67d971f5e3ead53458657100d3eb",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16186604/",
+              "status": 200,
+              "bytes": 143571,
+              "sha256": "ebfeb51c299066d50425da438a2b2202bd8690a611a5defcbfb6ff37e2c219d0",
               "contentType": "text/html;charset=UTF-8"
             },
             {
               "url": "https://books.rakuten.co.jp/rb/18061661/",
               "status": 200,
-              "bytes": 89963,
-              "sha256": "c954db9b9318e3d17fe37ef4d795e7a97bd904e37ac0a4552d839c0f92a2d6a3",
+              "bytes": 90368,
+              "sha256": "9caf69be0db40823171657ee92f73015881fdfb9558429b59e9ac65fcba3fae7",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16660919/",
+              "status": 200,
+              "bytes": 141062,
+              "sha256": "c63d31bf0743777e0a37de3b173d0122057ef34874f5e37602b34010f2e27f72",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17847144/",
+              "status": 200,
+              "bytes": 148439,
+              "sha256": "602b2ee6eefe7cd0241150957258ca6edc082b468ac604206e28f67cb2824e82",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16660921/",
+              "status": 200,
+              "bytes": 143019,
+              "sha256": "a1d0a5b2f4db8c0772769599e88fef5de8ba7c87b93d1de33b36f85b46fcb293",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18084513/",
+              "status": 200,
+              "bytes": 92356,
+              "sha256": "a387fd53cd8054a59c47d8a621f628283c5fb53c279b8663233ca4385e6e39c1",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17426084/",
+              "status": 200,
+              "bytes": 137761,
+              "sha256": "9f9314fa4dc0a0fa934d194dc5657d9d104aa392e3ef6c1ef2c8a7f3d5cd7dda",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17847142/",
+              "status": 200,
+              "bytes": 147696,
+              "sha256": "ee3cfac39c959a5b516c63ee3df73e9091994a12f59530e8005cdde9f4581ed3",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17053771/",
+              "status": 200,
+              "bytes": 142324,
+              "sha256": "d3f71caf61de522407eef3dfc1c7a7e39a943b89859088a227545558263994cc",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/15897236/",
+              "status": 200,
+              "bytes": 143317,
+              "sha256": "0a51d03e1778a1d309582e2707d13cad024f5363bf3530af9b4648b136c20eb7",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17962869/",
+              "status": 200,
+              "bytes": 139417,
+              "sha256": "a6d010d7e7131f1b9e1f2465eed9a0edb32eec137d55d71ff9c09b564c637d72",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18393016/",
+              "status": 200,
+              "bytes": 148939,
+              "sha256": "aaa699b507d3433aa80d306a30f5cb3648172933090529a8a4a7c2b1ac3a82af",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17821635/",
+              "status": 200,
+              "bytes": 138156,
+              "sha256": "cea78040797bb01f802c6d05f1e49498b77676ac8e1b780c4871a9e89412158a",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16376774/",
+              "status": 200,
+              "bytes": 141325,
+              "sha256": "6603a205cedcb0f5c45e232e9b2ed41f9ffb56803285cfefaa2189aadc6718d2",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17005455/",
+              "status": 200,
+              "bytes": 141055,
+              "sha256": "f900152c2068eafb10c136feabbd841da79f1d7ff48e15326e68b8cd23a541c5",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18258292/",
+              "status": 200,
+              "bytes": 150184,
+              "sha256": "d69c18df14de9deacc0bd3e53a4e146b586f747d774328bfc9523f7b9a2da9fc",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16049789/",
+              "status": 200,
+              "bytes": 142949,
+              "sha256": "6076ce956ac89f68ad90bb05985f2f68e1d54df5e24891d005941103d11bd631",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/14297582/",
+              "status": 200,
+              "bytes": 141745,
+              "sha256": "38532cd6c5a38e2b6d2c40ad5640e3ed85b2d35286056439c9a4fe8ddd0cd426",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17393572/",
+              "status": 200,
+              "bytes": 86810,
+              "sha256": "096359ced7d48621260a108a68bf03f52df8cde2262bfefa8893763a0afcda9d",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17753694/",
+              "status": 200,
+              "bytes": 143080,
+              "sha256": "1b3050b26bbd341ec74246a15ab716e063c14a21f680691a1961a9a34c89e601",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17821637/",
+              "status": 200,
+              "bytes": 142972,
+              "sha256": "88691415317c9aaf10ae063d6efaabca27b245e8f81dbd0977569bc9255c7055",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18595234/",
+              "status": 200,
+              "bytes": 150882,
+              "sha256": "81561b82b44d75e2575ea802bfea57c4b54db0876f535c54a5b3c5b09816344d",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16186607/",
+              "status": 200,
+              "bytes": 141539,
+              "sha256": "d39ec5d3b25fb69b8314b0b1445ef093a7a07348d6238cb5a32d5e7b69e6b20f",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17705217/",
+              "status": 200,
+              "bytes": 90020,
+              "sha256": "8a6f67a788b98b79f9b0d9f5097e4eaf853bc00a5ba0a5a3037e0488e07be268",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16720355/",
+              "status": 200,
+              "bytes": 141674,
+              "sha256": "fb912ed92815de5664db4bc9338e7724e7a808e251c1eac66088bff9cfc12459",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16720356/",
+              "status": 200,
+              "bytes": 141571,
+              "sha256": "520d13dbc4de71742bc73c8609b8a03eb53299c852c84338ca5c5228aa0b735f",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18864053/",
+              "status": 200,
+              "bytes": 147461,
+              "sha256": "915129b5e4c91883903ab3c4bdd61a6f76de48b5e9f4eaefad1dbc35fc2e5ae0",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18864054/",
+              "status": 200,
+              "bytes": 147455,
+              "sha256": "b1c3eccc02258b533bbd82d969f70db0876ac707651a4252ce6ec01b35bbbb7c",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17823560/",
+              "status": 200,
+              "bytes": 152763,
+              "sha256": "982a1072ebc13cbfb5ab5f8f77993720e90137d0073d20496941016d4bfb9243",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17705216/",
+              "status": 200,
+              "bytes": 90315,
+              "sha256": "e33efe6aad16fb53af66fb282b00b2db9659ff329139bfb119545dc7bc0fceb1",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/16878364/",
+              "status": 200,
+              "bytes": 85481,
+              "sha256": "6bb36b402e734f9bd62c58f7035ad2ef3f62ecb173d13ac15fd33f33bfbcc17c",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17083011/",
+              "status": 200,
+              "bytes": 87269,
+              "sha256": "1d97a7f44f3f168cb48edff7f8944d566bad4813fd8c202dda81dbe71caf9a72",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17307397/",
+              "status": 200,
+              "bytes": 147319,
+              "sha256": "63bb9745a11cd0af26b26fb38d8c0867520f9b513bcc7336dde3b32fb9981a9a",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17222123/",
+              "status": 200,
+              "bytes": 86522,
+              "sha256": "3dcc2fe9d581dc87bcdd1ff861a9d1b58f6561e9dd50e36fc0347d5bdb03df93",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/17426083/",
+              "status": 200,
+              "bytes": 84285,
+              "sha256": "5ba8c3df0463a57d548b80fc45a39cef083b47c8d4e8d9f4d3dc1121b5754f3c",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18664603/",
+              "status": 200,
+              "bytes": 90614,
+              "sha256": "82387a313c028bf2104769e2a716b7e9d96d616957da40d73baf248f875dee7f",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18664602/",
+              "status": 200,
+              "bytes": 91412,
+              "sha256": "1a1c5e19d6a338deb54e1acb4d077f8a40a992e79eade40e21232705e2b3e1c4",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18596838/",
+              "status": 200,
+              "bytes": 97622,
+              "sha256": "d9922b05034ced9134e0acab4f90e4a716b8b5e79e1f1bfba938bc32c8799c1a",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18595282/",
+              "status": 200,
+              "bytes": 94943,
+              "sha256": "7048a8384e1824feb07c7ef4ba9b388e5f6bf8033d3aaa0192e28fcb302b6157",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18595457/",
+              "status": 200,
+              "bytes": 109154,
+              "sha256": "665dc6a0e2d1fb57e39d9e2803e352139b89e44daf4632d09d9d2935235305bc",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18595283/",
+              "status": 200,
+              "bytes": 90214,
+              "sha256": "2e8c7d570855e451e43ec570f14f2f890ce11f2c6b2fcced5f090a572db1d72f",
+              "contentType": "text/html;charset=UTF-8"
+            },
+            {
+              "url": "https://books.rakuten.co.jp/rb/18537078/",
+              "status": 200,
+              "bytes": 94960,
+              "sha256": "de0e3a3bf9540d5714951fd82d50d87cc2ae59f6df00a6f89d5a27cf20b32db0",
               "contentType": "text/html;charset=UTF-8"
             }
           ]
