@@ -7981,12 +7981,11 @@
         }
       ],
       "lastAttempt": {
-        "checkedAt": "2026-11-26T04:57:29.662Z",
-        "status": "REDIRECT_BLOCKED",
-        "message": "別ホストへの転送で取得停止。募集状況は未確認",
-        "stage": "FETCH",
-        "redirectHost": "wr.pokemoncenter-online.com",
-        "runUrl": "https://github.com/yasuyasu55/pokemon-radar-mobile/actions/runs/45758383365"
+        "checkedAt": "2026-11-27T04:56:38.985Z",
+        "status": "FAILED",
+        "message": "商品名を読み取れません",
+        "stage": "VERIFY",
+        "runUrl": "https://github.com/yasuyasu55/pokemon-radar-mobile/actions/runs/45942810471"
       }
     },
     "rakutenbooks": {
